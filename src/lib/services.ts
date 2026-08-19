@@ -48,7 +48,7 @@ export const SERVICES: Service[] = [
     icon: "user",
     seoTitle: "Testosterone Replacement Therapy in Overland Park, KS",
     seoDescription:
-      "TRT and men's hormone care in Overland Park and the Kansas City area, with telehealth throughout Kansas. Evaluation, monitoring and follow-up from Heartland Hormone.",
+      "TRT and men's hormone care in Overland Park and the Kansas City area, with telehealth throughout Kansas and Missouri. Evaluation, monitoring and follow-up from Heartland Hormone.",
     whatItIs:
       "Men's hormone therapy at Heartland starts with a clinical evaluation for symptoms that may be related to testosterone deficiency. Testosterone replacement may be considered after history, examination when appropriate and laboratory review.",
     whoItsFor: [
@@ -149,30 +149,30 @@ export const SERVICES: Service[] = [
     shortTitle: "Peptide Therapy",
     href: "/services/peptide-therapy",
     description:
-      "Selected peptide protocols for patients whose history, goals and clinical picture support a cautious, monitored approach.",
+      "Peptide therapy is coming soon. Heartland will offer selected peptide protocols only after clinical evaluation.",
     heroDescriptor:
-      "Peptide therapy may be considered for selected patients. It is a secondary service, not a first-line offering.",
+      "Peptide therapy is coming soon. It will be a secondary service for selected patients after evaluation.",
     highlights: [
+      "Coming soon",
       "Considered only after clinical evaluation",
-      "Not appropriate for every patient",
-      "Monitored over time",
+      "Not a first-line offering",
     ],
-    ctaLabel: "Explore Peptide Therapy",
+    ctaLabel: "Contact Heartland",
     primary: false,
     icon: "dna",
-    seoTitle: "Peptide Therapy in Overland Park, KS",
+    seoTitle: "Peptide Therapy Coming Soon | Heartland Hormone",
     seoDescription:
-      "Peptide therapy may be considered for selected patients at Heartland Hormone in the Kansas City area. Evidence, history and clinical appropriateness guide decisions.",
+      "Peptide therapy is coming soon at Heartland Hormone in Overland Park. Contact the clinic to be notified when this service is available.",
     whatItIs:
-      "Peptide therapy may be considered for selected patients based on individual goals, available evidence, medical history and clinical appropriateness. Some compounded peptide preparations are not FDA-approved medications and have not been reviewed by the FDA for safety, effectiveness or quality.",
+      "Peptide therapy is coming soon. When offered, it may be considered for selected patients based on individual goals, available evidence, medical history and clinical appropriateness. Some compounded peptide preparations are not FDA-approved medications and have not been reviewed by the FDA for safety, effectiveness or quality.",
     whoItsFor: [
-      "Patients already established in hormone or metabolic care who want to discuss whether a peptide protocol is appropriate.",
-      "Patients who understand that evidence varies by product and that peptides are not a substitute for foundational care.",
+      "Patients interested in being notified when peptide therapy becomes available.",
+      "Patients already considering hormone or metabolic care who want to ask about future peptide options.",
     ],
     whatToExpect: [
-      "Consultation to review goals, history and whether a peptide is appropriate.",
-      "Discussion of evidence, uncertainties and alternatives.",
-      "Monitoring if a protocol is started.",
+      "Contact the clinic if you would like to be notified when peptide therapy is offered.",
+      "Peptide protocols will be discussed only after a clinical evaluation.",
+      "Evidence, uncertainties and alternatives will be reviewed before any protocol is started.",
     ],
     safetyCallout:
       "Peptides are not portrayed here as proven treatments for every condition. Candidacy is never assumed from marketing copy.",

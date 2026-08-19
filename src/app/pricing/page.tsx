@@ -26,7 +26,7 @@ export default function PricingPage() {
       <PageHero
         eyebrow="Programs & Pricing"
         title="Programs & Pricing"
-        description="Published membership fees for hormone replacement therapy. Laboratory fees, the initial evaluation and therapies outside the listed tiers are billed separately."
+        description="Published membership fees for hormone replacement therapy. Laboratory fees are paid separately, typically before labs are ordered. The $200 initial evaluation applies to new HRT and weight-management patients."
       >
         <BookButton />
       </PageHero>
@@ -44,7 +44,7 @@ export default function PricingPage() {
           <SectionHeading
             eyebrow="Getting Started"
             title="Initial Evaluation"
-            description="Required before starting hormone replacement therapy membership."
+            description="Required for new HRT and medical weight-management patients. Laboratory fees are paid separately, typically before labs are ordered."
           />
           <div className="max-w-2xl">
             <PricingCard
@@ -124,17 +124,16 @@ export default function PricingPage() {
             title="Medical Weight Management"
             description={pricing.weightManagement.summary}
           />
-          <div className="max-w-2xl rounded-md border border-gold/40 bg-cream p-6 md:p-8">
-            <p className="font-display text-2xl text-teal tracking-wide mb-3">
-              {pricing.weightManagement.display}
-            </p>
-            <p className="text-sm text-charcoal/80 leading-relaxed mb-4">
-              This fee schedule covers hormone replacement therapy memberships.
-              Weight-management pricing is discussed during a separate consultation.
-            </p>
-            <BookButton
-              label="Schedule a Weight Management Consultation"
+          <div className="max-w-2xl">
+            <PricingCard
+              featured
+              name={pricing.weightManagement.name}
+              price={pricing.weightManagement.display}
+              summary={pricing.weightManagement.summary}
+              includes={pricing.weightManagement.includes}
+              notIncluded={pricing.weightManagement.notIncluded}
               href="/contact?interest=weight-management"
+              ctaLabel="Schedule a Weight Management Consultation"
             />
           </div>
         </div>
@@ -199,6 +198,20 @@ export default function PricingPage() {
                 </p>
                 <p className="text-sm text-charcoal/85 leading-relaxed">
                   {billingPolicy.nonPayment}
+                </p>
+              </div>
+              <div>
+                <h3 className="font-display text-xl text-teal tracking-wide mb-3">
+                  Shipping
+                </h3>
+                <p className="text-sm text-charcoal/85 leading-relaxed mb-6">
+                  {billingPolicy.shipping}
+                </p>
+                <h3 className="font-display text-xl text-teal tracking-wide mb-3">
+                  Refunds
+                </h3>
+                <p className="text-sm text-charcoal/85 leading-relaxed mb-6">
+                  {billingPolicy.refunds}
                 </p>
               </div>
               <div>

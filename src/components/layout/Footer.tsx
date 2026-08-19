@@ -40,6 +40,11 @@ export function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/patient-portal" className="hover:text-gold-light transition-colors">
+                  Patient Portal
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-gold-light transition-colors">
                   Contact
                 </Link>

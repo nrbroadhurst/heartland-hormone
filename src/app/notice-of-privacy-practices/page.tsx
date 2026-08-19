@@ -53,7 +53,8 @@ export default function NoticeOfPrivacyPracticesPage() {
             How to contact us about privacy
           </h2>
           <p>
-            Practice: {SITE.name}, {SITE.city}, {SITE.state}
+            Practice: {SITE.name}, {SITE.city}, {SITE.state}. Privacy officer:{" "}
+            {SITE.privacyOfficerName}
             {hasEmail() ? `. Email ${SITE.email}` : ""}
             {hasPhone() ? `. Phone ${SITE.phone}` : ""}. You may also file a
             complaint with the U.S. Department of Health and Human Services.

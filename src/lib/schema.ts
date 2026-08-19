@@ -18,12 +18,13 @@ export function clinicJsonLd() {
     name: SITE.name,
     url: SITE.siteUrl,
     description:
-      "Men's testosterone therapy, women's menopause care and medical weight management in Overland Park and the Kansas City area, with telehealth throughout Kansas.",
+      "Men's testosterone therapy, women's menopause care and medical weight management in Overland Park and the Kansas City area, with telehealth throughout Kansas and Missouri.",
     areaServed: [
       { "@type": "City", name: SITE.city },
       { "@type": "City", name: SITE.region },
       { "@type": "AdministrativeArea", name: SITE.county },
-      { "@type": "State", name: SITE.stateName },
+      { "@type": "State", name: "Kansas" },
+      { "@type": "State", name: "Missouri" },
     ],
     address,
     slogan: SITE.tagline,

@@ -9,7 +9,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "How It Works",
   description:
-    "Four steps from consultation to ongoing monitoring at Heartland Hormone. In-person care in the Kansas City area and telehealth throughout Kansas when eligible.",
+    "Four steps from labs and consultation to ongoing monitoring at Heartland Hormone. In-person care in the Kansas City area and telehealth throughout Kansas and Missouri when eligible.",
   path: "/how-it-works",
 });
 
@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="The Process"
         title="How It Works"
-        description="A straightforward path from first conversation to ongoing care, whether you join us in Overland Park / Kansas City or by telehealth throughout Kansas."
+        description="A straightforward path from labs and first conversation to ongoing care, whether you join us in Overland Park / Kansas City or by telehealth throughout Kansas and Missouri."
       >
         <BookButton />
       </PageHero>
@@ -31,10 +31,9 @@ export default function HowItWorksPage() {
         />
         <StepList />
         <p className="mt-8 text-sm text-charcoal/75 max-w-3xl leading-relaxed">
-          {SITE.telehealthStatement} Some medications, including certain
-          controlled substances, may require in-person evaluation. We do not
-          promise that testosterone or other prescriptions can always be provided
-          entirely online.
+          {SITE.telehealthStatement} {SITE.firstVisitPreference} We do not promise
+          that testosterone or other prescriptions can always be provided entirely
+          online.
         </p>
       </section>
 

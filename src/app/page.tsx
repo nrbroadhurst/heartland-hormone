@@ -45,7 +45,7 @@ export default function HomePage() {
               Men&apos;s testosterone therapy, women&apos;s menopause care, medical
               weight management and sexual wellness from an experienced local
               provider. In-person care in the Kansas City area with convenient
-              telehealth throughout Kansas.
+              telehealth throughout Kansas and Missouri.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button asChild variant="gold" size="lg">
@@ -69,7 +69,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Primary Care Lines"
           title="Hormone Therapy and Medical Weight Management"
-          description="Three core programs for men and women, with local visits in the Kansas City area and telehealth throughout Kansas when appropriate."
+          description="Three core programs for men and women, with local visits in the Kansas City area and telehealth throughout Kansas and Missouri when appropriate."
         />
         <ServicesGrid services={PRIMARY_SERVICES} featured />
       </section>
@@ -79,7 +79,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Additional Care"
             title="Related Services"
-            description="These offerings support selected patients. They are not the clinic's defining programs."
+            description="Peptide therapy is coming soon. Sexual wellness and healthy-aging support remain available for selected patients."
           />
           <ServicesGrid services={SECONDARY_SERVICES} />
         </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
             index={3}
             icon={Video}
             title="Telehealth When It Fits Your Life"
-            body="Convenient follow-up for eligible Kansas patients when clinically appropriate."
+            body="Convenient follow-up for eligible Kansas and Missouri patients when clinically appropriate."
           />
         </div>
       </section>
@@ -186,7 +186,7 @@ export default function HomePage() {
 
       <CTASection
         headline="Ready to talk through your options?"
-        subtext="Book a consultation in the Kansas City area or by telehealth throughout Kansas when eligible."
+        subtext="Book a consultation in the Kansas City area or by telehealth throughout Kansas and Missouri when eligible."
         ctaLabel="Book a Consultation"
         secondaryLabel="View Programs & Pricing"
         secondaryHref="/pricing"

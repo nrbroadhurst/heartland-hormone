@@ -52,7 +52,8 @@ export default function TelehealthConsentPage() {
             </li>
             <li>
               Some medications, including certain controlled substances, may
-              require an in-person visit under federal or Kansas rules.
+              require an in-person visit under federal, Kansas or Missouri rules.
+              An in-person first visit is preferred.
             </li>
           </ul>
         </section>

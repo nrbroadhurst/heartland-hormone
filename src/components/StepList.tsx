@@ -17,27 +17,27 @@ export type Step = {
 
 const DEFAULT_STEPS: Step[] = [
   {
-    title: "Schedule Your Consultation",
+    title: "Request Your Consultation",
     description:
-      "Choose men's hormone care, women's hormone care or medical weight management. Visits are by appointment, in person or by telehealth when eligible.",
+      "Call, email or send a message to request an initial visit. Initial consultations are typically 45 minutes to 1 hour. An in-person first visit is preferred.",
     icon: CalendarCheck,
   },
   {
-    title: "Complete Your Evaluation",
+    title: "Pay for and Complete Labs",
     description:
-      "Medical history, symptoms, medication review, laboratory testing and other evaluation as appropriate.",
+      "Laboratory fees are paid by the patient, typically before an order is placed. Use discounted cash rates through Quest or LabCorp, or bill through your insurance. After payment is received, a lab order is sent.",
     icon: FlaskConical,
   },
   {
-    title: "Begin Your Personalized Treatment Plan",
+    title: "Attend Your Initial Consultation",
     description:
-      "If treatment is clinically appropriate, your provider will discuss options, risks, benefits, alternatives and expected follow-up.",
+      "Review history, symptoms and lab results. If treatment is clinically appropriate, your provider will discuss options, risks, benefits, alternatives and expected follow-up.",
     icon: ClipboardList,
   },
   {
     title: "Ongoing Monitoring & Adjustment",
     description:
-      "Follow-up, medication adjustments, laboratory review and ongoing communication.",
+      "First HRT follow-up is typically 6 to 8 weeks later, then every 6 months once stable. Follow-up visits are typically 15 to 20 minutes and may be in office or by telehealth.",
     icon: RefreshCw,
   },
 ];

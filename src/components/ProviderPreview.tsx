@@ -29,10 +29,11 @@ export function ProviderPreview() {
           </h2>
           <div className="h-px w-16 bg-gold mb-6" />
           <p className="text-charcoal/85 leading-relaxed mb-4">
-            Heartland was founded by an Adult-Gerontology Acute Care Nurse
-            Practitioner, AGACNP-BC, raised in Miami County. The Kansas City metro
-            has been home since 1983. Family life here includes children who
-            graduated from the Blue Valley School District.
+            Heartland was founded by {SITE.providerName}, {SITE.providerCredential},
+            an Adult-Gerontology Acute Care Nurse Practitioner raised in Miami
+            County. The Kansas City metro has been home since 1983. Family life
+            here includes children who graduated from the Blue Valley School
+            District.
           </p>
           <p className="text-charcoal/85 leading-relaxed mb-8">
             After more than four decades in this community, the clinic exists to
@@ -56,8 +57,8 @@ export function CareTeamNote() {
         Your Care Team
       </p>
       <p className="text-sm text-charcoal/80 leading-relaxed">
-        Care is nurse practitioner-led. Heartland was founded by an{" "}
-        {providerCredentialLine()} with decades of advanced clinical experience.{" "}
+        Care is nurse practitioner-led by {SITE.providerName},{" "}
+        {providerCredentialLine()}.{" "}
         <Link href="/about" className="text-teal underline underline-offset-2">
           Meet your provider
         </Link>

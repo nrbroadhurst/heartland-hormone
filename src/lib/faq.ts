@@ -14,7 +14,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Do you offer in-person and telehealth appointments?",
     answer:
-      "Yes. Patients can be seen in person in the Kansas City area or by telehealth when eligible. Follow-up appointments may be conducted by telehealth or in office. Telehealth is available for eligible patients when clinically appropriate and permitted by applicable law and prescribing requirements.",
+      "Yes. Patients can be seen in person in the Kansas City area or by telehealth when eligible in Kansas or Missouri. An in-person first visit is preferred. Follow-up appointments may be conducted by telehealth or in office. Controlled substances such as testosterone may require at least one in-person visit per year.",
   },
   {
     id: "location",
@@ -28,7 +28,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "initial-eval",
     category: "General",
     question: "What does the initial evaluation cost?",
-    answer: `${pricing.initialEvaluation.name} is ${pricing.initialEvaluation.display} and includes a one-time consultation and comprehensive medical assessment. Initial lab panels must be completed before the first appointment. Laboratory fees are separate.`,
+    answer: `${pricing.initialEvaluation.name} is ${pricing.initialEvaluation.display} for new HRT and medical weight-management patients. Laboratory fees are separate and are typically paid before labs are ordered through Quest Diagnostics or LabCorp.`,
   },
   {
     id: "insurance",
@@ -46,11 +46,18 @@ export const FAQ_ENTRIES: FAQEntry[] = [
       "Some patients use HSA or FSA funds for eligible medical expenses. Eligibility depends on your plan. Check with your plan administrator before assuming coverage.",
   },
   {
+    id: "patient-portal",
+    category: "General",
+    question: "Where do I log in for records, forms and bills?",
+    answer:
+      "Heartland uses a secure OptiMantra patient portal for forms, shared documents, invoices and clinic messaging. Medical records are not stored on this website. Use the Patient Portal link in the header after your account has been created. New patients should request a consultation first.",
+  },
+  {
     id: "outside-labs",
     category: "General",
     question: "Can I use lab results from another provider?",
     answer:
-      "Recent outside labs may be reviewed when they are appropriate, complete and recent enough to support a clinical decision. Additional testing may still be needed before starting or continuing therapy.",
+      "Outside labs may be accepted when they include the tests needed to establish care and are no more than one month old. Additional testing may still be required.",
   },
   {
     id: "lab-cost",
@@ -89,7 +96,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Men's Hormone Therapy",
     question: "Do you prescribe tadalafil?",
     answer:
-      "Tadalafil and similar prescription treatments may be prescribed when clinically appropriate. They are not included in the published HRT membership tiers and are priced separately.",
+      "Tadalafil and similar prescription treatments may be prescribed when clinically appropriate. They are not included in the published HRT membership tiers. Add-on pricing is reviewed during consultation.",
   },
   {
     id: "perimenopause",
@@ -129,27 +136,27 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "membership-billing",
     category: "General",
     question: "How does monthly membership billing work?",
-    answer: `${billingPolicy.recurring} ${billingPolicy.nonPayment}`,
+    answer: `${billingPolicy.recurring} ${billingPolicy.nonPayment} ${billingPolicy.refunds}`,
   },
   {
     id: "semaglutide",
     category: "Weight Management",
     question: "Do you prescribe semaglutide?",
     answer:
-      "Semaglutide may be considered when clinically appropriate following a medical evaluation. Weight-management pricing is not part of the published HRT fee schedule and is reviewed during consultation.",
+      "Semaglutide may be considered when clinically appropriate following a medical evaluation. Weight-management-only patients pay a $200 consultation plus medication and laboratory fees.",
   },
   {
     id: "tirzepatide",
     category: "Weight Management",
     question: "Do you prescribe tirzepatide?",
     answer:
-      "Tirzepatide may be considered when clinically appropriate following a medical evaluation. Weight-management pricing is not part of the published HRT fee schedule and is reviewed during consultation.",
+      "Tirzepatide may be considered when clinically appropriate following a medical evaluation. Weight-management-only patients pay a $200 consultation plus medication and laboratory fees.",
   },
   {
     id: "weight-meds-cost",
     category: "Weight Management",
     question: "Is medication included in the monthly cost?",
-    answer: `${pricing.weightManagement.display}. Weight-management pricing is discussed during a separate consultation and is not listed in the current HRT membership fee schedule.`,
+    answer: `${pricing.weightManagement.summary} Medication is billed separately from the $200 consult.`,
   },
   {
     id: "weight-monthly-visits",

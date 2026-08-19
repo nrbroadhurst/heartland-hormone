@@ -8,7 +8,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Locations | Overland Park, Kansas City & Kansas Telehealth",
   description:
-    "Heartland Hormone serves Overland Park and the Kansas City area in person, with telehealth throughout Kansas for eligible patients.",
+    "Heartland Hormone serves Overland Park and the Kansas City area in person, with telehealth throughout Kansas and Missouri for eligible patients.",
   path: "/locations",
 });
 
@@ -86,7 +86,7 @@ export default function LocationsPage() {
               <Video className="h-5 w-5" strokeWidth={1.5} aria-hidden />
             </div>
             <SectionHeading
-              title="Telehealth throughout Kansas"
+              title="Telehealth throughout Kansas and Missouri"
               description={SITE.telehealthStatement}
             />
             <div className="rounded-md border border-gold/40 bg-cream p-6 -mt-2">

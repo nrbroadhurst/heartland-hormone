@@ -12,17 +12,17 @@ export const pricing = {
     teaserDisplay: "$200 one-time",
     confirmed: true,
     summary:
-      "One-time consultation and comprehensive medical assessment. Initial lab panels must be completed before the first appointment so baseline levels can be reviewed and an initial treatment plan can be discussed.",
+      "Required for new HRT and medical weight-management patients. One-time consultation and comprehensive medical assessment. Laboratory fees are paid separately, typically before labs are ordered.",
     includes: [
-      "One-time consultation",
+      "One-time consultation, typically 45 minutes to 1 hour",
       "Comprehensive medical assessment",
       "Review of required baseline labs",
       "Discussion of an initial treatment plan when clinically appropriate",
     ],
     notIncluded: [
-      "Laboratory testing fees",
+      "Laboratory testing fees, which are paid by the patient before labs are ordered",
       "Monthly membership",
-      "Medication and supplies",
+      "Medication",
     ],
   },
   mensInjections: {
@@ -39,8 +39,8 @@ export const pricing = {
       "Testosterone cypionate injections, supplies, shipping, lab interpretation, dose changes and ongoing provider care.",
     includes: [
       "Testosterone cypionate (subcutaneous or intramuscular) when clinically appropriate",
-      "Vials, syringes, needles and alcohol pads",
-      "Monthly shipping",
+      "Syringes, needles and alcohol wipes",
+      "Medication shipped to your home when a prescription is filled",
       "Routine lab interpretation",
       "Dose titration management",
       "Ongoing provider care by telehealth or in office",
@@ -64,7 +64,7 @@ export const pricing = {
     includes: [
       "Compounded scrotal testosterone cream (20%) in a Topi-CLICK dispenser, or sublingual testosterone troches (typically twice daily), when clinically appropriate",
       "Monthly pharmacy supplies",
-      "Shipping",
+      "Medication shipped to your home when a prescription is filled",
       "Routine lab interpretation",
       "Dose titration management",
       "Ongoing provider care by telehealth or in office",
@@ -91,7 +91,7 @@ export const pricing = {
       "Daily bedtime oral micronized progesterone capsules when clinically appropriate",
       "Daily topical testosterone cream (0.5% to 1%) when clinically appropriate",
       "Monthly supplies for these three baseline medications",
-      "Shipping",
+      "Medication shipped to your home when a prescription is filled",
       "Routine lab interpretation",
       "Ratio adjustments",
       "Ongoing provider care by telehealth or in office",
@@ -114,8 +114,8 @@ export const pricing = {
       "Combination troches or subcutaneous testosterone micro-injections with oral progesterone and topical estradiol, plus specialized supplies, shipping and ongoing provider care.",
     includes: [
       "All-in-one combination troches (estradiol / progesterone / testosterone), or subcutaneous testosterone micro-injections paired with oral progesterone and topical estradiol, when clinically appropriate",
-      "Custom single-matrix or specialized injection supplies",
-      "Shipping",
+      "Custom single-matrix or specialized injection supplies, including syringes, needles and alcohol wipes when injections are used",
+      "Medication shipped to your home when a prescription is filled",
       "Routine lab interpretation",
       "Ongoing provider care by telehealth or in office",
     ],
@@ -128,34 +128,39 @@ export const pricing = {
     id: "weight-management",
     name: "Medical Weight Management",
     href: "/services/weight-management",
-    display: "Pricing provided at consultation",
-    teaserDisplay: "Pricing at consultation",
-    confirmed: false,
+    display: "$200 consult + medication",
+    teaserDisplay: "From $200 consult",
+    confirmed: true,
     summary:
-      "Medical weight-management pricing is reviewed during consultation. It is not part of the published HRT membership fee schedule.",
+      "Weight-management-only patients pay a $200 initial consultation plus medication and laboratory fees. Patients already on an HRT membership are not charged a separate weight-management consult. Medication is billed separately.",
     includes: [
-      "Clinical evaluation when you schedule a weight-management visit",
-      "Discussion of medication options when clinically appropriate",
+      "$200 initial consultation for weight-management-only patients",
+      "Ongoing weight-management as part of an active HRT membership, without a separate consult fee",
+      "Prescription medication when clinically appropriate, billed separately",
     ],
     notIncluded: [
-      "A published monthly rate is not listed until this program is added to the clinic fee schedule",
+      "Laboratory testing fees",
+      "Medication cost",
+      "A published monthly medication-inclusive rate",
     ],
   },
 } as const;
 
 export const labPolicy = {
   notIncluded:
-    "Laboratory testing fees are not included in monthly membership or consultation fees. Patients may bill lab work through their health insurance or use discounted cash-based rates through Quest Diagnostics and LabCorp.",
+    "Laboratory testing fees are not included in monthly membership or consultation fees. Labs are paid by the patient, typically before an order is placed. Patients may use insurance or discounted cash rates through Quest Diagnostics and LabCorp.",
   preAppointment:
-    "Initial lab panels must be completed before the first appointment so baseline levels can be reviewed. Follow-up laboratory testing must be completed before scheduled follow-up appointments so values can be evaluated in real time for dose changes.",
+    "Required labs are ordered after payment is received. Complete labs before the first appointment so baseline levels can be reviewed. Follow-up hormone labs must be drawn before scheduled follow-up appointments so values can be evaluated for dose changes.",
   titration:
-    "During the initial titration phase, follow-up labs and appointments occur 6 to 8 weeks after starting therapy and after any later dose adjustment.",
+    "The first follow-up after starting HRT is 6 to 8 weeks later and may be in office or by telehealth. Hormone labs should be drawn before that visit. Dose adjustments are made as needed.",
   maintenance:
     "Once on a stable dose, routine follow-up appointments and labs occur every 6 months.",
   annual:
     "A comprehensive annual lab panel is required once per year for long-term safety monitoring and prescription renewals.",
   modality:
     "Follow-up appointments may be conducted by telehealth or in office.",
+  outsideLabs:
+    "Outside labs may be accepted when they include the tests needed to establish care and are no more than one month old. Additional testing may still be required.",
 };
 
 export const membershipExclusions = [
@@ -172,11 +177,15 @@ export const billingPolicy = {
   membershipCovers:
     "Monthly membership covers ongoing clinical consultations, follow-up evaluations (telehealth or in office), protocol titration management, and core monthly hormone medication supplies included in the selected tier (testosterone, and for women's programs progesterone and estradiol as listed).",
   recurring:
-    "Monthly membership fees are processed automatically on the designated billing date. An active, paid membership is required for ongoing clinical care, laboratory management and prescription refills.",
+    "Monthly membership fees are processed automatically on the same day each month. A card on file is required for autopay. An active, paid membership is required for ongoing clinical care, laboratory management and prescription refills.",
   nonPayment:
     "If a monthly fee is declined or unpaid, pending and future compounding pharmacy orders, medication shipments and clinical appointments are paused. Prescriptions are not reordered or sent until the account balance is paid in full. Persistent non-payment past 30 days may result in discharge from the practice and cancellation of active prescriptions.",
   priceAdjustments:
     "Base monthly fees reflect current compounding pharmacy supplier costs. If market disruptions, shortages, regulatory changes or significant supplier price increases occur, membership fees and medication costs may be adjusted. Patients receive at least 30 days of written notice before a price adjustment takes effect.",
+  refunds:
+    "Consultation and membership fees are generally nonrefundable.",
+  shipping:
+    "Prescribed hormone medications are typically shipped to the patient's home. Local pharmacy pickup may be available depending on the filling pharmacy.",
 };
 
 /** Homepage teaser aliases */

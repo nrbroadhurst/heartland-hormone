@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description:
-    "Men's testosterone therapy, women's menopause care and medical weight management in Overland Park and the Kansas City area, with telehealth throughout Kansas.",
+    "Men's testosterone therapy, women's menopause care and medical weight management in Overland Park and the Kansas City area, with telehealth throughout Kansas and Missouri.",
   openGraph: {
     title: SITE.name,
     description:
-      "Personalized hormone replacement and medical weight management for men and women. Overland Park / Kansas City plus telehealth throughout Kansas.",
+      "Personalized hormone replacement and medical weight management for men and women. Overland Park / Kansas City plus telehealth throughout Kansas and Missouri.",
     type: "website",
     locale: "en_US",
     siteName: SITE.name,

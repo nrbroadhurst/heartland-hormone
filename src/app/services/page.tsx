@@ -34,7 +34,7 @@ export default function ServicesHubPage() {
         <div className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
           <SectionHeading
             title="Additional services"
-            description="Peptide therapy, sexual wellness and healthy-aging support may be considered for selected patients."
+            description="Peptide therapy is coming soon. Sexual wellness and healthy-aging support may be considered for selected patients."
           />
           <ServicesGrid services={SECONDARY_SERVICES} />
         </div>

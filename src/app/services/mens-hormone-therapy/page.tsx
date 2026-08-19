@@ -15,7 +15,7 @@ const PATH = "/services/mens-hormone-therapy";
 export const metadata: Metadata = pageMeta({
   title: "Testosterone Replacement Therapy in Overland Park, KS",
   description:
-    "TRT and men's hormone care in Overland Park and Kansas City, with telehealth throughout Kansas. Evaluation, monitoring and follow-up from Heartland Hormone.",
+    "TRT and men's hormone care in Overland Park and Kansas City, with telehealth throughout Kansas and Missouri. Evaluation, monitoring and follow-up from Heartland Hormone.",
   path: PATH,
 });
 
@@ -40,7 +40,7 @@ export default function MensHormonePage() {
       <PageHero
         eyebrow="Men's Care"
         title="Men's Hormone Therapy & Testosterone Replacement"
-        description={`Heartland Hormone & Wellness Clinic provides individualized evaluation and treatment for men experiencing symptoms that may be related to testosterone deficiency. Care is available in person in the Kansas City area and through telehealth for eligible patients throughout Kansas.`}
+        description={`Heartland Hormone & Wellness Clinic provides individualized evaluation and treatment for men experiencing symptoms that may be related to testosterone deficiency. Care is available in person in the Kansas City area and through telehealth for eligible patients throughout Kansas and Missouri.`}
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Schedule a Men's Hormone Consultation" />
@@ -149,7 +149,7 @@ export default function MensHormonePage() {
 
       <CTASection
         headline="Schedule a Men's Hormone Consultation"
-        subtext="In-person care in the Kansas City area, with telehealth throughout Kansas when eligible."
+        subtext="In-person care in the Kansas City area, with telehealth throughout Kansas and Missouri when eligible."
         ctaLabel="Schedule a Men's Hormone Consultation"
         secondaryLabel="View Men's Hormone Pricing"
         secondaryHref="/pricing#mens-hormone"

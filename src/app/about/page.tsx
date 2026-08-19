@@ -10,7 +10,7 @@ import { clinicJsonLd, personJsonLd } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "About | Experienced Care, Local Roots",
   description:
-    "Heartland Hormone & Wellness Clinic was founded by an AGACNP-BC with decades of clinical experience and more than four decades in the Kansas City community.",
+    "Heartland Hormone & Wellness Clinic was founded by Sherry Broadhurst, MSN, APRN, AGACNP-BC, with decades of clinical experience and more than four decades in the Kansas City community.",
   path: "/about",
 });
 
@@ -29,7 +29,7 @@ const PILLARS = [
   },
   {
     title: "Telehealth Access",
-    quote: "Follow-up for eligible Kansas patients when clinically appropriate.",
+    quote: "Follow-up for eligible Kansas and Missouri patients when clinically appropriate.",
   },
   {
     title: "Evidence-Based Decisions",
@@ -74,9 +74,10 @@ export default function AboutPage() {
             <div className="h-px w-16 bg-gold mb-6" />
             <div className="space-y-4 text-charcoal/90 leading-relaxed">
               <p>
-                Heartland Hormone & Wellness Clinic was founded by an
-                Adult-Gerontology Acute Care Nurse Practitioner, AGACNP-BC, with
-                decades of advanced clinical experience.
+                Heartland Hormone & Wellness Clinic was founded by{" "}
+                {SITE.providerName}, {SITE.providerCredential}, an{" "}
+                {SITE.providerTitle} with decades of advanced clinical experience.
+                Care is nurse practitioner-led.
               </p>
               <p>
                 Raised in Miami County, the founder made the Kansas City metro
@@ -126,7 +127,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
         <SectionHeading
           title="Credentials"
-          description="Board-certified Adult-Gerontology Acute Care Nurse Practitioner (AGACNP-BC)."
+          description={`${SITE.providerCredential}. ${SITE.providerTitle}.`}
         />
         <p className="text-sm text-charcoal/70 max-w-2xl">
           {SITE.serviceAreaLine} License details are confirmed during your visit.

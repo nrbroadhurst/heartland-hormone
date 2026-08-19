@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/locations",
     "/pricing",
     "/faq",
+    "/patient-portal",
     "/contact",
     "/privacy-policy",
     "/notice-of-privacy-practices",
