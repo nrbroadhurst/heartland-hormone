@@ -14,6 +14,7 @@ type PricingCardProps = {
   featured?: boolean;
   note?: string;
   billingNote?: string;
+  className?: string;
 };
 
 export function PricingCard({
@@ -27,14 +28,16 @@ export function PricingCard({
   featured = false,
   note,
   billingNote,
+  className,
 }: PricingCardProps) {
   return (
     <article
       className={cn(
-        "flex h-full flex-col rounded-md border p-6 md:p-8",
+        "flex h-full min-h-0 flex-col rounded-md border p-6 md:p-8 lg:min-h-[34rem]",
         featured
           ? "border-gold bg-teal text-cream"
           : "border-gold/40 bg-cream",
+        className,
       )}
     >
       <h3
@@ -53,7 +56,7 @@ export function PricingCard({
       >
         {price}
       </p>
-      {billingNote && (
+      {billingNote ? (
         <p
           className={cn(
             "text-sm mb-3 -mt-1",
@@ -61,6 +64,10 @@ export function PricingCard({
           )}
         >
           Recurring billing. {billingNote} unless canceled.
+        </p>
+      ) : (
+        <p className="text-sm mb-3 -mt-1 invisible" aria-hidden="true">
+          Recurring billing. 13 billing cycles per year unless canceled.
         </p>
       )}
       <p

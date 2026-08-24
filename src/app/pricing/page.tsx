@@ -54,7 +54,7 @@ export default function PricingPage() {
             title="Initial Medical Consultation"
             description="Required for new hormone care and medical weight-management patients. Laboratory fees are paid separately, typically before labs are ordered."
           />
-          <div className="max-w-2xl">
+          <div className="grid gap-8 lg:grid-cols-2">
             <PricingCard
               featured
               name={pricing.initialEvaluation.name}
@@ -136,7 +136,7 @@ export default function PricingPage() {
             title="Medical Weight Management Program"
             description={pricing.weightManagement.summary}
           />
-          <div className="max-w-2xl">
+          <div className="grid gap-8 lg:grid-cols-2">
             <PricingCard
               featured
               name={pricing.weightManagement.name}
