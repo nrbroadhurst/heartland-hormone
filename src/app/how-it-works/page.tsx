@@ -9,7 +9,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "How It Works",
   description:
-    "Four steps from labs and consultation to ongoing monitoring at Heartland Hormone. In-person care in the Kansas City area and telehealth throughout Kansas and Missouri when eligible.",
+    "Four steps from labs and consultation to ongoing monitoring at Heartland Hormone. Local Kansas City-area clinic with convenient follow-up options.",
   path: "/how-it-works",
 });
 
@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="The Process"
         title="How It Works"
-        description="A straightforward path from labs and first conversation to ongoing care, whether you join us in Overland Park / Kansas City or by telehealth throughout Kansas and Missouri."
+        description="A straightforward path from labs and first conversation to ongoing care at our Kansas City-area clinic."
       >
         <BookButton />
       </PageHero>
@@ -31,9 +31,8 @@ export default function HowItWorksPage() {
         />
         <StepList />
         <p className="mt-8 text-sm text-charcoal/75 max-w-3xl leading-relaxed">
-          {SITE.telehealthStatement} {SITE.firstVisitPreference} We do not promise
-          that testosterone or other prescriptions can always be provided entirely
-          online.
+          {SITE.virtualCareStatement} {SITE.firstVisitPreference} We do not promise
+          that prescriptions can always be provided entirely through virtual care.
         </p>
       </section>
 
@@ -52,9 +51,8 @@ export default function HowItWorksPage() {
       </section>
 
       <CTASection
-        headline="Schedule a Consultation"
-        subtext="Choose men's hormone care, women's hormone care or medical weight management."
-        ctaLabel="Schedule a Consultation"
+        headline="Ready to get started?"
+        subtext="Book a consultation at our Kansas City-area clinic."
         secondaryLabel="View Programs & Pricing"
         secondaryHref="/pricing"
       />

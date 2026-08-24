@@ -9,7 +9,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Contact & Book a Consultation",
   description:
-    "Book a men's hormone, women's hormone or weight-management consultation with Heartland Hormone in Overland Park / Kansas City, or by telehealth throughout Kansas and Missouri.",
+    "Book a men's hormone, women's hormone or weight-management consultation with Heartland Hormone at our Overland Park / Kansas City clinic.",
   path: "/contact",
 });
 
@@ -28,7 +28,7 @@ export default async function ContactPage({ searchParams }: Props) {
       <PageHero
         eyebrow="Contact"
         title="Book a Consultation"
-        description="Call, email or send a message. Initial visits are typically 45 minutes to 1 hour. An in-person first visit is preferred. Follow-up may be in office or by telehealth."
+        description="Call, email or send a message. Initial visits are typically 45 minutes to 1 hour. An in-person first visit is preferred. Virtual follow-up may be available when clinically and legally appropriate."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">

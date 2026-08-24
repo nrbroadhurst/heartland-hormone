@@ -34,7 +34,7 @@ export default function PatientPortalPage() {
             "Upload documents such as previous lab results",
             "Pay invoices when they are sent",
             "Message the clinic when messaging is enabled",
-            "Join telehealth visits when they are scheduled in OptiMantra",
+            "Join virtual care visits when they are scheduled in OptiMantra",
           ]}
         />
 

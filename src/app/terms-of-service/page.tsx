@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { billingConfig } from "@/lib/billing";
+import { billingPolicy } from "@/lib/pricing";
 import { SITE, hasEmail } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
@@ -18,7 +21,10 @@ export default function TermsOfServicePage() {
         description="Terms governing use of this website. Not a substitute for a provider-patient agreement."
       />
       <article className="mx-auto max-w-3xl px-4 py-14 md:px-6 space-y-8 text-charcoal/90 leading-relaxed">
-        <p className="text-sm text-charcoal/60">Last updated: August 17, 2026</p>
+        <p className="text-sm text-charcoal/60">
+          Last updated: August 24, 2026. Sections marked for attorney review
+          should be confirmed before final launch.
+        </p>
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">Acceptance</h2>
@@ -39,6 +45,62 @@ export default function TermsOfServicePage() {
             individually with a licensed provider following consultation and
             appropriate evaluation.
           </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="font-display text-2xl text-teal tracking-wide">
+            Eligibility and prescription decisions
+          </h2>
+          <p>
+            Not every patient qualifies for every service described on this
+            website. Prescription treatment is provided only when clinically
+            appropriate following evaluation. Browsing this website does not
+            guarantee eligibility, approval or a specific treatment plan.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="font-display text-2xl text-teal tracking-wide">
+            Recurring programs and billing
+          </h2>
+          <p>
+            Some clinical programs use recurring billing. Recurring programs may
+            be billed {billingConfig.frequencyLabel}. {billingConfig.cyclesPerYearLabel}.
+          </p>
+          <p>{billingPolicy.recurringAuthorization}</p>
+          <p>
+            See{" "}
+            <Link href="/recurring-billing" className="text-teal underline underline-offset-2">
+              Recurring Billing & Cancellation
+            </Link>{" "}
+            and{" "}
+            <Link href="/pricing" className="text-teal underline underline-offset-2">
+              Programs & Pricing
+            </Link>
+            .
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="font-display text-2xl text-teal tracking-wide">
+            Cancellation and refunds
+          </h2>
+          <p>{billingPolicy.cancellation}</p>
+          <p>{billingPolicy.refunds}</p>
+          <p>
+            See{" "}
+            <Link href="/refund-policy" className="text-teal underline underline-offset-2">
+              Refund Policy
+            </Link>
+            .
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="font-display text-2xl text-teal tracking-wide">
+            Pharmacy fulfillment
+          </h2>
+          <p>{billingPolicy.pharmacyFulfillment}</p>
         </section>
 
         <section className="space-y-3">
@@ -74,7 +136,7 @@ export default function TermsOfServicePage() {
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">Contact</h2>
           <p>
-            {SITE.name}
+            {SITE.legalBusinessName}
             {hasEmail() ? (
               <>
                 {" "}

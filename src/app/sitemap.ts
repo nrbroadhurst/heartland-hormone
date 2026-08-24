@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SERVICES } from "@/lib/services";
+import { getPublicServices } from "@/lib/services";
 import { SITE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy-policy",
     "/notice-of-privacy-practices",
     "/terms-of-service",
+    "/recurring-billing",
+    "/refund-policy",
     "/telehealth-consent",
     "/medical-disclaimer",
   ];
@@ -27,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: path === "" ? 1 : 0.7,
     })),
-    ...SERVICES.map((s) => ({
+    ...getPublicServices().map((s) => ({
       url: `${SITE.siteUrl}${s.href}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,

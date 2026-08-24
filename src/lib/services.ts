@@ -1,3 +1,5 @@
+import { features } from "@/lib/features";
+
 export type ServiceSlug =
   | "mens-hormone-therapy"
   | "womens-hormone-therapy"
@@ -24,72 +26,73 @@ export type Service = {
   whatToExpect: string[];
   safetyCallout: string;
   extraDisclosure?: string;
+  publiclyMarketable: boolean;
 };
 
 export const SERVICES: Service[] = [
   {
     slug: "mens-hormone-therapy",
-    title: "Men's Hormone Therapy",
+    title: "Men's Hormone Care",
     shortTitle: "Men's Hormone Care",
     href: "/services/mens-hormone-therapy",
     description:
-      "Evaluation and treatment for low testosterone, fatigue, decreased strength, reduced libido, changes in body composition and other symptoms that may be associated with testosterone deficiency.",
+      "Evaluation and treatment for low energy, decreased libido, decreased strength, changes in body composition, mood changes and other symptoms that may be associated with hormone deficiency.",
     heroDescriptor:
-      "Testosterone evaluation and replacement for appropriately selected men, with laboratory monitoring and follow-up in the Kansas City area or by telehealth.",
+      "Individualized men's hormone evaluation and treatment with laboratory monitoring and ongoing clinical follow-up from a local Kansas provider.",
     highlights: [
-      "Testosterone replacement therapy",
-      "Ongoing laboratory monitoring",
-      "Sexual wellness",
-      "Tadalafil when appropriate",
-      "In-person and telehealth follow-up",
+      "Clinical evaluation for hormone-related symptoms",
+      "Appropriate laboratory testing",
+      "Individualized treatment when clinically appropriate",
+      "Ongoing medical monitoring",
+      "Sexual wellness evaluation when appropriate",
     ],
     ctaLabel: "Explore Men's Hormone Care",
     primary: true,
     icon: "user",
-    seoTitle: "Testosterone Replacement Therapy in Overland Park, KS",
+    seoTitle: "Men's Hormone Care in Overland Park, KS",
     seoDescription:
-      "TRT and men's hormone care in Overland Park and the Kansas City area, with telehealth throughout Kansas and Missouri. Evaluation, monitoring and follow-up from Heartland Hormone.",
+      "Men's hormone care and hormone replacement evaluation in Overland Park and the Kansas City area. Clinical evaluation, monitoring and follow-up from Heartland Hormone.",
     whatItIs:
-      "Men's hormone therapy at Heartland starts with a clinical evaluation for symptoms that may be related to testosterone deficiency. Testosterone replacement may be considered after history, examination when appropriate and laboratory review.",
+      "Men's hormone care at Heartland starts with a clinical evaluation for symptoms that may be related to hormone deficiency. Treatment may be considered after history, examination when appropriate and laboratory review.",
     whoItsFor: [
       "Men with low energy, reduced libido or changes in strength and body composition.",
       "Men who want a structured evaluation rather than a one-size-fits-all protocol.",
-      "Men who prefer local Kansas City-area care with telehealth follow-up when appropriate.",
+      "Men who prefer a local Kansas City-area clinic with follow-up options when appropriate.",
     ],
     whatToExpect: [
       "Schedule a men's hormone consultation.",
       "Complete evaluation and baseline laboratory review.",
-      "Discuss whether treatment is appropriate, including testosterone cypionate or other formulations.",
+      "Discuss whether treatment is appropriate based on clinical findings.",
       "Begin follow-up, monitoring and medication adjustments if treatment is started.",
     ],
     safetyCallout:
-      "Symptoms of low testosterone can have many causes. Laboratory testing and clinical evaluation are required before treatment. Testosterone is prescribed only when clinically appropriate.",
+      "Hormone-related symptoms can have many causes. Laboratory testing and clinical evaluation are required before treatment. Prescription treatment is provided only when clinically appropriate.",
+    publiclyMarketable: true,
   },
   {
     slug: "womens-hormone-therapy",
-    title: "Women's Hormone Therapy",
+    title: "Women's Hormone & Menopause Care",
     shortTitle: "Women's Hormone Care",
     href: "/services/womens-hormone-therapy",
     description:
-      "Personalized care for women experiencing perimenopause, menopause and hormone-related symptoms.",
+      "Personalized care for women experiencing perimenopause, menopause, hot flashes, night sweats, disrupted sleep, mood changes, fatigue, libido concerns and other hormone-related symptoms.",
     heroDescriptor:
-      "Menopause and perimenopause care with estradiol, progesterone, vaginal estrogen and, when appropriate, testosterone.",
+      "Individualized perimenopause and menopause care with customized hormone treatment, laboratory evaluation and ongoing clinical monitoring.",
     highlights: [
-      "Estradiol",
-      "Progesterone",
-      "Vaginal estrogen",
-      "Testosterone when appropriate",
-      "Customized treatment options",
-      "Ongoing follow-up and medication adjustments",
+      "Perimenopause and menopause care",
+      "Hot flashes, night sweats and sleep changes",
+      "Individualized hormone treatment",
+      "Ongoing clinical management",
+      "Sexual wellness support when appropriate",
     ],
     ctaLabel: "Explore Women's Hormone Care",
     primary: true,
     icon: "heart",
-    seoTitle: "Menopause & Women's Hormone Therapy in Overland Park, KS",
+    seoTitle: "Menopause & Women's Hormone Care in Overland Park, KS",
     seoDescription:
-      "Menopause and perimenopause care in Overland Park and Kansas City. Individualized hormone therapy with follow-up from Heartland Hormone.",
+      "Menopause and perimenopause care in Overland Park and Kansas City. Individualized women's hormone care with clinical follow-up from Heartland Hormone.",
     whatItIs:
-      "Women's hormone care is based on symptoms, medical history, risk factors and each patient's goals. Treatment may include FDA-approved therapies and, when an individualized need cannot be met by commercial products, customized compounded formulations.",
+      "Women's hormone and menopause care is based on symptoms, medical history, risk factors and each patient's goals. Customized prescription formulations may be considered when clinically appropriate and legally available.",
     whoItsFor: [
       "Women in perimenopause or menopause with hot flashes, sleep changes, low energy or related symptoms.",
       "Women with vaginal dryness, painful intercourse or other genitourinary symptoms.",
@@ -103,6 +106,7 @@ export const SERVICES: Service[] = [
     ],
     safetyCallout:
       "Hormone therapy is not appropriate for every woman. Decisions consider uterine status, bleeding history, breast history, cardiovascular and thromboembolic risk, family history and treatment goals.",
+    publiclyMarketable: true,
   },
   {
     slug: "weight-management",
@@ -110,38 +114,38 @@ export const SERVICES: Service[] = [
     shortTitle: "Weight Management",
     href: "/services/weight-management",
     description:
-      "Provider-guided medical weight management using evidence-based treatment, ongoing monitoring and prescription medication when appropriate.",
+      "Medical evaluation and individualized treatment for weight-related health concerns, with prescription treatment when clinically appropriate, dose management and ongoing follow-up.",
     heroDescriptor:
-      "Medical weight-management care with GLP-1 and GIP/GLP-1 options when clinically appropriate, plus dose management and follow-up.",
+      "Medical weight-management care with clinical evaluation, monitoring and prescription treatment when appropriate.",
     highlights: [
-      "GLP-1 and GIP/GLP-1 treatment",
-      "Semaglutide",
-      "Tirzepatide",
-      "Dose management",
-      "Side-effect monitoring",
-      "Ongoing follow-up",
+      "Medical evaluation",
+      "Prescription treatment when clinically appropriate",
+      "Dose management and side-effect monitoring",
+      "Nutrition and activity guidance",
+      "Ongoing medical follow-up",
     ],
     ctaLabel: "Explore Weight Management",
     primary: true,
     icon: "scale",
-    seoTitle: "Medical Weight Loss in Overland Park, KS",
+    seoTitle: "Medical Weight Management in Overland Park, KS",
     seoDescription:
-      "Medical weight management in Overland Park and Kansas City, including GLP-1 and GIP/GLP-1 treatment when appropriate. Semaglutide and tirzepatide options with clinical follow-up.",
+      "Medical weight management in Overland Park and Kansas City. Clinical evaluation, monitoring and prescription treatment when appropriate.",
     whatItIs:
       "Medical weight management combines evaluation, lifestyle guidance and prescription medication when clinically appropriate. Medication selection depends on health history, goals, contraindications, availability, cost and preference.",
     whoItsFor: [
       "Adults who may benefit from prescription weight-management treatment and ongoing monitoring.",
       "Patients who want dose titration and side-effect support rather than a one-time prescription.",
-      "Kansas City-area patients who want in-person or telehealth follow-up.",
+      "Kansas City-area patients who want in-person evaluation with follow-up options when appropriate.",
     ],
     whatToExpect: [
       "Schedule a weight-management consultation.",
       "Review medical history, prior weight-loss attempts and medications.",
-      "Discuss branded or, when legally and clinically appropriate, patient-specific compounded options.",
-      "Follow up for titration, side-effect management and weight tracking.",
+      "Discuss treatment options if clinically appropriate.",
+      "Follow up for titration, side-effect management and progress tracking.",
     ],
     safetyCallout:
-      "Prescription weight-loss medication is not appropriate for every patient. We do not guarantee a specific amount of weight loss. Compounded products are not equivalent to FDA-approved branded medications.",
+      "Prescription weight-management treatment is not appropriate for every patient. We do not guarantee a specific amount of weight loss. Customized prescription formulations are not FDA-approved products.",
+    publiclyMarketable: true,
   },
   {
     slug: "peptide-therapy",
@@ -149,35 +153,34 @@ export const SERVICES: Service[] = [
     shortTitle: "Peptide Therapy",
     href: "/services/peptide-therapy",
     description:
-      "Peptide therapy is coming soon. Heartland will offer selected peptide protocols only after clinical evaluation.",
+      "Peptide therapy is not currently offered as a public service. Content is preserved for future launch after compliance review.",
     heroDescriptor:
-      "Peptide therapy is coming soon. It will be a secondary service for selected patients after evaluation.",
+      "Peptide therapy is not currently offered as a public service.",
     highlights: [
-      "Coming soon",
-      "Considered only after clinical evaluation",
+      "Not currently publicly offered",
+      "Considered only after clinical evaluation when available",
       "Not a first-line offering",
     ],
     ctaLabel: "Contact Heartland",
     primary: false,
     icon: "dna",
-    seoTitle: "Peptide Therapy Coming Soon | Heartland Hormone",
+    seoTitle: "Peptide Therapy | Heartland Hormone",
     seoDescription:
-      "Peptide therapy is coming soon at Heartland Hormone in Overland Park. Contact the clinic to be notified when this service is available.",
+      "Peptide therapy is not currently offered as a public service at Heartland Hormone.",
     whatItIs:
-      "Peptide therapy is coming soon. When offered, it may be considered for selected patients based on individual goals, available evidence, medical history and clinical appropriateness. Some compounded peptide preparations are not FDA-approved medications and have not been reviewed by the FDA for safety, effectiveness or quality.",
+      "Peptide therapy is not currently offered as a public service. When offered in the future, it may be considered for selected patients based on individual goals, available evidence, medical history and clinical appropriateness.",
     whoItsFor: [
-      "Patients interested in being notified when peptide therapy becomes available.",
-      "Patients already considering hormone or metabolic care who want to ask about future peptide options.",
+      "This service is not currently publicly marketed.",
     ],
     whatToExpect: [
-      "Contact the clinic if you would like to be notified when peptide therapy is offered.",
-      "Peptide protocols will be discussed only after a clinical evaluation.",
-      "Evidence, uncertainties and alternatives will be reviewed before any protocol is started.",
+      "Contact the clinic with general questions if you are an existing patient.",
+      "Peptide protocols would be discussed only after a clinical evaluation when the service becomes available.",
     ],
     safetyCallout:
-      "Peptides are not portrayed here as proven treatments for every condition. Candidacy is never assumed from marketing copy.",
+      "Peptide therapy is not currently offered as a public service on this website.",
     extraDisclosure:
-      "Some compounded peptide preparations are not FDA-approved medications and have not been reviewed by the FDA for safety, effectiveness or quality. Your provider will discuss specifics during consultation.",
+      "Some compounded peptide preparations are not FDA-approved medications and have not been reviewed by the FDA for safety, effectiveness or quality.",
+    publiclyMarketable: false,
   },
   {
     slug: "sexual-wellness",
@@ -187,10 +190,10 @@ export const SERVICES: Service[] = [
     description:
       "Evaluation and treatment for sexual health concerns in men and women, including erectile function and menopause-related symptoms.",
     heroDescriptor:
-      "Sexual wellness care as part of men's and women's hormone programs, not a standalone promise of results.",
+      "Sexual wellness care as part of men's and women's hormone programs, evaluated individually rather than promised as a standalone result.",
     highlights: [
       "Erectile function evaluation",
-      "Tadalafil when appropriate",
+      "Prescription treatment when clinically appropriate",
       "Menopause-related sexual symptoms",
     ],
     ctaLabel: "Explore Sexual Wellness",
@@ -198,9 +201,9 @@ export const SERVICES: Service[] = [
     icon: "heartPulse",
     seoTitle: "Sexual Wellness Care in Overland Park, KS",
     seoDescription:
-      "Sexual wellness evaluation for men and women in Overland Park and Kansas City, including erectile function and menopause-related symptoms when clinically appropriate.",
+      "Sexual wellness evaluation for men and women in Overland Park and Kansas City when clinically appropriate.",
     whatItIs:
-      "Sexual wellness can be evaluated as part of men's health and women's hormone care. Erectile dysfunction has many potential causes and is not always related to testosterone. For women, vaginal estrogen and other therapies may be considered for genitourinary symptoms.",
+      "Sexual wellness can be evaluated as part of men's health and women's hormone care. Contributing factors are reviewed and treatment options may be discussed when clinically appropriate.",
     whoItsFor: [
       "Men with erectile changes who want a clinical evaluation.",
       "Women with low libido, vaginal dryness or discomfort during intercourse.",
@@ -211,19 +214,20 @@ export const SERVICES: Service[] = [
       "Follow up on response and side effects.",
     ],
     safetyCallout:
-      "Sexual-wellness medications are prescribed only when clinically appropriate. We do not imply that testosterone always explains erectile dysfunction.",
+      "Sexual-wellness medications are prescribed only when clinically appropriate. Hormone changes do not explain every case of sexual dysfunction.",
+    publiclyMarketable: true,
   },
   {
     slug: "wellness-healthy-aging",
-    title: "Wellness & Healthy Aging",
+    title: "Healthy Aging & Wellness",
     shortTitle: "Healthy Aging",
     href: "/services/wellness-healthy-aging",
     description:
-      "Support for metabolic health, strength, sleep, body composition and hormone-related symptoms as you age. Aging is not reversed here.",
+      "Support for metabolic wellness, strength, sleep, body composition and hormone-related symptoms as you age.",
     heroDescriptor:
-      "Practical support for healthspan: risk evaluation, metabolic health, sleep, strength and sustainable habits.",
+      "Practical support for metabolic health, sleep, strength and sustainable habits.",
     highlights: [
-      "Metabolic health",
+      "Metabolic wellness",
       "Sleep and strength",
       "Hormone-related symptoms",
       "Preventive care coordination",
@@ -231,11 +235,11 @@ export const SERVICES: Service[] = [
     ctaLabel: "Explore Wellness Care",
     primary: false,
     icon: "leaf",
-    seoTitle: "Wellness & Healthy Aging in Overland Park, KS",
+    seoTitle: "Healthy Aging & Wellness in Overland Park, KS",
     seoDescription:
-      "Healthy aging support in Overland Park and Kansas City: metabolic health, sleep, strength, body composition and hormone-related symptoms.",
+      "Healthy aging support in Overland Park and Kansas City: metabolic wellness, sleep, strength, body composition and hormone-related symptoms.",
     whatItIs:
-      "Wellness and healthy-aging visits focus on health risk evaluation, metabolic health, sleep, strength, body composition, hormone-related symptoms, preventive care coordination and sustainable lifestyle changes. This is not an anti-aging program and does not claim to reverse aging.",
+      "Wellness and healthy-aging visits focus on health risk evaluation, metabolic wellness, sleep, strength, body composition, hormone-related symptoms, preventive care coordination and sustainable lifestyle changes.",
     whoItsFor: [
       "Adults who want a practical plan around energy, body composition and long-term health habits.",
       "Patients already in hormone or weight-management care who want broader lifestyle support.",
@@ -247,21 +251,48 @@ export const SERVICES: Service[] = [
     ],
     safetyCallout:
       "We do not claim that aging can be reversed. Plans are individualized and measured against clinical findings, not marketing claims.",
+    publiclyMarketable: true,
   },
 ];
 
 export const PRIMARY_SERVICES = SERVICES.filter((s) => s.primary);
-export const SECONDARY_SERVICES = SERVICES.filter((s) => !s.primary);
 
-export const NAV_SERVICES = SERVICES.filter((s) =>
-  [
-    "mens-hormone-therapy",
-    "womens-hormone-therapy",
-    "weight-management",
-    "peptide-therapy",
-    "sexual-wellness",
-  ].includes(s.slug),
-);
+export function getSecondaryServices() {
+  return SERVICES.filter(
+    (s) =>
+      !s.primary &&
+      s.publiclyMarketable &&
+      (s.slug !== "peptide-therapy" || features.publicPeptideMarketing),
+  );
+}
+
+export function getNavServices() {
+  return SERVICES.filter(
+    (s) =>
+      s.publiclyMarketable &&
+      (s.slug !== "peptide-therapy" || features.publicPeptideMarketing) &&
+      [
+        "mens-hormone-therapy",
+        "womens-hormone-therapy",
+        "weight-management",
+        "sexual-wellness",
+        ...(features.publicPeptideMarketing ? (["peptide-therapy"] as const) : []),
+      ].includes(s.slug),
+  );
+}
+
+export function getPublicServices() {
+  return SERVICES.filter(
+    (s) =>
+      s.publiclyMarketable &&
+      (s.slug !== "peptide-therapy" || features.publicPeptideMarketing),
+  );
+}
+
+/** @deprecated Use getNavServices() for navigation */
+export const NAV_SERVICES = getNavServices();
+
+export const SECONDARY_SERVICES = getSecondaryServices();
 
 export const DEDICATED_SERVICE_SLUGS: ServiceSlug[] = [
   "mens-hormone-therapy",
@@ -271,4 +302,13 @@ export const DEDICATED_SERVICE_SLUGS: ServiceSlug[] = [
 
 export function getService(slug: string): Service | undefined {
   return SERVICES.find((s) => s.slug === slug);
+}
+
+export function isServicePubliclyMarketable(slug: string): boolean {
+  const service = getService(slug);
+  if (!service) return false;
+  if (service.slug === "peptide-therapy" && !features.publicPeptideMarketing) {
+    return false;
+  }
+  return service.publiclyMarketable;
 }

@@ -10,7 +10,7 @@ import {
   addressLines,
   phoneHref,
 } from "@/lib/site";
-import { NAV_SERVICES } from "@/lib/services";
+import { getNavServices } from "@/lib/services";
 
 export function Footer() {
   const lines = addressLines();
@@ -62,7 +62,7 @@ export function Footer() {
               Care
             </h3>
             <ul className="space-y-2 text-sm">
-              {NAV_SERVICES.map((service) => (
+              {getNavServices().map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={service.href}
@@ -115,7 +115,7 @@ export function Footer() {
               </li>
             </ul>
             <p className="mt-4 text-xs text-cream/70 leading-relaxed">
-              {SITE.telehealthStatement}
+              {SITE.virtualCareStatement}
             </p>
           </div>
         </div>

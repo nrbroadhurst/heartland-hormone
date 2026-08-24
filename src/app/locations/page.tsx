@@ -6,9 +6,9 @@ import { MapPin, Video, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Locations | Overland Park, Kansas City & Kansas Telehealth",
+  title: "Locations | Overland Park & Kansas City",
   description:
-    "Heartland Hormone serves Overland Park and the Kansas City area in person, with telehealth throughout Kansas and Missouri for eligible patients.",
+    "Heartland Hormone serves Overland Park and the Kansas City area from a local Kansas clinic. Virtual follow-up may be available for eligible patients.",
   path: "/locations",
 });
 
@@ -20,7 +20,7 @@ export default function LocationsPage() {
     <>
       <PageHero
         eyebrow="Visit Us"
-        title="Kansas City-Area Clinic + Telehealth"
+        title="Local Kansas City-Area Clinic"
         description={`${SITE.locationLine}. Visits are by appointment only.`}
       >
         <BookButton />
@@ -34,7 +34,7 @@ export default function LocationsPage() {
             </div>
             <SectionHeading
               title="Kansas City-area clinic"
-              description="In-person visits in the Overland Park / Kansas City area for patients who prefer face-to-face care."
+              description="In-person visits in Overland Park for patients who prefer face-to-face care."
             />
             <ul className="space-y-3 text-charcoal/90 -mt-4">
               <li className="font-medium text-teal">{SITE.name}</li>
@@ -81,34 +81,36 @@ export default function LocationsPage() {
             </ul>
           </div>
 
-          <div>
-            <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-md border border-gold/40 text-teal">
-              <Video className="h-5 w-5" strokeWidth={1.5} aria-hidden />
+          {SITE.virtualCareAvailable && (
+            <div>
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-md border border-gold/40 text-teal">
+                <Video className="h-5 w-5" strokeWidth={1.5} aria-hidden />
+              </div>
+              <SectionHeading
+                title="Virtual follow-up"
+                description={SITE.virtualCareStatement}
+              />
+              <div className="rounded-md border border-gold/40 bg-cream p-6 -mt-2">
+                <p className="font-display text-sm tracking-wide text-teal mb-2">
+                  Current virtual care service area
+                </p>
+                <p className="text-charcoal/90 leading-relaxed">
+                  {SITE.virtualCareStates.join(", ")}
+                </p>
+                <p className="mt-4 text-sm text-charcoal/70 leading-relaxed">
+                  You generally need to be physically located in a state where the
+                  provider is licensed at the time of the visit. Some treatments may
+                  still require an in-person appointment.
+                </p>
+              </div>
             </div>
-            <SectionHeading
-              title="Telehealth throughout Kansas and Missouri"
-              description={SITE.telehealthStatement}
-            />
-            <div className="rounded-md border border-gold/40 bg-cream p-6 -mt-2">
-              <p className="font-display text-sm tracking-wide text-teal mb-2">
-                Current telehealth service area
-              </p>
-              <p className="text-charcoal/90 leading-relaxed">
-                {SITE.telehealthStates.join(", ")}
-              </p>
-              <p className="mt-4 text-sm text-charcoal/70 leading-relaxed">
-                You generally need to be physically located in a state where the
-                provider is licensed at the time of the visit. Some treatments may
-                still require an in-person appointment.
-              </p>
-            </div>
-          </div>
+          )}
         </div>
       </section>
 
       <CTASection
         headline="Book your visit"
-        subtext="Virtual or in person, always by appointment."
+        subtext="In-person care at our Kansas City-area clinic, by appointment."
         secondaryLabel="View Programs & Pricing"
         secondaryHref="/pricing"
       />

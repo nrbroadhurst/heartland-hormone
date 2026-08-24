@@ -8,15 +8,16 @@
  * - clinic photos
  * - booking URL / custom domain (heartlandhormone.com)
  * - tadalafil add-on pricing
- * - peptide launch pricing
  * - Quest/LabCorp cash-rate list
- * - cancellation/pause policy
+ * - cancellation/pause policy finalization
  * - attorney-reviewed legal pages
  */
 export const SITE = {
   name: "Heartland Hormone & Wellness Clinic",
+  legalBusinessName: "Heartland Hormone & Wellness Clinic",
   shortName: "Heartland",
-  tagline: "Hormone therapy and medical weight management for men and women.",
+  tagline:
+    "Personalized hormone, menopause and medical weight-management care for men and women.",
   siteUrl: "https://heartland-hormone.vercel.app",
 
   city: "Overland Park",
@@ -26,9 +27,11 @@ export const SITE = {
   county: "Johnson County",
   country: "US",
   locationLine:
-    "Overland Park / Kansas City + Telehealth Throughout Kansas and Missouri",
+    "Serving the Kansas City Area and Eligible Patients Throughout Kansas",
   serviceAreaLine:
-    "Local care in the Kansas City area. Convenient telehealth throughout Kansas and Missouri.",
+    "Local care in the Kansas City area with in-person appointments and convenient follow-up options.",
+  heroSupportingCopy:
+    "Experienced, individualized medical care from a local Kansas provider, with in-person appointments and convenient follow-up options.",
 
   streetAddress: "14400 Metcalf Avenue, Suite 150",
   addressNote: "Inside Property Evaluations/Regus Building",
@@ -51,11 +54,12 @@ export const SITE = {
   consultLength:
     "Initial consultations are typically 45 minutes to 1 hour. Follow-up visits are typically 15 to 20 minutes.",
   firstVisitPreference:
-    "An in-person first visit is preferred. Follow-up may be in office or by telehealth when clinically appropriate. Controlled substances such as testosterone may require at least one in-person visit per year.",
+    "An in-person first visit is preferred. Follow-up may be in office or by virtual visit when clinically and legally appropriate. Controlled substances may require at least one in-person visit per year.",
 
-  telehealthStates: ["Kansas", "Missouri"] as const,
-  telehealthStatement:
-    "Telehealth is available for eligible patients in Kansas and Missouri when clinically appropriate and permitted by applicable law and prescribing requirements.",
+  virtualCareAvailable: true,
+  virtualCareStates: ["Kansas", "Missouri"] as const,
+  virtualCareStatement:
+    "Virtual follow-up may be available for eligible Kansas and Missouri patients when clinically and legally appropriate.",
 
   acceptsInsurance: false,
   superbillAvailable: true,
@@ -69,10 +73,10 @@ export const SITE = {
 } as const;
 
 export const MEDICAL_DISCLAIMER =
-  "Information on this website is for general educational purposes and does not replace individualized medical evaluation or treatment. Prescription medications are provided only when clinically appropriate following evaluation by a licensed healthcare professional.";
+  "Information on this website is provided for general educational purposes and does not constitute medical advice. Treatment recommendations are individualized following appropriate clinical evaluation. Prescription treatment is provided only when clinically appropriate.";
 
 export const PRICING_DISCLAIMER =
-  "Treatment is individualized. Medication availability, dose, laboratory requirements and treatment recommendations vary by patient. Pricing shown reflects current published program structures and may change. Additional medications, laboratory testing or specialized services are billed separately. Prescription treatment is provided only when clinically appropriate. Consultation and membership fees are generally nonrefundable.";
+  "Treatment is individualized. Medication availability, dose, laboratory requirements and treatment recommendations vary by patient. Pricing shown reflects current published program structures and may change. Additional medications, laboratory testing or specialized services are billed separately. Prescription treatment is provided only when clinically appropriate. Consultation and program fees are generally nonrefundable.";
 
 export const LEGAL_LINKS = [
   { href: "/privacy-policy", label: "Privacy Policy" },
@@ -81,7 +85,9 @@ export const LEGAL_LINKS = [
     label: "Notice of Privacy Practices",
   },
   { href: "/terms-of-service", label: "Terms of Service" },
-  { href: "/telehealth-consent", label: "Telehealth Consent" },
+  { href: "/recurring-billing", label: "Recurring Billing & Cancellation" },
+  { href: "/refund-policy", label: "Refund Policy" },
+  { href: "/telehealth-consent", label: "Virtual Care Consent" },
   { href: "/medical-disclaimer", label: "Medical Disclaimer" },
 ] as const;
 

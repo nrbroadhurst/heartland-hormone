@@ -37,7 +37,7 @@ const DEFAULT_STEPS: Step[] = [
   {
     title: "Ongoing Monitoring & Adjustment",
     description:
-      "First HRT follow-up is typically 6 to 8 weeks later, then every 6 months once stable. Follow-up visits are typically 15 to 20 minutes and may be in office or by telehealth.",
+      "First hormone care follow-up is typically 6 to 8 weeks later, then every 6 months once stable. Follow-up visits are typically 15 to 20 minutes and may be in office or by virtual visit when appropriate.",
     icon: RefreshCw,
   },
 ];

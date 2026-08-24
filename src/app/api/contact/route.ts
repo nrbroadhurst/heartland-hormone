@@ -3,10 +3,13 @@ import { z } from "zod";
 
 const schema = z.object({
   name: z.string().min(2).max(120),
+  firstName: z.string().max(80).optional(),
+  lastName: z.string().max(80).optional(),
   email: z.string().email().max(200),
   phone: z.string().max(40).optional(),
   interest: z.string().max(80).optional(),
-  message: z.string().min(10).max(5000),
+  contactMethod: z.string().max(40).optional(),
+  message: z.string().max(5000).optional(),
 });
 
 export async function POST(request: Request) {
@@ -21,6 +24,7 @@ export async function POST(request: Request) {
       name: parsed.data.name,
       email: parsed.data.email,
       interest: parsed.data.interest,
+      contactMethod: parsed.data.contactMethod,
     });
 
     return NextResponse.json({ ok: true });

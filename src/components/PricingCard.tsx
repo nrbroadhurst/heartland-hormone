@@ -13,6 +13,7 @@ type PricingCardProps = {
   ctaLabel?: string;
   featured?: boolean;
   note?: string;
+  billingNote?: string;
 };
 
 export function PricingCard({
@@ -25,6 +26,7 @@ export function PricingCard({
   ctaLabel = "Book a Consultation",
   featured = false,
   note,
+  billingNote,
 }: PricingCardProps) {
   return (
     <article
@@ -51,6 +53,16 @@ export function PricingCard({
       >
         {price}
       </p>
+      {billingNote && (
+        <p
+          className={cn(
+            "text-sm mb-3 -mt-1",
+            featured ? "text-cream/75" : "text-charcoal/70",
+          )}
+        >
+          Recurring billing. {billingNote} unless canceled.
+        </p>
+      )}
       <p
         className={cn(
           "text-sm leading-relaxed mb-6",

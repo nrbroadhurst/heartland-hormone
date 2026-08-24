@@ -89,9 +89,9 @@ export default function AboutPage() {
               </p>
               <p>
                 Care is built around continuity, a personal relationship with
-                patients, local availability when you need an office visit, and
-                telehealth convenience when it fits and is permitted. Treatment
-                decisions stay individualized and evidence-based.
+                patients,                 local availability when you need an office visit, and virtual
+                follow-up when it fits and is permitted. Treatment decisions stay
+                individualized and evidence-based.
               </p>
             </div>
             <div className="mt-8">

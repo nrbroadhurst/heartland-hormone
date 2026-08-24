@@ -8,10 +8,10 @@ import {
 import { FadeIn } from "@/components/FadeIn";
 
 const DEFAULT_BADGES: { icon: LucideIcon; label: string }[] = [
-  { icon: BadgeCheck, label: "Nurse Practitioner-Led Care" },
-  { icon: MapPin, label: "Kansas City Clinic + Telehealth" },
-  { icon: FlaskConical, label: "Lab-Guided Treatment" },
-  { icon: Lock, label: "Cash-Pay Program Clarity" },
+  { icon: BadgeCheck, label: "Board-Certified Provider" },
+  { icon: MapPin, label: "Local Kansas Clinic" },
+  { icon: FlaskConical, label: "Individualized Treatment" },
+  { icon: Lock, label: "Ongoing Clinical Monitoring" },
 ];
 
 export function TrustBadgeRow({

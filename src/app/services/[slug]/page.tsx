@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getService, SERVICES, DEDICATED_SERVICE_SLUGS } from "@/lib/services";
+import {
+  getService,
+  SERVICES,
+  DEDICATED_SERVICE_SLUGS,
+  isServicePubliclyMarketable,
+} from "@/lib/services";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { ServiceExpectSteps } from "@/components/StepList";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -23,17 +28,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) return {};
-  return pageMeta({
+
+  const base = pageMeta({
     title: service.seoTitle,
     description: service.seoDescription,
     path: service.href,
   });
+
+  if (!isServicePubliclyMarketable(slug)) {
+    return {
+      ...base,
+      robots: { index: false, follow: false },
+    };
+  }
+
+  return base;
 }
 
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service || DEDICATED_SERVICE_SLUGS.includes(service.slug)) notFound();
+
+  if (!isServicePubliclyMarketable(slug)) {
+    notFound();
+  }
 
   return (
     <>
@@ -106,7 +125,7 @@ export default async function ServicePage({ params }: Props) {
 
       <CTASection
         headline={`Ready to discuss ${service.shortTitle.toLowerCase()}?`}
-        subtext="Book a consultation, virtual or in person at our Kansas City-area clinic."
+        subtext="Book a consultation at our Kansas City-area clinic."
         ctaLabel="Book a Consultation"
         secondaryLabel="View Programs & Pricing"
         secondaryHref="/pricing"

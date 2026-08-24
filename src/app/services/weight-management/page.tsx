@@ -13,9 +13,9 @@ import { SITE } from "@/lib/site";
 const PATH = "/services/weight-management";
 
 export const metadata: Metadata = pageMeta({
-  title: "Medical Weight Loss in Overland Park, KS",
+  title: "Medical Weight Management in Overland Park, KS",
   description:
-    "Medical weight management in Overland Park and Kansas City, including GLP-1 and GIP/GLP-1 treatment when appropriate. Semaglutide and tirzepatide with clinical follow-up.",
+    "Medical weight management in Overland Park and Kansas City. Clinical evaluation, monitoring and prescription treatment when appropriate.",
   path: PATH,
 });
 
@@ -40,12 +40,12 @@ export default function WeightManagementPage() {
       <PageHero
         eyebrow="Weight Management"
         title="Medical Weight Management"
-        description="Heartland Hormone & Wellness Clinic provides individualized medical weight-management care for adults who may benefit from prescription treatment, lifestyle guidance and ongoing clinical monitoring."
+        description="Heartland provides individualized medical weight-management care for adults who may benefit from prescription treatment, lifestyle guidance and ongoing clinical monitoring."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <BookButton label="Schedule a Weight Management Consultation" />
+          <BookButton label="Book a Weight Management Consultation" />
           <BookButton
-            label="View Weight Management Pricing"
+            label="View Programs & Pricing"
             href="/pricing#weight-management"
             variant="outline"
           />
@@ -53,28 +53,30 @@ export default function WeightManagementPage() {
       </PageHero>
 
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-        <SectionHeading title="Prescription Weight-Management Options" />
+        <SectionHeading title="Prescription Weight-Management Treatment" />
         <p className="text-charcoal/90 leading-relaxed -mt-4 mb-6">
-          Prescription medications may be considered when clinically appropriate
-          following a medical evaluation. Medication selection depends on health
-          history, treatment goals, contraindications, availability, cost and
-          patient preference.
+          Prescription weight-management treatment may be considered when medically
+          appropriate following a clinical evaluation. Medication selection depends
+          on health history, treatment goals, contraindications, availability, cost
+          and patient preference.
         </p>
         <TreatmentList
           items={[
-            "GLP-1 medications",
-            "GIP/GLP-1 medications",
-            "Semaglutide",
-            "Tirzepatide",
+            "Medical evaluation for weight-related health concerns",
+            "Individualized treatment planning",
+            "Prescription treatment when clinically appropriate",
+            "Dose management and side-effect monitoring",
+            "Nutrition and activity guidance",
+            "Ongoing medical follow-up",
+            "Weight and health-progress tracking",
           ]}
         />
         <p className="mt-6 text-charcoal/90 leading-relaxed">
-          FDA-approved branded medications are prescribed when appropriate and may
-          be filled through the patient&apos;s pharmacy or available manufacturer
-          programs. Patient-specific compounded medications may be considered when
-          legally and clinically appropriate. Compounded semaglutide or
-          tirzepatide is not automatically available to every patient and is not
-          described as equivalent to an FDA-approved branded product.
+          Customized prescription formulations may be considered when clinically
+          appropriate and legally available. Compounded medications are not
+          FDA-approved products and are not described as equivalent to
+          FDA-approved branded medications. Availability is not guaranteed for
+          every patient.
         </p>
       </section>
 
@@ -87,17 +89,16 @@ export default function WeightManagementPage() {
               "Review of previous weight-loss attempts",
               "Medication review",
               "Baseline laboratory evaluation when appropriate",
-              "Prescription medication when appropriate",
-              "Injection education",
+              "Prescription treatment when clinically appropriate",
+              "Injection education when applicable",
               "Dose titration",
               "Side-effect management",
               "Weight tracking",
-              "BMI tracking",
               "Basic nutrition guidance",
               "Physical activity guidance",
-              "Monthly follow-up during active treatment",
+              "Clinical follow-up during active treatment",
               "Prescription refill management",
-              "Telehealth follow-up when appropriate",
+              "Virtual follow-up when clinically and legally appropriate",
             ]}
           />
           <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
@@ -115,17 +116,17 @@ export default function WeightManagementPage() {
 
       <section className="mx-auto max-w-3xl px-4 py-10 md:px-6">
         <p className="text-sm text-charcoal/75 leading-relaxed">
-          {SITE.telehealthStatement} {SITE.serviceAreaLine} We do not guarantee a
+          {SITE.virtualCareStatement} {SITE.serviceAreaLine} We do not guarantee a
           specific amount of weight loss, and not every patient qualifies for
-          GLP-1 therapy.
+          prescription weight-management treatment.
         </p>
         <CareTeamNote />
       </section>
 
       <CTASection
-        headline="Schedule a Weight Management Consultation"
-        subtext="Provider-guided care with monitoring, not a one-time prescription."
-        ctaLabel="Schedule a Weight Management Consultation"
+        headline="Book a Weight Management Consultation"
+        subtext="Clinician-guided care with monitoring, not a guaranteed prescription."
+        ctaLabel="Book a Weight Management Consultation"
         secondaryLabel="View Programs & Pricing"
         secondaryHref="/pricing#weight-management"
       />

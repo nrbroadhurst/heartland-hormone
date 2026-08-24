@@ -8,12 +8,16 @@ const APPOINTMENT_TYPES = [
     href: "/contact?interest=mens-hormone",
   },
   {
-    label: "Women's Hormone Consultation",
+    label: "Women's Hormone & Menopause Consultation",
     href: "/contact?interest=womens-hormone",
   },
   {
-    label: "Weight Management Consultation",
+    label: "Medical Weight Management Consultation",
     href: "/contact?interest=weight-management",
+  },
+  {
+    label: "General Wellness Consultation",
+    href: "/contact?interest=wellness",
   },
 ] as const;
 

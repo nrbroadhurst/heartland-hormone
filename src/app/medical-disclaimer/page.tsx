@@ -22,9 +22,8 @@ export default function MedicalDisclaimerPage() {
         <p>
           Nothing on this site establishes a provider-patient relationship.
           Treatment decisions are made only after evaluation by a licensed
-          healthcare professional. Prescription medications, including testosterone,
-          estradiol, progesterone, GLP-1 therapies and related treatments, are
-          provided only when clinically appropriate.
+          healthcare professional. Prescription treatment is provided only when
+          clinically appropriate.
         </p>
         <p>
           Individual results vary. We do not guarantee symptom resolution, weight

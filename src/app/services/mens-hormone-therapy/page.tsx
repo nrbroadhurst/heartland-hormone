@@ -13,9 +13,9 @@ import { SITE } from "@/lib/site";
 const PATH = "/services/mens-hormone-therapy";
 
 export const metadata: Metadata = pageMeta({
-  title: "Testosterone Replacement Therapy in Overland Park, KS",
+  title: "Men's Hormone Care in Overland Park, KS",
   description:
-    "TRT and men's hormone care in Overland Park and Kansas City, with telehealth throughout Kansas and Missouri. Evaluation, monitoring and follow-up from Heartland Hormone.",
+    "Men's hormone care and evaluation in Overland Park and Kansas City. Clinical evaluation, laboratory testing, individualized treatment and ongoing monitoring from a local Kansas provider.",
   path: PATH,
 });
 
@@ -24,8 +24,8 @@ export default function MensHormonePage() {
     <>
       <JsonLd
         data={serviceJsonLd(
-          "Men's Hormone Therapy & Testosterone Replacement",
-          "Individualized evaluation and treatment for men experiencing symptoms that may be related to testosterone deficiency.",
+          "Men's Hormone Care",
+          "Individualized evaluation and treatment for men experiencing symptoms that may be related to hormone deficiency.",
           PATH,
         )}
       />
@@ -33,19 +33,19 @@ export default function MensHormonePage() {
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
           { name: "Services", path: "/services" },
-          { name: "Men's Hormone Therapy", path: PATH },
+          { name: "Men's Hormone Care", path: PATH },
         ])}
       />
 
       <PageHero
         eyebrow="Men's Care"
-        title="Men's Hormone Therapy & Testosterone Replacement"
-        description={`Heartland Hormone & Wellness Clinic provides individualized evaluation and treatment for men experiencing symptoms that may be related to testosterone deficiency. Care is available in person in the Kansas City area and through telehealth for eligible patients throughout Kansas and Missouri.`}
+        title="Men's Hormone Care"
+        description="Heartland provides individualized evaluation and treatment for men experiencing symptoms that may be related to hormone deficiency. Care is available in person at our Kansas City-area clinic, with virtual follow-up when clinically and legally appropriate."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <BookButton label="Schedule a Men's Hormone Consultation" />
+          <BookButton label="Book a Men's Hormone Consultation" />
           <BookButton
-            label="View Men's Hormone Pricing"
+            label="View Programs & Pricing"
             href="/pricing#mens-hormone"
             variant="outline"
           />
@@ -53,7 +53,7 @@ export default function MensHormonePage() {
       </PageHero>
 
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-        <SectionHeading title="Could Low Testosterone Be Affecting You?" />
+        <SectionHeading title="Could a Hormone Imbalance Be Affecting You?" />
         <p className="text-charcoal/90 leading-relaxed -mt-4 mb-6">
           These symptoms can have many causes. Laboratory testing and clinical
           evaluation are necessary before treatment.
@@ -62,10 +62,9 @@ export default function MensHormonePage() {
           items={[
             "Low energy",
             "Reduced libido",
-            "Erectile changes",
+            "Erectile concerns",
             "Loss of strength",
-            "Difficulty maintaining muscle",
-            "Increased body fat",
+            "Changes in body composition",
             "Changes in mood",
             "Decreased motivation",
             "Difficulty concentrating",
@@ -76,53 +75,49 @@ export default function MensHormonePage() {
 
       <section className="bg-teal/5 border-y border-gold/20">
         <div className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-          <SectionHeading title="Testosterone Replacement Therapy" />
+          <SectionHeading title="Individualized Hormone Treatment" />
           <div className="space-y-4 text-charcoal/90 leading-relaxed -mt-4">
             <p>
-              Testosterone replacement may be considered for appropriately
-              evaluated patients based on symptoms, medical history, examination
-              when appropriate and laboratory findings. Not everyone with these
-              symptoms receives testosterone.
+              Hormone replacement may be considered for appropriately evaluated
+              patients based on symptoms, medical history, examination when
+              appropriate and laboratory findings. Not everyone with these
+              symptoms receives hormone treatment.
             </p>
             <p>
-              When treatment is appropriate, options may include testosterone
-              cypionate injections or other clinically appropriate formulations.
-              Follow-up includes symptom review, laboratory monitoring and
-              medication adjustments.
+              When treatment is clinically appropriate, options are selected
+              individually. Follow-up includes symptom review, laboratory
+              monitoring and medication adjustments.
             </p>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-        <SectionHeading title="What Your TRT Program May Include" />
+        <SectionHeading title="What Your Program May Include" />
         <TreatmentList
           items={[
             "Comprehensive initial evaluation",
             "Baseline laboratory review",
-            "Testosterone medication when clinically appropriate",
-            "Injection supplies when applicable",
+            "Individualized hormone treatment when clinically appropriate",
+            "Supplies when applicable",
             "Education on medication administration",
-            "Routine follow-up",
+            "Routine clinical follow-up",
             "Laboratory monitoring",
             "Symptom monitoring",
-            "Hematocrit/CBC monitoring when appropriate",
-            "Blood pressure monitoring",
             "Medication adjustments",
             "Prescription refill management",
-            "Provider messaging",
             "In-office care when necessary",
-            "Telehealth follow-up when appropriate",
+            "Virtual follow-up when clinically and legally appropriate",
           ]}
         />
         <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
-          Male HRT membership starts at {pricing.mensInjections.display} for base
-          injections and {pricing.mensTransdermal.display} for transdermal cream or
-          troche options. The {pricing.initialEvaluation.display} initial evaluation
-          and laboratory fees are separate. Therapies such as hCG, anastrozole and
-          other add-ons listed on the pricing page are not included.{" "}
+          {pricing.mensInjections.name} starts at {pricing.mensInjections.display}.
+          {pricing.mensTransdermal.name} is {pricing.mensTransdermal.display}.
+          The {pricing.initialEvaluation.display} initial consultation and
+          laboratory fees are separate. Therapies listed as exclusions on the
+          pricing page are not included.{" "}
           <Link href="/pricing#mens-hormone" className="text-teal underline underline-offset-2">
-            View men&apos;s hormone pricing
+            View men&apos;s hormone programs and pricing
           </Link>
           .
         </p>
@@ -133,25 +128,25 @@ export default function MensHormonePage() {
           <SectionHeading title="Sexual Wellness" />
           <p className="text-charcoal/90 leading-relaxed -mt-4">
             Erectile function and sexual wellness can be evaluated as part of
-            men&apos;s health care. Tadalafil and similar prescription treatments
-            may be used when clinically appropriate. Erectile dysfunction is not
-            always caused by testosterone and is assessed on its own.
+            men&apos;s health care. Prescription treatments may be considered when
+            clinically appropriate. Sexual dysfunction is not always caused by
+            hormone changes and is assessed individually.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-10 md:px-6">
         <p className="text-sm text-charcoal/75 leading-relaxed">
-          {SITE.telehealthStatement} {SITE.serviceAreaLine}
+          {SITE.virtualCareStatement} {SITE.serviceAreaLine}
         </p>
         <CareTeamNote />
       </section>
 
       <CTASection
-        headline="Schedule a Men's Hormone Consultation"
-        subtext="In-person care in the Kansas City area, with telehealth throughout Kansas and Missouri when eligible."
-        ctaLabel="Schedule a Men's Hormone Consultation"
-        secondaryLabel="View Men's Hormone Pricing"
+        headline="Book a Men's Hormone Consultation"
+        subtext="Local Kansas City-area care with virtual follow-up when clinically and legally appropriate."
+        ctaLabel="Book a Men's Hormone Consultation"
+        secondaryLabel="View Programs & Pricing"
         secondaryHref="/pricing#mens-hormone"
       />
     </>

@@ -1,6 +1,6 @@
 # Heartland Hormone & Wellness Clinic
 
-Marketing and lead-generation website for a concierge hormone optimization and peptide therapy practice based in Kansas.
+Marketing and lead-generation website for Heartland Hormone & Wellness Clinic, a local Kansas hormone, menopause and medical weight-management clinic.
 
 ## Stack
 

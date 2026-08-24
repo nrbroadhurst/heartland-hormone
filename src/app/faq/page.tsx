@@ -10,7 +10,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "FAQ",
   description:
-    "Answers about telehealth, insurance, TRT, menopause care, GLP-1 treatment and pricing at Heartland Hormone in Overland Park and Kansas City.",
+    "Answers about hormone care, menopause care, medical weight management, billing and pricing at Heartland Hormone in Overland Park and Kansas City.",
   path: "/faq",
 });
 
@@ -21,7 +21,7 @@ export default function FAQPage() {
       <PageHero
         eyebrow="FAQ"
         title="Frequently Asked Questions"
-        description="Plain answers about in-person visits, telehealth, hormone therapy, weight management and pricing."
+        description="Plain answers about in-person visits, hormone care, weight management, billing and pricing."
       />
 
       <section className="mx-auto max-w-3xl px-4 py-16 md:py-20 md:px-6 space-y-12">

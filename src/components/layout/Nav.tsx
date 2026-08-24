@@ -6,7 +6,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Logo } from "@/components/logo/Logo";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS, SITE } from "@/lib/site";
-import { NAV_SERVICES } from "@/lib/services";
+import { getNavServices } from "@/lib/services";
 import { cn } from "@/lib/utils";
 
 export function AnnouncementBar() {
@@ -58,7 +58,7 @@ export function Nav() {
                   <ChevronDown className="h-3.5 w-3.5 text-gold" />
                 </Link>
                 <div className="invisible absolute left-0 top-full z-50 min-w-[260px] translate-y-1 rounded-md border border-gold/30 bg-cream p-2 opacity-0 shadow-lg transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                  {NAV_SERVICES.map((service) => (
+                  {getNavServices().map((service) => (
                     <Link
                       key={service.slug}
                       href={service.href}
@@ -145,7 +145,7 @@ export function Nav() {
                     >
                       All Services
                     </Link>
-                    {NAV_SERVICES.map((service) => (
+                    {getNavServices().map((service) => (
                       <Link
                         key={service.slug}
                         href={service.href}
