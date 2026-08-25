@@ -3,16 +3,16 @@
  * All recurring program prices inherit cadence from this file.
  */
 export const billingConfig = {
-  cycleDays: 28,
-  cyclesPerYear: 13,
-  frequencyLabel: "every 28 days",
-  cyclesPerYearLabel: "13 billing cycles per year",
+  cycleDays: 30,
+  cyclesPerYear: 12,
+  frequencyLabel: "every month",
+  cyclesPerYearLabel: "Billed monthly until canceled",
   recurringDisclosure:
-    "Automatically billed every 28 days until canceled. A 28-day billing schedule results in 13 billing cycles in a typical year.",
+    "Automatically billed every month until canceled.",
   recurringAuthorization:
-    "By enrolling, you authorize Heartland Hormone & Wellness Clinic to charge the payment method you provide every 28 days at the program rate shown until you cancel. A 28-day billing schedule results in 13 billing cycles in a typical year. You may cancel future recurring charges according to the cancellation policy.",
-  fourWeekExplanation:
-    "Our recurring care programs may use a four-week billing cycle to align treatment, follow-up and medication-management intervals.",
+    "By enrolling, you authorize Heartland Hormone & Wellness Clinic to charge the payment method you provide every month at the program rate shown until you cancel. You may cancel future recurring charges according to the cancellation policy.",
+  monthlyExplanation:
+    "Our recurring care programs are billed every month for ongoing clinical care and program management.",
 } as const;
 
 export function formatRecurringPrice(amount: number): string {

@@ -57,7 +57,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "billing-frequency",
     category: "General",
     question: "How often am I billed?",
-    answer: `Recurring Heartland programs are billed ${billingConfig.frequencyLabel} rather than once per calendar month. This aligns many treatment and follow-up cycles with four-week intervals. ${billingConfig.cyclesPerYearLabel}. Your exact program price and billing terms will be shown before enrollment.`,
+    answer: `Recurring Heartland programs are billed ${billingConfig.frequencyLabel}. ${billingConfig.cyclesPerYearLabel}. Your exact program price and billing terms will be shown before enrollment.`,
   },
   {
     id: "cancel-program",

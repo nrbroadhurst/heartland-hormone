@@ -63,11 +63,17 @@ export function PricingCard({
             featured ? "text-cream/75" : "text-charcoal/70",
           )}
         >
-          Recurring billing. {billingNote} unless canceled.
+          {billingNote}
         </p>
       ) : (
-        <p className="text-sm mb-3 -mt-1 invisible" aria-hidden="true">
-          Recurring billing. 13 billing cycles per year unless canceled.
+        <p
+          className={cn(
+            "text-sm mb-3 -mt-1 invisible",
+            featured ? "text-cream/75" : "text-charcoal/70",
+          )}
+          aria-hidden="true"
+        >
+          Billed monthly until canceled
         </p>
       )}
       <p

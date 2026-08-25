@@ -34,20 +34,6 @@ export default function PricingPage() {
       </PageHero>
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8 space-y-16">
-        <div className="rounded-md border border-gold/40 bg-teal/5 px-5 py-4 text-sm text-charcoal/85 leading-relaxed max-w-3xl">
-          <strong className="text-teal">Self-pay programs:</strong> Heartland does
-          not bill insurance for recurring program fees. A superbill can be
-          provided on request. HSA or FSA eligibility depends on your plan
-          administrator. Laboratory testing may be billed through insurance or paid
-          at discounted cash rates through Quest Diagnostics and LabCorp.
-        </div>
-
-        <div className="rounded-md border border-gold/40 bg-cream px-5 py-4 text-sm text-charcoal/85 leading-relaxed max-w-3xl">
-          <strong className="text-teal">Four-week billing cycle:</strong>{" "}
-          {billingConfig.fourWeekExplanation} Recurring programs are billed{" "}
-          {billingConfig.frequencyLabel}. {billingConfig.cyclesPerYearLabel}.
-        </div>
-
         <div id="initial-evaluation" className="scroll-mt-28">
           <SectionHeading
             eyebrow="Getting Started"

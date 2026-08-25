@@ -3,7 +3,6 @@ import { Stethoscope, UserRound, MapPin, ClipboardCheck } from "lucide-react";
 import { SITE, formattedAddress, mapsUrl } from "@/lib/site";
 import { PRIMARY_SERVICES, getSecondaryServices } from "@/lib/services";
 import { homepagePricing, pricing } from "@/lib/pricing";
-import { billingConfig } from "@/lib/billing";
 import { Button } from "@/components/ui/button";
 import { TrustBadgeRow } from "@/components/TrustBadgeRow";
 import { ServicesGrid } from "@/components/ServiceCard";
@@ -190,7 +189,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-4 text-sm text-cream/75">
-            Recurring programs: {billingConfig.cyclesPerYearLabel}.
+            Recurring programs are billed monthly.
           </p>
           <div className="mt-8">
             <Button asChild variant="gold" size="lg">
