@@ -53,7 +53,16 @@ export function AppointmentForm() {
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const nextErrors = validate(values);
+    const data = new FormData(event.currentTarget);
+    const next: FormState = {
+      name: String(data.get("name") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+      email: String(data.get("email") ?? ""),
+      reason: String(data.get("reason") ?? ""),
+      message: String(data.get("message") ?? ""),
+    };
+    setValues(next);
+    const nextErrors = validate(next);
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) {
       return;
@@ -64,7 +73,7 @@ export function AppointmentForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify(next),
       });
       if (!response.ok) {
         throw new Error("Request failed");
