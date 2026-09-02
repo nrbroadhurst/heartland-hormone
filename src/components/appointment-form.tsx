@@ -3,18 +3,12 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { CheckCircle2 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { clinic, visitReasons } from "@/lib/clinic";
+import { cn } from "@/lib/utils";
 
 type FormState = {
   name: string;
@@ -100,32 +94,32 @@ export function AppointmentForm() {
           </a>
           .
         </p>
-        <Button
-          className="mt-6 h-10 px-4"
-          variant="outline"
+        <button
+          type="button"
+          className={cn(buttonVariants({ variant: "outline" }), "mt-6 h-10 px-4")}
           onClick={() => {
             setStatus("idle");
             setErrors({});
           }}
         >
           Send another request
-        </Button>
+        </button>
       </div>
     );
   }
 
+  const fieldClass =
+    "h-11 w-full min-w-0 rounded-lg border border-input bg-transparent px-3 py-1 text-base outline-none transition-colors focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm";
+
   return (
-    <form onSubmit={onSubmit} className="space-y-5" noValidate>
+    <form method="post" action="/contact" onSubmit={onSubmit} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field
-          id="name"
-          label="Full name"
-          error={errors.name}
-        >
+        <Field id="name" label="Full name" error={errors.name}>
           <Input
             id="name"
             name="name"
             autoComplete="name"
+            required
             value={values.name}
             aria-invalid={Boolean(errors.name)}
             className="h-11 px-3"
@@ -140,6 +134,7 @@ export function AppointmentForm() {
             name="phone"
             type="tel"
             autoComplete="tel"
+            required
             value={values.phone}
             aria-invalid={Boolean(errors.phone)}
             className="h-11 px-3"
@@ -171,30 +166,24 @@ export function AppointmentForm() {
       </Field>
 
       <Field id="reason" label="What brings you in?" error={errors.reason}>
-        <Select
-          value={values.reason || null}
-          onValueChange={(value) =>
-            setValues((current) => ({
-              ...current,
-              reason: String(value ?? ""),
-            }))
+        <select
+          id="reason"
+          name="reason"
+          required
+          value={values.reason}
+          aria-invalid={Boolean(errors.reason)}
+          className={fieldClass}
+          onChange={(event) =>
+            setValues((current) => ({ ...current, reason: event.target.value }))
           }
         >
-          <SelectTrigger
-            id="reason"
-            className="h-11 w-full min-w-0 px-3"
-            aria-invalid={Boolean(errors.reason)}
-          >
-            <SelectValue placeholder="Select a reason" />
-          </SelectTrigger>
-          <SelectContent align="start" alignItemWithTrigger={false}>
-            {visitReasons.map((reason) => (
-              <SelectItem key={reason.value} value={reason.value}>
-                {reason.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+          <option value="">Select a reason</option>
+          {visitReasons.map((reason) => (
+            <option key={reason.value} value={reason.value}>
+              {reason.label}
+            </option>
+          ))}
+        </select>
       </Field>
 
       <Field
@@ -221,13 +210,16 @@ export function AppointmentForm() {
         </p>
       ) : null}
 
-      <Button
+      <button
         type="submit"
         disabled={status === "submitting"}
-        className="h-11 w-full px-5 text-base sm:w-auto"
+        className={cn(
+          buttonVariants(),
+          "h-11 w-full px-5 text-base sm:w-auto",
+        )}
       >
         {status === "submitting" ? "Sending…" : "Request a visit"}
-      </Button>
+      </button>
       <p className="text-xs leading-relaxed text-muted-foreground">
         Submitting this form requests a call back. It does not create a patient
         relationship or guarantee an appointment time.

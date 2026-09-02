@@ -10,12 +10,7 @@ import {
 } from "lucide-react";
 
 import { ButtonLink } from "@/components/button-link";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { FaqList } from "@/components/faq-list";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -24,7 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { clinic, faqs, services } from "@/lib/clinic";
+import { clinic, services } from "@/lib/clinic";
 
 const steps = [
   {
@@ -205,18 +200,7 @@ export default function HomePage() {
               .
             </p>
           </div>
-          <Accordion>
-            {faqs.map((faq, index) => (
-              <AccordionItem key={faq.question} value={`faq-${index}`}>
-                <AccordionTrigger className="py-4 text-base">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <FaqList />
         </div>
       </section>
 

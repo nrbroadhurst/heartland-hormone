@@ -2,17 +2,30 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 
 import { Logo } from "@/components/logo";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { clinic, navLinks } from "@/lib/clinic";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-primary/10 bg-background/90 backdrop-blur-md">
@@ -61,23 +74,25 @@ export function SiteHeader() {
           </Link>
         </div>
 
-        <Button
-          variant="outline"
-          size="icon-lg"
-          className="md:hidden"
+        <button
+          type="button"
+          className={cn(
+            buttonVariants({ variant: "outline", size: "icon-lg" }),
+            "md:hidden",
+          )}
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-controls="mobile-nav"
         >
           {open ? <X /> : <Menu />}
           <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-        </Button>
+        </button>
       </div>
 
       {open ? (
         <div
           id="mobile-nav"
-          className="border-t border-border bg-background px-4 py-4 md:hidden"
+          className="fixed inset-x-0 top-16 z-50 border-b border-border bg-background px-4 py-4 shadow-md md:hidden"
         >
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {navLinks.map((link) => (
