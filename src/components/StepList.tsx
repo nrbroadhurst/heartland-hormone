@@ -37,7 +37,7 @@ const DEFAULT_STEPS: Step[] = [
   {
     title: "Ongoing Care and Monitoring",
     description:
-      "Regular follow-up visits and monitoring help keep treatment safe, effective and aligned with your goals. First hormone care follow-up is typically 6 to 8 weeks later, then every 6 months once stable. Visits may be in office or by virtual visit when appropriate.",
+      "Regular follow-up visits and monitoring help keep treatment safe, effective and aligned with your goals. First hormone care follow-up is typically 6 to 8 weeks later, then approximately every 6 months once stable. Visits may be in office or by virtual visit when appropriate.",
     icon: RefreshCw,
   },
 ];

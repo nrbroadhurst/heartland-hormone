@@ -162,7 +162,7 @@ export const labPolicy = {
   titration:
     "The first follow-up after starting hormone care is 6 to 8 weeks later and may be in office or by virtual visit when appropriate. Hormone labs should be drawn before that visit. Dose adjustments are made as needed.",
   maintenance:
-    "Once on a stable dose, routine follow-up appointments and labs occur every 6 months.",
+    "Once on a stable dose, routine follow-up appointments and labs occur approximately every 6 months.",
   annual:
     "A comprehensive annual lab panel is required once per year for long-term safety monitoring and prescription renewals.",
   modality:
