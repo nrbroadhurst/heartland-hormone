@@ -7,18 +7,18 @@ import { CTASection } from "@/components/CTASection";
 import { TreatmentList } from "@/components/TreatmentList";
 import { pageMeta } from "@/lib/seo";
 import {
+  INQUIRY_PRICE_NOTE,
   pricing,
   labPolicy,
   membershipExclusions,
   billingPolicy,
 } from "@/lib/pricing";
-import { billingConfig } from "@/lib/billing";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Programs & Pricing",
   description:
-    "Heartland Hormone clinical program pricing: $200 initial consultation, men's and women's hormone care programs, medical weight management, lab schedule and billing policies.",
+    "Heartland Hormone clinical programs for men's and women's hormone care and medical weight management. Fees are provided during consultation.",
   path: "/pricing",
 });
 
@@ -28,7 +28,7 @@ export default function PricingPage() {
       <PageHero
         eyebrow="Programs & Pricing"
         title="Programs & Pricing"
-        description="Published clinical program fees for hormone care and medical weight management. Laboratory fees are paid separately, typically before labs are ordered. The $200 initial consultation applies to new hormone care and weight-management patients."
+        description="Clinical programs for hormone care and medical weight management. Fees are reviewed during consultation. Laboratory fees are paid separately, typically before labs are ordered."
       >
         <BookButton />
       </PageHero>
@@ -45,6 +45,7 @@ export default function PricingPage() {
               featured
               name={pricing.initialEvaluation.name}
               price={pricing.initialEvaluation.display}
+              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.initialEvaluation.summary}
               includes={pricing.initialEvaluation.includes}
               notIncluded={pricing.initialEvaluation.notIncluded}
@@ -65,7 +66,7 @@ export default function PricingPage() {
               featured
               name={pricing.mensInjections.name}
               price={pricing.mensInjections.display}
-              billingNote={billingConfig.cyclesPerYearLabel}
+              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.mensInjections.summary}
               includes={pricing.mensInjections.includes}
               notIncluded={pricing.mensInjections.notIncluded}
@@ -75,7 +76,7 @@ export default function PricingPage() {
             <PricingCard
               name={pricing.mensTransdermal.name}
               price={pricing.mensTransdermal.display}
-              billingNote={billingConfig.cyclesPerYearLabel}
+              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.mensTransdermal.summary}
               includes={pricing.mensTransdermal.includes}
               notIncluded={pricing.mensTransdermal.notIncluded}
@@ -96,7 +97,7 @@ export default function PricingPage() {
               featured
               name={pricing.womensTriple.name}
               price={pricing.womensTriple.display}
-              billingNote={billingConfig.cyclesPerYearLabel}
+              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.womensTriple.summary}
               includes={pricing.womensTriple.includes}
               notIncluded={pricing.womensTriple.notIncluded}
@@ -106,7 +107,7 @@ export default function PricingPage() {
             <PricingCard
               name={pricing.womensAdvanced.name}
               price={pricing.womensAdvanced.display}
-              billingNote={billingConfig.cyclesPerYearLabel}
+              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.womensAdvanced.summary}
               includes={pricing.womensAdvanced.includes}
               notIncluded={pricing.womensAdvanced.notIncluded}
@@ -127,6 +128,7 @@ export default function PricingPage() {
               featured
               name={pricing.weightManagement.name}
               price={pricing.weightManagement.display}
+              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.weightManagement.summary}
               includes={pricing.weightManagement.includes}
               notIncluded={pricing.weightManagement.notIncluded}

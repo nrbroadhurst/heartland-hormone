@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { billingConfig } from "@/lib/billing";
-import { billingPolicy, pricing } from "@/lib/pricing";
+import { billingPolicy } from "@/lib/pricing";
 import { SITE } from "@/lib/site";
 import { integrations } from "@/lib/integrations";
 import { pageMeta } from "@/lib/seo";
@@ -111,20 +111,23 @@ export default function RecurringBillingPage() {
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">
-            Current published program rates
+            Program fees
           </h2>
-          <ul className="space-y-2 text-sm">
-            <li>{pricing.mensInjections.name}: {pricing.mensInjections.display}</li>
-            <li>{pricing.mensTransdermal.name}: {pricing.mensTransdermal.display}</li>
-            <li>{pricing.womensTriple.name}: {pricing.womensTriple.display}</li>
-            <li>{pricing.womensAdvanced.name}: {pricing.womensAdvanced.display}</li>
-          </ul>
+          <p>
+            Monthly program fees are reviewed during consultation and confirmed
+            before any enrollment or recurring charge. Heartland Hormone does not
+            publish dollar amounts on this site.
+          </p>
+          <p>
+            The amount charged is the program fee you enroll in after
+            consultation. It is not a separate billing-platform fee.
+          </p>
           <p className="text-sm">
             See{" "}
             <Link href="/pricing" className="text-teal underline underline-offset-2">
               Programs & Pricing
             </Link>{" "}
-            for full program details.
+            for what each program includes.
           </p>
         </section>
       </article>

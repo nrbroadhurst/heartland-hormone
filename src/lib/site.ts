@@ -76,7 +76,7 @@ export const MEDICAL_DISCLAIMER =
   "Information on this website is provided for general educational purposes and does not constitute medical advice. Treatment recommendations are individualized following appropriate clinical evaluation. Prescription treatment is provided only when clinically appropriate.";
 
 export const PRICING_DISCLAIMER =
-  "Treatment is individualized. Medication availability, dose, laboratory requirements and treatment recommendations vary by patient. Pricing shown reflects current published program structures and may change. Additional medications, laboratory testing or specialized services are billed separately. Prescription treatment is provided only when clinically appropriate. Consultation and program fees are generally nonrefundable.";
+  "Treatment is individualized. Medication availability, dose, laboratory requirements and treatment recommendations vary by patient. Program and consultation fees are provided during consultation and may change. Additional medications, laboratory testing or specialized services are billed separately. Prescription treatment is provided only when clinically appropriate. Consultation and program fees are generally nonrefundable.";
 
 export const LEGAL_LINKS = [
   { href: "/privacy-policy", label: "Privacy Policy" },

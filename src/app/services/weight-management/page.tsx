@@ -107,7 +107,7 @@ export default function WeightManagementPage() {
               href="/pricing#weight-management"
               className="text-teal underline underline-offset-2"
             >
-              View weight-management pricing
+              View weight-management programs
             </Link>
             .
           </p>

@@ -1,11 +1,15 @@
 /**
- * Clinic fee schedule. Pages and homepage teasers read from this file.
+ * Clinic fee schedule.
+ * Public pages show inquiry-based copy only. Numeric amounts stay here for
+ * internal invoice setup and are not printed on the website.
  */
 import {
   billingConfig,
-  formatRecurringPrice,
-  formatRecurringTeaser,
 } from "@/lib/billing";
+
+export const INQUIRY_PRICE_LABEL = "By inquiry";
+export const INQUIRY_PRICE_NOTE =
+  "Fees are reviewed during consultation and depend on the treatment plan.";
 
 export const pricing = {
   initialEvaluation: {
@@ -15,8 +19,8 @@ export const pricing = {
     href: "/contact",
     price: 200,
     cadence: "one-time" as const,
-    display: "$200 one-time",
-    teaserDisplay: "$200 one-time",
+    display: INQUIRY_PRICE_LABEL,
+    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Required for new hormone care and medical weight-management patients. One-time consultation and comprehensive medical assessment. Laboratory fees are paid separately, typically before labs are ordered.",
@@ -42,8 +46,8 @@ export const pricing = {
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
-    display: formatRecurringPrice(199),
-    teaserDisplay: formatRecurringTeaser(199),
+    display: INQUIRY_PRICE_LABEL,
+    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Core men's hormone care with injection-based treatment when clinically appropriate, supplies, shipping, lab interpretation, dose management and ongoing clinical monitoring.",
@@ -70,7 +74,8 @@ export const pricing = {
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
-    display: formatRecurringPrice(229),
+    display: INQUIRY_PRICE_LABEL,
+    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Advanced men's hormone care with transdermal or troche formulations when clinically appropriate, plus shipping, lab interpretation and ongoing clinical monitoring.",
@@ -97,8 +102,8 @@ export const pricing = {
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
-    display: formatRecurringPrice(199),
-    teaserDisplay: formatRecurringTeaser(199),
+    display: INQUIRY_PRICE_LABEL,
+    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Core women's hormone and menopause care with customized hormone therapy when clinically appropriate, plus shipping, lab interpretation and ongoing clinical monitoring.",
@@ -125,7 +130,8 @@ export const pricing = {
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
-    display: formatRecurringPrice(229),
+    display: INQUIRY_PRICE_LABEL,
+    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Comprehensive women's hormone care with advanced customized formulations when clinically appropriate, plus specialized supplies, shipping and ongoing clinical monitoring.",
@@ -146,13 +152,13 @@ export const pricing = {
     name: "Medical Weight Management Program",
     invoiceDescription: "Medical Weight Management Program",
     href: "/services/weight-management",
-    display: "$200 consult + medication",
-    teaserDisplay: "From $200 consult",
+    display: INQUIRY_PRICE_LABEL,
+    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
-      "Weight-management-only patients pay a $200 initial consultation plus medication and laboratory fees. Patients already enrolled in a hormone care program are not charged a separate weight-management consult. Medication is billed separately.",
+      "Weight-management-only patients complete an initial consultation; medication and laboratory fees are billed separately. Patients already enrolled in a hormone care program are not charged a separate weight-management consult. Exact fees are reviewed during consultation.",
     includes: [
-      "$200 initial consultation for weight-management-only patients",
+      "Initial consultation for weight-management-only patients",
       "Ongoing weight-management care as part of an active hormone care program, without a separate consult fee",
       "Prescription treatment when clinically appropriate, billed separately",
     ],

@@ -152,8 +152,8 @@ export default function HomePage() {
           <SectionHeading
             onDark
             eyebrow="Programs"
-            title="Straightforward, Transparent Pricing"
-            description="Clear cash-pay clinical programs so patients understand what care includes before starting treatment."
+            title="Clinical Programs"
+            description="Cash-pay hormone and weight-management programs. Fees are reviewed during consultation so care can be matched to your plan."
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -189,7 +189,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-4 text-sm text-cream/75">
-            Recurring programs are billed monthly.
+            Recurring programs, when enrolled, are billed monthly. Exact fees are provided during consultation.
           </p>
           <div className="mt-8">
             <Button asChild variant="gold" size="lg">

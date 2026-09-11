@@ -131,15 +131,14 @@ export default function WomensHormonePage() {
             ]}
           />
           <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
-            {pricing.womensTriple.name} starts at {pricing.womensTriple.display}.
-            {pricing.womensAdvanced.name} is {pricing.womensAdvanced.display}.
-            The {pricing.initialEvaluation.display} initial consultation and
+            {pricing.womensTriple.name} and {pricing.womensAdvanced.name}{" "}
+            fees are reviewed during consultation. The initial consultation and
             laboratory fees are separate.{" "}
             <Link
               href="/pricing#womens-hormone"
               className="text-teal underline underline-offset-2"
             >
-              View women&apos;s hormone programs and pricing
+              View women&apos;s hormone programs
             </Link>
             .
           </p>

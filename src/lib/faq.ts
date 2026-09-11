@@ -29,7 +29,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "initial-eval",
     category: "General",
     question: "What does the initial consultation cost?",
-    answer: `${pricing.initialEvaluation.name} is ${pricing.initialEvaluation.display} for new hormone care and medical weight-management patients. Laboratory fees are separate and are typically paid before labs are ordered through Quest Diagnostics or LabCorp.`,
+    answer:
+      "Initial consultation fees are provided during scheduling and depend on the visit. Laboratory fees are separate and are typically paid before labs are ordered through Quest Diagnostics or LabCorp.",
   },
   {
     id: "insurance",
@@ -95,7 +96,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "mens-program-included",
     category: "Men's Hormone Care",
     question: "What is included in the men's hormone care program?",
-    answer: `${pricing.mensInjections.name} is ${pricing.mensInjections.display} and includes individualized men's hormone care, supplies when applicable, shipping, routine lab interpretation and ongoing clinical monitoring when clinically appropriate. ${pricing.mensTransdermal.name} is ${pricing.mensTransdermal.display} for advanced formulation options. Therapies listed as program exclusions on the pricing page are billed separately.`,
+    answer: `${pricing.mensInjections.name} includes individualized men's hormone care, supplies when applicable, shipping, routine lab interpretation and ongoing clinical monitoring when clinically appropriate. ${pricing.mensTransdermal.name} is available for advanced formulation options. Program fees are reviewed during consultation. Therapies listed as program exclusions on the programs page are billed separately.`,
   },
   {
     id: "lab-frequency",
@@ -149,7 +150,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "women-meds-included",
     category: "Women's Hormone & Menopause Care",
     question: "Are medications included in the program?",
-    answer: `${pricing.womensTriple.name} is ${pricing.womensTriple.display} and includes program medications when clinically appropriate. ${pricing.womensAdvanced.name} is ${pricing.womensAdvanced.display} for comprehensive hormone care options. Laboratory fees and therapies listed as exclusions are billed separately.`,
+    answer: `${pricing.womensTriple.name} includes program medications when clinically appropriate. ${pricing.womensAdvanced.name} is available for comprehensive hormone care options. Program fees are reviewed during consultation. Laboratory fees and therapies listed as exclusions are billed separately.`,
   },
   {
     id: "program-billing",
@@ -162,13 +163,13 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Weight Management",
     question: "What prescription treatment is available for weight management?",
     answer:
-      "Prescription weight-management treatment may be considered when medically appropriate following a clinical evaluation. Weight-management-only patients pay a $200 consultation plus medication and laboratory fees. Medication selection depends on health history, goals and clinical appropriateness.",
+      "Prescription weight-management treatment may be considered when medically appropriate following a clinical evaluation. Weight-management-only patients complete an initial consultation; medication and laboratory fees are billed separately. Exact fees are reviewed during consultation. Medication selection depends on health history, goals and clinical appropriateness.",
   },
   {
     id: "weight-meds-cost",
     category: "Weight Management",
     question: "Is medication included in the program cost?",
-    answer: `${pricing.weightManagement.summary} Medication is billed separately from the $200 consult.`,
+    answer: `${pricing.weightManagement.summary} Medication is billed separately from the consultation.`,
   },
   {
     id: "weight-follow-up",

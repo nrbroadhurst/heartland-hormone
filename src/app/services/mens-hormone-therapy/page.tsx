@@ -111,13 +111,12 @@ export default function MensHormonePage() {
           ]}
         />
         <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
-          {pricing.mensInjections.name} starts at {pricing.mensInjections.display}.
-          {pricing.mensTransdermal.name} is {pricing.mensTransdermal.display}.
-          The {pricing.initialEvaluation.display} initial consultation and
+          {pricing.mensInjections.name} and {pricing.mensTransdermal.name}{" "}
+          fees are reviewed during consultation. The initial consultation and
           laboratory fees are separate. Therapies listed as exclusions on the
-          pricing page are not included.{" "}
+          programs page are not included.{" "}
           <Link href="/pricing#mens-hormone" className="text-teal underline underline-offset-2">
-            View men&apos;s hormone programs and pricing
+            View men&apos;s hormone programs
           </Link>
           .
         </p>
