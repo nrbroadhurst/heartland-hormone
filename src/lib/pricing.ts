@@ -1,15 +1,11 @@
 /**
  * Clinic fee schedule.
- * Public pages show inquiry-based copy only. Numeric amounts stay here for
- * internal invoice setup and are not printed on the website.
+ * Public pages do not print dollar amounts. Numeric values stay here for
+ * internal invoice setup.
  */
 import {
   billingConfig,
 } from "@/lib/billing";
-
-export const INQUIRY_PRICE_LABEL = "By inquiry";
-export const INQUIRY_PRICE_NOTE =
-  "Fees are reviewed during consultation and depend on the treatment plan.";
 
 export const pricing = {
   initialEvaluation: {
@@ -19,8 +15,6 @@ export const pricing = {
     href: "/contact",
     price: 200,
     cadence: "one-time" as const,
-    display: INQUIRY_PRICE_LABEL,
-    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Required for new hormone care and medical weight-management patients. One-time consultation and comprehensive medical assessment. Laboratory fees are paid separately, typically before labs are ordered.",
@@ -46,8 +40,6 @@ export const pricing = {
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
-    display: INQUIRY_PRICE_LABEL,
-    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Core men's hormone care with injection-based treatment when clinically appropriate, supplies, shipping, lab interpretation, dose management and ongoing clinical monitoring.",
@@ -74,8 +66,6 @@ export const pricing = {
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
-    display: INQUIRY_PRICE_LABEL,
-    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Advanced men's hormone care with transdermal or troche formulations when clinically appropriate, plus shipping, lab interpretation and ongoing clinical monitoring.",
@@ -102,8 +92,6 @@ export const pricing = {
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
-    display: INQUIRY_PRICE_LABEL,
-    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Core women's hormone and menopause care with customized hormone therapy when clinically appropriate, plus shipping, lab interpretation and ongoing clinical monitoring.",
@@ -130,8 +118,6 @@ export const pricing = {
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
-    display: INQUIRY_PRICE_LABEL,
-    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Comprehensive women's hormone care with advanced customized formulations when clinically appropriate, plus specialized supplies, shipping and ongoing clinical monitoring.",
@@ -152,8 +138,6 @@ export const pricing = {
     name: "Medical Weight Management Program",
     invoiceDescription: "Medical Weight Management Program",
     href: "/services/weight-management",
-    display: INQUIRY_PRICE_LABEL,
-    teaserDisplay: INQUIRY_PRICE_LABEL,
     confirmed: true,
     summary:
       "Weight-management-only patients complete an initial consultation; medication and laboratory fees are billed separately. Patients already enrolled in a hormone care program are not charged a separate weight-management consult. Exact fees are reviewed during consultation.",
@@ -227,13 +211,6 @@ export const refundPolicyPending = {
   recurringCancellationDeadline: null as string | null,
   duplicateBillingPolicy: null as string | null,
   failedPaymentPolicy: null as string | null,
-};
-
-/** Homepage teaser aliases */
-export const homepagePricing = {
-  mens: pricing.mensInjections,
-  womens: pricing.womensTriple,
-  weight: pricing.weightManagement,
 };
 
 /** Service-level invoice description reference for OptiMantra setup */

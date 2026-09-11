@@ -7,7 +7,6 @@ import { CTASection } from "@/components/CTASection";
 import { TreatmentList } from "@/components/TreatmentList";
 import { pageMeta } from "@/lib/seo";
 import {
-  INQUIRY_PRICE_NOTE,
   pricing,
   labPolicy,
   membershipExclusions,
@@ -44,8 +43,6 @@ export default function PricingPage() {
             <PricingCard
               featured
               name={pricing.initialEvaluation.name}
-              price={pricing.initialEvaluation.display}
-              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.initialEvaluation.summary}
               includes={pricing.initialEvaluation.includes}
               notIncluded={pricing.initialEvaluation.notIncluded}
@@ -65,8 +62,6 @@ export default function PricingPage() {
             <PricingCard
               featured
               name={pricing.mensInjections.name}
-              price={pricing.mensInjections.display}
-              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.mensInjections.summary}
               includes={pricing.mensInjections.includes}
               notIncluded={pricing.mensInjections.notIncluded}
@@ -75,8 +70,6 @@ export default function PricingPage() {
             />
             <PricingCard
               name={pricing.mensTransdermal.name}
-              price={pricing.mensTransdermal.display}
-              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.mensTransdermal.summary}
               includes={pricing.mensTransdermal.includes}
               notIncluded={pricing.mensTransdermal.notIncluded}
@@ -96,8 +89,6 @@ export default function PricingPage() {
             <PricingCard
               featured
               name={pricing.womensTriple.name}
-              price={pricing.womensTriple.display}
-              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.womensTriple.summary}
               includes={pricing.womensTriple.includes}
               notIncluded={pricing.womensTriple.notIncluded}
@@ -106,8 +97,6 @@ export default function PricingPage() {
             />
             <PricingCard
               name={pricing.womensAdvanced.name}
-              price={pricing.womensAdvanced.display}
-              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.womensAdvanced.summary}
               includes={pricing.womensAdvanced.includes}
               notIncluded={pricing.womensAdvanced.notIncluded}
@@ -127,8 +116,6 @@ export default function PricingPage() {
             <PricingCard
               featured
               name={pricing.weightManagement.name}
-              price={pricing.weightManagement.display}
-              billingNote={INQUIRY_PRICE_NOTE}
               summary={pricing.weightManagement.summary}
               includes={pricing.weightManagement.includes}
               notIncluded={pricing.weightManagement.notIncluded}

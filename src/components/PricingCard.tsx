@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 
 type PricingCardProps = {
   name: string;
-  price: string;
+  price?: string;
   summary: string;
   includes: readonly string[];
   notIncluded?: readonly string[];
@@ -49,34 +49,28 @@ export function PricingCard({
       >
         {name}
       </h3>
-      <p
-        className={cn(
-          "font-display text-2xl md:text-3xl tracking-wide mb-3",
-          featured ? "text-gold-light" : "text-teal",
-        )}
-      >
-        {price}
-      </p>
+      {price ? (
+        <p
+          className={cn(
+            "font-display text-2xl md:text-3xl tracking-wide mb-3",
+            featured ? "text-gold-light" : "text-teal",
+          )}
+        >
+          {price}
+        </p>
+      ) : null}
       {billingNote ? (
         <p
           className={cn(
-            "text-sm mb-3 -mt-1",
+            "text-sm mb-3",
+            !price && "mt-0",
+            price && "-mt-1",
             featured ? "text-cream/75" : "text-charcoal/70",
           )}
         >
           {billingNote}
         </p>
-      ) : (
-        <p
-          className={cn(
-            "text-sm mb-3 -mt-1 invisible",
-            featured ? "text-cream/75" : "text-charcoal/70",
-          )}
-          aria-hidden="true"
-        >
-          Billed monthly until canceled
-        </p>
-      )}
+      ) : null}
       <p
         className={cn(
           "text-sm leading-relaxed mb-6",

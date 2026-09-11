@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Stethoscope, UserRound, MapPin, ClipboardCheck } from "lucide-react";
 import { SITE, formattedAddress, mapsUrl } from "@/lib/site";
 import { getSecondaryServices } from "@/lib/services";
-import { homepagePricing, pricing } from "@/lib/pricing";
 import {
   APPROACH_PARAGRAPHS,
   APPROACH_TITLE,
@@ -197,22 +196,18 @@ export default function HomePage() {
             {[
               {
                 name: "Initial Consultation",
-                price: pricing.initialEvaluation.teaserDisplay,
                 href: "/pricing#initial-evaluation",
               },
               {
                 name: "Men's Hormone Care",
-                price: homepagePricing.mens.teaserDisplay,
                 href: "/pricing#mens-hormone",
               },
               {
                 name: "Women's Hormone Care",
-                price: homepagePricing.womens.teaserDisplay,
                 href: "/pricing#womens-hormone",
               },
               {
                 name: "Medical Weight Management",
-                price: homepagePricing.weight.teaserDisplay,
                 href: "/services/weight-management",
               },
             ].map((card) => (
@@ -221,8 +216,7 @@ export default function HomePage() {
                 href={card.href}
                 className="rounded-md border border-gold/40 p-6 hover:border-gold transition"
               >
-                <h3 className="font-display text-xl tracking-wide mb-2">{card.name}</h3>
-                <p className="font-display text-2xl text-gold-light">{card.price}</p>
+                <h3 className="font-display text-xl tracking-wide">{card.name}</h3>
               </Link>
             ))}
           </div>
