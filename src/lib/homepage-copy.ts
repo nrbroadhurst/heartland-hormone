@@ -5,7 +5,7 @@
 export const HERO_HEADLINE = "Feel Like Yourself Again";
 
 export const HERO_LEAD =
-  "Helping women and men restore energy, balance, vitality and confidence through personalized hormone replacement and optimization therapy.";
+  "Helping women and men restore energy, balance, vitality, and confidence through personalized hormone replacement and symptom-guided hormone balancing.";
 
 export const HERO_SUPPORT =
   "Whether you are experiencing low testosterone, perimenopause, menopause, PCOS or weight-management challenges, we provide evidence-based care tailored to your goals and lifestyle.";

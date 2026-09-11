@@ -17,7 +17,7 @@ export const SITE = {
   legalBusinessName: "Heartland Hormone & Wellness Clinic",
   shortName: "Heartland",
   tagline:
-    "Helping women and men restore energy, balance, vitality and confidence through personalized hormone replacement and optimization therapy.",
+    "Helping women and men restore energy, balance, vitality, and confidence through personalized hormone replacement and symptom-guided hormone balancing.",
   consultCta: "Schedule Your Consultation",
   consultCtaShort: "Schedule Consultation",
   siteUrl: "https://heartland-hormone.vercel.app",
