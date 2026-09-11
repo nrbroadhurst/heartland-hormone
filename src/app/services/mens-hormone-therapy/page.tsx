@@ -40,7 +40,7 @@ export default function MensHormonePage() {
       <PageHero
         eyebrow="Men's Care"
         title="Men's Hormone Care"
-        description="Heartland provides individualized evaluation and treatment for men experiencing symptoms that may be related to hormone deficiency. Care is available in person at our Kansas City-area clinic, with virtual follow-up when clinically and legally appropriate."
+        description="Heartland provides individualized evaluation and testosterone replacement therapy when clinically appropriate for men experiencing symptoms that may be related to low testosterone. Care is available in person at our Kansas City-area clinic, with virtual follow-up when clinically and legally appropriate."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Book a Men's Hormone Consultation" />

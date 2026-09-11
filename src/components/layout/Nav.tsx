@@ -86,7 +86,7 @@ export function Nav() {
             <Link href="/patient-portal">Patient Portal</Link>
           </Button>
           <Button asChild variant="gold" size="sm" className="hidden sm:inline-flex">
-            <Link href="/contact">Book a Consultation</Link>
+            <Link href="/contact">{SITE.consultCtaShort}</Link>
           </Button>
           <button
             type="button"
@@ -185,7 +185,7 @@ export function Nav() {
           </Link>
           <Button asChild variant="gold" className="mt-4">
             <Link href="/contact" onClick={() => setOpen(false)}>
-              Book a Consultation
+              {SITE.consultCta}
             </Link>
           </Button>
         </nav>

@@ -35,7 +35,7 @@ export function BookingWidget({
           Schedule
         </p>
         <h3 className="font-display text-2xl text-teal tracking-wide mb-4">
-          Book a Consultation
+          {SITE.consultCta}
         </h3>
         <iframe
           title="Appointment scheduler"
@@ -49,7 +49,7 @@ export function BookingWidget({
   return (
     <div className="rounded-md border border-gold/40 bg-cream p-6 md:p-8">
       <p className="font-display text-xs uppercase tracking-[0.2em] text-gold mb-3">
-        Book a Consultation
+        {SITE.consultCta}
       </p>
       <h3 className="font-display text-2xl text-teal tracking-wide mb-3">
         Request an Appointment

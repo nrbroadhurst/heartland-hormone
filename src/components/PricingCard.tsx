@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { SITE } from "@/lib/site";
 
 type PricingCardProps = {
   name: string;
@@ -24,7 +25,7 @@ export function PricingCard({
   includes,
   notIncluded,
   href = "/contact",
-  ctaLabel = "Book a Consultation",
+  ctaLabel = SITE.consultCta,
   featured = false,
   note,
   billingNote,

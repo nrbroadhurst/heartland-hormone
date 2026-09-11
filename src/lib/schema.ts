@@ -18,7 +18,7 @@ export function clinicJsonLd() {
     name: SITE.name,
     url: SITE.siteUrl,
     description:
-    "Men's hormone care, women's menopause care and medical weight management in Overland Park and the Kansas City area. Local Kansas clinic with individualized treatment.",
+    "Helping women and men restore energy, balance and confidence through personalized hormone replacement, menopause care and medical weight management in Overland Park and the Kansas City area.",
     areaServed: [
       { "@type": "City", name: SITE.city },
       { "@type": "City", name: SITE.region },

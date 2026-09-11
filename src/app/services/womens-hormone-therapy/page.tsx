@@ -65,27 +65,40 @@ export default function WomensHormonePage() {
             "Vaginal symptoms",
             "Sexual wellness concerns",
             "Changes in body composition",
+            "Symptoms that may be related to PCOS",
             "Reduced sense of well-being",
           ]}
         />
       </section>
 
       <section className="bg-teal/5 border-y border-gold/20">
-        <div className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6 space-y-6">
-          <SectionHeading title="Customized Hormone Therapy" />
+        <div className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6 space-y-4">
+          <SectionHeading title="PCOS and Metabolic Hormone Care" />
           <p className="text-charcoal/90 leading-relaxed -mt-4">
-            A patient may receive one or more prescription therapies based upon
-            clinical evaluation. Specific medications, strengths and combinations
-            are determined during consultation and documented in your medical
-            record rather than listed on this public website.
-          </p>
-          <p className="text-charcoal/90 leading-relaxed">
-            FDA-approved hormone therapies are used when appropriate. Customized
-            prescription formulations may be considered when clinically appropriate
-            and legally available. Compounded hormones are not described as safer,
-            more natural, superior or free of risk.
+            Polycystic ovary syndrome (PCOS) can affect cycles, androgen levels,
+            metabolic health and long-term wellness. When clinically appropriate,
+            Heartland evaluates these concerns as part of women&apos;s hormone and
+            metabolic visits rather than as a separate walk-in program. Treatment
+            is individualized after history, examination when indicated and
+            laboratory review.
           </p>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6 space-y-6">
+        <SectionHeading title="Customized Hormone Therapy" />
+        <p className="text-charcoal/90 leading-relaxed -mt-4">
+          A patient may receive one or more prescription therapies based upon
+          clinical evaluation. Specific medications, strengths and combinations
+          are determined during consultation and documented in your medical
+          record rather than listed on this public website.
+        </p>
+        <p className="text-charcoal/90 leading-relaxed">
+          FDA-approved hormone therapies are used when appropriate. Customized
+          prescription formulations may be considered when clinically appropriate
+          and legally available. Compounded hormones are not described as safer,
+          more natural, superior or free of risk.
+        </p>
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">

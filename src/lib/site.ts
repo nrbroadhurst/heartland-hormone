@@ -17,7 +17,9 @@ export const SITE = {
   legalBusinessName: "Heartland Hormone & Wellness Clinic",
   shortName: "Heartland",
   tagline:
-    "Personalized hormone, menopause and medical weight-management care for men and women.",
+    "Helping women and men restore energy, balance, vitality and confidence through personalized hormone replacement and optimization therapy.",
+  consultCta: "Schedule Your Consultation",
+  consultCtaShort: "Schedule Consultation",
   siteUrl: "https://heartland-hormone.vercel.app",
 
   city: "Overland Park",
@@ -27,11 +29,11 @@ export const SITE = {
   county: "Johnson County",
   country: "US",
   locationLine:
-    "Serving the Kansas City Area and Eligible Patients Throughout Kansas",
+    "Based in Kansas. Serving the Kansas City area and eligible patients in Kansas and Missouri.",
   serviceAreaLine:
-    "Local care in the Kansas City area with in-person appointments and convenient follow-up options.",
+    "Local care in the Kansas City area with in-person appointments and convenient follow-up options for eligible Kansas and Missouri patients.",
   heroSupportingCopy:
-    "Experienced, individualized medical care from a local Kansas provider, with in-person appointments and convenient follow-up options.",
+    "Whether you are experiencing low testosterone, perimenopause, menopause, PCOS or weight-management challenges, we provide evidence-based care tailored to your goals and lifestyle.",
 
   streetAddress: "14400 Metcalf Avenue, Suite 150",
   addressNote: "Inside Property Evaluations/Regus Building",

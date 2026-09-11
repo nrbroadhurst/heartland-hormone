@@ -22,8 +22,7 @@ export function Footer() {
           <div className="space-y-4">
             <Logo variant="stacked" theme="dark" className="h-24 w-auto" />
             <p className="text-sm text-cream/80 leading-relaxed">
-              {SITE.name} provides men&apos;s hormone therapy, women&apos;s
-              menopause care and medical weight management. {SITE.serviceAreaLine}
+              {SITE.tagline} {SITE.serviceAreaLine}
             </p>
           </div>
 

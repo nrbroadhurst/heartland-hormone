@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Men's Hormone Care",
     href: "/services/mens-hormone-therapy",
     description:
-      "Evaluation and treatment for low energy, decreased libido, decreased strength, changes in body composition, mood changes and other symptoms that may be associated with hormone deficiency.",
+      "Evaluation and treatment for low energy, decreased libido, decreased strength, changes in body composition, mood changes, brain fog and other symptoms that may be associated with low testosterone.",
     heroDescriptor:
       "Individualized men's hormone evaluation and treatment with laboratory monitoring and ongoing clinical follow-up from a local Kansas provider.",
     highlights: [
@@ -81,9 +81,9 @@ export const SERVICES: Service[] = [
     highlights: [
       "Perimenopause and menopause care",
       "Hot flashes, night sweats and sleep changes",
+      "PCOS evaluation when clinically appropriate",
       "Individualized hormone treatment",
       "Ongoing clinical management",
-      "Sexual wellness support when appropriate",
     ],
     ctaLabel: "Explore Women's Hormone Care",
     primary: true,
@@ -96,6 +96,7 @@ export const SERVICES: Service[] = [
     whoItsFor: [
       "Women in perimenopause or menopause with hot flashes, sleep changes, low energy or related symptoms.",
       "Women with vaginal dryness, painful intercourse or other genitourinary symptoms.",
+      "Women who may benefit from evaluation of polycystic ovary syndrome (PCOS) as part of hormone and metabolic care.",
       "Women who want ongoing follow-up rather than a one-time prescription.",
     ],
     whatToExpect: [

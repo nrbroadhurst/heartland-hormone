@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { SITE } from "@/lib/site";
 
 type CTASectionProps = {
   headline: string;
@@ -16,7 +17,7 @@ type CTASectionProps = {
 export function CTASection({
   headline,
   subtext,
-  ctaLabel = "Book a Consultation",
+  ctaLabel = SITE.consultCta,
   ctaHref = "/contact",
   secondaryLabel,
   secondaryHref,

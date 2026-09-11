@@ -9,7 +9,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Hormone & Weight Management Services",
   description:
-    "Men's hormone care, women's menopause care and medical weight management in Overland Park and the Kansas City area.",
+    "Hormone replacement and optimization therapy for women and men, plus medical weight management, in Overland Park and the Kansas City area.",
   path: "/services",
 });
 
@@ -20,8 +20,8 @@ export default function ServicesHubPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Care for Men and Women"
-        description={`Men's hormone care, women's menopause care and medical weight management are the core of this practice. ${SITE.serviceAreaLine}`}
+        title="Hormone Replacement & Optimization Therapy for Women and Men"
+        description={`Hormonal changes can affect how you feel physically, mentally and emotionally. We provide comprehensive evaluations and personalized treatment plans for appropriate candidates. ${SITE.serviceAreaLine}`}
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">

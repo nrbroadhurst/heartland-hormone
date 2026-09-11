@@ -1,11 +1,23 @@
 import Link from "next/link";
 import { Stethoscope, UserRound, MapPin, ClipboardCheck } from "lucide-react";
 import { SITE, formattedAddress, mapsUrl } from "@/lib/site";
-import { PRIMARY_SERVICES, getSecondaryServices } from "@/lib/services";
+import { getSecondaryServices } from "@/lib/services";
 import { homepagePricing, pricing } from "@/lib/pricing";
+import {
+  APPROACH_PARAGRAPHS,
+  APPROACH_TITLE,
+  CLOSING_CTA_HEADLINE,
+  CLOSING_CTA_SUBTEXT,
+  COMMON_SYMPTOMS,
+  HERO_HEADLINE,
+  HERO_LEAD,
+  WHY_CHOOSE_COMMITMENTS,
+  WHY_CHOOSE_INTRO,
+} from "@/lib/homepage-copy";
 import { Button } from "@/components/ui/button";
 import { TrustBadgeRow } from "@/components/TrustBadgeRow";
 import { ServicesGrid } from "@/components/ServiceCard";
+import { SpecializedCareGrid } from "@/components/SpecializedCare";
 import { StepList } from "@/components/StepList";
 import { CTASection } from "@/components/CTASection";
 import { FadeIn } from "@/components/FadeIn";
@@ -13,6 +25,7 @@ import { SectionHeading } from "@/components/PageHero";
 import { JsonLd } from "@/components/JsonLd";
 import { TrustCard } from "@/components/TrustCard";
 import { ProviderPreview } from "@/components/ProviderPreview";
+import { TreatmentList } from "@/components/TreatmentList";
 import { clinicJsonLd } from "@/lib/schema";
 
 export default function HomePage() {
@@ -37,21 +50,20 @@ export default function HomePage() {
               Heartland Hormone &amp; Wellness Clinic
             </p>
             <h1 className="font-display max-w-3xl text-4xl leading-tight tracking-wide md:text-5xl lg:text-6xl mb-4 text-balance">
-              Feel Like Yourself Again
+              {HERO_HEADLINE}
             </h1>
             <p className="max-w-2xl text-lg md:text-xl text-cream/90 leading-relaxed mb-4">
-              Personalized hormone, menopause and medical weight-management care
-              for men and women.
+              {HERO_LEAD}
             </p>
             <p className="max-w-2xl text-base md:text-lg text-cream/80 leading-relaxed mb-8">
               {SITE.heroSupportingCopy}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button asChild variant="gold" size="lg">
-                <Link href="/contact">Book a Consultation</Link>
+                <Link href="/contact">{SITE.consultCta}</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/pricing">View Programs &amp; Pricing</Link>
+                <Link href="/pricing">View Programs</Link>
               </Button>
             </div>
             <p className="mt-6 inline-flex items-center gap-2 text-sm text-cream/85">
@@ -66,11 +78,35 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Primary Programs"
-          title="Men's Hormone Care, Women's Hormone Care and Medical Weight Management"
-          description="Three core clinical programs focused on evaluation, individualized treatment and ongoing medical monitoring."
+          eyebrow="Our Approach"
+          title={APPROACH_TITLE}
+          description={APPROACH_PARAGRAPHS[0]}
         />
-        <ServicesGrid services={PRIMARY_SERVICES} featured />
+        <p className="max-w-3xl text-charcoal/90 leading-relaxed -mt-4">
+          {APPROACH_PARAGRAPHS[1]}
+        </p>
+      </section>
+
+      <section className="bg-teal/5 border-y border-gold/20">
+        <div className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Symptoms"
+            title="Common Symptoms We Address"
+            description="Hormonal imbalances can affect many aspects of daily life. Patients often seek care for:"
+          />
+          <div className="max-w-3xl">
+            <TreatmentList items={COMMON_SYMPTOMS} />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Services"
+          title="Specialized Hormone & Metabolic Health Services"
+          description="Core clinical programs for hormone care and medical weight management, with related support when it is clinically appropriate."
+        />
+        <SpecializedCareGrid />
       </section>
 
       {secondaryServices.length > 0 && (
@@ -88,12 +124,14 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Local Kansas Care"
-          title="Local Care You Can Actually Visit"
-          description="Heartland combines the convenience of modern follow-up with the reassurance of a local Kansas medical practice."
+          eyebrow="Why Choose Heartland"
+          title="Personalized, Evidence-Based Care"
+          description={WHY_CHOOSE_INTRO}
         />
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-4 text-charcoal/90 leading-relaxed">
+            <p>Our commitment is to provide:</p>
+            <TreatmentList items={WHY_CHOOSE_COMMITMENTS} />
             <p>
               Patients who need or prefer in-person care have access to a physical
               clinic in the Kansas City area. {SITE.virtualCareStatement}
@@ -193,7 +231,7 @@ export default function HomePage() {
           </p>
           <div className="mt-8">
             <Button asChild variant="gold" size="lg">
-              <Link href="/pricing">View Programs &amp; Pricing</Link>
+              <Link href="/pricing">View Programs</Link>
             </Button>
           </div>
         </div>
@@ -216,10 +254,10 @@ export default function HomePage() {
       </section>
 
       <CTASection
-        headline="Ready to talk through your options?"
-        subtext="Book a consultation at our Kansas City-area clinic. Virtual follow-up may be available when clinically and legally appropriate."
-        ctaLabel="Book a Consultation"
-        secondaryLabel="View Programs & Pricing"
+        headline={CLOSING_CTA_HEADLINE}
+        subtext={CLOSING_CTA_SUBTEXT}
+        ctaLabel={SITE.consultCta}
+        secondaryLabel="View Programs"
         secondaryHref="/pricing"
         variant="teal"
       />

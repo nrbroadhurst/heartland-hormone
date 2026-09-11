@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { SITE } from "@/lib/site";
 
 type PageHeroProps = {
   eyebrow?: string;
@@ -75,7 +76,7 @@ export function SectionHeading({
 }
 
 export function BookButton({
-  label = "Book a Consultation",
+  label = SITE.consultCta,
   href = "/contact",
   variant = "gold" as const,
 }: {

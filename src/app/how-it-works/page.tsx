@@ -9,7 +9,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "How It Works",
   description:
-    "Four steps from labs and consultation to ongoing monitoring at Heartland Hormone. Local Kansas City-area clinic with convenient follow-up options.",
+    "Schedule a consultation, complete a comprehensive evaluation including labs, receive a personalized plan when treatment is appropriate, and continue with ongoing monitoring at Heartland Hormone.",
   path: "/how-it-works",
 });
 
@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="The Process"
         title="How It Works"
-        description="A straightforward path from labs and first conversation to ongoing care at our Kansas City-area clinic."
+        description="Schedule a consultation, complete a comprehensive evaluation including laboratory review, receive a personalized plan when treatment is appropriate, and continue with ongoing monitoring."
       >
         <BookButton />
       </PageHero>
@@ -27,7 +27,7 @@ export default function HowItWorksPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
         <SectionHeading
           title="Four steps"
-          description="Every patient starts with a consultation and appropriate evaluation. Treatment decisions are made individually."
+          description="Every patient starts with a consultation and appropriate evaluation. Treatment decisions are made individually. Prescription treatment is provided only when clinically appropriate."
         />
         <StepList />
         <p className="mt-8 text-sm text-charcoal/75 max-w-3xl leading-relaxed">
@@ -51,8 +51,8 @@ export default function HowItWorksPage() {
       </section>
 
       <CTASection
-        headline="Ready to get started?"
-        subtext="Book a consultation at our Kansas City-area clinic."
+        headline="Ready to restore your energy and confidence?"
+        subtext="Schedule a consultation at our Kansas City-area clinic to discuss whether hormone care or medical weight management may be right for you."
         secondaryLabel="View Programs & Pricing"
         secondaryHref="/pricing"
       />

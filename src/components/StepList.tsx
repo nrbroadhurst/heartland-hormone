@@ -17,27 +17,27 @@ export type Step = {
 
 const DEFAULT_STEPS: Step[] = [
   {
-    title: "Request Your Consultation",
+    title: "Schedule Your Consultation",
     description:
-      "Call, email or send a message to request an initial visit. Initial consultations are typically 45 minutes to 1 hour. An in-person first visit is preferred.",
+      "Meet with our provider to discuss your symptoms, medical history and health goals. Call, email or send a message to request an initial visit. Initial consultations are typically 45 minutes to 1 hour, and an in-person first visit is preferred.",
     icon: CalendarCheck,
   },
   {
-    title: "Pay for and Complete Labs",
+    title: "Complete a Comprehensive Evaluation",
     description:
-      "Laboratory fees are paid by the patient, typically before an order is placed. Use discounted cash rates through Quest or LabCorp, or bill through your insurance. After payment is received, a lab order is sent.",
+      "Testing and laboratory review help determine whether hormone replacement and optimization therapy or other treatment options may be appropriate. Laboratory fees are paid by the patient, typically before an order is placed, through Quest, LabCorp or insurance when available.",
     icon: FlaskConical,
   },
   {
-    title: "Attend Your Initial Consultation",
+    title: "Receive Your Personalized Treatment Plan",
     description:
-      "Review history, symptoms and lab results. If treatment is clinically appropriate, your provider will discuss options, risks, benefits, alternatives and expected follow-up.",
+      "Based on your evaluation, we develop a customized plan tailored to your needs. If treatment is clinically appropriate, your provider will discuss options, risks, benefits, alternatives and expected follow-up.",
     icon: ClipboardList,
   },
   {
-    title: "Ongoing Monitoring & Adjustment",
+    title: "Ongoing Care and Monitoring",
     description:
-      "First hormone care follow-up is typically 6 to 8 weeks later, then every 6 months once stable. Follow-up visits are typically 15 to 20 minutes and may be in office or by virtual visit when appropriate.",
+      "Regular follow-up visits and monitoring help keep treatment safe, effective and aligned with your goals. First hormone care follow-up is typically 6 to 8 weeks later, then every 6 months once stable. Visits may be in office or by virtual visit when appropriate.",
     icon: RefreshCw,
   },
 ];

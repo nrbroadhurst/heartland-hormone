@@ -7,9 +7,9 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Contact & Book a Consultation",
+  title: "Contact & Schedule a Consultation",
   description:
-    "Book a men's hormone, women's hormone or weight-management consultation with Heartland Hormone at our Overland Park / Kansas City clinic.",
+    "Schedule a men's hormone, women's hormone or weight-management consultation with Heartland Hormone at our Overland Park / Kansas City clinic.",
   path: "/contact",
 });
 
@@ -27,7 +27,7 @@ export default async function ContactPage({ searchParams }: Props) {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Book a Consultation"
+        title={SITE.consultCta}
         description="Call, email or send a message. Initial visits are typically 45 minutes to 1 hour. An in-person first visit is preferred. Virtual follow-up may be available when clinically and legally appropriate."
       />
 
