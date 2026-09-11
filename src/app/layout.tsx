@@ -1,76 +1,63 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
-
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
-import { clinic } from "@/lib/clinic";
-
+import { Cinzel, Montserrat } from "next/font/google";
+import { AnnouncementBar, Nav } from "@/components/layout/Nav";
+import { Footer } from "@/components/layout/Footer";
+import { SITE } from "@/lib/site";
 import "./globals.css";
 
-const heading = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const cinzel = Cinzel({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["600"],
+  variable: "--font-display",
+  display: "swap",
 });
 
-const sans = Source_Sans_3({
-  variable: "--font-source",
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
+  variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.siteUrl),
   title: {
-    default: `${clinic.name} | Overland Park, KS`,
-    template: `%s | ${clinic.shortName}`,
+    default: `${SITE.name} | Hormone Therapy & Weight Management in Overland Park`,
+    template: `%s | ${SITE.name}`,
   },
   description:
-    "Nurse practitioner–led hormone and wellness care in Overland Park, Kansas. Heartland Hormone & Wellness Clinic is owned by Sherry L. Broadhurst, NP, AGACNP-BC.",
+    "Men's hormone care, women's menopause care and medical weight management in Overland Park and the Kansas City area. Local Kansas clinic with individualized treatment.",
   openGraph: {
-    title: clinic.name,
+    title: SITE.name,
     description:
-      "Thoughtful, lab-guided hormone care in Overland Park. Visits by appointment.",
-    locale: "en_US",
+      "Personalized hormone, menopause and medical weight-management care for men and women. Local Kansas clinic serving the Kansas City area.",
     type: "website",
+    locale: "en_US",
+    siteName: SITE.name,
+    url: SITE.siteUrl,
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  name: clinic.name,
-  legalName: clinic.legalName,
-  telephone: "+1-913-915-4569",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "14400 Metcalf Ave Fl 1",
-    addressLocality: "Overland Park",
-    addressRegion: "KS",
-    postalCode: "66223",
-    addressCountry: "US",
-  },
-  founder: {
-    "@type": "Person",
-    name: clinic.owner.name,
-    jobTitle: clinic.owner.title,
-  },
-};
-
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html
-      lang="en"
-      className={`${heading.variable} ${sans.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+    <html lang="en">
+      <body
+        className={`${cinzel.variable} ${montserrat.variable} min-h-screen bg-cream text-charcoal antialiased font-body`}
+      >
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-gold focus:px-4 focus:py-2 focus:text-teal"
+        >
+          Skip to content
+        </a>
+        <AnnouncementBar />
+        <Nav />
+        <main id="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,20 +1,14 @@
 # Heartland Hormone & Wellness Clinic
 
-Public website for **Heartland Hormone & Wellness Clinic LLC**, a nurse practitioner–led hormone and wellness practice in Overland Park, Kansas.
+Marketing and lead-generation website for Heartland Hormone & Wellness Clinic, a local Kansas hormone, menopause and medical weight-management clinic.
 
-Owner: Sherry L. Broadhurst, NP, AGACNP-BC  
-Address: 14400 Metcalf Ave, Floor 1, Overland Park, KS 66223  
-Phone: (913) 915-4569
+## Stack
 
-## What this site includes
+- Next.js 15 (App Router) + TypeScript
+- Tailwind CSS v4 (design tokens in `src/app/globals.css`)
+- Radix Accordion, Framer Motion, React Hook Form + Zod
 
-- Home, Services, About, and Contact pages
-- Request-a-visit form with validation, loading, error, and success states
-- Clinic contact details, hours (by appointment), and a medical-information disclaimer
-
-The contact API accepts valid requests locally. It does not send email yet. Before going live, connect `/src/app/api/contact/route.ts` to the clinic’s email or scheduling tool.
-
-## Run locally
+## Getting started
 
 ```bash
 npm install
@@ -23,11 +17,12 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-```bash
-npm run build
-npm start
-```
+## Placeholders
 
-## Stack
+Anywhere you see `[PLACEHOLDER]` or `// TODO`, replace with real provider-confirmed content before launch. Do not invent names, addresses, licenses, prices, or medical claims.
 
-Next.js (App Router), TypeScript, Tailwind CSS, and shadcn/ui.
+Priority confirmations: clinic address, provider credentials, telehealth states, scheduler + BAA, membership pricing, attorney review of legal pages.
+
+## Deploy
+
+Built for Vercel. Set the real domain in `src/app/layout.tsx` (`metadataBase`), `src/app/sitemap.ts`, and `src/app/robots.ts`.

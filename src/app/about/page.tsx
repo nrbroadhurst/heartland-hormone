@@ -1,95 +1,145 @@
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
+import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
+import { CTASection } from "@/components/CTASection";
+import { FadeIn } from "@/components/FadeIn";
+import { SITE, providerCredentialLine } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { pageMeta } from "@/lib/seo";
+import { clinicJsonLd, personJsonLd } from "@/lib/schema";
 
-import { ButtonLink } from "@/components/button-link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { clinic } from "@/lib/clinic";
-
-export const metadata: Metadata = {
-  title: "About",
+export const metadata: Metadata = pageMeta({
+  title: "About | Experienced Care, Local Roots",
   description:
-    "Meet Sherry L. Broadhurst, NP, AGACNP-BC, owner of Heartland Hormone & Wellness Clinic in Overland Park, Kansas.",
-};
+    "Heartland Hormone & Wellness Clinic was founded by Sherry Broadhurst, MSN, APRN, AGACNP-BC, with decades of clinical experience and more than four decades in the Kansas City community.",
+  path: "/about",
+});
+
+const PILLARS = [
+  {
+    title: "Clinical Experience",
+    quote: "Nurse practitioner-led care grounded in years of advanced practice.",
+  },
+  {
+    title: "Continuity",
+    quote: "Follow-up, messaging and medication adjustments with the same clinic.",
+  },
+  {
+    title: "Local Availability",
+    quote: "A Kansas City-area clinic when face-to-face care is the better fit.",
+  },
+  {
+    title: "Telehealth Access",
+    quote: "Follow-up for eligible Kansas and Missouri patients when clinically appropriate.",
+  },
+  {
+    title: "Evidence-Based Decisions",
+    quote: "Symptoms, history and labs inform treatment, not a fixed protocol.",
+  },
+];
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
-      <p className="text-xs font-semibold tracking-[0.18em] text-terracotta uppercase">
-        About
-      </p>
-      <h1 className="mt-2 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-        A Kansas City clinician who opened a clinic for the visits that never
-        fit in a hospital hallway.
-      </h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-        {clinic.name} is owned and led by {clinic.owner.name},{" "}
-        {clinic.owner.credential}. The clinic sits at {clinic.addressLine1} in
-        Overland Park — close enough for patients across Johnson County and the
-        wider metro to come in without making a day of it.
-      </p>
+    <>
+      <JsonLd data={{ ...clinicJsonLd(), founder: personJsonLd() }} />
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
-          <p>
-            Sherry is a board-certified Adult-Gerontology Acute Care Nurse
-            Practitioner. Before opening this practice she cared for adults in
-            hospital and specialty settings in the Kansas City area, including
-            work in nephrology and acute care. That background shows up in how
-            she practices here: she reads the labs, she watches the whole
-            picture, and she will tell you when hormone treatment is not the
-            right next step.
-          </p>
-          <p>
-            Too many patients — especially women in midlife — are told they are
-            too old, too complicated, or “within normal limits” while they are
-            not sleeping, not thinking clearly, and not feeling like themselves.
-            This clinic exists so those visits have a home: enough time, a
-            workup that matches the story, and follow-up that does not disappear
-            after the first prescription.
-          </p>
-          <p>
-            {clinic.legalName} is a nurse practitioner organization. Care is
-            individualized. Nothing on this website is a diagnosis or a promise
-            of treatment.
-          </p>
+      <PageHero
+        eyebrow="About"
+        title="Experienced Care. Local Roots."
+        description="Heartland Hormone & Wellness Clinic was created to bring thoughtful, individualized hormone and wellness care to the community we have called home for more than four decades."
+      />
+
+      <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-2 md:items-start">
+          <FadeIn>
+            <div className="aspect-[4/5] w-full rounded-md border border-gold/30 bg-teal text-cream flex flex-col items-center justify-center px-8 text-center">
+              <p className="font-display text-xs uppercase tracking-[0.25em] text-gold mb-4">
+                Founder
+              </p>
+              <p className="font-display text-2xl tracking-wide mb-3">
+                {SITE.providerName ?? SITE.shortName}
+              </p>
+              <p className="text-sm text-cream/80 leading-relaxed">
+                {providerCredentialLine()}
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.08}>
+            <p className="font-display text-xs uppercase tracking-[0.25em] text-gold mb-3">
+              Your Provider
+            </p>
+            <h2 className="font-display text-3xl text-teal tracking-wide mb-2">
+              {SITE.providerName ?? "Nurse Practitioner-Led Care"}
+            </h2>
+            <p className="text-charcoal/70 mb-6">{providerCredentialLine()}</p>
+            <div className="h-px w-16 bg-gold mb-6" />
+            <div className="space-y-4 text-charcoal/90 leading-relaxed">
+              <p>
+                Heartland Hormone & Wellness Clinic was founded by{" "}
+                {SITE.providerName}, {SITE.providerCredential}, an{" "}
+                {SITE.providerTitle} with decades of advanced clinical experience.
+                Care is nurse practitioner-led.
+              </p>
+              <p>
+                Raised in Miami County, the founder made the Kansas City metro
+                home in 1983 and has lived and raised a family here for more than
+                four decades. Children graduated from the Blue Valley School
+                District. Those local ties are why the clinic exists: to provide
+                personalized, evidence-based hormone and wellness care to this
+                community.
+              </p>
+              <p>
+                Care is built around continuity, a personal relationship with
+                patients,                 local availability when you need an office visit, and virtual
+                follow-up when it fits and is permitted. Treatment decisions stay
+                individualized and evidence-based.
+              </p>
+            </div>
+            <div className="mt-8">
+              <BookButton />
+            </div>
+          </FadeIn>
         </div>
-        <Card>
-          <CardHeader>
-            <CardTitle className="font-heading text-xl font-semibold">
-              Credentials at a glance
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4 text-sm leading-relaxed">
-            <Fact label="Clinician" value={`${clinic.owner.name}, ${clinic.owner.credential}`} />
-            <Fact label="Role" value={clinic.owner.title} />
-            <Fact
-              label="Board certification"
-              value="Adult-Gerontology Acute Care Nurse Practitioner (AGACNP-BC)"
-            />
-            <Fact
-              label="Clinic"
-              value={`${clinic.addressLine1}, ${clinic.addressLine2}`}
-            />
-            <Fact label="Phone" value={clinic.phoneDisplay} />
-          </CardContent>
-        </Card>
-      </div>
+      </section>
 
-      <ButtonLink href="/contact" className="mt-12 h-12 px-6 text-base">
-        Request a visit
-        <ArrowRight />
-      </ButtonLink>
-    </div>
-  );
-}
+      <section className="bg-teal text-cream">
+        <div className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Practice"
+            title="What guides this clinic"
+            onDark
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 -mt-4">
+            {PILLARS.map((pillar) => (
+              <blockquote
+                key={pillar.title}
+                className="rounded-md border border-gold/30 p-6"
+              >
+                <p className="font-display text-sm tracking-[0.2em] uppercase text-gold mb-3">
+                  {pillar.title}
+                </p>
+                <p className="text-cream/90 leading-relaxed">{pillar.quote}</p>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
 
-function Fact({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <p className="text-xs font-semibold tracking-[0.14em] text-muted-foreground uppercase">
-        {label}
-      </p>
-      <p className="mt-1 text-foreground">{value}</p>
-    </div>
+      <section className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
+        <SectionHeading
+          title="Credentials"
+          description={`${SITE.providerCredential}. ${SITE.providerTitle}.`}
+        />
+        <p className="text-sm text-charcoal/70 max-w-2xl">
+          {SITE.serviceAreaLine} License details are confirmed during your visit.
+        </p>
+      </section>
+
+      <CTASection
+        headline="Ready to meet?"
+        subtext="Book a consultation, virtual or at our Kansas City-area clinic."
+        secondaryLabel="View Programs & Pricing"
+        secondaryHref="/pricing"
+      />
+    </>
   );
 }
