@@ -33,7 +33,7 @@ export const SITE = {
   serviceAreaLine:
     "Local care in the Kansas City area with in-person appointments and convenient follow-up options for eligible Kansas and Missouri patients.",
   heroSupportingCopy:
-    "Whether you are experiencing low testosterone, perimenopause, menopause, PCOS or weight-management challenges, we provide evidence-based care tailored to your goals and lifestyle.",
+    "Whether you are experiencing low testosterone, perimenopause, menopause, PMOS/PCOS or weight-management challenges, we provide evidence-based care tailored to your goals and lifestyle.",
 
   streetAddress: "14400 Metcalf Avenue, Suite 105",
   addressNote: "Inside Property Evaluations/Regus Building",
