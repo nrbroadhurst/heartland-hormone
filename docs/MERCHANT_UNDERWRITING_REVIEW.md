@@ -67,7 +67,7 @@ Annual billing cycles: 13 for 28-day recurring programs.
 ## Contact Transparency
 
 - Business: Heartland Hormone & Wellness Clinic
-- Address: 14400 Metcalf Avenue, Suite 150, Overland Park, KS 66223
+- Address: 14400 Metcalf Avenue, Suite 105, Overland Park, KS 66223
 - Phone: 913-427-9275
 - Email: sherry@heartlandhormones.com
 - Patient portal: OptiMantra (linked from header)

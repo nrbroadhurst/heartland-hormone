@@ -7,7 +7,7 @@ Write your answers after each question. "N/A" is fine if something does not appl
 **Already on the website (confirm or correct):**
 - Phone: 913-427-9275
 - Email: sherry@heartlandhormones.com
-- Address: 14400 Metcalf Avenue, Suite 150 (Inside Property Evaluations/Regus Building), Overland Park, KS
+- Address: 14400 Metcalf Avenue, Suite 105 (Inside Property Evaluations/Regus Building), Overland Park, KS
 - Men's HRT: Tier 1 $199/mo injections | Tier 2 $229/mo cream or troche
 - Women's HRT: Tier 1 $199/mo triple therapy | Tier 2 $229/mo advanced formulations
 - Initial evaluation: $200 one-time

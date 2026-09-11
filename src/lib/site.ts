@@ -35,7 +35,7 @@ export const SITE = {
   heroSupportingCopy:
     "Whether you are experiencing low testosterone, perimenopause, menopause, PCOS or weight-management challenges, we provide evidence-based care tailored to your goals and lifestyle.",
 
-  streetAddress: "14400 Metcalf Avenue, Suite 150",
+  streetAddress: "14400 Metcalf Avenue, Suite 105",
   addressNote: "Inside Property Evaluations/Regus Building",
   zip: "66223",
   phone: "913-427-9275",
