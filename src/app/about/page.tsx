@@ -45,7 +45,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Experienced Care. Local Roots."
-        description="Heartland Hormone & Wellness Clinic was created to bring thoughtful, individualized hormone and wellness care to the community we have called home for more than four decades."
+        description="Heartland Hormone & Wellness Clinic was created to bring thoughtful, individualized hormone and wellness care to the community we have called home for decades."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
