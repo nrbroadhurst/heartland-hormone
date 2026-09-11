@@ -29,8 +29,9 @@ Use service-level names only:
 
 - Initial Medical Consultation
 - Men's Hormone Care Program
+- Men's Hormone Care Program - Level 2
 - Women's Hormone Care Program
-- Comprehensive Women's Hormone Care
+- Women's Hormone Care Program - Level 2
 - Medical Weight Management Program
 - Clinical Follow-Up
 - Laboratory Services

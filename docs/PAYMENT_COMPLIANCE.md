@@ -25,8 +25,9 @@ Meeting pricing provided to Heartland:
 The public website describes clinical programs, not individual prescription products:
 
 - Men's Hormone Care Program
+- Men's Hormone Care Program - Level 2
 - Women's Hormone Care Program
-- Women's Comprehensive Hormone Care Program
+- Women's Hormone Care Program - Level 2
 - Medical Weight Management Program
 - Initial Medical Consultation
 

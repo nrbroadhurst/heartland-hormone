@@ -49,7 +49,7 @@ Removed from primary marketing:
 | Men's Hormone Care Program | $199 | Every 28 days | Yes | No |
 | Men's Hormone Care Program - Level 2 | $229 | Every 28 days | Yes | No |
 | Women's Hormone Care Program | $199 | Every 28 days | Yes | No |
-| Women's Comprehensive Hormone Care Program | $229 | Every 28 days | Yes | No |
+| Women's Hormone Care Program - Level 2 | $229 | Every 28 days | Yes | No |
 | Medical Weight Management Program | $200 consult + medication | Consult one-time; meds separate | Separate | No |
 
 Annual billing cycles: 13 for 28-day recurring programs.

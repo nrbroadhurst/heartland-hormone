@@ -110,8 +110,8 @@ export const pricing = {
   },
   womensAdvanced: {
     id: "womens-advanced",
-    name: "Women's Comprehensive Hormone Care Program",
-    invoiceDescription: "Comprehensive Women's Hormone Care",
+    name: "Women's Hormone Care Program - Level 2",
+    invoiceDescription: "Women's Hormone Care Program - Level 2",
     href: "/services/womens-hormone-therapy",
     price: 229,
     cadence: "month" as const,
