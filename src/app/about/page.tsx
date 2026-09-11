@@ -80,10 +80,10 @@ export default function AboutPage() {
                 Care is nurse practitioner-led.
               </p>
               <p>
-                Raised in Miami County, the founder made the Kansas City metro
-                home in 1983 and has lived and raised a family here for more than
-                four decades. Children graduated from the Blue Valley School
-                District. Those local ties are why the clinic exists: to provide
+                Raised in Miami County, the founder has called the Kansas City
+                metro home for many years and built a family here. With children
+                educated in the Blue Valley School District, those long-standing
+                local ties are the reason this clinic exists: to provide
                 personalized, evidence-based hormone and wellness care to this
                 community.
               </p>
