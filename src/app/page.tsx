@@ -221,7 +221,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-4 text-sm text-cream/75">
-            Recurring programs, when enrolled, are billed monthly. Exact fees are provided during consultation.
+            Recurring programs, when enrolled, are billed every four weeks. Exact fees are provided during consultation.
           </p>
           <div className="mt-8">
             <Button asChild variant="gold" size="lg">

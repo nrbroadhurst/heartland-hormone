@@ -58,7 +58,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "billing-frequency",
     category: "General",
     question: "How often am I billed?",
-    answer: `Recurring Heartland programs are billed ${billingConfig.frequencyLabel}. ${billingConfig.cyclesPerYearLabel}. Your exact program price and billing terms will be shown before enrollment.`,
+    answer: `Recurring Heartland programs are billed ${billingConfig.frequencyLabel} until canceled. Your exact program price and billing terms will be shown before enrollment.`,
   },
   {
     id: "cancel-program",

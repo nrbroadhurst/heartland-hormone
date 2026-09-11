@@ -65,7 +65,7 @@ export default function TermsOfServicePage() {
           </h2>
           <p>
             Some clinical programs use recurring billing. Recurring programs may
-            be billed {billingConfig.frequencyLabel}. {billingConfig.cyclesPerYearLabel}.
+            be billed {billingConfig.frequencyLabel} {billingConfig.cyclesPerYearLabel}.
           </p>
           <p>{billingPolicy.recurringAuthorization}</p>
           <p>

@@ -10,7 +10,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Recurring Billing & Cancellation",
   description:
-    "Heartland Hormone recurring billing, monthly program fees, cancellation process and program management information.",
+    "Heartland Hormone recurring billing, four-week program fees, cancellation process and program management information.",
   path: "/recurring-billing",
 });
 
@@ -30,13 +30,10 @@ export default function RecurringBillingPage() {
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">
-            Monthly billing
+            Recurring billing
           </h2>
           <p>{billingConfig.monthlyExplanation}</p>
-          <p>
-            Recurring programs are billed <strong>{billingConfig.frequencyLabel}</strong>.
-            {" "}{billingConfig.cyclesPerYearLabel}.
-          </p>
+          <p>Recurring programs are every four weeks until canceled.</p>
         </section>
 
         <section className="space-y-3">
