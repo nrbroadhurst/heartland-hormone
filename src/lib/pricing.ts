@@ -120,7 +120,7 @@ export const pricing = {
     shippingIncluded: true,
     confirmed: true,
     summary:
-      "Comprehensive women's hormone care with advanced customized formulations when clinically appropriate, plus specialized supplies, shipping and ongoing clinical monitoring.",
+      "Advanced women's hormone care with transdermal or troche formulations when clinically appropriate, plus shipping, lab interpretation and ongoing clinical monitoring.",
     includes: [
       "Advanced customized hormone therapy when clinically appropriate",
       "Specialized supplies when injections or combination formulations are used",
