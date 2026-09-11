@@ -156,7 +156,7 @@ export const pricing = {
 
 export const labPolicy = {
   notIncluded:
-    "Laboratory testing fees are not included in recurring program or consultation fees. Labs are paid by the patient, typically before an order is placed. Patients may use insurance or discounted cash rates through Quest Diagnostics and LabCorp.",
+    "Laboratory testing fees are not included in recurring program or consultation fees. Labs are paid by the patient, typically before an order is placed. Patients may use insurance or discounted cash rates through Quest Diagnostics.",
   preAppointment:
     "Required labs are ordered after payment is received. Complete labs before the first appointment so baseline levels can be reviewed. Follow-up hormone labs must be drawn before scheduled follow-up appointments so values can be evaluated for dose changes.",
   titration:

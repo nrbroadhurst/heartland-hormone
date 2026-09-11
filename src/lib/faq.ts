@@ -30,7 +30,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "What does the initial consultation cost?",
     answer:
-      "Initial consultation fees are provided during scheduling and depend on the visit. Laboratory fees are separate and are typically paid before labs are ordered through Quest Diagnostics or LabCorp.",
+      "Initial consultation fees are provided during scheduling and depend on the visit. Laboratory fees are separate and are typically paid before labs are ordered through Quest Diagnostics.",
   },
   {
     id: "insurance",
@@ -38,7 +38,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     question: "Do you accept insurance?",
     answer: SITE.acceptsInsurance
       ? "Insurance billing details are reviewed during scheduling."
-      : `Heartland uses cash-pay clinical programs rather than insurance billing for recurring program fees. ${SITE.superbillAvailable ? "A superbill can be provided on request for you to submit to your plan." : ""} Laboratory testing may be billed through insurance or paid at discounted cash rates through Quest Diagnostics and LabCorp.`,
+      : `Heartland uses cash-pay clinical programs rather than insurance billing for recurring program fees. ${SITE.superbillAvailable ? "A superbill can be provided on request for you to submit to your plan." : ""} Laboratory testing may be billed through insurance or paid at discounted cash rates through Quest Diagnostics.`,
   },
   {
     id: "hsa-fsa",

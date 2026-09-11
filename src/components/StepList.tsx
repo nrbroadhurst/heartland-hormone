@@ -25,7 +25,7 @@ const DEFAULT_STEPS: Step[] = [
   {
     title: "Complete a Comprehensive Evaluation",
     description:
-      "Testing and laboratory review help determine whether hormone replacement and optimization therapy or other treatment options may be appropriate. Laboratory fees are paid by the patient, typically before an order is placed, through Quest, LabCorp or insurance when available.",
+      "Testing and laboratory review help determine whether hormone replacement and optimization therapy or other treatment options may be appropriate. Laboratory fees are paid by the patient, typically before an order is placed, through Quest Diagnostics or insurance when available.",
     icon: FlaskConical,
   },
   {
