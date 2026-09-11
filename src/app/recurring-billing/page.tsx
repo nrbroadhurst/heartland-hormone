@@ -111,13 +111,9 @@ export default function RecurringBillingPage() {
             Program fees
           </h2>
           <p>
-            Monthly program fees are reviewed during consultation and confirmed
-            before any enrollment or recurring charge. Heartland Hormone does not
+            Program fees are reviewed during consultation and confirmed before
+            any enrollment or recurring charge. Heartland Hormone does not
             publish dollar amounts on this site.
-          </p>
-          <p>
-            The amount charged is the program fee you enroll in after
-            consultation. It is not a separate billing-platform fee.
           </p>
           <p className="text-sm">
             See{" "}
