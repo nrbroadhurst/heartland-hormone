@@ -111,8 +111,8 @@ export default function LocationsPage() {
       <CTASection
         headline="Book your visit"
         subtext="In-person care at our Kansas City-area clinic, by appointment."
-        secondaryLabel="View Programs & Pricing"
-        secondaryHref="/pricing"
+        secondaryLabel="View Programs"
+        secondaryHref="/programs"
       />
     </>
   );

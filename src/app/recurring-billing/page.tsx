@@ -117,8 +117,8 @@ export default function RecurringBillingPage() {
           </p>
           <p className="text-sm">
             See{" "}
-            <Link href="/pricing" className="text-teal underline underline-offset-2">
-              Programs & Pricing
+            <Link href="/programs" className="text-teal underline underline-offset-2">
+              Programs
             </Link>{" "}
             for what each program includes.
           </p>

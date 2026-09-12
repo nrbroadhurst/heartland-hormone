@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services",
     "/about",
     "/locations",
-    "/pricing",
+    "/programs",
     "/faq",
     "/patient-portal",
     "/contact",

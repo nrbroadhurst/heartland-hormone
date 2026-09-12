@@ -63,7 +63,7 @@ export default function HomePage() {
                 <Link href="/contact">{SITE.consultCta}</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/pricing">View Programs</Link>
+                <Link href="/programs">View Programs</Link>
               </Button>
             </div>
             <p className="mt-6 inline-flex items-center gap-2 text-sm text-cream/85">
@@ -229,7 +229,7 @@ export default function HomePage() {
           </p>
           <div className="mt-8">
             <Button asChild variant="gold" size="lg">
-              <Link href="/pricing">View Programs</Link>
+              <Link href="/programs">View Programs</Link>
             </Button>
           </div>
         </div>
@@ -256,7 +256,7 @@ export default function HomePage() {
         subtext={CLOSING_CTA_SUBTEXT}
         ctaLabel={SITE.consultCta}
         secondaryLabel="View Programs"
-        secondaryHref="/pricing"
+        secondaryHref="/programs"
         variant="teal"
       />
     </>

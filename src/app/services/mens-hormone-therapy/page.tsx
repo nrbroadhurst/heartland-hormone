@@ -45,8 +45,8 @@ export default function MensHormonePage() {
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Book a Men's Hormone Consultation" />
           <BookButton
-            label="View Programs & Pricing"
-            href="/pricing#mens-hormone"
+            label="View Programs"
+            href="/programs#mens-hormone"
             variant="outline"
           />
         </div>
@@ -115,7 +115,7 @@ export default function MensHormonePage() {
           fees are reviewed during consultation. The initial consultation and
           laboratory fees are separate. Therapies listed as exclusions on the
           programs page are not included.{" "}
-          <Link href="/pricing#mens-hormone" className="text-teal underline underline-offset-2">
+          <Link href="/programs#mens-hormone" className="text-teal underline underline-offset-2">
             View men&apos;s hormone programs
           </Link>
           .
@@ -145,8 +145,8 @@ export default function MensHormonePage() {
         headline="Book a Men's Hormone Consultation"
         subtext="Local Kansas City-area care with virtual follow-up when clinically and legally appropriate."
         ctaLabel="Book a Men's Hormone Consultation"
-        secondaryLabel="View Programs & Pricing"
-        secondaryHref="/pricing#mens-hormone"
+        secondaryLabel="View Programs"
+        secondaryHref="/programs#mens-hormone"
       />
     </>
   );

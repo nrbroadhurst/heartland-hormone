@@ -95,7 +95,7 @@ export const LEGAL_LINKS = [
 
 export const NAV_LINKS = [
   { href: "/services", label: "Services", children: true },
-  { href: "/pricing", label: "Programs & Pricing" },
+  { href: "/programs", label: "Programs" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },

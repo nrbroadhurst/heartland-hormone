@@ -15,18 +15,18 @@ import {
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Programs & Pricing",
+  title: "Programs",
   description:
     "Heartland Hormone clinical programs for men's and women's hormone care and medical weight management. Fees are provided during consultation.",
-  path: "/pricing",
+  path: "/programs",
 });
 
 export default function PricingPage() {
   return (
     <>
       <PageHero
-        eyebrow="Programs & Pricing"
-        title="Programs & Pricing"
+        eyebrow="Programs"
+        title="Programs"
         description="Clinical programs for hormone care and medical weight management. Fees are reviewed during consultation. Laboratory fees are paid separately, typically before labs are ordered."
       >
         <BookButton />

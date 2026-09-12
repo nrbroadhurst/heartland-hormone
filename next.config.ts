@@ -5,11 +5,19 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
+  async rewrites() {
+    return [
+      {
+        source: "/programs",
+        destination: "/pricing",
+      },
+    ];
+  },
   async redirects() {
     return [
       {
         source: "/membership",
-        destination: "/pricing",
+        destination: "/programs",
         permanent: true,
       },
       {

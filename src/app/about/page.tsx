@@ -135,8 +135,8 @@ export default function AboutPage() {
       <CTASection
         headline="Ready to meet?"
         subtext="Book a consultation, virtual or at our Kansas City-area clinic."
-        secondaryLabel="View Programs & Pricing"
-        secondaryHref="/pricing"
+        secondaryLabel="View Programs"
+        secondaryHref="/programs"
       />
     </>
   );

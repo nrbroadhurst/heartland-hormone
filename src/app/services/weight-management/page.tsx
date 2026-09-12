@@ -45,8 +45,8 @@ export default function WeightManagementPage() {
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Book a Weight Management Consultation" />
           <BookButton
-            label="View Programs & Pricing"
-            href="/pricing#weight-management"
+            label="View Programs"
+            href="/programs#weight-management"
             variant="outline"
           />
         </div>
@@ -104,7 +104,7 @@ export default function WeightManagementPage() {
           <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
             {pricing.weightManagement.summary}{" "}
             <Link
-              href="/pricing#weight-management"
+              href="/programs#weight-management"
               className="text-teal underline underline-offset-2"
             >
               View weight-management programs
@@ -127,8 +127,8 @@ export default function WeightManagementPage() {
         headline="Book a Weight Management Consultation"
         subtext="Clinician-guided care with monitoring, not a guaranteed prescription."
         ctaLabel="Book a Weight Management Consultation"
-        secondaryLabel="View Programs & Pricing"
-        secondaryHref="/pricing#weight-management"
+        secondaryLabel="View Programs"
+        secondaryHref="/programs#weight-management"
       />
     </>
   );
