@@ -11,7 +11,7 @@ export const HERO_SUPPORT =
   "Whether you are experiencing low testosterone, perimenopause, menopause, PMOS/PCOS or weight-management challenges, we provide evidence-based care tailored to your goals and lifestyle.";
 
 export const APPROACH_TITLE =
-  "Hormone Replacement & Optimization Therapy for Women and Men";
+  "Hormone Replacement & Symptom-Guided Hormone Balancing for Women and Men";
 
 export const APPROACH_PARAGRAPHS = [
   "Hormonal changes can affect how you feel physically, mentally and emotionally. We provide comprehensive evaluations and personalized treatment plans to help appropriate candidates optimize hormone health, improve quality of life and feel their best at every stage of life.",
@@ -37,7 +37,7 @@ export const COMMON_SYMPTOMS = [
 
 export const SPECIALIZED_CARE = [
   {
-    title: "Hormone Replacement & Optimization Therapy for Women",
+    title: "Hormone Replacement & Symptom-Guided Hormone Balancing for Women",
     body: "Personalized care for women experiencing hormonal changes related to perimenopause, menopause, postmenopausal symptoms or other hormone imbalances. Treatment plans are tailored to your symptoms, laboratory findings and individual health goals.",
     href: "/services/womens-hormone-therapy",
   },
@@ -52,13 +52,13 @@ export const SPECIALIZED_CARE = [
     href: "/services/womens-hormone-therapy",
   },
   {
-    title: "PCOS Evaluation & Metabolic Support",
-    body: "Care for polycystic ovary syndrome (PCOS) as part of women's hormone and metabolic visits when clinically appropriate, with attention to hormonal balance, metabolic health and long-term wellness.",
+    title: "PMOS/PCOS Evaluation & Metabolic Support",
+    body: "Care for PMOS/PCOS (polycystic ovary syndrome) as part of women's hormone and metabolic visits when clinically appropriate, with attention to hormonal balance, metabolic health and long-term wellness.",
     href: "/services/womens-hormone-therapy",
   },
   {
     title: "Medical Weight Management",
-    body: "For appropriate candidates, medically supervised weight-management programs designed to support metabolic health and complement overall hormone optimization.",
+    body: "For appropriate candidates, medically supervised weight-management programs designed to support metabolic health and complement hormone replacement and symptom-guided balancing.",
     href: "/services/weight-management",
   },
 ] as const;
@@ -79,4 +79,4 @@ export const WHY_CHOOSE_COMMITMENTS = [
 export const CLOSING_CTA_HEADLINE = "Ready to Restore Your Energy and Confidence?";
 
 export const CLOSING_CTA_SUBTEXT =
-  "Discover whether hormone replacement and optimization therapy or medical weight management may be right for you. Take the first step toward improving your health, energy and quality of life.";
+  "Discover whether hormone replacement and symptom-guided hormone balancing or medical weight management may be right for you. Take the first step toward improving your health, energy and quality of life.";

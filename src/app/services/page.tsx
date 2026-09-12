@@ -9,7 +9,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Hormone & Weight Management Services",
   description:
-    "Hormone replacement and optimization therapy for women and men, plus medical weight management, in Overland Park and the Kansas City area.",
+    "Hormone replacement and symptom-guided hormone balancing for women and men, plus medical weight management, in Overland Park and the Kansas City area.",
   path: "/services",
 });
 
@@ -20,7 +20,7 @@ export default function ServicesHubPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Hormone Replacement & Optimization Therapy for Women and Men"
+        title="Hormone Replacement & Symptom-Guided Hormone Balancing for Women and Men"
         description={`Hormonal changes can affect how you feel physically, mentally and emotionally. We provide comprehensive evaluations and personalized treatment plans for appropriate candidates. ${SITE.serviceAreaLine}`}
       />
 

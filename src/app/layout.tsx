@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description:
-    "Hormone replacement and optimization therapy for women and men, plus medical weight management, in Overland Park and the Kansas City area. Local Kansas clinic with individualized care.",
+    "Hormone replacement and symptom-guided hormone balancing for women and men, plus medical weight management, in Overland Park and the Kansas City area. Local Kansas clinic with individualized care.",
   openGraph: {
     title: SITE.name,
     description:

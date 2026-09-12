@@ -81,7 +81,7 @@ export const SERVICES: Service[] = [
     highlights: [
       "Perimenopause and menopause care",
       "Hot flashes, night sweats and sleep changes",
-      "PCOS evaluation when clinically appropriate",
+      "PMOS/PCOS evaluation when clinically appropriate",
       "Individualized hormone treatment",
       "Ongoing clinical management",
     ],
@@ -96,7 +96,7 @@ export const SERVICES: Service[] = [
     whoItsFor: [
       "Women in perimenopause or menopause with hot flashes, sleep changes, low energy or related symptoms.",
       "Women with vaginal dryness, painful intercourse or other genitourinary symptoms.",
-      "Women who may benefit from evaluation of polycystic ovary syndrome (PCOS) as part of hormone and metabolic care.",
+      "Women who may benefit from evaluation of PMOS/PCOS (polycystic ovary syndrome) as part of hormone and metabolic care.",
       "Women who want ongoing follow-up rather than a one-time prescription.",
     ],
     whatToExpect: [
