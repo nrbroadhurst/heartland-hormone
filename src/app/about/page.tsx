@@ -75,9 +75,8 @@ export default function AboutPage() {
             <div className="space-y-4 text-charcoal/90 leading-relaxed">
               <p>
                 Heartland Hormone & Wellness Clinic was founded by{" "}
-                {SITE.providerName}, {SITE.providerCredential}, an{" "}
-                {SITE.providerTitle} with decades of advanced clinical experience.
-                Care is nurse practitioner-led.
+                {SITE.providerName}, an {SITE.providerTitle} with decades of
+                advanced clinical experience. Care is nurse practitioner-led.
               </p>
               <p>
                 Raised in Miami County, the founder has called the Kansas City
