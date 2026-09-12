@@ -8,6 +8,7 @@ import {
   CLOSING_CTA_HEADLINE,
   CLOSING_CTA_SUBTEXT,
   COMMON_SYMPTOMS,
+  COMMON_SYMPTOMS_INTRO,
   HERO_HEADLINE,
   HERO_LEAD,
   WHY_CHOOSE_COMMITMENTS,
@@ -91,10 +92,13 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Symptoms"
             title="Common Symptoms We Address"
-            description="Hormonal imbalances can affect many aspects of daily life. Patients often seek care for:"
+            description={COMMON_SYMPTOMS_INTRO[0]}
           />
           <div className="max-w-3xl">
-            <TreatmentList items={COMMON_SYMPTOMS} />
+            <p className="text-charcoal/90 leading-relaxed mb-4 -mt-4">
+              {COMMON_SYMPTOMS_INTRO[1]}
+            </p>
+            <TreatmentList items={[...COMMON_SYMPTOMS]} />
           </div>
         </div>
       </section>

@@ -18,16 +18,21 @@ export const APPROACH_PARAGRAPHS = [
   "Our approach focuses on identifying the root cause of symptoms, reviewing comprehensive laboratory testing and developing individualized treatment plans tailored to your needs and health goals. Prescription treatment is provided only when clinically appropriate.",
 ];
 
+export const COMMON_SYMPTOMS_INTRO = [
+  "Hormonal shifts can influence how you feel physically, mentally, and emotionally. Many patients come to Heartland Hormone & Wellness Clinic when symptoms begin affecting daily life or overall quality of life.",
+  "Patients commonly report:",
+] as const;
+
 export const COMMON_SYMPTOMS = [
-  "Fatigue and low energy",
-  "Brain fog and difficulty concentrating",
-  "Weight gain and metabolic changes",
-  "Low libido and sexual health concerns",
-  "Mood changes, irritability or anxiety",
-  "Poor sleep and insomnia",
-  "Reduced muscle mass and strength",
-  "Hot flashes, night sweats and menopause transitions",
-  "Low testosterone symptoms",
+  "Persistent fatigue or reduced stamina",
+  "Brain fog, slowed thinking, or difficulty focusing",
+  "Unexplained weight gain or metabolic changes",
+  "Low libido or sexual performance concerns",
+  "Mood swings, irritability, or increased anxiety",
+  "Trouble sleeping or waking unrefreshed",
+  "Loss of muscle tone or strength",
+  "Hot flashes, night sweats, or menopause-related changes",
+  "Signs of low testosterone, including decreased energy, libido, or strength",
 ];
 
 export const SPECIALIZED_CARE = [
