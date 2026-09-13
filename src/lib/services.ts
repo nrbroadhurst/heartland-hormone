@@ -216,7 +216,7 @@ export const SERVICES: Service[] = [
     ],
     safetyCallout:
       "Sexual-wellness medications are prescribed only when clinically appropriate. Hormone changes do not explain every case of sexual dysfunction.",
-    publiclyMarketable: true,
+    publiclyMarketable: false,
   },
   {
     slug: "wellness-healthy-aging",
@@ -276,7 +276,6 @@ export function getNavServices() {
         "mens-hormone-therapy",
         "womens-hormone-therapy",
         "weight-management",
-        "sexual-wellness",
         ...(features.publicPeptideMarketing ? (["peptide-therapy"] as const) : []),
       ].includes(s.slug),
   );
@@ -309,6 +308,9 @@ export function isServicePubliclyMarketable(slug: string): boolean {
   const service = getService(slug);
   if (!service) return false;
   if (service.slug === "peptide-therapy" && !features.publicPeptideMarketing) {
+    return false;
+  }
+  if (service.slug === "sexual-wellness") {
     return false;
   }
   return service.publiclyMarketable;

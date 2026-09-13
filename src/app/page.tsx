@@ -118,7 +118,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Additional Care"
               title="Related Services"
-              description="Sexual wellness, healthy aging and metabolic wellness support for selected patients after clinical evaluation."
+              description="Healthy aging and metabolic wellness support for selected patients after clinical evaluation."
             />
             <ServicesGrid services={secondaryServices} />
           </div>

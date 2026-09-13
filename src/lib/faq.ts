@@ -109,14 +109,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Men's Hormone Care",
     question: "Can hormone treatment help erectile dysfunction?",
     answer:
-      "Erectile dysfunction has many potential causes. Hormone treatment is not appropriate for every case of ED and is evaluated separately from sexual-wellness medications.",
-  },
-  {
-    id: "sexual-wellness-meds",
-    category: "Men's Hormone Care",
-    question: "Do you prescribe sexual wellness medications?",
-    answer:
-      "Prescription sexual-wellness treatments may be considered when clinically appropriate following evaluation. They are not included in the published hormone care program tiers. Add-on pricing is reviewed during consultation.",
+      "Erectile dysfunction has many potential causes. Hormone treatment is not appropriate for every case of ED and is evaluated as part of a clinical visit.",
   },
   {
     id: "perimenopause",

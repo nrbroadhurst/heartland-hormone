@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/sexual-wellness",
+        destination: "/services",
+        permanent: true,
+      },
+      {
         source: "/services/concierge-wellness",
         destination: "/services",
         permanent: true,

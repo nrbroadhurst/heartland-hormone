@@ -122,18 +122,6 @@ export default function MensHormonePage() {
         </p>
       </section>
 
-      <section className="bg-teal/5 border-y border-gold/20">
-        <div className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-          <SectionHeading title="Sexual Wellness" />
-          <p className="text-charcoal/90 leading-relaxed -mt-4">
-            Erectile function and sexual wellness can be evaluated as part of
-            men&apos;s health care. Prescription treatments may be considered when
-            clinically appropriate. Sexual dysfunction is not always caused by
-            hormone changes and is assessed individually.
-          </p>
-        </div>
-      </section>
-
       <section className="mx-auto max-w-3xl px-4 py-10 md:px-6">
         <p className="text-sm text-charcoal/75 leading-relaxed">
           {SITE.virtualCareStatement} {SITE.serviceAreaLine}
