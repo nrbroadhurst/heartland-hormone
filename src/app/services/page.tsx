@@ -47,7 +47,7 @@ export default function ServicesHubPage() {
       <CTASection
         headline="Not sure where to start?"
         subtext="Book a consultation. Your provider will help you choose the right path after evaluation."
-        secondaryLabel="View Programs"
+        secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"
       />
     </>

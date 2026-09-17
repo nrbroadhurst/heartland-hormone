@@ -54,7 +54,7 @@ export const SITE = {
   privacyOfficerName: "Sherry Broadhurst",
 
   consultLength:
-    "Initial consultations are typically 45 minutes to 1 hour. Follow-up visits are typically 15 to 20 minutes.",
+    "New patient consultations are typically 60 minutes. Follow-up visits are typically 15 to 20 minutes.",
   firstVisitPreference:
     "An in-person first visit is preferred. Follow-up may be in office or by virtual visit when clinically and legally appropriate. Controlled substances may require at least one in-person visit per year.",
 
@@ -78,7 +78,7 @@ export const MEDICAL_DISCLAIMER =
   "Information on this website is provided for general educational purposes and does not constitute medical advice. Treatment recommendations are individualized following appropriate clinical evaluation. Prescription treatment is provided only when clinically appropriate.";
 
 export const PRICING_DISCLAIMER =
-  "Treatment is individualized. Medication availability, dose, laboratory requirements and treatment recommendations vary by patient. Program and consultation fees are provided during consultation and may change. Additional medications, laboratory testing or specialized services are billed separately. Prescription treatment is provided only when clinically appropriate. Consultation and program fees are generally nonrefundable.";
+  "Treatment is individualized. Medication availability, dose, laboratory requirements and treatment recommendations vary by patient. Published program rates are listed on Pricing & Programs and may change. Additional medications, laboratory testing or specialized services are billed separately. Prescription treatment is provided only when clinically appropriate. Consultation fees are nonrefundable. Membership fees are nonrefundable once billed and medications have been prescribed, processed or shipped.";
 
 export const LEGAL_LINKS = [
   { href: "/privacy-policy", label: "Privacy Policy" },
@@ -95,7 +95,7 @@ export const LEGAL_LINKS = [
 
 export const NAV_LINKS = [
   { href: "/services", label: "Services", children: true },
-  { href: "/programs", label: "Programs" },
+  { href: "/programs", label: "Pricing & Programs" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },

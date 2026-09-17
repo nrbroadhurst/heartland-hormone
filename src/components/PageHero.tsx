@@ -7,6 +7,7 @@ type PageHeroProps = {
   title: string;
   description?: string;
   children?: React.ReactNode;
+  compact?: boolean;
 };
 
 export function PageHero({
@@ -14,10 +15,17 @@ export function PageHero({
   title,
   description,
   children,
+  compact = false,
 }: PageHeroProps) {
   return (
     <section className="bg-teal text-cream">
-      <div className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
+      <div
+        className={
+          compact
+            ? "mx-auto max-w-7xl px-4 py-10 md:py-14 md:px-6 lg:px-8"
+            : "mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8"
+        }
+      >
         {eyebrow && (
           <p className="mb-3 font-display text-xs uppercase tracking-[0.25em] text-gold">
             {eyebrow}
@@ -44,24 +52,32 @@ export function SectionHeading({
   description,
   align = "left",
   onDark = false,
+  compact = false,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
   onDark?: boolean;
+  compact?: boolean;
 }) {
   return (
-    <div className={align === "center" ? "text-center mx-auto max-w-2xl mb-10" : "mb-10 max-w-2xl"}>
+    <div
+      className={
+        align === "center"
+          ? `text-center mx-auto max-w-2xl ${compact ? "mb-5" : "mb-10"}`
+          : `${compact ? "mb-5" : "mb-10"} max-w-2xl`
+      }
+    >
       {eyebrow && (
         <p className="mb-2 font-display text-xs uppercase tracking-[0.25em] text-gold">
           {eyebrow}
         </p>
       )}
       <h2
-        className={`font-display text-3xl md:text-4xl tracking-wide mb-3 ${
-          onDark ? "text-cream" : "text-teal"
-        }`}
+        className={`font-display tracking-wide mb-3 ${
+          compact ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl"
+        } ${onDark ? "text-cream" : "text-teal"}`}
       >
         {title}
       </h2>

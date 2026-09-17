@@ -111,16 +111,18 @@ export default function RecurringBillingPage() {
             Program fees
           </h2>
           <p>
-            Program fees are reviewed during consultation and confirmed before
-            any enrollment or recurring charge. Heartland Hormone does not
-            publish dollar amounts on this site.
+            Published hormone program rates and the new-patient consultation fee
+            are listed on Pricing &amp; Programs. Recurring memberships are billed
+            every four weeks (13 cycles per year). Your selected program and
+            billing terms are confirmed before enrollment or any recurring
+            charge.
           </p>
           <p className="text-sm">
             See{" "}
             <Link href="/programs" className="text-teal underline underline-offset-2">
-              Programs
+              Pricing &amp; Programs
             </Link>{" "}
-            for what each program includes.
+            for current rates and what each program includes.
           </p>
         </section>
       </article>

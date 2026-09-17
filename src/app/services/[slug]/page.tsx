@@ -127,7 +127,7 @@ export default async function ServicePage({ params }: Props) {
         headline={`Ready to discuss ${service.shortTitle.toLowerCase()}?`}
         subtext="Book a consultation at our Kansas City-area clinic."
         ctaLabel="Book a Consultation"
-        secondaryLabel="View Programs"
+        secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"
       />
     </>

@@ -45,7 +45,7 @@ export default function MensHormonePage() {
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Book a Men's Hormone Consultation" />
           <BookButton
-            label="View Programs"
+            label="View Pricing & Programs"
             href="/programs#mens-hormone"
             variant="outline"
           />
@@ -111,12 +111,14 @@ export default function MensHormonePage() {
           ]}
         />
         <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
-          {pricing.mensInjections.name} and {pricing.mensTransdermal.name}{" "}
-          fees are reviewed during consultation. The initial consultation and
-          laboratory fees are separate. Therapies listed as exclusions on the
-          programs page are not included.{" "}
+          {pricing.mensInjections.name} is {pricing.mensInjections.display} every
+          4 weeks. {pricing.mensTransdermal.name} is{" "}
+          {pricing.mensTransdermal.display} every 4 weeks. The{" "}
+          {pricing.initialEvaluation.name} ({pricing.initialEvaluation.display})
+          and laboratory fees are separate. Additional services listed on Pricing
+          &amp; Programs are not included.{" "}
           <Link href="/programs#mens-hormone" className="text-teal underline underline-offset-2">
-            View men&apos;s hormone programs
+            View men&apos;s hormone pricing
           </Link>
           .
         </p>
@@ -133,7 +135,7 @@ export default function MensHormonePage() {
         headline="Book a Men's Hormone Consultation"
         subtext="Local Kansas City-area care with virtual follow-up when clinically and legally appropriate."
         ctaLabel="Book a Men's Hormone Consultation"
-        secondaryLabel="View Programs"
+        secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs#mens-hormone"
       />
     </>

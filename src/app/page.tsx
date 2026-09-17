@@ -27,6 +27,7 @@ import { TrustCard } from "@/components/TrustCard";
 import { ProviderPreview } from "@/components/ProviderPreview";
 import { TreatmentList } from "@/components/TreatmentList";
 import { clinicJsonLd } from "@/lib/schema";
+import { pricing } from "@/lib/pricing";
 
 export default function HomePage() {
   const secondaryServices = getSecondaryServices();
@@ -63,7 +64,7 @@ export default function HomePage() {
                 <Link href="/contact">{SITE.consultCta}</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/programs">View Programs</Link>
+                <Link href="/programs">View Pricing &amp; Programs</Link>
               </Button>
             </div>
             <p className="mt-6 inline-flex items-center gap-2 text-sm text-cream/85">
@@ -192,26 +193,30 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
           <SectionHeading
             onDark
-            eyebrow="Programs"
-            title="Clinical Programs"
-            description="Cash-pay hormone and weight-management programs. Fees are reviewed during consultation so care can be matched to your plan."
+            eyebrow="Pricing & Programs"
+            title="Published Program Rates"
+            description="Cash-pay hormone programs with published 4-week membership rates. Medical weight management is billed separately by consultation."
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Initial Consultation",
-                href: "/pricing#initial-evaluation",
+                name: "New Patient Consultation",
+                teaser: pricing.initialEvaluation.teaserDisplay,
+                href: "/programs#initial-evaluation",
               },
               {
                 name: "Men's Hormone Care",
-                href: "/pricing#mens-hormone",
+                teaser: pricing.mensInjections.teaserDisplay,
+                href: "/programs#mens-hormone",
               },
               {
                 name: "Women's Hormone Care",
-                href: "/pricing#womens-hormone",
+                teaser: pricing.womensTriple.teaserDisplay,
+                href: "/programs#womens-hormone",
               },
               {
                 name: "Medical Weight Management",
+                teaser: pricing.weightManagement.teaserDisplay,
                 href: "/services/weight-management",
               },
             ].map((card) => (
@@ -221,15 +226,16 @@ export default function HomePage() {
                 className="rounded-md border border-gold/40 p-6 hover:border-gold transition"
               >
                 <h3 className="font-display text-xl tracking-wide">{card.name}</h3>
+                <p className="mt-2 text-sm text-gold-light">{card.teaser}</p>
               </Link>
             ))}
           </div>
           <p className="mt-4 text-sm text-cream/75">
-            Recurring programs, when enrolled, are billed every four weeks. Exact fees are provided during consultation.
+            Recurring hormone programs are billed every four weeks (13 cycles per year) until canceled. Labs are not included.
           </p>
           <div className="mt-8">
             <Button asChild variant="gold" size="lg">
-              <Link href="/programs">View Programs</Link>
+              <Link href="/programs">View Pricing &amp; Programs</Link>
             </Button>
           </div>
         </div>
@@ -255,7 +261,7 @@ export default function HomePage() {
         headline={CLOSING_CTA_HEADLINE}
         subtext={CLOSING_CTA_SUBTEXT}
         ctaLabel={SITE.consultCta}
-        secondaryLabel="View Programs"
+        secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"
         variant="teal"
       />

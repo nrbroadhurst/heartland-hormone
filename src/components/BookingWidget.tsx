@@ -56,8 +56,7 @@ export function BookingWidget({
       </h3>
       <p className="text-sm text-charcoal/80 leading-relaxed mb-6">
         Choose the visit type that fits your goals. Call, email or send a
-        message. Initial consultations are typically 45 minutes to 1 hour.
-        Follow-up visits are typically 15 to 20 minutes. Call{" "}
+        message. {SITE.consultLength} Call{" "}
         <a href={`tel:${SITE.phoneTel}`} className="text-teal underline underline-offset-2">
           {SITE.phone}
         </a>

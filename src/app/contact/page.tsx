@@ -28,7 +28,7 @@ export default async function ContactPage({ searchParams }: Props) {
       <PageHero
         eyebrow="Contact"
         title={SITE.consultCta}
-        description="Call, email or send a message. Initial visits are typically 45 minutes to 1 hour. An in-person first visit is preferred. Virtual follow-up may be available when clinically and legally appropriate."
+        description="Call, email or send a message. New patient consultations are typically 60 minutes. An in-person first visit is preferred. Virtual follow-up may be available when clinically and legally appropriate."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">

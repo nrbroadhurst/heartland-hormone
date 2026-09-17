@@ -1,205 +1,226 @@
 /**
- * Clinic fee schedule.
- * Public pages do not print dollar amounts. Numeric values stay here for
- * internal invoice setup.
+ * Clinic fee schedule shown on Pricing & Programs.
  */
-import {
-  billingConfig,
-} from "@/lib/billing";
+import { billingConfig } from "@/lib/billing";
+
+export const FOUR_WEEK_NOTE = "Every 4 weeks";
+
+export const programSharedIncludes = [
+  "Provider oversight",
+  "Medication management",
+  "Quarterly follow-up visits",
+  "Personalized treatment adjustments",
+  "Convenient home delivery of included medications",
+] as const;
+
+export const additionalServices = [
+  "DHEA",
+  "HCG",
+  "Enclomiphene",
+  "Thyroid optimization",
+  "Tadalafil",
+  "Medical weight-loss medications",
+  "Nutritional and wellness supplements",
+] as const;
 
 export const pricing = {
   initialEvaluation: {
     id: "initial-evaluation",
-    name: "Initial Medical Consultation",
-    invoiceDescription: "Initial Medical Consultation",
+    name: "New Patient Consultation",
+    invoiceDescription: "New Patient Consultation",
     href: "/contact",
-    price: 200,
+    price: 225,
     cadence: "one-time" as const,
+    display: "$225",
+    teaserDisplay: "$225",
     confirmed: true,
     summary:
-      "Required for new hormone care and medical weight-management patients. One-time consultation and comprehensive medical assessment. Laboratory fees are paid separately, typically before labs are ordered.",
+      "Your comprehensive 60-minute consultation. Required laboratory testing is separate.",
     includes: [
-      "One-time consultation, typically 45 minutes to 1 hour",
-      "Comprehensive medical assessment",
-      "Review of required baseline labs",
-      "Discussion of an initial treatment plan when clinically appropriate",
+      "Detailed health history review",
+      "Symptom and wellness assessment",
+      "Review of current medications",
+      "Comprehensive hormone evaluation",
+      "Review of required laboratory testing",
+      "Personalized treatment recommendations",
+      "Development of an individualized treatment plan",
     ],
-    notIncluded: [
-      "Laboratory testing fees, which are paid by the patient before labs are ordered",
-      "Recurring program fees",
-      "Medication",
-    ],
+    notIncluded: ["Required laboratory testing"],
   },
   mensInjections: {
     id: "mens-injections",
-    name: "Men's Hormone Care Program",
-    invoiceDescription: "Men's Hormone Care Program",
+    name: "Men's TRT Injection Program",
+    invoiceDescription: "Men's TRT Injection Program",
     href: "/services/mens-hormone-therapy",
-    price: 199,
-    cadence: "month" as const,
+    price: 175,
+    cadence: "fourWeeks" as const,
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
+    display: "$175",
+    teaserDisplay: "From $175 every 4 weeks",
     confirmed: true,
     summary:
-      "Core men's hormone care with injection-based treatment when clinically appropriate, supplies, shipping, lab interpretation, dose management and ongoing clinical monitoring.",
+      "Men's testosterone optimization with injection-based treatment when clinically appropriate.",
     includes: [
-      "Individualized men's hormone treatment when clinically appropriate",
-      "Injection supplies when injections are prescribed",
-      "Medication shipped to your home when a prescription is filled",
-      "Routine lab interpretation",
-      "Dose titration management",
-      "Ongoing clinical follow-up in office or by virtual visit when appropriate",
+      "Testosterone injections",
+      "Injection supplies",
+      "Convenient home delivery",
+      "Quarterly telehealth follow-up visits",
+      "Ongoing provider monitoring",
+      "Personalized dose adjustments",
+      "Access to discounted laboratory testing",
+      "Access to wellness supplements",
+      "Preferred access to medical weight management programs",
     ],
-    notIncluded: [
-      "Laboratory testing fees",
-      "Therapies listed as program exclusions on this page",
-    ],
+    notIncluded: ["Laboratory testing fees"],
   },
   mensTransdermal: {
     id: "mens-transdermal",
-    name: "Men's Hormone Care Program - Level 2",
-    invoiceDescription: "Men's Hormone Care Program - Level 2",
+    name: "Men's TRT Cream Program",
+    invoiceDescription: "Men's TRT Cream Program",
     href: "/services/mens-hormone-therapy",
-    price: 229,
-    cadence: "month" as const,
+    price: 225,
+    cadence: "fourWeeks" as const,
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
+    display: "$225",
+    teaserDisplay: "$225 every 4 weeks",
     confirmed: true,
     summary:
-      "Advanced men's hormone care with transdermal or troche formulations when clinically appropriate, plus shipping, lab interpretation and ongoing clinical monitoring.",
+      "Men's testosterone optimization with compounded testosterone cream when clinically appropriate.",
     includes: [
-      "Individualized men's hormone treatment when clinically appropriate",
-      "Pharmacy supplies for the selected formulation",
-      "Medication shipped to your home when a prescription is filled",
-      "Routine lab interpretation",
-      "Dose titration management",
-      "Ongoing clinical follow-up in office or by virtual visit when appropriate",
+      "Compounded testosterone cream",
+      "Convenient home delivery",
+      "Quarterly telehealth follow-up visits",
+      "Ongoing provider monitoring",
+      "Personalized dose adjustments",
+      "Access to discounted laboratory testing",
+      "Access to wellness supplements",
+      "Preferred access to medical weight management programs",
     ],
-    notIncluded: [
-      "Laboratory testing fees",
-      "Therapies listed as program exclusions on this page",
-    ],
+    notIncluded: ["Laboratory testing fees"],
   },
   womensTriple: {
     id: "womens-triple",
-    name: "Women's Hormone Care Program",
-    invoiceDescription: "Women's Hormone Care Program",
+    name: "Women's Complete BHRT Cream Program",
+    invoiceDescription: "Women's Complete BHRT Cream Program",
     href: "/services/womens-hormone-therapy",
-    price: 199,
-    cadence: "month" as const,
+    price: 200,
+    cadence: "fourWeeks" as const,
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
+    display: "$200",
+    teaserDisplay: "From $200 every 4 weeks",
     confirmed: true,
     summary:
-      "Core women's hormone and menopause care with customized hormone therapy when clinically appropriate, plus shipping, lab interpretation and ongoing clinical monitoring.",
+      "Women's hormone optimization with estradiol, progesterone and testosterone cream when clinically appropriate.",
     includes: [
-      "Customized hormone therapy when clinically appropriate",
-      "Program supplies for included baseline medications",
-      "Medication shipped to your home when a prescription is filled",
-      "Routine lab interpretation",
-      "Ratio and dose adjustments",
-      "Ongoing clinical follow-up in office or by virtual visit when appropriate",
+      "Estradiol therapy",
+      "Progesterone therapy",
+      "Testosterone cream",
+      "Convenient home delivery",
+      "Quarterly telehealth follow-up visits",
+      "Ongoing provider monitoring",
+      "Personalized dose adjustments",
+      "Access to discounted laboratory testing",
+      "Access to wellness supplements",
+      "Preferred access to medical weight management programs",
     ],
-    notIncluded: [
-      "Laboratory testing fees",
-      "Therapies listed as program exclusions on this page",
-    ],
+    notIncluded: ["Laboratory testing fees"],
   },
   womensAdvanced: {
     id: "womens-advanced",
-    name: "Women's Hormone Care Program - Level 2",
-    invoiceDescription: "Women's Hormone Care Program - Level 2",
+    name: "Women's Hybrid BHRT Program",
+    invoiceDescription: "Women's Hybrid BHRT Program",
     href: "/services/womens-hormone-therapy",
-    price: 229,
-    cadence: "month" as const,
+    price: 249,
+    cadence: "fourWeeks" as const,
     medicationIncluded: true,
     labsIncluded: false,
     shippingIncluded: true,
+    display: "$249",
+    teaserDisplay: "$249 every 4 weeks",
     confirmed: true,
     summary:
-      "Advanced women's hormone care with transdermal or troche formulations when clinically appropriate, plus shipping, lab interpretation and ongoing clinical monitoring.",
+      "Women's hormone optimization with testosterone injections plus estradiol and progesterone therapy when clinically appropriate.",
     includes: [
-      "Advanced customized hormone therapy when clinically appropriate",
-      "Specialized supplies when injections or combination formulations are used",
-      "Medication shipped to your home when a prescription is filled",
-      "Routine lab interpretation",
-      "Ongoing clinical follow-up in office or by virtual visit when appropriate",
+      "Testosterone injections and supplies",
+      "Estradiol therapy",
+      "Progesterone therapy",
+      "Convenient home delivery",
+      "Quarterly telehealth follow-up visits",
+      "Ongoing provider monitoring",
+      "Personalized dose adjustments",
+      "Access to discounted laboratory testing",
+      "Access to wellness supplements",
+      "Preferred access to medical weight management programs",
     ],
-    notIncluded: [
-      "Laboratory testing fees",
-      "Therapies listed as program exclusions on this page",
-    ],
+    notIncluded: ["Laboratory testing fees"],
   },
   weightManagement: {
     id: "weight-management",
-    name: "Medical Weight Management Program",
+    name: "Medical Weight Management",
     invoiceDescription: "Medical Weight Management Program",
     href: "/services/weight-management",
+    teaserDisplay: "By consultation",
     confirmed: true,
     summary:
-      "Weight-management-only patients complete an initial consultation; medication and laboratory fees are billed separately. Patients already enrolled in a hormone care program are not charged a separate weight-management consult. Exact fees are reviewed during consultation.",
+      "Hormone program members have preferred access to medical weight-management care. Medication and laboratory fees are billed separately when clinically appropriate.",
     includes: [
-      "Initial consultation for weight-management-only patients",
-      "Ongoing weight-management care as part of an active hormone care program, without a separate consult fee",
+      "Preferred access for patients in an active hormone program",
       "Prescription treatment when clinically appropriate, billed separately",
     ],
     notIncluded: [
       "Laboratory testing fees",
       "Medication cost",
-      "A published medication-inclusive recurring program rate",
+      "A published medication-inclusive membership rate",
     ],
   },
 } as const;
 
 export const labPolicy = {
   notIncluded:
-    "Laboratory testing fees are not included in recurring program or consultation fees. Labs are paid by the patient, typically before an order is placed. Patients may use insurance or discounted cash rates through Quest Diagnostics.",
+    "Laboratory testing is not included in consultation fees or membership fees. Patients may use health insurance for eligible laboratory testing or Heartland Hormone & Wellness Clinic's discounted cash-pay laboratory option. Payment for discounted cash-pay laboratory testing is required prior to specimen collection.",
   preAppointment:
-    "Required labs are ordered after payment is received. Complete labs before the first appointment so baseline levels can be reviewed. Follow-up hormone labs must be drawn before scheduled follow-up appointments so values can be evaluated for dose changes.",
+    "Baseline laboratory testing is required before beginning hormone replacement therapy. Additional laboratory testing may be required throughout treatment based on prescribed medications, dosage adjustments, treatment response and medical necessity.",
   titration:
-    "The first follow-up after starting hormone care is 6 to 8 weeks later and may be in office or by virtual visit when appropriate. Hormone labs should be drawn before that visit. Dose adjustments are made as needed.",
+    "Periodic laboratory monitoring is required throughout treatment to ensure safety, effectiveness and appropriate dose optimization.",
   maintenance:
-    "Once on a stable dose, routine follow-up appointments and labs occur approximately every 6 months.",
+    "Follow-up frequency depends on the treatment plan. Hormone programs include quarterly follow-up visits.",
   annual:
-    "A comprehensive annual lab panel is required once per year for long-term safety monitoring and prescription renewals.",
+    "Additional laboratory testing may be required throughout treatment based on medical necessity.",
   modality:
     "Follow-up appointments may be conducted in office or by virtual visit when clinically and legally appropriate.",
   outsideLabs:
     "Outside labs may be accepted when they include the tests needed to establish care and are no more than one month old. Additional testing may still be required.",
 };
 
-export const membershipExclusions = [
-  "Human chorionic gonadotropin (hCG)",
-  "Aromatase inhibitors such as anastrozole",
-  "Intravaginal estradiol creams",
-  "Thyroid medication such as desiccated thyroid or levothyroxine",
-  "DHEA",
-  "Pregnenolone",
-  "Specialized specialty lab panels",
-];
+export const membershipExclusions = additionalServices;
 
 export const billingPolicy = {
   programCovers:
-    "Recurring program fees cover ongoing clinical consultations, follow-up evaluations, protocol titration management, and core program medication supplies included in the selected tier when clinically appropriate.",
+    "Hormone optimization programs are offered through a recurring membership that includes ongoing provider oversight, medication management, follow-up care, and the medications specifically included in your selected program. Program fees include provider oversight and the medications specifically listed within each program.",
   recurring: billingConfig.recurringDisclosure,
   recurringAuthorization: billingConfig.recurringAuthorization,
   nonPayment:
     "If a recurring program fee is declined or unpaid, pending and future compounding pharmacy orders, medication shipments and clinical appointments are paused. Prescriptions are not reordered or sent until the account balance is paid in full. Persistent non-payment past 30 days may result in discharge from the practice and cancellation of active prescriptions.",
   priceAdjustments:
-    "Program fees reflect current compounding pharmacy supplier costs. If market disruptions, shortages, regulatory changes or significant supplier price increases occur, program fees and medication costs may be adjusted. Patients receive at least 30 days of written notice before a price adjustment takes effect.",
+    "Program fees reflect current medication, compounding pharmacy, supplier, shipping and operational costs. If medication shortages, market disruptions, regulatory changes or significant supplier cost increases occur, membership fees may be adjusted. Patients receive at least 30 days of written notice before a fee adjustment takes effect.",
   refunds:
-    "Consultation and program fees are generally nonrefundable.",
+    "Consultation fees are non-refundable. Membership fees are non-refundable once billed and medications have been prescribed, processed or shipped.",
   shipping:
-    "Prescribed medications are typically shipped to the patient's home. Local pharmacy pickup may be available depending on the filling pharmacy.",
+    "Prescribed medications included in a program are typically shipped to the patient's home.",
   treatmentChanges:
-    "Clinical treatment may change based on response, safety or medical appropriateness. Any related pricing change will be disclosed before a new charge where required.",
+    "Treatment plans are individualized and may be modified based on symptoms, treatment response, laboratory findings, medication availability, safety considerations or medical necessity. Medication type, formulation, dosage and laboratory monitoring requirements may change throughout treatment.",
   cancellation:
-    "Patients may cancel future recurring charges through the patient portal or by contacting the clinic. Cancellation requests should be submitted before the next scheduled billing date when possible.",
+    "Members may cancel at any time prior to their next scheduled billing date. Memberships are billed every four weeks and automatically renew unless canceled. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.",
   pharmacyFulfillment:
     "Prescriptions may be filled by an appropriately licensed pharmacy based on the patient's treatment plan, location and medication needs.",
+  ancillaryNotIncluded:
+    "Laboratory testing, specialty medications, supplements, thyroid medications, erectile dysfunction medications, weight-loss medications and other ancillary therapies are not included unless specifically stated.",
 };
 
 /** Internal placeholders — not shown publicly until finalized */

@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 
-export function TreatmentList({ items }: { items: string[] }) {
+export function TreatmentList({ items }: { items: readonly string[] }) {
   return (
     <ul className="space-y-3">
       {items.map((item) => (

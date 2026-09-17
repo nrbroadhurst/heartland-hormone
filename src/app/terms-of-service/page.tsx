@@ -75,7 +75,7 @@ export default function TermsOfServicePage() {
             </Link>{" "}
             and{" "}
             <Link href="/programs" className="text-teal underline underline-offset-2">
-              Programs
+              Pricing &amp; Programs
             </Link>
             .
           </p>

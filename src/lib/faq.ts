@@ -30,7 +30,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "What does the initial consultation cost?",
     answer:
-      "Initial consultation fees are provided during scheduling and depend on the visit. Laboratory fees are separate and are typically paid before labs are ordered through Quest Diagnostics.",
+      `The ${pricing.initialEvaluation.name} is ${pricing.initialEvaluation.display} for 60 minutes. Laboratory testing is not included. Patients may use insurance for eligible labs or Heartland's discounted cash-pay option; cash-pay lab fees are due before collection.`,
   },
   {
     id: "insurance",
@@ -38,7 +38,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     question: "Do you accept insurance?",
     answer: SITE.acceptsInsurance
       ? "Insurance billing details are reviewed during scheduling."
-      : `Heartland uses cash-pay clinical programs rather than insurance billing for recurring program fees. ${SITE.superbillAvailable ? "A superbill can be provided on request for you to submit to your plan." : ""} Laboratory testing may be billed through insurance or paid at discounted cash rates through Quest Diagnostics.`,
+      : `Heartland uses cash-pay clinical programs rather than insurance billing for recurring program fees. ${SITE.superbillAvailable ? "A superbill can be provided on request for you to submit to your plan." : ""} Laboratory testing may be billed through insurance or paid at Heartland's discounted cash-pay laboratory rates.`,
   },
   {
     id: "hsa-fsa",
@@ -58,7 +58,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "billing-frequency",
     category: "General",
     question: "How often am I billed?",
-    answer: `Recurring Heartland programs are billed ${billingConfig.frequencyLabel} until canceled. Your exact program price and billing terms will be shown before enrollment.`,
+    answer: `Recurring hormone programs are billed ${billingConfig.frequencyLabel} until canceled (13 cycles per year). Published program rates are listed on Pricing & Programs. Your selected program and billing terms are confirmed before enrollment.`,
   },
   {
     id: "cancel-program",
@@ -96,7 +96,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "mens-program-included",
     category: "Men's Hormone Care",
     question: "What is included in the men's hormone care program?",
-    answer: `${pricing.mensInjections.name} includes individualized men's hormone care, supplies when applicable, shipping, routine lab interpretation and ongoing clinical monitoring when clinically appropriate. ${pricing.mensTransdermal.name} is available for advanced formulation options. Program fees are reviewed during consultation. Therapies listed as program exclusions on the programs page are billed separately.`,
+    answer: `${pricing.mensInjections.name} is ${pricing.mensInjections.display} every 4 weeks and includes testosterone injections, supplies, shipping, quarterly follow-up and ongoing monitoring when clinically appropriate. ${pricing.mensTransdermal.name} is ${pricing.mensTransdermal.display} every 4 weeks with compounded testosterone cream. Laboratory testing and additional services listed on Pricing & Programs are billed separately.`,
   },
   {
     id: "lab-frequency",
@@ -143,7 +143,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "women-meds-included",
     category: "Women's Hormone & Menopause Care",
     question: "Are medications included in the program?",
-    answer: `${pricing.womensTriple.name} includes program medications when clinically appropriate. ${pricing.womensAdvanced.name} is available for comprehensive hormone care options. Program fees are reviewed during consultation. Laboratory fees and therapies listed as exclusions are billed separately.`,
+    answer: `${pricing.womensTriple.name} is ${pricing.womensTriple.display} every 4 weeks and includes estradiol, progesterone and testosterone cream when clinically appropriate. ${pricing.womensAdvanced.name} is ${pricing.womensAdvanced.display} every 4 weeks with testosterone injections plus estradiol and progesterone therapy. Laboratory fees and additional services listed on Pricing & Programs are billed separately.`,
   },
   {
     id: "program-billing",
@@ -156,7 +156,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Weight Management",
     question: "What prescription treatment is available for weight management?",
     answer:
-      "Prescription weight-management treatment may be considered when medically appropriate following a clinical evaluation. Weight-management-only patients complete an initial consultation; medication and laboratory fees are billed separately. Exact fees are reviewed during consultation. Medication selection depends on health history, goals and clinical appropriateness.",
+      "Prescription weight-management treatment may be considered when medically appropriate following a clinical evaluation. It is not a published membership rate. Hormone program members have preferred access. Medication and laboratory fees are billed separately. Medication selection depends on health history, goals and clinical appropriateness.",
   },
   {
     id: "weight-meds-cost",

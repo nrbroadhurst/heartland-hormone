@@ -34,7 +34,7 @@ export function PricingCard({
   return (
     <article
       className={cn(
-        "flex h-full min-h-0 flex-col rounded-md border p-6 md:p-8 lg:min-h-[34rem]",
+        "flex h-full min-h-0 flex-col rounded-md border p-5 md:p-6",
         featured
           ? "border-gold bg-teal text-cream"
           : "border-gold/40 bg-cream",

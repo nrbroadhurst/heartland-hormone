@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/FadeIn";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { Service } from "@/lib/services";
+import { SITE } from "@/lib/site";
 import {
   CalendarCheck,
   FlaskConical,
@@ -19,7 +20,7 @@ const DEFAULT_STEPS: Step[] = [
   {
     title: "Schedule Your Consultation",
     description:
-      "Meet with our provider to discuss your symptoms, medical history and health goals. Call, email or send a message to request an initial visit. Initial consultations are typically 45 minutes to 1 hour, and an in-person first visit is preferred.",
+      `Meet with our provider to discuss your symptoms, medical history and health goals. Call, email or send a message to request an initial visit. ${SITE.consultLength} An in-person first visit is preferred.`,
     icon: CalendarCheck,
   },
   {

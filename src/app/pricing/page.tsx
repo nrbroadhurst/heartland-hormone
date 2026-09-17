@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Check } from "lucide-react";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { PricingCard } from "@/components/PricingCard";
 import { PricingDisclaimer } from "@/components/MedicalDisclaimer";
@@ -9,15 +10,17 @@ import { pageMeta } from "@/lib/seo";
 import {
   pricing,
   labPolicy,
-  membershipExclusions,
+  additionalServices,
   billingPolicy,
+  programSharedIncludes,
+  FOUR_WEEK_NOTE,
 } from "@/lib/pricing";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Programs",
+  title: "Pricing & Programs",
   description:
-    "Heartland Hormone clinical programs for men's and women's hormone care and medical weight management. Fees are provided during consultation.",
+    "Published Heartland Hormone rates: $225 new-patient consultation, men's TRT from $175 every 4 weeks, and women's BHRT from $200 every 4 weeks. Labs billed separately.",
   path: "/programs",
 });
 
@@ -25,43 +28,66 @@ export default function PricingPage() {
   return (
     <>
       <PageHero
-        eyebrow="Programs"
-        title="Programs"
-        description="Clinical programs for hormone care and medical weight management. Fees are reviewed during consultation. Laboratory fees are paid separately, typically before labs are ordered."
+        compact
+        eyebrow="Pricing & Programs"
+        title="Pricing & Programs"
+        description="Cash-pay hormone programs with published 4-week membership rates. All programs include provider oversight, medication management, quarterly follow-up, treatment adjustments, and home delivery of included medications. Laboratory testing is billed separately."
       >
         <BookButton />
       </PageHero>
 
-      <section className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8 space-y-16">
+      <section className="mx-auto max-w-7xl px-4 py-10 md:py-12 md:px-6 lg:px-8 space-y-12">
+        <div className="rounded-md border border-gold/40 bg-teal/5 p-5 md:p-6">
+          <h2 className="font-display text-xl text-teal tracking-wide mb-4">
+            All programs include
+          </h2>
+          <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {programSharedIncludes.map((item) => (
+              <li key={item} className="flex gap-2 text-sm text-charcoal/85">
+                <Check
+                  className="h-4 w-4 shrink-0 mt-0.5 text-teal"
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div id="initial-evaluation" className="scroll-mt-28">
           <SectionHeading
+            compact
             eyebrow="Getting Started"
-            title="Initial Medical Consultation"
-            description="Required for new hormone care and medical weight-management patients. Laboratory fees are paid separately, typically before labs are ordered."
+            title="New Patient Consultation"
+            description="Required before hormone care. 60 minutes. Laboratory testing is not included in the consult fee."
           />
-          <div className="grid gap-8 lg:grid-cols-2">
-            <PricingCard
-              featured
-              name={pricing.initialEvaluation.name}
-              summary={pricing.initialEvaluation.summary}
-              includes={pricing.initialEvaluation.includes}
-              notIncluded={pricing.initialEvaluation.notIncluded}
-              href="/contact"
-              ctaLabel="Book a Consultation"
-            />
-          </div>
+          <PricingCard
+            featured
+            name={pricing.initialEvaluation.name}
+            price={pricing.initialEvaluation.display}
+            billingNote="One-time · 60 minutes"
+            summary={pricing.initialEvaluation.summary}
+            includes={pricing.initialEvaluation.includes}
+            notIncluded={pricing.initialEvaluation.notIncluded}
+            href="/contact"
+            ctaLabel="Book a Consultation"
+          />
         </div>
 
         <div id="mens-hormone" className="scroll-mt-28">
           <SectionHeading
+            compact
             eyebrow="Men"
-            title="Men's Hormone Care Programs"
-            description="Recurring programs include core hormone care, supplies, shipping when applicable, routine lab interpretation and ongoing clinical monitoring when clinically appropriate."
+            title="Men's Hormone Care"
+            description="Recurring membership billed every 4 weeks. Includes listed medications, supplies when applicable, shipping, and ongoing clinical monitoring."
           />
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2">
             <PricingCard
               featured
               name={pricing.mensInjections.name}
+              price={pricing.mensInjections.display}
+              billingNote={FOUR_WEEK_NOTE}
               summary={pricing.mensInjections.summary}
               includes={pricing.mensInjections.includes}
               notIncluded={pricing.mensInjections.notIncluded}
@@ -70,6 +96,8 @@ export default function PricingPage() {
             />
             <PricingCard
               name={pricing.mensTransdermal.name}
+              price={pricing.mensTransdermal.display}
+              billingNote={FOUR_WEEK_NOTE}
               summary={pricing.mensTransdermal.summary}
               includes={pricing.mensTransdermal.includes}
               notIncluded={pricing.mensTransdermal.notIncluded}
@@ -81,14 +109,17 @@ export default function PricingPage() {
 
         <div id="womens-hormone" className="scroll-mt-28">
           <SectionHeading
+            compact
             eyebrow="Women"
-            title="Women's Hormone Care Programs"
-            description="Recurring programs include program medications when clinically appropriate, supplies, shipping, routine lab interpretation and ongoing clinical monitoring."
+            title="Women's Hormone Care"
+            description="Recurring membership billed every 4 weeks. Includes listed medications, shipping, and ongoing clinical monitoring."
           />
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2">
             <PricingCard
               featured
               name={pricing.womensTriple.name}
+              price={pricing.womensTriple.display}
+              billingNote={FOUR_WEEK_NOTE}
               summary={pricing.womensTriple.summary}
               includes={pricing.womensTriple.includes}
               notIncluded={pricing.womensTriple.notIncluded}
@@ -97,6 +128,8 @@ export default function PricingPage() {
             />
             <PricingCard
               name={pricing.womensAdvanced.name}
+              price={pricing.womensAdvanced.display}
+              billingNote={FOUR_WEEK_NOTE}
               summary={pricing.womensAdvanced.summary}
               includes={pricing.womensAdvanced.includes}
               notIncluded={pricing.womensAdvanced.notIncluded}
@@ -106,122 +139,107 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div id="weight-management" className="scroll-mt-28">
+        <div id="additional-services" className="scroll-mt-28">
+          <span id="weight-management" className="block scroll-mt-28 sr-only">
+            Medical weight management
+          </span>
           <SectionHeading
-            eyebrow="Weight"
-            title="Medical Weight Management Program"
-            description={pricing.weightManagement.summary}
+            compact
+            eyebrow="Add-ons"
+            title="Additional services"
+            description="These are not included in membership rates unless specifically stated. Medical weight-management medications are billed separately; hormone program members have preferred access."
           />
-          <div className="grid gap-8 lg:grid-cols-2">
-            <PricingCard
-              featured
-              name={pricing.weightManagement.name}
-              summary={pricing.weightManagement.summary}
-              includes={pricing.weightManagement.includes}
-              notIncluded={pricing.weightManagement.notIncluded}
-              href="/contact?interest=weight-management"
-              ctaLabel="Book a Weight Management Consultation"
-            />
+          <div className="grid gap-6 lg:grid-cols-2">
+            <TreatmentList items={additionalServices} />
+            <p className="text-sm text-charcoal/85 leading-relaxed">
+              {billingPolicy.ancillaryNotIncluded}{" "}
+              <Link
+                href="/services/weight-management"
+                className="text-teal underline underline-offset-2"
+              >
+                Medical weight management
+              </Link>{" "}
+              is available by consultation, not as a published membership rate.
+            </p>
           </div>
         </div>
 
         <div id="lab-schedule" className="scroll-mt-28">
           <SectionHeading
+            compact
             eyebrow="Labs"
-            title="Laboratory & Appointment Schedule"
+            title="Laboratory testing"
             description={labPolicy.notIncluded}
           />
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
-              <h3 className="font-display text-xl text-teal tracking-wide mb-3">
-                Before appointments
-              </h3>
-              <p className="text-sm text-charcoal/85 leading-relaxed mb-4">
-                {labPolicy.preAppointment}
-              </p>
-              <h3 className="font-display text-xl text-teal tracking-wide mb-3">
-                Follow-up timing
-              </h3>
-              <TreatmentList
-                items={[
-                  labPolicy.titration,
-                  labPolicy.maintenance,
-                  labPolicy.annual,
-                  labPolicy.modality,
-                ]}
-              />
+          <p className="text-sm text-charcoal/85 leading-relaxed max-w-3xl">
+            {labPolicy.preAppointment} {labPolicy.outsideLabs}
+          </p>
+        </div>
+
+        <div id="program-policies" className="scroll-mt-28">
+          <SectionHeading
+            compact
+            eyebrow="Membership"
+            title="Membership & billing"
+            description="Memberships bill every 4 weeks (13 cycles per year) and renew until you cancel. Cancel before the next bill to stop the following cycle."
+          />
+          <div className="grid gap-6 lg:grid-cols-2 text-sm text-charcoal/85 leading-relaxed">
+            <div className="space-y-3">
+              <p>{billingPolicy.programCovers}</p>
+              <p>{billingPolicy.refunds}</p>
+              <p>{billingPolicy.priceAdjustments}</p>
             </div>
-            <div className="rounded-md border border-gold/40 bg-teal/5 p-6">
-              <h3 className="font-display text-xl text-teal tracking-wide mb-3">
-                Lab fee disclosure
-              </h3>
-              <p className="text-sm text-charcoal/85 leading-relaxed">
-                {labPolicy.notIncluded}
+            <div className="space-y-3">
+              <p>{billingPolicy.cancellation}</p>
+              <p>
+                <Link
+                  href="/recurring-billing"
+                  className="text-teal underline underline-offset-2"
+                >
+                  Full recurring billing and cancellation policy
+                </Link>
+                {" · "}
+                <Link
+                  href="/refund-policy"
+                  className="text-teal underline underline-offset-2"
+                >
+                  Refund policy
+                </Link>
               </p>
             </div>
           </div>
         </div>
 
-        <div id="program-policies" className="scroll-mt-28">
-          <SectionHeading
-            eyebrow="Policies"
-            title="Program Overview, Billing & Exclusions"
-            description={billingPolicy.programCovers}
-          />
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
-              <h3 className="font-display text-xl text-teal tracking-wide mb-3">
-                Not included in recurring programs
-              </h3>
-              <TreatmentList items={membershipExclusions} />
-            </div>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-display text-xl text-teal tracking-wide mb-3">
-                  Recurring billing
-                </h3>
-                <p className="text-sm text-charcoal/85 leading-relaxed mb-3">
-                  {billingPolicy.recurring}
-                </p>
-                <p className="text-sm text-charcoal/85 leading-relaxed mb-3">
-                  {billingPolicy.nonPayment}
-                </p>
-                <p className="text-sm text-charcoal/85 leading-relaxed">
-                  <Link href="/recurring-billing" className="text-teal underline underline-offset-2">
-                    View recurring billing and cancellation policy
-                  </Link>
-                </p>
-              </div>
-              <div>
-                <h3 className="font-display text-xl text-teal tracking-wide mb-3">
-                  Shipping & pharmacy fulfillment
-                </h3>
-                <p className="text-sm text-charcoal/85 leading-relaxed mb-6">
-                  {billingPolicy.shipping} {billingPolicy.pharmacyFulfillment}
-                </p>
-                <h3 className="font-display text-xl text-teal tracking-wide mb-3">
-                  Refunds
-                </h3>
-                <p className="text-sm text-charcoal/85 leading-relaxed mb-6">
-                  {billingPolicy.refunds}{" "}
-                  <Link href="/refund-policy" className="text-teal underline underline-offset-2">
-                    View refund policy
-                  </Link>
-                </p>
-              </div>
-              <div>
-                <h3 className="font-display text-xl text-teal tracking-wide mb-3">
-                  Treatment changes & pricing adjustments
-                </h3>
-                <p className="text-sm text-charcoal/85 leading-relaxed mb-3">
-                  {billingPolicy.treatmentChanges}
-                </p>
-                <p className="text-sm text-charcoal/85 leading-relaxed">
-                  {billingPolicy.priceAdjustments}
-                </p>
-              </div>
-            </div>
-          </div>
+        <div
+          id="get-started"
+          className="scroll-mt-28 rounded-md border border-gold/40 bg-cream p-5 md:p-6"
+        >
+          <h2 className="font-display text-xl text-teal tracking-wide mb-4">
+            Get started
+          </h2>
+          <ul className="space-y-2 text-sm text-charcoal/85 mb-6">
+            <li>
+              New Patient Consultation — {pricing.initialEvaluation.display}{" "}
+              one-time
+            </li>
+            <li>
+              {pricing.mensInjections.name} — {pricing.mensInjections.display}{" "}
+              every 4 weeks
+            </li>
+            <li>
+              {pricing.mensTransdermal.name} — {pricing.mensTransdermal.display}{" "}
+              every 4 weeks
+            </li>
+            <li>
+              {pricing.womensTriple.name} — {pricing.womensTriple.display} every
+              4 weeks
+            </li>
+            <li>
+              {pricing.womensAdvanced.name} — {pricing.womensAdvanced.display}{" "}
+              every 4 weeks
+            </li>
+          </ul>
+          <BookButton />
         </div>
 
         <PricingDisclaimer />
@@ -231,8 +249,9 @@ export default function PricingPage() {
       </section>
 
       <CTASection
-        headline="Questions about which program fits?"
-        subtext="Book a consultation. We will outline options after a clinical evaluation."
+        className="py-12 md:py-16"
+        headline="Ready to schedule?"
+        subtext="Book a 60-minute New Patient Consultation. We will match a published program to your clinical plan when treatment is appropriate."
         secondaryLabel="See How It Works"
         secondaryHref="/how-it-works"
       />

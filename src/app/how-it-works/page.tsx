@@ -44,7 +44,7 @@ export default function HowItWorksPage() {
           </Link>{" "}
           or{" "}
           <Link href="/programs" className="text-teal underline underline-offset-2">
-            view programs
+            view pricing &amp; programs
           </Link>
           .
         </p>
@@ -53,7 +53,7 @@ export default function HowItWorksPage() {
       <CTASection
         headline="Ready to restore your energy and confidence?"
         subtext="Schedule a consultation at our Kansas City-area clinic to discuss whether hormone care or medical weight management may be right for you."
-        secondaryLabel="View Programs"
+        secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"
       />
     </>

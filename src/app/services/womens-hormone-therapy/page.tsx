@@ -45,7 +45,7 @@ export default function WomensHormonePage() {
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Book a Women's Hormone Consultation" />
           <BookButton
-            label="View Programs"
+            label="View Pricing & Programs"
             href="/programs#womens-hormone"
             variant="outline"
           />
@@ -144,14 +144,16 @@ export default function WomensHormonePage() {
             ]}
           />
           <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
-            {pricing.womensTriple.name} and {pricing.womensAdvanced.name}{" "}
-            fees are reviewed during consultation. The initial consultation and
-            laboratory fees are separate.{" "}
+            {pricing.womensTriple.name} is {pricing.womensTriple.display} every
+            4 weeks. {pricing.womensAdvanced.name} is{" "}
+            {pricing.womensAdvanced.display} every 4 weeks. The{" "}
+            {pricing.initialEvaluation.name} ({pricing.initialEvaluation.display})
+            and laboratory fees are separate.{" "}
             <Link
               href="/programs#womens-hormone"
               className="text-teal underline underline-offset-2"
             >
-              View women&apos;s hormone programs
+              View women&apos;s hormone pricing
             </Link>
             .
           </p>
@@ -169,7 +171,7 @@ export default function WomensHormonePage() {
         headline="Book a Women's Hormone Consultation"
         subtext="Perimenopause and menopause care with ongoing clinical monitoring."
         ctaLabel="Book a Women's Hormone Consultation"
-        secondaryLabel="View Programs"
+        secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs#womens-hormone"
       />
     </>
