@@ -37,7 +37,7 @@ export function BookingWidget() {
   return (
     <div className="rounded-md border border-gold/40 bg-cream p-6 md:p-8">
       <p className="font-display text-xs uppercase tracking-[0.2em] text-gold mb-3">
-        {SITE.consultCta}
+        Schedule Your Appointment
       </p>
       <h3 className="font-display text-2xl text-teal tracking-wide mb-3">
         Request an Appointment
@@ -57,24 +57,27 @@ export function BookingWidget() {
           </li>
         ))}
       </ul>
-      <p className="text-sm text-charcoal/80 leading-relaxed mb-6">
-        Appointments are requested by sending a message below or by calling{" "}
+      <p className="text-sm text-charcoal/80 leading-relaxed mb-3">
+        Appointments may be requested by submitting a message below or by calling{" "}
         <a
           href={`tel:${SITE.phoneTel}`}
           className="text-teal underline underline-offset-2"
         >
           {SITE.phone}
         </a>
-        . This website does not open OptiMantra. If you already have a portal
-        account, use the invite you received from the clinic; do not look for a
-        login button here.
+        .
+      </p>
+      <p className="text-sm text-charcoal/80 leading-relaxed mb-6">
+        If you already have a Heartland patient portal account, please use the
+        invitation link provided by the clinic to access your portal. Portal
+        access is not available directly through this website.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row">
         <Button asChild variant="teal">
           <Link href="#contact-form">Send a Message</Link>
         </Button>
         <Button asChild variant="outline-teal">
-          <a href={`tel:${SITE.phoneTel}`}>Call {SITE.phone}</a>
+          <a href={`tel:${SITE.phoneTel}`}>Or call {SITE.phone}</a>
         </Button>
       </div>
     </div>

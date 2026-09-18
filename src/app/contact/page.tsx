@@ -8,7 +8,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Contact & Schedule a Consultation",
+  title: "Schedule an Appointment",
   description:
     "Schedule a men's hormone, women's hormone or weight-management consultation with Heartland Hormone at our Overland Park / Kansas City clinic.",
   path: "/contact",
@@ -26,10 +26,10 @@ export default async function ContactPage({ searchParams }: Props) {
 
   return (
     <>
-      <PageHero title={SITE.consultCta}>
+      <PageHero title="Schedule an Appointment">
         <div className="max-w-2xl space-y-4 text-lg text-cream/85 leading-relaxed">
           <p>
-            Schedule your consultation through our{" "}
+            Schedule your appointment through our{" "}
             <Link
               href="/patient-portal"
               className="underline underline-offset-2 text-gold-light hover:text-gold"
@@ -39,8 +39,11 @@ export default async function ContactPage({ searchParams }: Props) {
             or contact us by phone, email, or message if you have questions before
             booking.
           </p>
+          <h2 className="font-display text-2xl text-gold tracking-wide pt-2">
+            New Patient Consultations
+          </h2>
           <p>
-            New Patient Consultations are typically 60 minutes and include a
+            New patient consultations are typically 60 minutes and include a
             comprehensive review of your symptoms, health history, laboratory
             findings, and health goals. If treatment is recommended, ongoing
             follow-up care is provided to monitor your progress, review
@@ -50,10 +53,11 @@ export default async function ContactPage({ searchParams }: Props) {
             Follow-Up Appointments
           </h2>
           <p>
-            Follow-up visits are for established Heartland patients currently
-            receiving care. These appointments provide an opportunity to review
-            your progress, discuss any concerns, evaluate laboratory results when
-            applicable, and make adjustments to your treatment plan as needed.
+            Follow-up visits are available for established Heartland patients
+            currently receiving care. These appointments provide an opportunity
+            to review your progress, discuss any concerns, evaluate laboratory
+            results when applicable, and make adjustments to your treatment plan
+            as needed.
           </p>
         </div>
       </PageHero>
