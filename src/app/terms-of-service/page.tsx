@@ -72,7 +72,7 @@ export default function TermsOfServicePage() {
           <p>
             See{" "}
             <Link href="/recurring-billing" className="text-teal underline underline-offset-2">
-              Recurring Billing & Cancellation
+              Recurring Billing & Cancellation Policy
             </Link>{" "}
             and{" "}
             <Link href="/programs" className="text-teal underline underline-offset-2">
