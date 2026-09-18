@@ -17,8 +17,8 @@ export const APPROACH_TITLE =
   "Hormone Replacement & Symptom-Guided Hormone Balancing for Women and Men";
 
 export const APPROACH_PARAGRAPHS = [
-  "Hormonal changes can affect how you feel physically, mentally and emotionally. We provide comprehensive evaluations and personalized treatment plans to help appropriate candidates optimize hormone health, improve quality of life and feel their best at every stage of life.",
-  "Our approach focuses on identifying the root cause of symptoms, reviewing comprehensive laboratory testing and developing individualized treatment plans tailored to your needs and health goals. Prescription treatment is provided only when clinically appropriate.",
+  "Hormonal changes can affect how you feel physically, mentally, and emotionally. We provide comprehensive evaluations and personalized treatment plans designed around your unique needs, helping you improve hormone health, enhance quality of life, and feel your best at every stage of life.",
+  "Our approach focuses on identifying the root causes of symptoms, reviewing comprehensive laboratory testing, and developing individualized treatment plans aligned with your health goals and unique needs. Treatment recommendations are based on your symptoms, health history, and laboratory findings.",
 ];
 
 export const COMMON_SYMPTOMS_INTRO = [
