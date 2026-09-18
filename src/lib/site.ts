@@ -164,9 +164,10 @@ export function emailComposeUrl(options?: {
   if (!SITE.email) return null;
   const params = new URLSearchParams();
   params.set("to", `<${SITE.email}>`);
+  params.set("login_hint", SITE.email);
   if (options?.subject) params.set("subject", options.subject);
   if (options?.body) params.set("body", options.body);
-  return `https://outlook.office.com/mail/deeplink/compose?${params.toString()}`;
+  return `https://outlook.office365.com/mail/deeplink/compose?${params.toString()}`;
 }
 
 export function emailMailtoUrl(options?: {

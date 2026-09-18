@@ -25,6 +25,4 @@ Priority confirmations: clinic address, provider credentials, telehealth states,
 
 ## Contact form
 
-Without `RESEND_API_KEY`, Send Message opens an Outlook draft to `sherry@heartlandhormones.com`. The visitor must click Send.
-
-To send from the server (no Outlook draft), set `RESEND_API_KEY` and a verified `CONTACT_FROM_EMAIL` on Vercel.
+Send Message does not open Outlook. It emails `sherry@heartlandhormones.com` through FormSubmit (first request sends an activation email to that inbox). Optional: set `RESEND_API_KEY` and `CONTACT_FROM_EMAIL` for server-side delivery.

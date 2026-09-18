@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { SITE, emailComposeUrl, emailMailtoUrl } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 const schema = z.object({
   name: z.string().min(2).max(120),
@@ -23,15 +23,6 @@ function formatBody(data: z.infer<typeof schema>): string {
     "",
     data.message?.trim() ? data.message.trim() : "(no message)",
   ].join("\n");
-}
-
-function composeUrls(data: z.infer<typeof schema>) {
-  const subject = `Website appointment request from ${data.name}`;
-  const body = formatBody(data);
-  return {
-    outlookUrl: emailComposeUrl({ subject, body }),
-    mailtoUrl: emailMailtoUrl({ subject, body }),
-  };
 }
 
 async function sendWithResend(data: z.infer<typeof schema>, apiKey: string) {
@@ -70,11 +61,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true, emailed: true });
     }
 
-    return NextResponse.json({
-      ok: true,
-      emailed: false,
-      ...composeUrls(parsed.data),
-    });
+    return NextResponse.json({ ok: true, emailed: false });
   } catch {
     return NextResponse.json({ error: "Could not send message" }, { status: 502 });
   }

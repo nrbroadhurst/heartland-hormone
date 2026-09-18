@@ -39,9 +39,7 @@ export function ContactForm({
 }: {
   defaultInterest?: string;
 }) {
-  const [status, setStatus] = useState<"idle" | "success" | "compose" | "error">(
-    "idle",
-  );
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const {
     register,
     handleSubmit,
@@ -67,33 +65,57 @@ export function ContactForm({
       return;
     }
     try {
+      const payload = {
+        name: `${data.firstName} ${data.lastName}`.trim(),
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phone: data.phone,
+        interest: data.interest,
+        contactMethod: data.contactMethod,
+        message: data.message ?? "",
+      };
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: `${data.firstName} ${data.lastName}`.trim(),
-          firstName: data.firstName,
-          lastName: data.lastName,
-          email: data.email,
-          phone: data.phone,
-          interest: data.interest,
-          contactMethod: data.contactMethod,
-          message: data.message ?? "",
-        }),
+        body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error("Failed");
-      const result = (await res.json()) as {
+      const result = (await res.json().catch(() => null)) as {
         emailed?: boolean;
-        outlookUrl?: string | null;
-        mailtoUrl?: string | null;
-      };
-      if (result.emailed) {
+      } | null;
+      if (res.ok && result?.emailed) {
         setStatus("success");
-      } else if (result.outlookUrl) {
-        window.location.assign(result.outlookUrl);
-        setStatus("compose");
       } else {
-        throw new Error("Failed");
+        const delivered = await fetch(
+          `https://formsubmit.co/ajax/${encodeURIComponent(SITE.email)}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              name: payload.name,
+              email: payload.email,
+              phone: payload.phone,
+              interest: payload.interest,
+              contactMethod: payload.contactMethod,
+              message: payload.message || "(no message)",
+              _subject: `Website appointment request from ${payload.name}`,
+              _template: "box",
+              _captcha: "false",
+              _replyto: payload.email,
+            }),
+          },
+        );
+        const deliveredJson = (await delivered.json().catch(() => null)) as {
+          success?: boolean | string;
+        } | null;
+        const ok =
+          delivered.ok &&
+          (deliveredJson?.success === true || deliveredJson?.success === "true");
+        if (!ok) throw new Error("Failed");
+        setStatus("success");
       }
       reset({
         firstName: "",
@@ -260,14 +282,8 @@ export function ContactForm({
 
       {status === "success" && (
         <p className="rounded-md bg-teal/10 px-4 py-3 text-sm text-teal" role="status">
-          Thank you. Your appointment request was emailed to the clinic. We will
+          Thank you. Your appointment request was sent to the clinic. We will
           respond shortly.
-        </p>
-      )}
-      {status === "compose" && (
-        <p className="rounded-md bg-teal/10 px-4 py-3 text-sm text-teal" role="status">
-          An Outlook message to the clinic was opened. Click Send in Outlook so
-          the request is delivered. The To field should be {SITE.email}.
         </p>
       )}
       {status === "error" && (
