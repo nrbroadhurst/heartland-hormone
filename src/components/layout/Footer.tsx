@@ -22,8 +22,13 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Logo variant="stacked" theme="dark" className="h-24 w-auto" />
+            <h3 className="font-display text-sm tracking-widest uppercase text-gold">
+              {SITE.name}
+            </h3>
             <p className="text-sm text-cream/80 leading-relaxed">
-              {SITE.tagline} {SITE.serviceAreaLine}
+              Helping women and men restore energy, balance, vitality, and
+              confidence through personalized hormone care and evidence-based
+              treatment.
             </p>
           </div>
 
@@ -47,11 +52,6 @@ export function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-gold-light transition-colors">
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations" className="hover:text-gold-light transition-colors">
-                  Locations
                 </Link>
               </li>
             </ul>
@@ -94,7 +94,6 @@ export function Footer() {
                   {SITE.city}, {SITE.state} / {SITE.region}
                 </li>
               )}
-              <li className="pt-2">{SITE.serviceAreaLine}</li>
               {hasPhone() && (
                 <li className="pt-2">
                   <a href={phoneHref() ?? `tel:${SITE.phone}`} className="hover:text-gold-light">
@@ -107,14 +106,10 @@ export function Footer() {
                   <EmailLink />
                 </li>
               )}
-              {SITE.officeHours && <li className="pt-2">{SITE.officeHours}</li>}
-              <li className="text-gold text-xs tracking-wide uppercase pt-1">
+              <li className="text-gold text-xs tracking-wide uppercase pt-2">
                 By Appointment Only
               </li>
             </ul>
-            <p className="mt-4 text-xs text-cream/70 leading-relaxed">
-              {SITE.virtualCareStatement}
-            </p>
           </div>
         </div>
 
