@@ -82,41 +82,43 @@ export default function WomensHormonePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6 space-y-6">
-        <SectionHeading title="Customized Hormone Therapy" />
-        <p className="text-charcoal/90 leading-relaxed -mt-4">
-          Heartland provides individualized hormone therapy based on symptoms,
-          health history, treatment goals, and laboratory findings. Treatment
-          plans are developed around each patient&apos;s unique needs, goals, and
-          preferences.
-        </p>
-        <p className="text-charcoal/90 leading-relaxed">
-          Ongoing care includes symptom review, laboratory monitoring, and
-          treatment adjustments as needed.
-        </p>
-      </section>
+      <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6 space-y-10">
+        <div className="space-y-6">
+          <SectionHeading title="Customized Hormone Therapy" />
+          <p className="text-charcoal/90 leading-relaxed -mt-4">
+            Heartland provides individualized hormone therapy based on symptoms,
+            health history, treatment goals, and laboratory findings. Treatment
+            plans are developed around each patient&apos;s unique needs, goals, and
+            preferences.
+          </p>
+          <p className="text-charcoal/90 leading-relaxed">
+            Ongoing care includes symptom review, laboratory monitoring, and
+            treatment adjustments as needed.
+          </p>
+        </div>
 
-      <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-        <SectionHeading title="Why Women's Hormone Care Requires Individualization" />
-        <p className="text-charcoal/90 leading-relaxed -mt-4 mb-6">
-          Hormone therapy decisions consider:
-        </p>
-        <TreatmentList
-          items={[
-            "Uterine status",
-            "Bleeding history",
-            "Breast history",
-            "Cardiovascular risk",
-            "Thromboembolic risk",
-            "Family history",
-            "Symptom profile",
-            "Medication tolerance",
-            "Sexual health concerns",
-            "Vaginal symptoms",
-            "Medication interactions",
-            "Individual treatment goals",
-          ]}
-        />
+        <div>
+          <SectionHeading title="Why Women's Hormone Care Is Individualized" />
+          <p className="text-charcoal/90 leading-relaxed -mt-4 mb-6">
+            Treatment recommendations are based on factors that may include:
+          </p>
+          <TreatmentList
+            items={[
+              "Uterine status",
+              "Bleeding history",
+              "Breast health history",
+              "Cardiovascular risk factors",
+              "Thromboembolic risk factors",
+              "Family history",
+              "Symptom profile",
+              "Medication tolerance",
+              "Sexual health concerns",
+              "Vaginal symptoms",
+              "Potential medication interactions",
+              "Individual treatment goals",
+            ]}
+          />
+        </div>
       </section>
 
       <section className="bg-teal/5 border-y border-gold/20">
