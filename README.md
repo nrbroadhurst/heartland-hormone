@@ -25,4 +25,4 @@ Priority confirmations: clinic address, provider credentials, telehealth states,
 
 ## Contact form
 
-Send Message stays on this website. It does not open Outlook, mailto, or a Microsoft account picker, so a personal mailbox is never shown. Requests go to `sherry@heartlandhormones.com` (FormSubmit; first request sends an activation email to that inbox). Optional: set `RESEND_API_KEY` and `CONTACT_FROM_EMAIL` for server-side delivery. The clinic email is shown as copyable text only.
+Send Message does not open Outlook, mailto, or a Microsoft account picker. If `RESEND_API_KEY` is set, the server emails `sherry@heartlandhormones.com` directly. Otherwise the browser posts the form to FormSubmit (a brief human-check page may appear). The first FormSubmit request sends an activation email to the Heartland inbox — open that message once, then later requests arrive as appointment emails. The clinic address on the site is copyable text only.
