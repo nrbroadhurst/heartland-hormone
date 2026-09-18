@@ -25,7 +25,7 @@ export default function WeightManagementPage() {
       <JsonLd
         data={serviceJsonLd(
           "Medical Weight Management",
-          "Individualized medical weight-management care for adults who may benefit from prescription treatment, lifestyle guidance and ongoing clinical monitoring.",
+          "Heartland provides medical evaluation and individualized treatment for weight-related health concerns. Care includes prescription weight management medications when indicated, ongoing monitoring, and personalized support to help patients achieve their health goals.",
           PATH,
         )}
       />
@@ -40,7 +40,7 @@ export default function WeightManagementPage() {
       <PageHero
         eyebrow="Weight Management"
         title="Medical Weight Management"
-        description="Heartland provides individualized medical weight-management care for adults who may benefit from prescription treatment, lifestyle guidance and ongoing clinical monitoring."
+        description="Heartland provides medical evaluation and individualized treatment for weight-related health concerns. Care includes prescription weight management medications when indicated, ongoing monitoring, and personalized support to help patients achieve their health goals."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Book a Weight Management Consultation" />
