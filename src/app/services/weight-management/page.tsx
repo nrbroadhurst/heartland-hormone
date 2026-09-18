@@ -52,31 +52,18 @@ export default function WeightManagementPage() {
         </div>
       </PageHero>
 
-      <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-        <SectionHeading title="Prescription Weight-Management Treatment" />
-        <p className="text-charcoal/90 leading-relaxed -mt-4 mb-6">
-          Prescription weight-management treatment may be considered when medically
-          appropriate following a clinical evaluation. Medication selection depends
-          on health history, treatment goals, contraindications, availability, cost
-          and patient preference.
+      <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6 space-y-6">
+        <SectionHeading title="Prescription Weight Management" />
+        <p className="text-charcoal/90 leading-relaxed -mt-4">
+          Heartland provides individualized medical weight management based on
+          your health history, current health status, treatment goals, and
+          response to treatment. Treatment plans are developed around each
+          patient&apos;s unique needs and may include prescription medications as
+          part of a comprehensive approach to weight management.
         </p>
-        <TreatmentList
-          items={[
-            "Medical evaluation for weight-related health concerns",
-            "Individualized treatment planning",
-            "Prescription treatment when clinically appropriate",
-            "Dose management and side-effect monitoring",
-            "Nutrition and activity guidance",
-            "Ongoing medical follow-up",
-            "Weight and health-progress tracking",
-          ]}
-        />
-        <p className="mt-6 text-charcoal/90 leading-relaxed">
-          Customized prescription formulations may be considered when clinically
-          appropriate and legally available. Compounded medications are not
-          FDA-approved products and are not described as equivalent to
-          FDA-approved branded medications. Availability is not guaranteed for
-          every patient.
+        <p className="text-charcoal/90 leading-relaxed">
+          Ongoing care includes weight and health progress monitoring,
+          side-effect management, and treatment adjustments as needed.
         </p>
       </section>
 
