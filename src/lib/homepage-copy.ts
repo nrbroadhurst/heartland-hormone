@@ -22,20 +22,23 @@ export const APPROACH_PARAGRAPHS = [
 ];
 
 export const COMMON_SYMPTOMS_INTRO = [
-  "Hormonal shifts can influence how you feel physically, mentally, and emotionally. Many patients come to Heartland Hormone & Wellness Clinic when symptoms begin affecting daily life or overall quality of life.",
+  "Hormonal shifts can influence how you feel physically, mentally, and emotionally. Many patients come to Heartland Hormone & Wellness Clinic when symptoms begin disrupting their daily activities, sleep, relationships, overall well-being, and quality of life.",
   "Patients commonly report:",
 ] as const;
 
 export const COMMON_SYMPTOMS = [
   "Persistent fatigue or reduced stamina",
-  "Brain fog, slowed thinking, or difficulty focusing",
+  "Brain fog or difficulty concentrating",
   "Unexplained weight gain or metabolic changes",
-  "Low libido or sexual performance concerns",
-  "Mood swings, irritability, or increased anxiety",
+  "Low libido or sexual health concerns",
+  "Mood swings, irritability, or anxiety",
   "Trouble sleeping or waking unrefreshed",
-  "Loss of muscle tone or strength",
-  "Hot flashes, night sweats, or menopause-related changes",
+  "Loss of muscle tone, strength, or endurance",
+  "Hot flashes, night sweats, or other menopause-related symptoms",
   "Signs of low testosterone, including decreased energy, libido, or strength",
+  "Irregular menstrual cycles",
+  "Symptoms associated with PMOS/PCOS",
+  "Symptoms associated with endometriosis",
 ];
 
 export const SPECIALIZED_CARE = [
