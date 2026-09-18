@@ -146,15 +146,44 @@ export default function PricingPage() {
         </div>
 
         <div id="lab-schedule" className="scroll-mt-28">
-          <SectionHeading
-            compact
-            eyebrow="Labs"
-            title="Laboratory testing"
-            description={labPolicy.notIncluded}
-          />
-          <p className="text-sm text-charcoal/85 leading-relaxed max-w-3xl">
-            {labPolicy.preAppointment} {labPolicy.outsideLabs}
-          </p>
+          <SectionHeading compact title="Laboratory Testing" />
+          <div className="max-w-3xl space-y-8 text-sm text-charcoal/85 leading-relaxed -mt-4">
+            <div className="space-y-4">
+              <p>{labPolicy.intro}</p>
+              <p>{labPolicy.questOption}</p>
+              <p>{labPolicy.insuranceOption}</p>
+            </div>
+            <div>
+              <h3 className="font-display text-lg text-teal tracking-wide mb-3">
+                Before Your Initial Consultation
+              </h3>
+              <p className="mb-4">{labPolicy.beforeConsult}</p>
+              <p className="mb-3">{labPolicy.pricingIntro}</p>
+              <ul className="space-y-2">
+                {labPolicy.panels.map((panel) => (
+                  <li
+                    key={panel.name}
+                    className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 border-b border-gold/20 py-2 last:border-b-0"
+                  >
+                    <span>{panel.name}</span>
+                    <span className="font-medium text-teal shrink-0">
+                      {panel.price}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-display text-lg text-teal tracking-wide mb-3">
+                Ongoing Monitoring
+              </h3>
+              <div className="space-y-3">
+                {labPolicy.ongoing.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         <div id="program-policies" className="scroll-mt-28">

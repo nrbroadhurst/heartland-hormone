@@ -189,20 +189,53 @@ export const pricing = {
 } as const;
 
 export const labPolicy = {
+  intro:
+    "Laboratory testing is separate from consultation and membership fees.",
+  questOption:
+    "Heartland offers access to discounted laboratory testing through Quest Diagnostics. Patients who choose this option purchase laboratory testing through Heartland, and payment is required before laboratory orders are issued.",
+  insuranceOption:
+    "Patients who prefer to use their own health insurance for laboratory testing may request a laboratory requisition for completion through their insurance plan's preferred laboratory.",
+  beforeConsult:
+    "Baseline laboratory testing is required before beginning hormone therapy and must be completed before your consultation so results are available for review during your appointment.",
+  pricingIntro: "Heartland's current discounted laboratory pricing is:",
+  panels: [
+    {
+      name: "Initial comprehensive laboratory panel",
+      price: "$250",
+    },
+    {
+      name: "Follow-up hormone monitoring panel",
+      price: "$150",
+    },
+    {
+      name: "Follow-up hormone and thyroid monitoring panel",
+      price: "$175",
+    },
+  ],
+  ongoing: [
+    "Laboratory monitoring is an important part of safe and effective hormone therapy.",
+    "An initial comprehensive laboratory panel is required before beginning treatment.",
+    "Follow-up hormone testing is typically performed 6 to 8 weeks after starting therapy or following significant dose adjustments.",
+    "Once treatment is established, laboratory monitoring is generally performed every 3 months until hormone levels and symptoms have stabilized.",
+    "After a stable treatment regimen is achieved, laboratory monitoring may be performed every 6 months.",
+    "An annual comprehensive laboratory panel is required as part of ongoing care.",
+    "Outside laboratory results may be accepted if they include all required tests and were completed within the previous 30 days. Additional testing may still be required.",
+    "Additional laboratory testing requested by the patient or required beyond Heartland's standard hormone and thyroid monitoring panels is billed separately.",
+  ],
   notIncluded:
-    "Laboratory testing is not included in consultation fees or membership fees. Patients may use health insurance for eligible laboratory testing or Heartland Hormone & Wellness Clinic's discounted cash-pay laboratory option. Payment for discounted cash-pay laboratory testing is required prior to specimen collection.",
+    "Laboratory testing is separate from consultation and membership fees. Heartland offers access to discounted laboratory testing through Quest Diagnostics. Patients who choose this option purchase laboratory testing through Heartland, and payment is required before laboratory orders are issued. Patients who prefer to use their own health insurance for laboratory testing may request a laboratory requisition for completion through their insurance plan's preferred laboratory.",
   preAppointment:
-    "Baseline laboratory testing is required before beginning hormone replacement therapy. Additional laboratory testing may be required throughout treatment based on prescribed medications, dosage adjustments, treatment response and medical necessity.",
+    "Baseline laboratory testing is required before beginning hormone therapy and must be completed before your consultation so results are available for review during your appointment.",
   titration:
-    "Periodic laboratory monitoring is required throughout treatment to ensure safety, effectiveness and appropriate dose optimization.",
+    "Follow-up hormone testing is typically performed 6 to 8 weeks after starting therapy or following significant dose adjustments.",
   maintenance:
-    "Follow-up frequency depends on the treatment plan. Hormone programs include quarterly follow-up visits.",
+    "Once treatment is established, laboratory monitoring is generally performed every 3 months until hormone levels and symptoms have stabilized. After a stable treatment regimen is achieved, laboratory monitoring may be performed every 6 months.",
   annual:
-    "Additional laboratory testing may be required throughout treatment based on medical necessity.",
+    "An annual comprehensive laboratory panel is required as part of ongoing care.",
   modality:
     "Follow-up appointments may be conducted in office or by virtual visit when clinically and legally appropriate.",
   outsideLabs:
-    "Outside labs may be accepted when they include the tests needed to establish care and are no more than one month old. Additional testing may still be required.",
+    "Outside laboratory results may be accepted if they include all required tests and were completed within the previous 30 days. Additional testing may still be required.",
 };
 
 export const membershipExclusions = additionalServices;
