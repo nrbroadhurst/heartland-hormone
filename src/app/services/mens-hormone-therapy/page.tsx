@@ -78,15 +78,16 @@ export default function MensHormonePage() {
           <SectionHeading title="Individualized Hormone Treatment" />
           <div className="space-y-4 text-charcoal/90 leading-relaxed -mt-4">
             <p>
-              Hormone replacement may be considered for appropriately evaluated
-              patients based on symptoms, medical history, examination when
-              appropriate and laboratory findings. Not everyone with these
-              symptoms receives hormone treatment.
+              Hormone replacement therapy may be considered for patients
+              following a comprehensive evaluation of symptoms, medical history,
+              and laboratory findings. Not everyone with symptoms suggestive of
+              a hormone imbalance requires hormone treatment.
             </p>
             <p>
-              When treatment is clinically appropriate, options are selected
-              individually. Follow-up includes symptom review, laboratory
-              monitoring and medication adjustments.
+              When appropriate, treatment plans are individualized to each
+              patient&apos;s needs and goals. Ongoing care includes symptom
+              review, laboratory monitoring, and treatment adjustments as
+              needed.
             </p>
           </div>
         </div>
