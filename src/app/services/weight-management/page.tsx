@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { TreatmentList } from "@/components/TreatmentList";
 import { CTASection } from "@/components/CTASection";
@@ -7,7 +6,6 @@ import { CareTeamNote } from "@/components/ProviderPreview";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
-import { pricing } from "@/lib/pricing";
 import { SITE } from "@/lib/site";
 
 const PATH = "/services/weight-management";
@@ -69,35 +67,25 @@ export default function WeightManagementPage() {
 
       <section className="bg-teal/5 border-y border-gold/20">
         <div className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-          <SectionHeading title="What Our Weight Management Program May Include" />
+          <SectionHeading title="What to Expect" />
           <TreatmentList
             items={[
               "Comprehensive medical evaluation",
-              "Review of previous weight-loss attempts",
-              "Medication review",
-              "Baseline laboratory evaluation when appropriate",
-              "Prescription treatment when clinically appropriate",
-              "Injection education when applicable",
-              "Dose titration",
-              "Side-effect management",
-              "Weight tracking",
-              "Basic nutrition guidance",
+              "Review of previous weight-loss efforts",
+              "Review of current medications",
+              "Baseline laboratory testing when indicated",
+              "Individualized treatment planning",
+              "Prescription weight-management medications when indicated",
+              "Medication management and monitoring",
+              "Side-effect monitoring",
+              "Weight and health progress tracking",
+              "Nutrition and lifestyle guidance",
               "Physical activity guidance",
-              "Clinical follow-up during active treatment",
+              "Routine follow-up visits",
+              "Treatment adjustments as needed",
               "Prescription refill management",
-              "Virtual follow-up when clinically and legally appropriate",
             ]}
           />
-          <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
-            {pricing.weightManagement.summary}{" "}
-            <Link
-              href="/programs#additional-services"
-              className="text-teal underline underline-offset-2"
-            >
-              View weight-management programs
-            </Link>
-            .
-          </p>
         </div>
       </section>
 
