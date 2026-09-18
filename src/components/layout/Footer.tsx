@@ -54,7 +54,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3 min-w-0">
+          <div className="lg:col-span-4 min-w-0">
             <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
               Care
             </h3>
@@ -65,14 +65,14 @@ export function Footer() {
                     href={service.href}
                     className="text-pretty hover:text-gold-light transition-colors"
                   >
-                    {service.title}
+                    {service.title.replace("Menopause Care", "Menopause\u00A0Care")}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="lg:col-span-4 min-w-0">
+          <div className="lg:col-span-3 min-w-0">
             <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
               Visit &amp; Contact
             </h3>
