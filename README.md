@@ -23,6 +23,8 @@ Anywhere you see `[PLACEHOLDER]` or `// TODO`, replace with real provider-confir
 
 Priority confirmations: clinic address, provider credentials, telehealth states, scheduler + BAA, membership pricing, attorney review of legal pages.
 
-## Deploy
+## Contact form
 
-Built for Vercel. Set the real domain in `src/app/layout.tsx` (`metadataBase`), `src/app/sitemap.ts`, and `src/app/robots.ts`.
+Without `RESEND_API_KEY`, Send Message opens an Outlook draft to `sherry@heartlandhormones.com`. The visitor must click Send.
+
+To send from the server (no Outlook draft), set `RESEND_API_KEY` and a verified `CONTACT_FROM_EMAIL` on Vercel.

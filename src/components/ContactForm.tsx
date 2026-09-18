@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
+import { SITE } from "@/lib/site";
 
 const INTEREST_OPTIONS = [
   { value: "mens-hormone", label: "Men's Hormone Care" },
@@ -38,7 +39,9 @@ export function ContactForm({
 }: {
   defaultInterest?: string;
 }) {
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success" | "compose" | "error">(
+    "idle",
+  );
   const {
     register,
     handleSubmit,
@@ -79,7 +82,19 @@ export function ContactForm({
         }),
       });
       if (!res.ok) throw new Error("Failed");
-      setStatus("success");
+      const result = (await res.json()) as {
+        emailed?: boolean;
+        outlookUrl?: string | null;
+        mailtoUrl?: string | null;
+      };
+      if (result.emailed) {
+        setStatus("success");
+      } else if (result.outlookUrl) {
+        window.location.assign(result.outlookUrl);
+        setStatus("compose");
+      } else {
+        throw new Error("Failed");
+      }
       reset({
         firstName: "",
         lastName: "",
@@ -245,12 +260,20 @@ export function ContactForm({
 
       {status === "success" && (
         <p className="rounded-md bg-teal/10 px-4 py-3 text-sm text-teal" role="status">
-          Thank you. Your message was received. We will respond shortly.
+          Thank you. Your appointment request was emailed to the clinic. We will
+          respond shortly.
+        </p>
+      )}
+      {status === "compose" && (
+        <p className="rounded-md bg-teal/10 px-4 py-3 text-sm text-teal" role="status">
+          An Outlook message to the clinic was opened. Click Send in Outlook so
+          the request is delivered. The To field should be {SITE.email}.
         </p>
       )}
       {status === "error" && (
         <p className="rounded-md bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
-          Something went wrong. Please try again.
+          The message could not be emailed. Please call {SITE.phone} or use the
+          clinic email link on this page.
         </p>
       )}
 

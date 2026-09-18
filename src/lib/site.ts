@@ -157,8 +157,26 @@ export function phoneHref(): string | null {
 }
 
 /** Outlook on the web compose for the clinic Microsoft 365 mailbox. */
-export function emailComposeUrl(): string | null {
+export function emailComposeUrl(options?: {
+  subject?: string;
+  body?: string;
+}): string | null {
   if (!SITE.email) return null;
-  // Angle-bracket address only (no display name) so To shows the mailbox once.
-  return `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(`<${SITE.email}>`)}`;
+  const params = new URLSearchParams();
+  params.set("to", `<${SITE.email}>`);
+  if (options?.subject) params.set("subject", options.subject);
+  if (options?.body) params.set("body", options.body);
+  return `https://outlook.office.com/mail/deeplink/compose?${params.toString()}`;
+}
+
+export function emailMailtoUrl(options?: {
+  subject?: string;
+  body?: string;
+}): string | null {
+  if (!SITE.email) return null;
+  const params = new URLSearchParams();
+  if (options?.subject) params.set("subject", options.subject);
+  if (options?.body) params.set("body", options.body);
+  const query = params.toString();
+  return `mailto:${SITE.email}${query ? `?${query}` : ""}`;
 }
