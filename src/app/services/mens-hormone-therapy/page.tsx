@@ -93,21 +93,19 @@ export default function MensHormonePage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-        <SectionHeading title="What Your Program May Include" />
+        <SectionHeading title="What to Expect" />
         <TreatmentList
           items={[
             "Comprehensive initial evaluation",
-            "Baseline laboratory review",
-            "Individualized hormone treatment when clinically appropriate",
-            "Supplies when applicable",
+            "Baseline laboratory testing and review",
+            "Individualized treatment plan",
             "Education on medication administration",
-            "Routine clinical follow-up",
+            "Routine follow-up visits",
             "Laboratory monitoring",
-            "Symptom monitoring",
-            "Medication adjustments",
+            "Symptom assessment and monitoring",
+            "Treatment adjustments as needed",
             "Prescription refill management",
             "In-office care when necessary",
-            "Virtual follow-up when clinically and legally appropriate",
           ]}
         />
         <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
