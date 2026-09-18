@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms-of-service",
     "/recurring-billing",
     "/refund-policy",
-    "/telehealth-consent",
     "/medical-disclaimer",
   ];
 
