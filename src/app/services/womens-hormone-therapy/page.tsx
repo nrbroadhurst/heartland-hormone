@@ -25,7 +25,7 @@ export default function WomensHormonePage() {
       <JsonLd
         data={serviceJsonLd(
           "Women's Hormone & Menopause Care",
-          "Individualized care for women experiencing hormonal changes related to perimenopause, menopause, postmenopause, and associated symptoms.",
+          "Individualized care for women navigating the menopause transition, including perimenopause, menopause, and postmenopause.",
           PATH,
         )}
       />
@@ -39,7 +39,7 @@ export default function WomensHormonePage() {
 
       <PageHero
         title="Women's Hormone & Menopause Care"
-        description="Heartland provides individualized care for women experiencing hormonal changes related to perimenopause, menopause, postmenopause, and associated symptoms. Treatment recommendations are based on your symptoms, health history, risk factors, laboratory findings, and personal health goals."
+        description="Heartland provides individualized care for women navigating the menopause transition, including perimenopause, menopause, and postmenopause. Treatment recommendations are based on your symptoms, health history, risk factors, laboratory findings, and personal health goals."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Book a Women's Hormone Consultation" />
