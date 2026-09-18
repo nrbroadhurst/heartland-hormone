@@ -134,9 +134,11 @@ export default function PricingPage() {
             <PricingCard
               name={pricing.womensAdvanced.name}
               price={pricing.womensAdvanced.display}
-              billingNote={FOUR_WEEK_NOTE}
+              billingNote="Every 4 Weeks"
               summary={pricing.womensAdvanced.summary}
+              includesHeading={pricing.womensAdvanced.includesHeading}
               includes={pricing.womensAdvanced.includes}
+              notIncludedHeading={pricing.womensAdvanced.notIncludedHeading}
               notIncluded={pricing.womensAdvanced.notIncluded}
               href="/contact?interest=womens-hormone"
               ctaLabel="Book a Women's Hormone Consultation"
