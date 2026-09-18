@@ -40,11 +40,20 @@ export default async function ContactPage({ searchParams }: Props) {
             booking.
           </p>
           <p>
-            New patient consultations are typically 60 minutes and include a
+            New Patient Consultations are typically 60 minutes and include a
             comprehensive review of your symptoms, health history, laboratory
             findings, and health goals. If treatment is recommended, ongoing
-            follow-up visits are scheduled to monitor your progress, review
+            follow-up care is provided to monitor your progress, review
             laboratory results, and adjust your treatment plan as needed.
+          </p>
+          <h2 className="font-display text-2xl text-gold tracking-wide pt-2">
+            Follow-Up Appointments
+          </h2>
+          <p>
+            Follow-up visits are for established Heartland patients currently
+            receiving care. These appointments provide an opportunity to review
+            your progress, discuss any concerns, evaluate laboratory results when
+            applicable, and make adjustments to your treatment plan as needed.
           </p>
         </div>
       </PageHero>
