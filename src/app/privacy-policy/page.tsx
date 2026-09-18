@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { EmailLink } from "@/components/EmailLink";
 import { SITE, hasEmail } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
@@ -91,12 +92,7 @@ export default function PrivacyPolicyPage() {
               <>
                 {" "}
                 at{" "}
-                <a
-                  href={`mailto:${SITE.email}`}
-                  className="text-teal underline underline-offset-2"
-                >
-                  {SITE.email}
-                </a>
+                <EmailLink className="text-teal underline underline-offset-2" />
               </>
             ) : (
               ". Use the contact form for general questions."

@@ -155,3 +155,9 @@ export function phoneHref(): string | null {
   if (!SITE.phoneTel && !SITE.phone) return null;
   return `tel:${SITE.phoneTel ?? SITE.phone}`;
 }
+
+/** Outlook on the web compose for the clinic Microsoft 365 mailbox. */
+export function emailComposeUrl(): string | null {
+  if (!SITE.email) return null;
+  return `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(SITE.email)}`;
+}

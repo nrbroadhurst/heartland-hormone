@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { EmailLink } from "@/components/EmailLink";
 import { SITE, addressLines, mapsUrl, hasPhone, hasEmail, phoneHref } from "@/lib/site";
 import { MapPin, Video, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
@@ -66,9 +67,7 @@ export default function LocationsPage() {
               )}
               {hasEmail() && (
                 <li>
-                  <a href={`mailto:${SITE.email}`} className="hover:text-teal">
-                    {SITE.email}
-                  </a>
+                  <EmailLink className="hover:text-teal" />
                 </li>
               )}
               <li className="pt-2 flex items-start gap-2">

@@ -4,6 +4,7 @@ import { PageHero, SectionHeading } from "@/components/PageHero";
 import { BookingWidget } from "@/components/BookingWidget";
 import { ContactForm } from "@/components/ContactForm";
 import { SITE, hasEmail, hasPhone, addressLines, mapsUrl, phoneHref } from "@/lib/site";
+import { EmailLink } from "@/components/EmailLink";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
 
@@ -118,11 +119,11 @@ export default async function ContactPage({ searchParams }: Props) {
               {hasEmail() && (
                 <li className="flex gap-3">
                   <Mail className="h-5 w-5 text-gold shrink-0" strokeWidth={1.5} aria-hidden />
-                  <a href={`mailto:${SITE.email}`} className="hover:text-teal">
-                    {SITE.email}
-                  </a>
+                  <EmailLink className="hover:text-teal" />
                   <span className="block text-sm text-charcoal/70 mt-1">
-                    Clinic contact email for questions only.
+                    Opens Outlook on the web for this clinic address. Sign in
+                    with the Heartland Microsoft 365 account, not another work
+                    mailbox.
                   </span>
                 </li>
               )}

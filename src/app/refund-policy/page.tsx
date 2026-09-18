@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { billingPolicy } from "@/lib/pricing";
+import { EmailLink } from "@/components/EmailLink";
 import { SITE } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
@@ -67,9 +68,7 @@ export default function RefundPolicyPage() {
               {SITE.phone}
             </a>{" "}
             or{" "}
-            <a href={`mailto:${SITE.email}`} className="text-teal underline underline-offset-2">
-              {SITE.email}
-            </a>{" "}
+            <EmailLink className="text-teal underline underline-offset-2" />{" "}
             with billing questions.
           </p>
         </section>

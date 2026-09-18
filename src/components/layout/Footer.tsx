@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo/Logo";
+import { EmailLink } from "@/components/EmailLink";
 import {
   LEGAL_LINKS,
   NAV_LINKS,
@@ -103,9 +104,7 @@ export function Footer() {
               )}
               {hasEmail() && (
                 <li>
-                  <a href={`mailto:${SITE.email}`} className="hover:text-gold-light">
-                    {SITE.email}
-                  </a>
+                  <EmailLink className="hover:text-gold-light" />
                 </li>
               )}
               {SITE.officeHours && <li className="pt-2">{SITE.officeHours}</li>}

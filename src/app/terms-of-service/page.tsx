@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { billingConfig } from "@/lib/billing";
 import { billingPolicy } from "@/lib/pricing";
+import { EmailLink } from "@/components/EmailLink";
 import { SITE, hasEmail } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
@@ -141,12 +142,7 @@ export default function TermsOfServicePage() {
               <>
                 {" "}
                 (
-                <a
-                  href={`mailto:${SITE.email}`}
-                  className="text-teal underline underline-offset-2"
-                >
-                  {SITE.email}
-                </a>
+                <EmailLink className="text-teal underline underline-offset-2" />
                 )
               </>
             ) : (

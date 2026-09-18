@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { EmailLink } from "@/components/EmailLink";
 import { SITE, hasEmail } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
@@ -66,12 +67,7 @@ export default function TelehealthConsentPage() {
               <>
                 {" "}
                 at{" "}
-                <a
-                  href={`mailto:${SITE.email}`}
-                  className="text-teal underline underline-offset-2"
-                >
-                  {SITE.email}
-                </a>
+                <EmailLink className="text-teal underline underline-offset-2" />
               </>
             ) : (
               " through the contact page."

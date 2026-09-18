@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { billingConfig } from "@/lib/billing";
 import { billingPolicy } from "@/lib/pricing";
+import { EmailLink } from "@/components/EmailLink";
 import { SITE } from "@/lib/site";
 import { integrations } from "@/lib/integrations";
 import { pageMeta } from "@/lib/seo";
@@ -90,9 +91,7 @@ export default function RecurringBillingPage() {
               {SITE.phone}
             </a>{" "}
             or{" "}
-            <a href={`mailto:${SITE.email}`} className="text-teal underline underline-offset-2">
-              {SITE.email}
-            </a>
+            <EmailLink className="text-teal underline underline-offset-2" />
             .
           </p>
         </section>
