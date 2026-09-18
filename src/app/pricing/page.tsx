@@ -37,7 +37,7 @@ export default function PricingPage() {
       <section className="mx-auto max-w-7xl px-4 py-10 md:py-12 md:px-6 lg:px-8 space-y-12">
         <div className="rounded-md border border-gold/40 bg-teal/5 p-5 md:p-6">
           <h2 className="font-display text-xl text-teal tracking-wide mb-4">
-            All programs include
+            All Programs Include
           </h2>
           <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {programSharedIncludes.map((item) => (

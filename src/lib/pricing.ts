@@ -6,11 +6,11 @@ import { billingConfig } from "@/lib/billing";
 export const FOUR_WEEK_NOTE = "Every 4 weeks";
 
 export const programSharedIncludes = [
-  "Provider oversight",
+  "Ongoing provider oversight",
   "Medication management",
   "Quarterly follow-up visits",
-  "Personalized treatment adjustments",
-  "Convenient home delivery of included medications",
+  "Individualized treatment adjustments",
+  "Included medications shipped directly to your home",
 ] as const;
 
 export const additionalServices = [
