@@ -138,6 +138,7 @@ export function ContactForm({
       onSubmit={handleSubmit(onSubmit)}
       className="relative space-y-5"
       noValidate
+      autoComplete="off"
     >
       <p className="rounded-md border border-gold/30 bg-teal/5 px-4 py-3 text-sm text-charcoal/80">
         This form is for <strong>scheduling requests and general questions</strong>.
@@ -186,13 +187,16 @@ export function ContactForm({
         <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-teal">
           Email
         </label>
-        <input
-          id="email"
-          type="email"
-          autoComplete="email"
-          className="w-full rounded-md border border-gold/40 bg-cream px-3 py-2.5 text-charcoal focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/20"
-          {...register("email")}
-        />
+          <input
+            id="email"
+            type="email"
+            inputMode="email"
+            className="w-full rounded-md border border-gold/40 bg-cream px-3 py-2.5 text-charcoal focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/20"
+            {...register("email")}
+            autoComplete="off"
+            data-lpignore="true"
+            data-1p-ignore="true"
+          />
         {errors.email && (
           <p className="mt-1 text-sm text-red-700" role="alert">
             {errors.email.message}
@@ -288,8 +292,8 @@ export function ContactForm({
       )}
       {status === "error" && (
         <p className="rounded-md bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
-          The message could not be emailed. Please call {SITE.phone} or use the
-          clinic email link on this page.
+          The message could not be emailed. Please call {SITE.phone} or copy the
+          clinic address {SITE.email} (Heartland inbox only).
         </p>
       )}
 

@@ -156,28 +156,3 @@ export function phoneHref(): string | null {
   return `tel:${SITE.phoneTel ?? SITE.phone}`;
 }
 
-/** Outlook on the web compose for the clinic Microsoft 365 mailbox. */
-export function emailComposeUrl(options?: {
-  subject?: string;
-  body?: string;
-}): string | null {
-  if (!SITE.email) return null;
-  const params = new URLSearchParams();
-  params.set("to", `<${SITE.email}>`);
-  params.set("login_hint", SITE.email);
-  if (options?.subject) params.set("subject", options.subject);
-  if (options?.body) params.set("body", options.body);
-  return `https://outlook.office365.com/mail/deeplink/compose?${params.toString()}`;
-}
-
-export function emailMailtoUrl(options?: {
-  subject?: string;
-  body?: string;
-}): string | null {
-  if (!SITE.email) return null;
-  const params = new URLSearchParams();
-  if (options?.subject) params.set("subject", options.subject);
-  if (options?.body) params.set("body", options.body);
-  const query = params.toString();
-  return `mailto:${SITE.email}${query ? `?${query}` : ""}`;
-}

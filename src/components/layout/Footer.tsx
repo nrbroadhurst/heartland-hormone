@@ -104,7 +104,7 @@ export function Footer() {
               )}
               {hasEmail() && (
                 <li>
-                  <EmailLink className="hover:text-gold-light" />
+                  <EmailLink />
                 </li>
               )}
               {SITE.officeHours && <li className="pt-2">{SITE.officeHours}</li>}

@@ -119,11 +119,13 @@ export default async function ContactPage({ searchParams }: Props) {
               {hasEmail() && (
                 <li className="flex gap-3">
                   <Mail className="h-5 w-5 text-gold shrink-0" strokeWidth={1.5} aria-hidden />
-                  <EmailLink className="hover:text-teal" />
-                  <span className="block text-sm text-charcoal/70 mt-1">
-                    Opens Outlook on the web for this clinic address. Sign in
-                    with the Heartland Microsoft 365 account, not another work
-                    mailbox.
+                  <span>
+                    <EmailLink />
+                    <span className="block text-sm text-charcoal/70 mt-1">
+                      Public clinic inbox only. Messages from this page are sent
+                      to this address. Microsoft sign-in is not used, so a
+                      personal mailbox is never shown.
+                    </span>
                   </span>
                 </li>
               )}
