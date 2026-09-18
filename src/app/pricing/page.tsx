@@ -58,16 +58,17 @@ export default function PricingPage() {
             compact
             eyebrow="Getting Started"
             title="New Patient Consultation"
-            description="Required before hormone care. 60 minutes. Laboratory testing is not included in the consult fee."
           />
           <PricingCard
             featured
             name={pricing.initialEvaluation.name}
             price={pricing.initialEvaluation.display}
-            billingNote="One-time · 60 minutes"
+            billingNote="One-Time Fee • 60 Minutes"
             summary={pricing.initialEvaluation.summary}
+            includesHeading={pricing.initialEvaluation.includesHeading}
             includes={pricing.initialEvaluation.includes}
-            notIncluded={pricing.initialEvaluation.notIncluded}
+            extraHeading={pricing.initialEvaluation.beforeAppointmentHeading}
+            extra={pricing.initialEvaluation.beforeAppointment}
             href="/contact"
             ctaLabel="Book a Consultation"
           />

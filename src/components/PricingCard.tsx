@@ -9,6 +9,9 @@ type PricingCardProps = {
   price?: string;
   summary: string;
   includes: readonly string[];
+  includesHeading?: string;
+  extraHeading?: string;
+  extra?: readonly string[];
   notIncluded?: readonly string[];
   href?: string;
   ctaLabel?: string;
@@ -23,6 +26,9 @@ export function PricingCard({
   price,
   summary,
   includes,
+  includesHeading,
+  extraHeading,
+  extra,
   notIncluded,
   href = "/contact",
   ctaLabel = SITE.consultCta,
@@ -79,6 +85,16 @@ export function PricingCard({
       >
         {summary}
       </p>
+      {includesHeading ? (
+        <h4
+          className={cn(
+            "font-display text-sm tracking-wide mb-3",
+            featured ? "text-gold-light" : "text-teal",
+          )}
+        >
+          {includesHeading}
+        </h4>
+      ) : null}
       <ul className="space-y-2.5 mb-6 flex-1">
         {includes.map((item) => (
           <li key={item} className="flex gap-2 text-sm">
@@ -109,6 +125,28 @@ export function PricingCard({
               <li key={item}>{item}</li>
             ))}
           </ul>
+        </div>
+      )}
+      {(extraHeading || extra) && (
+        <div
+          className={cn(
+            "mb-6 border-t pt-4 space-y-3 text-sm leading-relaxed",
+            featured ? "border-gold/30 text-cream/80" : "border-gold/30 text-charcoal/80",
+          )}
+        >
+          {extraHeading ? (
+            <h4
+              className={cn(
+                "font-display text-sm tracking-wide",
+                featured ? "text-gold-light" : "text-teal",
+              )}
+            >
+              {extraHeading}
+            </h4>
+          ) : null}
+          {extra?.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </div>
       )}
       {note && (

@@ -35,17 +35,24 @@ export const pricing = {
     teaserDisplay: "$225",
     confirmed: true,
     summary:
-      "Your comprehensive 60-minute consultation. Required laboratory testing is separate.",
+      "A comprehensive consultation is required before starting hormone therapy. Required laboratory testing is separate and must be completed before your appointment.",
+    includesHeading: "Your 60-Minute Consultation Includes",
     includes: [
       "Detailed health history review",
-      "Symptom and wellness assessment",
+      "Symptom assessment",
       "Review of current medications",
       "Comprehensive hormone evaluation",
-      "Review of required laboratory testing",
+      "Review of laboratory results",
       "Personalized treatment recommendations",
       "Development of an individualized treatment plan",
     ],
-    notIncluded: ["Required laboratory testing"],
+    beforeAppointmentHeading: "Required Before Your Appointment",
+    beforeAppointment: [
+      "Laboratory testing is required and must be completed before your consultation so results are available for review during your appointment.",
+      "Heartland offers access to negotiated discounted laboratory pricing through Quest Diagnostics. Laboratory testing purchased through Heartland must be prepaid before laboratory orders are issued.",
+      "Patients who prefer to use their own health insurance benefits for laboratory testing may request a laboratory requisition for testing through their insurance plan's preferred laboratory.",
+      "Laboratory testing fees are separate from the consultation fee.",
+    ],
   },
   mensInjections: {
     id: "mens-injections",
