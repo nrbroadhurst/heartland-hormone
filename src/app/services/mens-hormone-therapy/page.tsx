@@ -38,9 +38,8 @@ export default function MensHormonePage() {
       />
 
       <PageHero
-        eyebrow="Men's Care"
         title="Men's Hormone Care"
-        description="Heartland provides individualized evaluation and testosterone replacement therapy when clinically appropriate for men experiencing symptoms that may be related to low testosterone. Care is available in person at our Kansas City-area clinic, with virtual follow-up when clinically and legally appropriate."
+        description="Heartland provides individualized evaluation, treatment, and ongoing monitoring for men experiencing symptoms that may be associated with low testosterone levels, including low energy, decreased libido, reduced strength, changes in body composition, mood changes, and brain fog."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <BookButton label="Book a Men's Hormone Consultation" />
