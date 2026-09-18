@@ -11,6 +11,8 @@ import {
   COMMON_SYMPTOMS_INTRO,
   HERO_HEADLINE,
   HERO_LEAD,
+  HERO_SUPPORT,
+  HERO_WHOLE_PERSON,
   WHY_CHOOSE_COMMITMENTS,
   WHY_CHOOSE_INTRO,
 } from "@/lib/homepage-copy";
@@ -56,8 +58,11 @@ export default function HomePage() {
             <p className="max-w-2xl text-lg md:text-xl text-cream/90 leading-relaxed mb-4">
               {HERO_LEAD}
             </p>
+            <p className="max-w-2xl text-base md:text-lg text-cream/80 leading-relaxed mb-4">
+              {HERO_SUPPORT}
+            </p>
             <p className="max-w-2xl text-base md:text-lg text-cream/80 leading-relaxed mb-8">
-              {SITE.heroSupportingCopy}
+              {HERO_WHOLE_PERSON}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button asChild variant="gold" size="lg">

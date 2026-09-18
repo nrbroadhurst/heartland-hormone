@@ -8,7 +8,10 @@ export const HERO_LEAD =
   "Helping women and men restore energy, balance, vitality, and confidence through personalized hormone replacement and symptom-guided hormone balancing.";
 
 export const HERO_SUPPORT =
-  "Whether you are experiencing low testosterone, perimenopause, menopause, PMOS/PCOS or weight-management challenges, we provide evidence-based care tailored to your goals and lifestyle.";
+  "Whether you are experiencing low testosterone, perimenopause, menopause, PMOS (Polyendocrine Metabolic Ovarian Syndrome, also known as PCOS [Polycystic Ovary Syndrome]), endometriosis, or weight management challenges, we provide evidence-based care tailored to your goals, symptoms, and lifestyle.";
+
+export const HERO_WHOLE_PERSON =
+  "Our approach focuses on treating the whole person, not just lab numbers, helping you achieve lasting improvements in health, well-being, and quality of life.";
 
 export const APPROACH_TITLE =
   "Hormone Replacement & Symptom-Guided Hormone Balancing for Women and Men";

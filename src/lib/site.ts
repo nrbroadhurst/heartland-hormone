@@ -33,7 +33,9 @@ export const SITE = {
   serviceAreaLine:
     "Local care in the Kansas City area with in-person appointments and convenient follow-up options for eligible Kansas and Missouri patients.",
   heroSupportingCopy:
-    "Whether you are experiencing low testosterone, perimenopause, menopause, PMOS/PCOS or weight-management challenges, we provide evidence-based care tailored to your goals and lifestyle.",
+    "Whether you are experiencing low testosterone, perimenopause, menopause, PMOS (Polyendocrine Metabolic Ovarian Syndrome, also known as PCOS [Polycystic Ovary Syndrome]), endometriosis, or weight management challenges, we provide evidence-based care tailored to your goals, symptoms, and lifestyle.",
+  heroWholePersonCopy:
+    "Our approach focuses on treating the whole person, not just lab numbers, helping you achieve lasting improvements in health, well-being, and quality of life.",
 
   streetAddress: "14400 Metcalf Avenue, Suite 105",
   addressNote: "Inside Property Evaluations/Regus Building",
