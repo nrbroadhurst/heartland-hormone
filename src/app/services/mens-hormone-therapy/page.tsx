@@ -78,16 +78,15 @@ export default function MensHormonePage() {
           <SectionHeading title="Individualized Hormone Treatment" />
           <div className="space-y-4 text-charcoal/90 leading-relaxed -mt-4">
             <p>
-              Hormone replacement therapy may be considered for patients
-              following a comprehensive evaluation of symptoms, medical history,
-              and laboratory findings. Not everyone with symptoms suggestive of
-              a hormone imbalance requires hormone treatment.
+              Treatment begins with a comprehensive evaluation of symptoms,
+              medical history, and laboratory findings. Based on these results,
+              Heartland develops a personalized treatment plan designed to
+              address each patient&apos;s individual needs and goals.
             </p>
             <p>
-              When appropriate, treatment plans are individualized to each
-              patient&apos;s needs and goals. Ongoing care includes symptom
-              review, laboratory monitoring, and treatment adjustments as
-              needed.
+              Ongoing care includes symptom review, laboratory monitoring, and
+              treatment adjustments as needed to help patients achieve and
+              maintain the best possible results.
             </p>
           </div>
         </div>
