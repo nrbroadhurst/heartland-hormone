@@ -4,28 +4,16 @@ import { SITE } from "@/lib/site";
 
 const APPOINTMENT_TYPES = [
   {
-    label: "Men's Hormone Consultation",
-    href: "/contact?interest=mens-hormone",
+    label: "New Patient Consultation (60 minutes)",
+    href: SITE.patientPortalUrl,
   },
   {
-    label: "Women's Hormone & Menopause Consultation",
-    href: "/contact?interest=womens-hormone",
-  },
-  {
-    label: "Medical Weight Management Consultation",
-    href: "/contact?interest=weight-management",
-  },
-  {
-    label: "General Wellness Consultation",
-    href: "/contact?interest=wellness",
+    label: "Follow-Up Visit (15-20 minutes)",
+    href: SITE.patientPortalUrl,
   },
 ] as const;
 
-export function BookingWidget({
-  serviceHint,
-}: {
-  serviceHint?: string;
-}) {
+export function BookingWidget() {
   const bookingHref = SITE.bookingUrl;
 
   if (bookingHref) {
@@ -55,43 +43,41 @@ export function BookingWidget({
         Request an Appointment
       </h3>
       <p className="text-sm text-charcoal/80 leading-relaxed mb-3">
-        Choose the visit type that best fits your needs.
+        Select your appointment type:
       </p>
-      <ul className="text-sm text-charcoal/80 leading-relaxed mb-6 space-y-1">
-        <li>New patient consultations are typically 60 minutes.</li>
-        <li>Follow-up visits are typically 15 to 20 minutes.</li>
-        <li>
-          Appointments can be requested online through our{" "}
-          <a
-            href={SITE.patientPortalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-teal underline underline-offset-2"
-          >
-            secure patient portal
-          </a>{" "}
-          or by calling{" "}
-          <a
-            href={`tel:${SITE.phoneTel}`}
-            className="text-teal underline underline-offset-2"
-          >
-            {SITE.phone}
-          </a>
-          .
-        </li>
-      </ul>
       <ul className="space-y-3 mb-6">
         {APPOINTMENT_TYPES.map((type) => (
-          <li key={type.href}>
-            <Link
-              href={serviceHint ? `${type.href}` : type.href}
+          <li key={type.label}>
+            <a
+              href={type.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex min-h-11 items-center rounded-md border border-gold/30 px-4 py-3 text-sm font-medium text-teal hover:border-gold hover:bg-teal/5"
             >
               {type.label}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
+      <p className="text-sm text-charcoal/80 leading-relaxed mb-6">
+        Appointments can be requested online through our{" "}
+        <a
+          href={SITE.patientPortalUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-teal underline underline-offset-2"
+        >
+          secure patient portal
+        </a>{" "}
+        or by calling{" "}
+        <a
+          href={`tel:${SITE.phoneTel}`}
+          className="text-teal underline underline-offset-2"
+        >
+          {SITE.phone}
+        </a>
+        .
+      </p>
       <div className="flex flex-col gap-3 sm:flex-row">
         <Button asChild variant="teal">
           <a
