@@ -19,8 +19,8 @@ export function Footer() {
   return (
     <footer className="bg-teal text-cream">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-12">
-          <div className="max-w-sm space-y-5 sm:col-span-2 lg:col-span-4 lg:max-w-none">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-8 xl:gap-x-12 lg:gap-y-12">
+          <div className="max-w-sm space-y-5 sm:col-span-2 lg:col-span-3 lg:max-w-none">
             <Logo variant="stacked" theme="dark" className="h-24 w-auto" />
             <p className="text-sm leading-7 text-cream/80 text-pretty">
               Helping women and men restore energy, balance, vitality, and
@@ -54,7 +54,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 min-w-0">
             <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
               Care
             </h3>
@@ -63,7 +63,7 @@ export function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={service.href}
-                    className="inline-block max-w-[16rem] text-pretty hover:text-gold-light transition-colors"
+                    className="text-pretty hover:text-gold-light transition-colors"
                   >
                     {service.title}
                   </Link>
@@ -72,7 +72,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4 min-w-0">
             <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
               Visit &amp; Contact
             </h3>
