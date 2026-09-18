@@ -78,7 +78,7 @@ export const SITE = {
 } as const;
 
 export const MEDICAL_DISCLAIMER =
-  "Information on this website is provided for general educational purposes and does not constitute medical advice. Treatment recommendations are individualized following appropriate clinical evaluation. Prescription treatment is provided only when clinically appropriate.";
+  "Information provided on this website is for general educational purposes only and is not intended as medical advice. Treatment recommendations are individualized and based on a comprehensive clinical evaluation. Prescription medications are prescribed only when medically appropriate.";
 
 export const PRICING_DISCLAIMER =
   "Treatment is individualized. Medication availability, dose, laboratory requirements and treatment recommendations vary by patient. Published program rates are listed on Pricing & Programs and may change. Additional medications, laboratory testing or specialized services are billed separately. Prescription treatment is provided only when clinically appropriate. Consultation fees are nonrefundable. Membership fees are nonrefundable once billed and medications have been prescribed, processed or shipped.";
@@ -90,9 +90,11 @@ export const LEGAL_LINKS = [
     label: "Notice of Privacy Practices",
   },
   { href: "/terms-of-service", label: "Terms of Service" },
-  { href: "/recurring-billing", label: "Recurring Billing & Cancellation" },
+  {
+    href: "/recurring-billing",
+    label: "Recurring Billing & Cancellation Policy",
+  },
   { href: "/refund-policy", label: "Refund Policy" },
-  { href: "/telehealth-consent", label: "Virtual Care Consent" },
   { href: "/medical-disclaimer", label: "Medical Disclaimer" },
 ] as const;
 

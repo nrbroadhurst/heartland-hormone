@@ -110,12 +110,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gold/30 pt-8 space-y-4">
-          <p className="max-w-4xl text-xs leading-relaxed text-cream/70">
+        <div className="mt-12 border-t border-gold/30 pt-8 space-y-6">
+          <p className="max-w-4xl text-xs leading-7 text-cream/70">
             {MEDICAL_DISCLAIMER}
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <ul className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-cream/75">
+          <div>
+            <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
+              Policies &amp; Legal
+            </h3>
+            <ul className="flex max-w-3xl flex-wrap gap-x-5 gap-y-2.5 text-xs leading-6 text-cream/75">
               {LEGAL_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-gold-light">
@@ -124,10 +127,10 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="text-xs text-cream/60">
-              © {new Date().getFullYear()} {SITE.name}. All rights reserved.
-            </p>
           </div>
+          <p className="text-xs text-cream/60">
+            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
