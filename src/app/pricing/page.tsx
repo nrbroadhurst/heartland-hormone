@@ -115,16 +115,18 @@ export default function PricingPage() {
             compact
             eyebrow="Women"
             title="Women's Hormone Care"
-            description="Recurring membership billed every 4 weeks. Includes listed medications, shipping, and ongoing clinical monitoring."
+            description="Recurring membership billed every 4 weeks. Membership includes prescribed hormone therapy, routine follow-up, ongoing clinical management, and shipment of included medications."
           />
           <div className="grid gap-6 lg:grid-cols-2">
             <PricingCard
               featured
               name={pricing.womensTriple.name}
               price={pricing.womensTriple.display}
-              billingNote={FOUR_WEEK_NOTE}
+              billingNote="Every 4 Weeks"
               summary={pricing.womensTriple.summary}
+              includesHeading={pricing.womensTriple.includesHeading}
               includes={pricing.womensTriple.includes}
+              notIncludedHeading={pricing.womensTriple.notIncludedHeading}
               notIncluded={pricing.womensTriple.notIncluded}
               href="/contact?interest=womens-hormone"
               ctaLabel="Book a Women's Hormone Consultation"
