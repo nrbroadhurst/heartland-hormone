@@ -6,12 +6,10 @@ const APPOINTMENT_TYPES = [
   {
     label: "New Patient Consultation (60 minutes)",
     href: "#contact-form",
-    external: false,
   },
   {
     label: "Follow-Up Visit (15-20 minutes)",
-    href: SITE.patientPortalUrl,
-    external: true,
+    href: "/patient-portal",
   },
 ] as const;
 
@@ -50,61 +48,35 @@ export function BookingWidget() {
       <ul className="space-y-3 mb-6">
         {APPOINTMENT_TYPES.map((type) => (
           <li key={type.label}>
-            {type.external ? (
-              <a
-                href={type.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex min-h-11 items-center rounded-md border border-gold/30 px-4 py-3 text-sm font-medium text-teal hover:border-gold hover:bg-teal/5"
-              >
-                {type.label}
-              </a>
-            ) : (
-              <Link
-                href={type.href}
-                className="flex min-h-11 items-center rounded-md border border-gold/30 px-4 py-3 text-sm font-medium text-teal hover:border-gold hover:bg-teal/5"
-              >
-                {type.label}
-              </Link>
-            )}
+            <Link
+              href={type.href}
+              className="flex min-h-11 items-center rounded-md border border-gold/30 px-4 py-3 text-sm font-medium text-teal hover:border-gold hover:bg-teal/5"
+            >
+              {type.label}
+            </Link>
           </li>
         ))}
       </ul>
       <p className="text-sm text-charcoal/80 leading-relaxed mb-3">
-        Follow-up visits are booked in OptiMantra. On the login screen, choose
-        patient sign-in for Heartland Hormone &amp; Wellness Clinic and use the
-        email address on your clinic account. This is not a provider login.
+        Follow-up visits are booked in the Heartland patient portal (OptiMantra).
+        Sign in with the personal email on your patient account — the address
+        that received your portal invite. Never sign in with the clinic contact
+        email.
       </p>
       <p className="text-sm text-charcoal/80 leading-relaxed mb-6">
-        New patients do not have a portal login yet. Use New Patient Consultation
-        above or call{" "}
+        New patients do not have a portal login yet. Choose New Patient
+        Consultation above or call{" "}
         <a
           href={`tel:${SITE.phoneTel}`}
           className="text-teal underline underline-offset-2"
         >
           {SITE.phone}
         </a>{" "}
-        so we can schedule your first visit and send your OptiMantra invite.
-        Current patients who already have a login can also book through the{" "}
-        <a
-          href={SITE.patientPortalUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-teal underline underline-offset-2"
-        >
-          secure patient portal
-        </a>
-        .
+        so we can schedule your first visit and send your invite.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row">
         <Button asChild variant="teal">
-          <a
-            href={SITE.patientPortalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sign In to OptiMantra
-          </a>
+          <Link href="/patient-portal">Patient Portal Instructions</Link>
         </Button>
         <Button asChild variant="outline-teal">
           <Link href="#contact-form">New Patient? Send a Message</Link>

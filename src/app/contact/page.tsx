@@ -28,11 +28,11 @@ export default async function ContactPage({ searchParams }: Props) {
       <PageHero title={SITE.consultCta}>
         <div className="max-w-2xl space-y-4 text-lg text-cream/85 leading-relaxed">
           <p>
-            Current patients can schedule through our secure OptiMantra patient
-            portal. Sign in as a patient of Heartland Hormone &amp; Wellness
-            Clinic using the email address we have on file. New patients, or
-            anyone who cannot log in, should contact us by phone, email, or
-            message so we can create your portal access.
+            Current patients schedule in the patient portal with the email
+            address on their own Heartland patient account. That is not the
+            clinic contact email. New patients, or anyone who cannot log in,
+            should contact us by phone, email, or message so we can create
+            portal access.
           </p>
           <p>
             New patient consultations are typically 60 minutes and include a
@@ -92,6 +92,10 @@ export default async function ContactPage({ searchParams }: Props) {
                   <a href={`mailto:${SITE.email}`} className="hover:text-teal">
                     {SITE.email}
                   </a>
+                  <span className="block text-sm text-charcoal/70 mt-1">
+                    Clinic contact email for questions. Do not use this address
+                    as a patient-portal username.
+                  </span>
                 </li>
               )}
               <li className="flex gap-3">

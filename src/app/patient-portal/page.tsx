@@ -19,7 +19,7 @@ export default function PatientPortalPage() {
       <PageHero
         eyebrow="Current Patients"
         title="Patient Portal"
-        description="Heartland uses OptiMantra. Sign in as a patient of Heartland Hormone & Wellness Clinic with the email address on file. Medical records are not stored on this website."
+        description="Patients sign in to OptiMantra with their own patient email — the address that received the Heartland invite. The clinic contact email is not a portal username. Medical records are not stored on this website."
       />
 
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
@@ -45,7 +45,7 @@ export default function PatientPortalPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-            Sign In to OptiMantra as a Patient
+              Open Patient Portal
             </a>
           </Button>
           <BookButton label="New Patient? Book a Consultation" href="/contact" />
@@ -53,10 +53,10 @@ export default function PatientPortalPage() {
 
         <p className="mt-8 text-sm text-charcoal/75 leading-relaxed">
           After your clinic account is set up, you will receive an OptiMantra
-          invite. Sign in as a patient (not as a provider) for Heartland Hormone
-          &amp; Wellness Clinic. Use the email address on file. If you cannot log
-          in, call {SITE.phone} or email {SITE.email} so we can confirm your
-          account. New patients should{" "}
+          invite at your personal email. Sign in as a patient, not as a provider.
+          Do not use the clinic contact email as your username.
+          If you cannot log in, call {SITE.phone} or email the clinic so we can
+          confirm your account. New patients should{" "}
           <Link href="/contact" className="text-teal underline underline-offset-2">
             request a consultation
           </Link>{" "}
