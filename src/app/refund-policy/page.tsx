@@ -41,7 +41,7 @@ export default function RefundPolicyPage() {
           <p>
             See{" "}
             <Link href="/recurring-billing" className="text-teal underline underline-offset-2">
-              Recurring Billing & Cancellation
+              Recurring Billing & Cancellation Policy
             </Link>{" "}
             for billing frequency and cancellation instructions.
           </p>
