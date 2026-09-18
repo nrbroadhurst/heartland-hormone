@@ -54,20 +54,21 @@ export default function MensHormonePage() {
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
         <SectionHeading title="Could a Hormone Imbalance Be Affecting You?" />
         <p className="text-charcoal/90 leading-relaxed -mt-4 mb-6">
-          These symptoms can have many causes. Laboratory testing and clinical
-          evaluation are necessary before treatment.
+          These symptoms can have many causes. A comprehensive evaluation and
+          laboratory testing are important to determine whether hormonal changes
+          may be contributing.
         </p>
         <TreatmentList
           items={[
             "Low energy",
             "Reduced libido",
-            "Erectile concerns",
+            "Erectile dysfunction",
             "Loss of strength",
             "Changes in body composition",
-            "Changes in mood",
+            "Mood changes",
             "Decreased motivation",
             "Difficulty concentrating",
-            "Poor recovery",
+            "Slower recovery from exercise or physical activity",
           ]}
         />
       </section>
