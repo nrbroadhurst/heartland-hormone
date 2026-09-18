@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { TreatmentList } from "@/components/TreatmentList";
 import { CTASection } from "@/components/CTASection";
-import { CareTeamNote } from "@/components/ProviderPreview";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
-import { pricing } from "@/lib/pricing";
-import { SITE } from "@/lib/site";
 
 const PATH = "/services/womens-hormone-therapy";
 
@@ -123,53 +119,30 @@ export default function WomensHormonePage() {
 
       <section className="bg-teal/5 border-y border-gold/20">
         <div className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-          <SectionHeading title="What Ongoing Care May Include" />
+          <SectionHeading title="What to Expect" />
           <TreatmentList
             items={[
               "Initial evaluation",
-              "Medication review",
-              "Review of previous labs",
+              "Review of medical history and current medications",
+              "Review of previous laboratory results",
               "Appropriate laboratory testing",
               "Individualized treatment planning",
               "Medication management",
-              "Dose adjustments",
-              "Symptom tracking",
+              "Treatment adjustments as needed",
+              "Symptom assessment and monitoring",
               "Side-effect monitoring",
               "Routine follow-up visits",
               "Prescription refill management",
-              "Provider messaging",
+              "Secure provider messaging",
             ]}
           />
-          <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
-            {pricing.womensTriple.name} is {pricing.womensTriple.display} every
-            4 weeks. {pricing.womensAdvanced.name} is{" "}
-            {pricing.womensAdvanced.display} every 4 weeks. The{" "}
-            {pricing.initialEvaluation.name} ({pricing.initialEvaluation.display})
-            and laboratory fees are separate.{" "}
-            <Link
-              href="/programs#womens-hormone"
-              className="text-teal underline underline-offset-2"
-            >
-              View women&apos;s hormone pricing
-            </Link>
-            .
-          </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-10 md:px-6">
-        <p className="text-sm text-charcoal/75 leading-relaxed">
-          {SITE.virtualCareStatement} {SITE.serviceAreaLine}
-        </p>
-        <CareTeamNote />
-      </section>
-
       <CTASection
-        headline="Book a Women's Hormone Consultation"
-        subtext="Perimenopause and menopause care with ongoing clinical monitoring."
+        headline="Ready to Get Started?"
+        subtext="Schedule a consultation to discuss your symptoms, review your health history, and learn whether hormone therapy may be right for you."
         ctaLabel="Book a Women's Hormone Consultation"
-        secondaryLabel="View Pricing & Programs"
-        secondaryHref="/programs#womens-hormone"
       />
     </>
   );
