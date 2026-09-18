@@ -5,11 +5,13 @@ import { SITE } from "@/lib/site";
 const APPOINTMENT_TYPES = [
   {
     label: "New Patient Consultation (60 minutes)",
-    href: SITE.patientPortalUrl,
+    href: "#contact-form",
+    external: false,
   },
   {
     label: "Follow-Up Visit (15-20 minutes)",
     href: SITE.patientPortalUrl,
+    external: true,
   },
 ] as const;
 
@@ -48,19 +50,42 @@ export function BookingWidget() {
       <ul className="space-y-3 mb-6">
         {APPOINTMENT_TYPES.map((type) => (
           <li key={type.label}>
-            <a
-              href={type.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex min-h-11 items-center rounded-md border border-gold/30 px-4 py-3 text-sm font-medium text-teal hover:border-gold hover:bg-teal/5"
-            >
-              {type.label}
-            </a>
+            {type.external ? (
+              <a
+                href={type.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-11 items-center rounded-md border border-gold/30 px-4 py-3 text-sm font-medium text-teal hover:border-gold hover:bg-teal/5"
+              >
+                {type.label}
+              </a>
+            ) : (
+              <Link
+                href={type.href}
+                className="flex min-h-11 items-center rounded-md border border-gold/30 px-4 py-3 text-sm font-medium text-teal hover:border-gold hover:bg-teal/5"
+              >
+                {type.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
+      <p className="text-sm text-charcoal/80 leading-relaxed mb-3">
+        Follow-up visits are booked in OptiMantra. On the login screen, choose
+        patient sign-in for Heartland Hormone &amp; Wellness Clinic and use the
+        email address on your clinic account. This is not a provider login.
+      </p>
       <p className="text-sm text-charcoal/80 leading-relaxed mb-6">
-        Appointments can be requested online through our{" "}
+        New patients do not have a portal login yet. Use New Patient Consultation
+        above or call{" "}
+        <a
+          href={`tel:${SITE.phoneTel}`}
+          className="text-teal underline underline-offset-2"
+        >
+          {SITE.phone}
+        </a>{" "}
+        so we can schedule your first visit and send your OptiMantra invite.
+        Current patients who already have a login can also book through the{" "}
         <a
           href={SITE.patientPortalUrl}
           target="_blank"
@@ -68,13 +93,6 @@ export function BookingWidget() {
           className="text-teal underline underline-offset-2"
         >
           secure patient portal
-        </a>{" "}
-        or by calling{" "}
-        <a
-          href={`tel:${SITE.phoneTel}`}
-          className="text-teal underline underline-offset-2"
-        >
-          {SITE.phone}
         </a>
         .
       </p>
@@ -85,11 +103,11 @@ export function BookingWidget() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Open Patient Portal
+            Sign In to OptiMantra
           </a>
         </Button>
         <Button asChild variant="outline-teal">
-          <Link href="#contact-form">Send a Message</Link>
+          <Link href="#contact-form">New Patient? Send a Message</Link>
         </Button>
       </div>
     </div>

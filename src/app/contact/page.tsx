@@ -28,17 +28,11 @@ export default async function ContactPage({ searchParams }: Props) {
       <PageHero title={SITE.consultCta}>
         <div className="max-w-2xl space-y-4 text-lg text-cream/85 leading-relaxed">
           <p>
-            Schedule your consultation through our{" "}
-            <a
-              href={SITE.patientPortalUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2 text-gold-light hover:text-gold"
-            >
-              secure patient portal
-            </a>{" "}
-            or contact us by phone, email, or message if you have questions before
-            booking.
+            Current patients can schedule through our secure OptiMantra patient
+            portal. Sign in as a patient of Heartland Hormone &amp; Wellness
+            Clinic using the email address we have on file. New patients, or
+            anyone who cannot log in, should contact us by phone, email, or
+            message so we can create your portal access.
           </p>
           <p>
             New patient consultations are typically 60 minutes and include a
