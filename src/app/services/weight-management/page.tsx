@@ -89,7 +89,7 @@ export default function WeightManagementPage() {
 
       <CTASection
         headline="Book a Weight Management Consultation"
-        subtext="Clinician-guided care with monitoring, not a guaranteed prescription."
+        subtext="Schedule a consultation to discuss your health history, weight-related concerns, and treatment goals."
         ctaLabel="Book a Weight Management Consultation"
         secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs#additional-services"
