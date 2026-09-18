@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero, SectionHeading } from "@/components/PageHero";
 import { BookingWidget } from "@/components/BookingWidget";
 import { ContactForm } from "@/components/ContactForm";
@@ -28,14 +29,22 @@ export default async function ContactPage({ searchParams }: Props) {
       <PageHero title={SITE.consultCta}>
         <div className="max-w-2xl space-y-4 text-lg text-cream/85 leading-relaxed">
           <p>
-            Request a visit by phone, email, or message. New patients and
-            follow-up visits are scheduled through the clinic. This website does
-            not open a patient-portal login.
+            Schedule your consultation through our{" "}
+            <Link
+              href="/patient-portal"
+              className="underline underline-offset-2 text-gold-light hover:text-gold"
+            >
+              secure patient portal
+            </Link>{" "}
+            or contact us by phone, email, or message if you have questions before
+            booking.
           </p>
           <p>
             New patient consultations are typically 60 minutes and include a
             comprehensive review of your symptoms, health history, laboratory
-            findings, and health goals.
+            findings, and health goals. If treatment is recommended, ongoing
+            follow-up visits are scheduled to monitor your progress, review
+            laboratory results, and adjust your treatment plan as needed.
           </p>
         </div>
       </PageHero>
