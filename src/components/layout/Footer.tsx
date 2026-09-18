@@ -19,24 +19,21 @@ export function Footer() {
   return (
     <footer className="bg-teal text-cream">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          <div className="space-y-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-12">
+          <div className="max-w-sm space-y-5 sm:col-span-2 lg:col-span-4 lg:max-w-none">
             <Logo variant="stacked" theme="dark" className="h-24 w-auto" />
-            <h3 className="font-display text-sm tracking-widest uppercase text-gold">
-              {SITE.name}
-            </h3>
-            <p className="text-sm text-cream/80 leading-relaxed">
+            <p className="text-sm leading-7 text-cream/80 text-pretty">
               Helping women and men restore energy, balance, vitality, and
               confidence through personalized hormone care and evidence-based
               treatment.
             </p>
           </div>
 
-          <div>
-            <h3 className="font-display text-sm tracking-widest uppercase text-gold mb-4">
+          <div className="lg:col-span-2">
+            <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
               Explore
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm leading-6">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-gold-light transition-colors">
@@ -57,16 +54,16 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-display text-sm tracking-widest uppercase text-gold mb-4">
+          <div className="lg:col-span-3">
+            <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
               Care
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm leading-6">
               {getNavServices().map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={service.href}
-                    className="hover:text-gold-light transition-colors"
+                    className="inline-block max-w-[16rem] text-pretty hover:text-gold-light transition-colors"
                   >
                     {service.title}
                   </Link>
@@ -75,46 +72,47 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-display text-sm tracking-widest uppercase text-gold mb-4">
+          <div className="lg:col-span-3">
+            <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
               Visit &amp; Contact
             </h3>
-            <ul className="space-y-2 text-sm text-cream/85">
-              <li>{SITE.name}</li>
+            <div className="space-y-4 text-sm leading-7 text-cream/85">
+              <p className="font-medium text-pretty text-cream">{SITE.name}</p>
               {lines.length > 0 ? (
-                <li>
+                <p>
                   {lines.map((line) => (
-                    <span key={line} className="block">
+                    <span key={line} className="block text-pretty">
                       {line}
                     </span>
                   ))}
-                </li>
+                </p>
               ) : (
-                <li>
+                <p>
                   {SITE.city}, {SITE.state} / {SITE.region}
-                </li>
+                </p>
               )}
-              {hasPhone() && (
-                <li className="pt-2">
-                  <a href={phoneHref() ?? `tel:${SITE.phone}`} className="hover:text-gold-light">
+              <p className="space-y-1">
+                {hasPhone() && (
+                  <a
+                    href={phoneHref() ?? `tel:${SITE.phone}`}
+                    className="block hover:text-gold-light"
+                  >
                     {SITE.phone}
                   </a>
-                </li>
-              )}
-              {hasEmail() && (
-                <li>
-                  <EmailLink />
-                </li>
-              )}
-              <li className="text-gold text-xs tracking-wide uppercase pt-2">
+                )}
+                {hasEmail() && (
+                  <EmailLink className="block" />
+                )}
+              </p>
+              <p className="text-xs tracking-wide uppercase text-gold">
                 By Appointment Only
-              </li>
-            </ul>
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="mt-12 border-t border-gold/30 pt-8 space-y-4">
-          <p className="text-xs leading-relaxed text-cream/70 max-w-4xl">
+          <p className="max-w-4xl text-xs leading-relaxed text-cream/70">
             {MEDICAL_DISCLAIMER}
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
