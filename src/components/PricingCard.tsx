@@ -13,6 +13,7 @@ type PricingCardProps = {
   extraHeading?: string;
   extra?: readonly string[];
   notIncluded?: readonly string[];
+  notIncludedHeading?: string;
   href?: string;
   ctaLabel?: string;
   featured?: boolean;
@@ -30,6 +31,7 @@ export function PricingCard({
   extraHeading,
   extra,
   notIncluded,
+  notIncludedHeading = "Not automatically included",
   href = "/contact",
   ctaLabel = SITE.consultCta,
   featured = false,
@@ -119,7 +121,7 @@ export function PricingCard({
             featured ? "border-gold/30 text-cream/75" : "border-gold/30 text-charcoal/70",
           )}
         >
-          <p className="font-medium mb-2">Not automatically included</p>
+          <p className="font-medium mb-2">{notIncludedHeading}</p>
           <ul className="space-y-1.5">
             {notIncluded.map((item) => (
               <li key={item}>{item}</li>

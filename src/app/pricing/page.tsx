@@ -86,9 +86,11 @@ export default function PricingPage() {
               featured
               name={pricing.mensInjections.name}
               price={pricing.mensInjections.display}
-              billingNote={FOUR_WEEK_NOTE}
+              billingNote="Every 4 Weeks"
               summary={pricing.mensInjections.summary}
+              includesHeading={pricing.mensInjections.includesHeading}
               includes={pricing.mensInjections.includes}
+              notIncludedHeading={pricing.mensInjections.notIncludedHeading}
               notIncluded={pricing.mensInjections.notIncluded}
               href="/contact?interest=mens-hormone"
               ctaLabel="Book a Men's Hormone Consultation"
