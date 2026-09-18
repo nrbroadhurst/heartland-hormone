@@ -39,7 +39,7 @@ export default function PricingPage() {
           <h2 className="font-display text-xl text-teal tracking-wide mb-4">
             All Programs Include
           </h2>
-          <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-2 sm:grid-cols-2">
             {programSharedIncludes.map((item) => (
               <li key={item} className="flex gap-2 text-sm text-charcoal/85">
                 <Check
