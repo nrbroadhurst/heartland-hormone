@@ -79,7 +79,7 @@ export default function PricingPage() {
             compact
             eyebrow="Men"
             title="Men's Hormone Care"
-            description="Recurring membership billed every 4 weeks. Includes listed medications, supplies when applicable, shipping, and ongoing clinical monitoring."
+            description="Recurring membership billed every 4 weeks. Includes prescribed testosterone therapy, shipping, ongoing clinical monitoring, and routine follow-up care."
           />
           <div className="grid gap-6 lg:grid-cols-2">
             <PricingCard
