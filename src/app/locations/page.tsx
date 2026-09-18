@@ -67,7 +67,7 @@ export default function LocationsPage() {
               )}
               {hasEmail() && (
                 <li>
-                  <EmailLink className="hover:text-teal" />
+                  <EmailLink />
                 </li>
               )}
               <li className="pt-2 flex items-start gap-2">
