@@ -98,9 +98,11 @@ export default function PricingPage() {
             <PricingCard
               name={pricing.mensTransdermal.name}
               price={pricing.mensTransdermal.display}
-              billingNote={FOUR_WEEK_NOTE}
+              billingNote="Every 4 Weeks"
               summary={pricing.mensTransdermal.summary}
+              includesHeading={pricing.mensTransdermal.includesHeading}
               includes={pricing.mensTransdermal.includes}
+              notIncludedHeading={pricing.mensTransdermal.notIncludedHeading}
               notIncluded={pricing.mensTransdermal.notIncluded}
               href="/contact?interest=mens-hormone"
               ctaLabel="Book a Men's Hormone Consultation"
