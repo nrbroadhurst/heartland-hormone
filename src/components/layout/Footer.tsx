@@ -118,7 +118,7 @@ export function Footer() {
             <h3 className="font-display mb-4 text-sm tracking-widest uppercase text-gold">
               Policies &amp; Legal
             </h3>
-            <ul className="flex max-w-3xl flex-wrap gap-x-5 gap-y-2.5 text-xs leading-6 text-cream/75">
+            <ul className="space-y-2.5 text-xs leading-6 text-cream/75">
               {LEGAL_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-gold-light">
@@ -128,9 +128,6 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <p className="text-xs text-cream/60">
-            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
