@@ -113,7 +113,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Services"
           title="Specialized Hormone & Metabolic Health Services"
-          description="Core clinical programs for hormone care and medical weight management, with related support when it is clinically appropriate."
+          description="Comprehensive hormone and metabolic health services designed to support overall well-being, address bothersome symptoms, and help you achieve your health goals through personalized, evidence-based care."
         />
         <SpecializedCareGrid />
       </section>

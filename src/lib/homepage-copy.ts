@@ -43,28 +43,23 @@ export const COMMON_SYMPTOMS = [
 
 export const SPECIALIZED_CARE = [
   {
-    title: "Hormone Replacement & Symptom-Guided Hormone Balancing for Women",
-    body: "Personalized care for women experiencing hormonal changes related to perimenopause, menopause, postmenopausal symptoms or other hormone imbalances. Treatment plans are tailored to your symptoms, laboratory findings and individual health goals.",
+    title: "Women's Hormonal Health & Wellness",
+    body: "Personalized care for women experiencing hormonal changes related to perimenopause, menopause, postmenopause, endometriosis, and other hormone imbalances. Treatment plans are designed around your symptoms, laboratory findings, health history, and individual goals.",
     href: "/services/womens-hormone-therapy",
   },
   {
     title: "Testosterone Replacement Therapy (TRT) for Men",
-    body: "Comprehensive evaluation and personalized treatment for men experiencing symptoms associated with low testosterone, including fatigue, decreased libido, reduced muscle mass, brain fog and diminished overall well-being.",
+    body: "Comprehensive evaluation and personalized treatment for men experiencing symptoms associated with low testosterone, including fatigue, decreased libido, reduced muscle mass, brain fog, and diminished overall well-being.",
     href: "/services/mens-hormone-therapy",
   },
   {
-    title: "Perimenopause, Menopause & Postmenopausal Care",
-    body: "Support through every stage of the menopause transition with evidence-based treatment options designed to improve quality of life and address bothersome symptoms.",
-    href: "/services/womens-hormone-therapy",
-  },
-  {
-    title: "PMOS/PCOS Evaluation & Metabolic Support",
-    body: "Care for PMOS/PCOS (polycystic ovary syndrome) as part of women's hormone and metabolic visits when clinically appropriate, with attention to hormonal balance, metabolic health and long-term wellness.",
+    title: "PMOS (PCOS) Evaluation & Metabolic Support",
+    body: "Comprehensive evaluation and support for PMOS (Polyendocrine Metabolic Ovarian Syndrome), also known as PCOS (Polycystic Ovary Syndrome), with a focus on hormone health, metabolic wellness, symptom management, and long-term health outcomes. Treatment plans are individualized and designed around your symptoms, health history, laboratory findings, and personal goals.",
     href: "/services/womens-hormone-therapy",
   },
   {
     title: "Medical Weight Management",
-    body: "For appropriate candidates, medically supervised weight-management programs designed to support metabolic health and complement hormone replacement and symptom-guided balancing.",
+    body: "Medically supervised weight management programs designed to support metabolic health, improve overall wellness, and complement hormone replacement and symptom-guided hormone balancing when clinically appropriate.",
     href: "/services/weight-management",
   },
 ] as const;

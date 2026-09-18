@@ -5,7 +5,7 @@ import { SPECIALIZED_CARE } from "@/lib/homepage-copy";
 
 export function SpecializedCareGrid() {
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 md:grid-cols-2">
       {SPECIALIZED_CARE.map((item, i) => (
         <FadeIn key={item.title} delay={i * 0.04} className="h-full">
           <article className="flex h-full flex-col rounded-md border border-gold/25 bg-cream p-6">
@@ -19,7 +19,7 @@ export function SpecializedCareGrid() {
               href={item.href}
               className="inline-flex items-center gap-1 text-sm font-medium text-teal hover:gap-2 transition-all"
             >
-              Learn more <ArrowRight className="h-4 w-4 text-gold" />
+              Learn More <ArrowRight className="h-4 w-4 text-gold" />
             </Link>
           </article>
         </FadeIn>
