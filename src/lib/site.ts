@@ -159,5 +159,7 @@ export function phoneHref(): string | null {
 /** Outlook on the web compose for the clinic Microsoft 365 mailbox. */
 export function emailComposeUrl(): string | null {
   if (!SITE.email) return null;
-  return `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(SITE.email)}`;
+  // Pass the address unencoded. Encoding @ can make Outlook show
+  // "email" <email> in the To field.
+  return `https://outlook.office.com/mail/deeplink/compose?to=${SITE.email}`;
 }
