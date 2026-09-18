@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { TreatmentList } from "@/components/TreatmentList";
 import { CTASection } from "@/components/CTASection";
-import { CareTeamNote } from "@/components/ProviderPreview";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
-import { SITE } from "@/lib/site";
 
 const PATH = "/services/weight-management";
 
@@ -87,15 +85,6 @@ export default function WeightManagementPage() {
             ]}
           />
         </div>
-      </section>
-
-      <section className="mx-auto max-w-3xl px-4 py-10 md:px-6">
-        <p className="text-sm text-charcoal/75 leading-relaxed">
-          {SITE.virtualCareStatement} {SITE.serviceAreaLine} We do not guarantee a
-          specific amount of weight loss, and not every patient qualifies for
-          prescription weight-management treatment.
-        </p>
-        <CareTeamNote />
       </section>
 
       <CTASection
