@@ -85,16 +85,14 @@ export default function WomensHormonePage() {
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6 space-y-6">
         <SectionHeading title="Customized Hormone Therapy" />
         <p className="text-charcoal/90 leading-relaxed -mt-4">
-          A patient may receive one or more prescription therapies based upon
-          clinical evaluation. Specific medications, strengths and combinations
-          are determined during consultation and documented in your medical
-          record rather than listed on this public website.
+          Heartland provides individualized hormone therapy based on symptoms,
+          health history, treatment goals, and laboratory findings. Treatment
+          plans are developed around each patient&apos;s unique needs, goals, and
+          preferences.
         </p>
         <p className="text-charcoal/90 leading-relaxed">
-          FDA-approved hormone therapies are used when appropriate. Customized
-          prescription formulations may be considered when clinically appropriate
-          and legally available. Compounded hormones are not described as safer,
-          more natural, superior or free of risk.
+          Ongoing care includes symptom review, laboratory monitoring, and
+          treatment adjustments as needed.
         </p>
       </section>
 
