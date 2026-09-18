@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { getSecondaryServices, PRIMARY_SERVICES } from "@/lib/services";
-import { PageHero, SectionHeading } from "@/components/PageHero";
+import { PRIMARY_SERVICES } from "@/lib/services";
+import { PageHero } from "@/components/PageHero";
 import { ServicesGrid } from "@/components/ServiceCard";
 import { CTASection } from "@/components/CTASection";
 import { pageMeta } from "@/lib/seo";
@@ -14,8 +14,6 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function ServicesHubPage() {
-  const secondaryServices = getSecondaryServices();
-
   return (
     <>
       <PageHero
@@ -25,24 +23,8 @@ export default function ServicesHubPage() {
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
-        <SectionHeading
-          title="Primary programs"
-          description="These three clinical programs are the starting point for most patients."
-        />
         <ServicesGrid services={PRIMARY_SERVICES} featured />
       </section>
-
-      {secondaryServices.length > 0 && (
-        <section className="bg-teal/5 border-y border-gold/20">
-          <div className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
-            <SectionHeading
-              title="Additional services"
-              description="Healthy aging and metabolic wellness support for selected patients after clinical evaluation."
-            />
-            <ServicesGrid services={secondaryServices} />
-          </div>
-        </section>
-      )}
 
       <CTASection
         headline="Not sure where to start?"

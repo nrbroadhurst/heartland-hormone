@@ -96,7 +96,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "mens-program-included",
     category: "Men's Hormone Care",
     question: "What is included in the men's hormone care program?",
-    answer: `${pricing.mensInjections.name} is ${pricing.mensInjections.display} every 4 weeks and includes testosterone injections, supplies, shipping, quarterly follow-up and ongoing monitoring when clinically appropriate. ${pricing.mensTransdermal.name} is ${pricing.mensTransdermal.display} every 4 weeks with compounded testosterone cream. Laboratory testing and additional services listed on Pricing & Programs are billed separately.`,
+    answer: `${pricing.mensInjections.name} is ${pricing.mensInjections.display} every 4 weeks and includes testosterone injections, supplies, shipping, quarterly follow-up and ongoing monitoring when clinically appropriate. ${pricing.mensTransdermal.name} is ${pricing.mensTransdermal.display} every 4 weeks with compounded testosterone cream. Laboratory testing is billed separately.`,
   },
   {
     id: "lab-frequency",
@@ -143,7 +143,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "women-meds-included",
     category: "Women's Hormone & Menopause Care",
     question: "Are medications included in the program?",
-    answer: `${pricing.womensTriple.name} is ${pricing.womensTriple.display} every 4 weeks and includes estradiol, progesterone and testosterone cream when clinically appropriate. ${pricing.womensAdvanced.name} is ${pricing.womensAdvanced.display} every 4 weeks with testosterone injections plus estradiol and progesterone therapy. Laboratory fees and additional services listed on Pricing & Programs are billed separately.`,
+    answer: `${pricing.womensTriple.name} is ${pricing.womensTriple.display} every 4 weeks and includes estradiol, progesterone and testosterone cream when clinically appropriate. ${pricing.womensAdvanced.name} is ${pricing.womensAdvanced.display} every 4 weeks with testosterone injections plus estradiol and progesterone therapy. Laboratory fees are billed separately.`,
   },
   {
     id: "program-billing",

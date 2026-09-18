@@ -5,12 +5,10 @@ import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { PricingCard } from "@/components/PricingCard";
 import { PricingDisclaimer } from "@/components/MedicalDisclaimer";
 import { CTASection } from "@/components/CTASection";
-import { TreatmentList } from "@/components/TreatmentList";
 import { pageMeta } from "@/lib/seo";
 import {
   pricing,
   labPolicy,
-  additionalServices,
   billingPolicy,
   programSharedIncludes,
   FOUR_WEEK_NOTE,
@@ -136,31 +134,6 @@ export default function PricingPage() {
               href="/contact?interest=womens-hormone"
               ctaLabel="Book a Women's Hormone Consultation"
             />
-          </div>
-        </div>
-
-        <div id="additional-services" className="scroll-mt-28">
-          <span id="weight-management" className="block scroll-mt-28 sr-only">
-            Medical weight management
-          </span>
-          <SectionHeading
-            compact
-            eyebrow="Add-ons"
-            title="Additional services"
-            description="These are not included in membership rates unless specifically stated. Medical weight-management medications are billed separately; hormone program members have preferred access."
-          />
-          <div className="grid gap-6 lg:grid-cols-2">
-            <TreatmentList items={additionalServices} />
-            <p className="text-sm text-charcoal/85 leading-relaxed">
-              {billingPolicy.ancillaryNotIncluded}{" "}
-              <Link
-                href="/services/weight-management"
-                className="text-teal underline underline-offset-2"
-              >
-                Medical weight management
-              </Link>{" "}
-              is available by consultation, not as a published membership rate.
-            </p>
           </div>
         </div>
 

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Stethoscope, UserRound, MapPin, ClipboardCheck } from "lucide-react";
 import { SITE, mapsUrl, hasStreetAddress } from "@/lib/site";
 import { AddressBlock } from "@/components/AddressBlock";
-import { getSecondaryServices } from "@/lib/services";
 import {
   APPROACH_PARAGRAPHS,
   APPROACH_TITLE,
@@ -19,7 +18,6 @@ import {
 } from "@/lib/homepage-copy";
 import { Button } from "@/components/ui/button";
 import { TrustBadgeRow } from "@/components/TrustBadgeRow";
-import { ServicesGrid } from "@/components/ServiceCard";
 import { SpecializedCareGrid } from "@/components/SpecializedCare";
 import { StepList } from "@/components/StepList";
 import { CTASection } from "@/components/CTASection";
@@ -33,8 +31,6 @@ import { clinicJsonLd } from "@/lib/schema";
 import { pricing } from "@/lib/pricing";
 
 export default function HomePage() {
-  const secondaryServices = getSecondaryServices();
-
   return (
     <>
       <JsonLd data={clinicJsonLd()} />
@@ -118,19 +114,6 @@ export default function HomePage() {
         />
         <SpecializedCareGrid />
       </section>
-
-      {secondaryServices.length > 0 && (
-        <section className="bg-teal/5 border-y border-gold/20">
-          <div className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
-            <SectionHeading
-              eyebrow="Additional Care"
-              title="Related Services"
-              description="Healthy aging and metabolic wellness support for selected patients after clinical evaluation."
-            />
-            <ServicesGrid services={secondaryServices} />
-          </div>
-        </section>
-      )}
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
         <SectionHeading

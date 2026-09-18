@@ -253,7 +253,7 @@ export const SERVICES: Service[] = [
     ],
     safetyCallout:
       "We do not claim that aging can be reversed. Plans are individualized and measured against clinical findings, not marketing claims.",
-    publiclyMarketable: true,
+    publiclyMarketable: false,
   },
 ];
 
@@ -311,7 +311,7 @@ export function isServicePubliclyMarketable(slug: string): boolean {
   if (service.slug === "peptide-therapy" && !features.publicPeptideMarketing) {
     return false;
   }
-  if (service.slug === "sexual-wellness") {
+  if (service.slug === "sexual-wellness" || service.slug === "wellness-healthy-aging") {
     return false;
   }
   return service.publiclyMarketable;

@@ -42,7 +42,7 @@ export default function WeightManagementPage() {
           <BookButton label="Book a Weight Management Consultation" />
           <BookButton
             label="View Pricing & Programs"
-            href="/programs#additional-services"
+            href="/programs"
             variant="outline"
           />
         </div>
@@ -92,7 +92,7 @@ export default function WeightManagementPage() {
         subtext="Schedule a consultation to discuss your health history, weight-related concerns, and treatment goals."
         ctaLabel="Book a Weight Management Consultation"
         secondaryLabel="View Pricing & Programs"
-        secondaryHref="/programs#additional-services"
+        secondaryHref="/programs"
       />
     </>
   );

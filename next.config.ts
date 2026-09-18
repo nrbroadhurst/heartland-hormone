@@ -27,7 +27,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/services/anti-aging-longevity",
-        destination: "/services/wellness-healthy-aging",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/services/wellness-healthy-aging",
+        destination: "/services",
         permanent: true,
       },
       {
