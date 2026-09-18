@@ -77,7 +77,6 @@ export function Footer() {
               Visit &amp; Contact
             </h3>
             <div className="space-y-4 text-sm leading-7 text-cream/85">
-              <p className="font-medium text-pretty text-cream">{SITE.name}</p>
               {lines.length > 0 ? (
                 <p>
                   {lines.map((line) => (
