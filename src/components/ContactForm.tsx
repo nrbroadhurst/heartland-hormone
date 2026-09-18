@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -34,32 +34,12 @@ const contactSchema = z.object({
 
 type ContactValues = z.infer<typeof contactSchema>;
 
-function interestLabel(value: string): string {
-  return INTEREST_OPTIONS.find((option) => option.value === value)?.label ?? value;
-}
-
-function contactMethodLabel(value: string): string {
-  return (
-    CONTACT_METHOD_OPTIONS.find((option) => option.value === value)?.label ?? value
-  );
-}
-
 export function ContactForm({
   defaultInterest = "general",
-  initiallySent = false,
 }: {
   defaultInterest?: string;
-  initiallySent?: boolean;
 }) {
-  const formRef = useRef<HTMLFormElement>(null);
-  const fullNameRef = useRef<HTMLInputElement>(null);
-  const subjectRef = useRef<HTMLInputElement>(null);
-  const nextRef = useRef<HTMLInputElement>(null);
-  const interestLabelRef = useRef<HTMLInputElement>(null);
-  const contactLabelRef = useRef<HTMLInputElement>(null);
-  const [status, setStatus] = useState<"idle" | "success" | "error">(
-    initiallySent ? "success" : "idle",
-  );
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const {
     register,
     handleSubmit,
@@ -84,19 +64,17 @@ export function ContactForm({
       setStatus("success");
       return;
     }
-
-    const payload = {
-      name: `${data.firstName} ${data.lastName}`.trim(),
-      firstName: data.firstName,
-      lastName: data.lastName,
-      email: data.email,
-      phone: data.phone,
-      interest: data.interest,
-      contactMethod: data.contactMethod,
-      message: data.message ?? "",
-    };
-
     try {
+      const payload = {
+        name: `${data.firstName} ${data.lastName}`.trim(),
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phone: data.phone,
+        interest: data.interest,
+        contactMethod: data.contactMethod,
+        message: data.message ?? "",
+      };
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -105,69 +83,33 @@ export function ContactForm({
       const result = (await res.json().catch(() => null)) as {
         emailed?: boolean;
       } | null;
-      if (res.ok && result?.emailed) {
-        setStatus("success");
-        reset({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          interest: defaultInterest,
-          contactMethod: "either",
-          message: "",
-          website: "",
-        });
-        return;
+      if (!res.ok || !result?.emailed) {
+        throw new Error("Failed");
       }
+      setStatus("success");
+      reset({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        interest: defaultInterest,
+        contactMethod: "either",
+        message: "",
+        website: "",
+      });
     } catch {
-      // Deliver through FormSubmit in the browser instead of a fetch() call.
-      // fetch() is blocked by FormSubmit's Cloudflare challenge; a normal
-      // form POST is not, and it never opens Microsoft mail.
-    }
-
-    const form = formRef.current;
-    if (!form) {
       setStatus("error");
-      return;
     }
-
-    if (fullNameRef.current) fullNameRef.current.value = payload.name;
-    if (subjectRef.current) {
-      subjectRef.current.value = `Website appointment request from ${payload.name}`;
-    }
-    if (interestLabelRef.current) {
-      interestLabelRef.current.value = interestLabel(payload.interest);
-    }
-    if (contactLabelRef.current) {
-      contactLabelRef.current.value = contactMethodLabel(payload.contactMethod);
-    }
-    if (nextRef.current) {
-      nextRef.current.value = `${window.location.origin}/contact?sent=1`;
-    }
-
-    form.action = `https://formsubmit.co/${SITE.email}`;
-    form.method = "POST";
-    form.submit();
   }
 
   return (
     <form
-      ref={formRef}
       id="contact-form"
       onSubmit={handleSubmit(onSubmit)}
       className="relative space-y-5"
       noValidate
       autoComplete="off"
     >
-      <input ref={fullNameRef} type="hidden" name="name" />
-      <input ref={subjectRef} type="hidden" name="_subject" />
-      <input ref={nextRef} type="hidden" name="_next" />
-      <input ref={interestLabelRef} type="hidden" name="service" />
-      <input ref={contactLabelRef} type="hidden" name="preferred_contact" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_honey" />
-
       <p className="rounded-md border border-gold/30 bg-teal/5 px-4 py-3 text-sm text-charcoal/80">
         This form is for <strong>scheduling requests and general questions</strong>.
         Please do not include detailed medical information in this form. Clinical
@@ -320,8 +262,7 @@ export function ContactForm({
       )}
       {status === "error" && (
         <p className="rounded-md bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
-          The message could not be emailed. Please call {SITE.phone} or copy the
-          clinic address {SITE.email} (Heartland inbox only).
+          The message could not be emailed. Please call {SITE.phone}.
         </p>
       )}
 

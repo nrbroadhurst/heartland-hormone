@@ -16,13 +16,12 @@ export const metadata: Metadata = pageMeta({
 });
 
 type Props = {
-  searchParams: Promise<{ interest?: string; sent?: string }>;
+  searchParams: Promise<{ interest?: string }>;
 };
 
 export default async function ContactPage({ searchParams }: Props) {
-  const { interest, sent } = await searchParams;
+  const { interest } = await searchParams;
   const defaultInterest = interest ?? "general";
-  const initiallySent = sent === "1";
   const lines = addressLines();
   const directions = mapsUrl();
 
@@ -152,11 +151,7 @@ export default async function ContactPage({ searchParams }: Props) {
             title="Request a visit"
             description="For scheduling requests and non-health questions only. Do not include symptoms, medications or medical history."
           />
-          <ContactForm
-            key={`${defaultInterest}-${initiallySent}`}
-            defaultInterest={defaultInterest}
-            initiallySent={initiallySent}
-          />
+          <ContactForm key={defaultInterest} defaultInterest={defaultInterest} />
         </div>
       </section>
     </>
