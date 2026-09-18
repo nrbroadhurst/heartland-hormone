@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { TreatmentList } from "@/components/TreatmentList";
 import { CTASection } from "@/components/CTASection";
-import { CareTeamNote } from "@/components/ProviderPreview";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/schema";
-import { pricing } from "@/lib/pricing";
-import { SITE } from "@/lib/site";
 
 const PATH = "/services/mens-hormone-therapy";
 
@@ -108,33 +104,12 @@ export default function MensHormonePage() {
             "In-office care when necessary",
           ]}
         />
-        <p className="mt-6 text-sm text-charcoal/75 leading-relaxed">
-          {pricing.mensInjections.name} is {pricing.mensInjections.display} every
-          4 weeks. {pricing.mensTransdermal.name} is{" "}
-          {pricing.mensTransdermal.display} every 4 weeks. The{" "}
-          {pricing.initialEvaluation.name} ({pricing.initialEvaluation.display})
-          and laboratory fees are separate. Additional services listed on Pricing
-          &amp; Programs are not included.{" "}
-          <Link href="/programs#mens-hormone" className="text-teal underline underline-offset-2">
-            View men&apos;s hormone pricing
-          </Link>
-          .
-        </p>
-      </section>
-
-      <section className="mx-auto max-w-3xl px-4 py-10 md:px-6">
-        <p className="text-sm text-charcoal/75 leading-relaxed">
-          {SITE.virtualCareStatement} {SITE.serviceAreaLine}
-        </p>
-        <CareTeamNote />
       </section>
 
       <CTASection
-        headline="Book a Men's Hormone Consultation"
-        subtext="Local Kansas City-area care with virtual follow-up when clinically and legally appropriate."
-        ctaLabel="Book a Men's Hormone Consultation"
-        secondaryLabel="View Pricing & Programs"
-        secondaryHref="/programs#mens-hormone"
+        headline="Ready to Get Started?"
+        subtext="Schedule a consultation to discuss your symptoms, review your health history, and determine whether hormone therapy is right for you."
+        ctaLabel="Schedule a Consultation"
       />
     </>
   );
