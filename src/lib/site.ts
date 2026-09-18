@@ -140,12 +140,7 @@ export function formattedAddress(): string | null {
 export function addressLines(): string[] {
   const lines: string[] = [];
   if (SITE.streetAddress) lines.push(SITE.streetAddress);
-  if (SITE.addressNote) {
-    for (const part of SITE.addressNote.split(" / ")) {
-      const trimmed = part.trim();
-      if (trimmed) lines.push(trimmed);
-    }
-  }
+  if (SITE.addressNote) lines.push(SITE.addressNote);
   const zip = SITE.zip ? ` ${SITE.zip}` : "";
   lines.push(`${SITE.city}, ${SITE.state}${zip}`);
   return lines;
