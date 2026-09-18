@@ -9,7 +9,11 @@ export function clinicJsonLd() {
     addressRegion: SITE.state,
     addressCountry: SITE.country,
   };
-  if (SITE.streetAddress) address.streetAddress = SITE.streetAddress;
+  if (SITE.streetAddress) {
+    address.streetAddress = SITE.addressNote
+      ? `${SITE.streetAddress}, ${SITE.addressNote}`
+      : SITE.streetAddress;
+  }
   if (SITE.zip) address.postalCode = SITE.zip;
 
   const data: Record<string, unknown> = {

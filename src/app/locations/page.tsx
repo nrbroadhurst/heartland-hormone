@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { EmailLink } from "@/components/EmailLink";
-import { SITE, addressLines, mapsUrl, hasPhone, hasEmail, phoneHref } from "@/lib/site";
+import { AddressBlock } from "@/components/AddressBlock";
+import { SITE, mapsUrl, hasPhone, hasEmail, phoneHref } from "@/lib/site";
 import { MapPin, Video, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
 
@@ -14,7 +15,6 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function LocationsPage() {
-  const lines = addressLines();
   const directions = mapsUrl();
 
   return (
@@ -40,11 +40,7 @@ export default function LocationsPage() {
             <ul className="space-y-3 text-charcoal/90 -mt-4">
               <li className="font-medium text-teal">{SITE.name}</li>
               <li>
-                {lines.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
-                ))}
+                <AddressBlock />
               </li>
               {directions && (
                 <li>

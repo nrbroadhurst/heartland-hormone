@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo/Logo";
+import { AddressBlock } from "@/components/AddressBlock";
 import { EmailLink } from "@/components/EmailLink";
 import {
   LEGAL_LINKS,
@@ -8,14 +9,12 @@ import {
   MEDICAL_DISCLAIMER,
   hasEmail,
   hasPhone,
-  addressLines,
+  hasStreetAddress,
   phoneHref,
 } from "@/lib/site";
 import { getNavServices } from "@/lib/services";
 
 export function Footer() {
-  const lines = addressLines();
-
   return (
     <footer className="bg-teal text-cream">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 lg:px-8">
@@ -77,14 +76,8 @@ export function Footer() {
               Visit &amp; Contact
             </h3>
             <div className="space-y-4 text-sm leading-7 text-cream/85">
-              {lines.length > 0 ? (
-                <p>
-                  {lines.map((line) => (
-                    <span key={line} className="block text-pretty">
-                      {line}
-                    </span>
-                  ))}
-                </p>
+              {hasStreetAddress() ? (
+                <AddressBlock />
               ) : (
                 <p>
                   {SITE.city}, {SITE.state} / {SITE.region}

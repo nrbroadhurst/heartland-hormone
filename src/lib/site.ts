@@ -130,13 +130,6 @@ export function cityStateLine(): string {
   return `${SITE.city}, ${SITE.state}`;
 }
 
-export function formattedAddress(): string | null {
-  if (!SITE.streetAddress) return null;
-  const zip = SITE.zip ? ` ${SITE.zip}` : "";
-  const note = SITE.addressNote ? ` (${SITE.addressNote})` : "";
-  return `${SITE.streetAddress}${note}, ${SITE.city}, ${SITE.state}${zip}`;
-}
-
 export function addressLines(): string[] {
   const lines: string[] = [];
   if (SITE.streetAddress) lines.push(SITE.streetAddress);
@@ -144,6 +137,11 @@ export function addressLines(): string[] {
   const zip = SITE.zip ? ` ${SITE.zip}` : "";
   lines.push(`${SITE.city}, ${SITE.state}${zip}`);
   return lines;
+}
+
+export function formattedAddress(): string | null {
+  const lines = addressLines();
+  return lines.length ? lines.join(", ") : null;
 }
 
 export function mapsUrl(): string | null {

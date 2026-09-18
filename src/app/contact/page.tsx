@@ -3,7 +3,8 @@ import Link from "next/link";
 import { PageHero, SectionHeading } from "@/components/PageHero";
 import { BookingWidget } from "@/components/BookingWidget";
 import { ContactForm } from "@/components/ContactForm";
-import { SITE, hasEmail, hasPhone, addressLines, mapsUrl, phoneHref } from "@/lib/site";
+import { SITE, hasEmail, hasPhone, mapsUrl, phoneHref } from "@/lib/site";
+import { AddressBlock } from "@/components/AddressBlock";
 import { EmailLink } from "@/components/EmailLink";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
@@ -22,7 +23,6 @@ type Props = {
 export default async function ContactPage({ searchParams }: Props) {
   const { interest } = await searchParams;
   const defaultInterest = interest ?? "general";
-  const lines = addressLines();
   const directions = mapsUrl();
 
   return (
@@ -83,16 +83,9 @@ export default async function ContactPage({ searchParams }: Props) {
             <ul className="space-y-4 text-charcoal/90 -mt-4">
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 text-gold shrink-0" strokeWidth={1.5} aria-hidden />
-                <span>
+                <div>
                   {SITE.name}
-                  <br />
-                  {lines.length > 0
-                    ? lines.map((line) => (
-                        <span key={line} className="block">
-                          {line}
-                        </span>
-                      ))
-                    : `${SITE.city}, ${SITE.state} / ${SITE.region}`}
+                  <AddressBlock />
                   {directions && (
                     <a
                       href={directions}
@@ -106,7 +99,7 @@ export default async function ContactPage({ searchParams }: Props) {
                   <span className="block text-sm text-charcoal/70 mt-1">
                     {SITE.serviceAreaLine}
                   </span>
-                </span>
+                </div>
               </li>
               {hasPhone() && (
                 <li className="flex gap-3">

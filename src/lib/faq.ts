@@ -22,7 +22,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Where is Heartland located?",
     answer: SITE.streetAddress
-      ? `Heartland Hormone & Wellness Clinic is at ${SITE.streetAddress}${SITE.addressNote ? ` (${SITE.addressNote})` : ""}, ${SITE.city}, ${SITE.state}. Visits are by appointment only.`
+      ? `Heartland Hormone & Wellness Clinic is at ${SITE.streetAddress}, ${SITE.addressNote}, ${SITE.city}, ${SITE.state} ${SITE.zip}. Visits are by appointment only.`
       : `Heartland Hormone & Wellness Clinic serves patients from the ${SITE.city} / ${SITE.region} area. The physical clinic is by appointment.`,
   },
   {

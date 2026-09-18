@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Stethoscope, UserRound, MapPin, ClipboardCheck } from "lucide-react";
-import { SITE, formattedAddress, mapsUrl } from "@/lib/site";
+import { SITE, mapsUrl, hasStreetAddress } from "@/lib/site";
+import { AddressBlock } from "@/components/AddressBlock";
 import { getSecondaryServices } from "@/lib/services";
 import {
   APPROACH_PARAGRAPHS,
@@ -145,12 +146,12 @@ export default function HomePage() {
               Patients who need or prefer in-person care have access to a physical
               clinic in the Kansas City area. {SITE.virtualCareStatement}
             </p>
-            {formattedAddress() && (
+            {hasStreetAddress() && (
               <div className="rounded-md border border-gold/40 bg-teal/5 p-5 text-sm">
                 <p className="font-display text-teal tracking-wide mb-2">
                   Clinic Location
                 </p>
-                <p>{formattedAddress()}</p>
+                <AddressBlock />
                 <p className="mt-2">{SITE.officeHours}</p>
                 {mapsUrl() && (
                   <Link
