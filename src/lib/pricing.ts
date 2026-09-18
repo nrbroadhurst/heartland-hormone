@@ -152,7 +152,7 @@ export const pricing = {
     teaserDisplay: "$249 every 4 weeks",
     confirmed: true,
     summary:
-      "Hormone therapy with testosterone injections, estradiol, and progesterone as part of an individualized treatment plan.",
+      "Hormone therapy with testosterone injections together with estradiol and progesterone therapy as part of an individualized treatment plan.",
     includesHeading: "Program Includes",
     includes: [
       "Testosterone injections and injection supplies",
