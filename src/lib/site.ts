@@ -159,8 +159,6 @@ export function phoneHref(): string | null {
 /** Outlook on the web compose for the clinic Microsoft 365 mailbox. */
 export function emailComposeUrl(): string | null {
   if (!SITE.email) return null;
-  // Use a clinic name plus the address so Outlook does not set the
-  // display name to the email itself ("email" <email>).
-  const recipient = `${SITE.shortName} <${SITE.email}>`;
-  return `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(recipient)}`;
+  // Angle-bracket address only (no display name) so To shows the mailbox once.
+  return `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(`<${SITE.email}>`)}`;
 }
