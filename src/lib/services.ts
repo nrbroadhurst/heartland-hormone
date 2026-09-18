@@ -16,6 +16,7 @@ export type Service = {
   description: string;
   heroDescriptor: string;
   highlights: string[];
+  highlightsHeading?: string;
   ctaLabel: string;
   primary: boolean;
   icon: "user" | "heart" | "scale" | "dna" | "heartPulse" | "leaf";
@@ -36,15 +37,15 @@ export const SERVICES: Service[] = [
     shortTitle: "Men's Hormone Care",
     href: "/services/mens-hormone-therapy",
     description:
-      "Evaluation and treatment for low energy, decreased libido, decreased strength, changes in body composition, mood changes, brain fog and other symptoms that may be associated with low testosterone.",
+      "Comprehensive evaluation and treatment for men experiencing low energy, decreased libido, reduced strength, changes in body composition, mood changes, brain fog, and other symptoms that may be associated with low testosterone levels or hormonal imbalance.",
     heroDescriptor:
       "Individualized men's hormone evaluation and treatment with laboratory monitoring and ongoing clinical follow-up from a local Kansas provider.",
+    highlightsHeading: "Program Includes:",
     highlights: [
-      "Clinical evaluation for hormone-related symptoms",
+      "Comprehensive evaluation of hormone-related symptoms",
       "Appropriate laboratory testing",
-      "Individualized treatment when clinically appropriate",
-      "Ongoing medical monitoring",
-      "Sexual wellness evaluation when appropriate",
+      "Personalized treatment plans when clinically indicated",
+      "Ongoing medical monitoring and follow-up care",
     ],
     ctaLabel: "Explore Men's Hormone Care",
     primary: true,

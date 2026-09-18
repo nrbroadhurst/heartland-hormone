@@ -53,6 +53,11 @@ export function PrimaryServiceCard({
         <p className="text-sm leading-relaxed text-charcoal/85 mb-5">
           {service.description}
         </p>
+        {service.highlightsHeading ? (
+          <p className="mb-3 text-sm font-medium text-teal">
+            {service.highlightsHeading}
+          </p>
+        ) : null}
         <ul className="mb-6 flex-1 space-y-2">
           {service.highlights.map((item) => (
             <li key={item} className="flex gap-2 text-sm text-charcoal/90">
