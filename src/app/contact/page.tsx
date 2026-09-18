@@ -45,9 +45,16 @@ export default async function ContactPage({ searchParams }: Props) {
           <p>
             New patient consultations are typically 60 minutes and include a
             comprehensive review of your symptoms, health history, laboratory
-            findings, and health goals. If treatment is recommended, ongoing
-            follow-up care is provided to monitor your progress, review
-            laboratory results, and adjust your treatment plan as needed.
+            findings, and health goals. To make the most of your visit, a
+            comprehensive laboratory evaluation is completed beforehand so we can
+            review your results together, discuss any underlying hormonal or
+            metabolic concerns, and develop a personalized treatment plan when
+            appropriate.
+          </p>
+          <p>
+            If treatment is recommended, ongoing follow-up care is provided to
+            monitor your progress, review laboratory results, and adjust your
+            treatment plan as needed.
           </p>
           <h2 className="font-display text-2xl text-gold tracking-wide pt-2">
             Follow-Up Appointments
@@ -56,8 +63,10 @@ export default async function ContactPage({ searchParams }: Props) {
             Follow-up visits are available for established Heartland patients
             currently receiving care. These appointments provide an opportunity
             to review your progress, discuss any concerns, evaluate laboratory
-            results when applicable, and make adjustments to your treatment plan
-            as needed.
+            results, and make adjustments to your treatment plan as needed.
+            Periodic laboratory testing is an important part of ongoing monitoring
+            and is required to help ensure treatment effectiveness, support
+            patient safety, and guide long-term care.
           </p>
         </div>
       </PageHero>
