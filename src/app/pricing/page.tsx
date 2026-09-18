@@ -29,7 +29,7 @@ export default function PricingPage() {
         compact
         eyebrow="Pricing & Programs"
         title="Pricing & Programs"
-        description="Cash-pay hormone programs with published 4-week membership rates. All programs include provider oversight, medication management, quarterly follow-up, treatment adjustments, and home delivery of included medications. Laboratory testing is billed separately."
+        description="Membership pricing includes prescribed testosterone, estradiol, and progesterone when part of your treatment plan, along with routine follow-up and ongoing clinical management. Program fees vary by treatment tier based on the medications and formulations prescribed. Additional medications, laboratory testing, and other services are billed separately."
       >
         <BookButton />
       </PageHero>
