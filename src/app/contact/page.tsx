@@ -25,19 +25,32 @@ export default async function ContactPage({ searchParams }: Props) {
 
   return (
     <>
-      <PageHero
-        eyebrow="Contact"
-        title={SITE.consultCta}
-        description="Call, email or send a message. New patient consultations are typically 60 minutes. An in-person first visit is preferred. Virtual follow-up may be available when clinically and legally appropriate."
-      />
+      <PageHero title={SITE.consultCta}>
+        <div className="max-w-2xl space-y-4 text-lg text-cream/85 leading-relaxed">
+          <p>
+            Schedule your consultation through our{" "}
+            <a
+              href={SITE.patientPortalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 text-gold-light hover:text-gold"
+            >
+              secure patient portal
+            </a>{" "}
+            or contact us by phone, email, or message if you have questions before
+            booking.
+          </p>
+          <p>
+            New patient consultations are typically 60 minutes and include a
+            comprehensive review of your symptoms, health history, laboratory
+            findings, and health goals.
+          </p>
+        </div>
+      </PageHero>
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <SectionHeading
-              title="Schedule"
-              description="Call, email or send a message. Online scheduling will be added when the patient portal is connected."
-            />
             <BookingWidget />
           </div>
 
