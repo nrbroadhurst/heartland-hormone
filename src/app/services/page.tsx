@@ -28,7 +28,7 @@ export default function ServicesHubPage() {
 
       <CTASection
         headline="Not sure where to start?"
-        subtext="Book a consultation. Your provider will help you choose the right path after evaluation."
+        subtext="Book a consultation to discuss your symptoms, health history, and goals. Your provider will help determine the most appropriate path based on your evaluation."
         secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"
       />
