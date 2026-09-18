@@ -9,7 +9,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Patient Portal",
   description:
-    "Log in to the Heartland Hormone patient portal to complete forms, view shared documents, pay invoices and message the clinic through OptiMantra.",
+    "Heartland Hormone uses OptiMantra for patient records after your account is created. Schedule by phone or message; this website does not open a portal login.",
   path: "/patient-portal",
 });
 
@@ -19,60 +19,46 @@ export default function PatientPortalPage() {
       <PageHero
         eyebrow="Current Patients"
         title="Patient Portal"
-        description="Patients sign in to OptiMantra with their own patient email — the address that received the Heartland invite. The clinic contact email is not a portal username. Medical records are not stored on this website."
+        description="This website does not open OptiMantra or any login page. Portal access is sent to you by the clinic after you are added as a patient. Medical records are not stored on this website."
       />
 
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
         <SectionHeading
-          title="What you can do in the portal"
-          description="After your clinic account is set up, you can log in to OptiMantra to manage your care online."
+          title="How portal access works"
+          description="Heartland uses OptiMantra inside the clinic. Patients receive a personal invite by email. This website does not include a login button."
         />
         <TreatmentList
           items={[
-            "Complete intake forms and consents",
-            "View shared documents, treatment plans and superbills when they are posted",
-            "Upload documents such as previous lab results",
-            "Pay invoices when they are sent",
-            "Message the clinic when messaging is enabled",
-            "Join virtual care visits when they are scheduled in OptiMantra",
+            "New patients request a consultation by phone, email, or the contact form",
+            "After you are added to the clinic record, you receive a portal invite at your personal email",
+            "Use only that invite. Do not use the clinic contact email as a username",
+            "If you already have access and need help, call the clinic rather than searching for a login page on this site",
           ]}
         />
 
-        <div className="mt-10 rounded-md border border-gold/40 bg-teal/5 p-5 text-sm text-charcoal/85 leading-relaxed">
-          <p className="font-medium text-teal mb-2">Before you open OptiMantra</p>
-          <p>
-            Heartland&apos;s website does not store or send anyone&apos;s OptiMantra
-            username or password. The next button only opens OptiMantra&apos;s own
-            login page. If you work at the clinic, your browser may fill in a
-            saved work login. That comes from your computer, not from this
-            website. Patients who have never signed in to OptiMantra on that
-            device see empty fields.
-          </p>
-        </div>
+        <p className="mt-8 text-sm text-charcoal/80 leading-relaxed">
+          After your account is set up, the portal is used for intake forms,
+          shared documents, invoices, and clinic messaging when those features
+          are enabled.
+        </p>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <Button asChild variant="teal" size="lg">
-            <a
-              href={SITE.patientPortalUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open Patient Portal
-            </a>
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <BookButton label="Request a Consultation" href="/contact" />
+          <Button asChild variant="outline-teal" size="lg">
+            <a href={`tel:${SITE.phoneTel}`}>Call {SITE.phone}</a>
           </Button>
-          <BookButton label="New Patient? Book a Consultation" href="/contact" />
         </div>
 
         <p className="mt-8 text-sm text-charcoal/75 leading-relaxed">
-          After your clinic account is set up, you will receive an OptiMantra
-          invite at your personal email. Sign in as a patient, not as a provider.
-          Do not use the clinic contact email as your username.
-          If you cannot log in, call {SITE.phone} or email the clinic so we can
-          confirm your account. New patients should{" "}
+          Questions about an existing account? Call {SITE.phone} or email the
+          clinic. Do not send passwords by email or through this website.
+        </p>
+        <p className="mt-4 text-sm text-charcoal/75 leading-relaxed">
+          New patients should{" "}
           <Link href="/contact" className="text-teal underline underline-offset-2">
             request a consultation
           </Link>{" "}
-          first; portal login is created after you are added to the clinic record.
+          first.
         </p>
       </section>
     </>

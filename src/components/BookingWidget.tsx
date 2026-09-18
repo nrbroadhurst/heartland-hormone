@@ -9,7 +9,7 @@ const APPOINTMENT_TYPES = [
   },
   {
     label: "Follow-Up Visit (15-20 minutes)",
-    href: "/patient-portal",
+    href: "#contact-form",
   },
 ] as const;
 
@@ -57,29 +57,24 @@ export function BookingWidget() {
           </li>
         ))}
       </ul>
-      <p className="text-sm text-charcoal/80 leading-relaxed mb-3">
-        Follow-up visits are booked in the Heartland patient portal (OptiMantra).
-        Sign in with the personal email on your patient account — the address
-        that received your portal invite. Never sign in with the clinic contact
-        email.
-      </p>
       <p className="text-sm text-charcoal/80 leading-relaxed mb-6">
-        New patients do not have a portal login yet. Choose New Patient
-        Consultation above or call{" "}
+        Appointments are requested by sending a message below or by calling{" "}
         <a
           href={`tel:${SITE.phoneTel}`}
           className="text-teal underline underline-offset-2"
         >
           {SITE.phone}
-        </a>{" "}
-        so we can schedule your first visit and send your invite.
+        </a>
+        . This website does not open OptiMantra. If you already have a portal
+        account, use the invite you received from the clinic; do not look for a
+        login button here.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row">
         <Button asChild variant="teal">
-          <Link href="/patient-portal">Patient Portal Instructions</Link>
+          <Link href="#contact-form">Send a Message</Link>
         </Button>
         <Button asChild variant="outline-teal">
-          <Link href="#contact-form">New Patient? Send a Message</Link>
+          <a href={`tel:${SITE.phoneTel}`}>Call {SITE.phone}</a>
         </Button>
       </div>
     </div>

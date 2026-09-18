@@ -52,7 +52,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Where do I log in for records, forms and bills?",
     answer:
-      "Heartland uses a secure OptiMantra patient portal for forms, shared documents, invoices and clinic messaging. Medical records are not stored on this website. Use the Patient Portal link in the header after your account has been created. New patients should request a consultation first.",
+      "Heartland uses OptiMantra for forms, shared documents, invoices and clinic messaging after your patient account is created. Medical records are not stored on this website. This website does not include a portal login. New patients should request a consultation first. Current patients use the invite emailed by the clinic.",
   },
   {
     id: "billing-frequency",

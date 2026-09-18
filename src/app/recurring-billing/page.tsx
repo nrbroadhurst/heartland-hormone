@@ -72,12 +72,18 @@ export default function RecurringBillingPage() {
                 href="/patient-portal"
                 className="text-teal underline underline-offset-2"
               >
-                Open the patient portal
+                Patient portal information
               </Link>{" "}
-              to manage your account, view invoices and cancel future recurring
-              charges when that function is enabled in OptiMantra.
+              explains how portal access is issued. Recurring charges can also be
+              managed by contacting the clinic.
             </p>
-          ) : null}
+          ) : (
+            <p>
+              Portal access is issued by the clinic after you are a patient. This
+              website does not open a login page. To manage or cancel a program,
+              call or email the clinic.
+            </p>
+          )}
           <p>
             You may also contact the clinic at{" "}
             <a href={`tel:${SITE.phoneTel}`} className="text-teal underline underline-offset-2">

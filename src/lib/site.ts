@@ -46,7 +46,8 @@ export const SITE = {
   officeHours: "By appointment only",
   bookingUrl: null as string | null,
   bookingSystem: "OptiMantra",
-  patientPortalUrl: "https://www.optimantra.com/optimus/om/patient/login",
+  /** Do not publish a live OptiMantra login URL on the public site. */
+  patientPortalUrl: null as string | null,
 
   providerName: "Sherry Broadhurst",
   providerCredential: "MSN, APRN, AGACNP-BC",
