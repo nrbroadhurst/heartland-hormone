@@ -26,8 +26,8 @@ export default function HowItWorksPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
         <SectionHeading
-          title="Four steps"
-          description="Every patient starts with a consultation and appropriate evaluation. Treatment decisions are made individually. Prescription treatment is provided only when clinically appropriate."
+          title="Four Simple Steps"
+          description="Every patient begins with a consultation and comprehensive evaluation. Treatment recommendations are individualized and based on symptoms, health history, and laboratory findings."
         />
         <StepList />
         <p className="mt-8 text-sm text-charcoal/75 max-w-3xl leading-relaxed">
