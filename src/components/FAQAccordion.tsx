@@ -19,7 +19,15 @@ export function FAQAccordion({ items }: { items: FAQItem[] }) {
       {items.map((item, i) => (
         <AccordionItem key={item.question} value={`item-${i}`}>
           <AccordionTrigger>{item.question}</AccordionTrigger>
-          <AccordionContent>{item.answer}</AccordionContent>
+            <AccordionContent>
+              {typeof item.answer === "string"
+                ? item.answer.split("\n\n").map((paragraph) => (
+                    <p key={paragraph.slice(0, 48)} className="mb-3 last:mb-0">
+                      {paragraph}
+                    </p>
+                  ))
+                : item.answer}
+            </AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>

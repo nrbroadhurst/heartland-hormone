@@ -30,7 +30,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "What does the initial consultation cost?",
     answer:
-      `The ${pricing.initialEvaluation.name} is ${pricing.initialEvaluation.display} for 60 minutes. Laboratory testing is not included. Patients may use insurance for eligible labs or Heartland's discounted cash-pay option; cash-pay lab fees are due before collection.`,
+      `The ${pricing.initialEvaluation.name} is ${pricing.initialEvaluation.display} and includes a comprehensive 60-minute evaluation. Laboratory testing is separate from the consultation fee.\n\nHeartland offers access to discounted laboratory testing through Quest Diagnostics. Laboratory testing purchased through Heartland must be prepaid before laboratory orders are issued. Patients who prefer to use their own health insurance benefits for laboratory testing may request a laboratory requisition for testing through their insurance plan's preferred laboratory.`,
   },
   {
     id: "insurance",
