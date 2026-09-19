@@ -64,7 +64,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "cancel-program",
     category: "General",
     question: "Can I cancel my program?",
-    answer: `${billingPolicy.cancellation} Use the Patient Portal to manage your account or contact the clinic at ${SITE.phone}. See the recurring billing and cancellation policy for details.`,
+    answer:
+      `Members may cancel at any time before their next scheduled billing date. To avoid the next billing cycle, cancellations must be submitted before the next scheduled billing date.\n\nUse the Patient Portal to manage your account or contact the clinic at ${SITE.phone}.\n\nSee the Recurring Billing & Cancellation Policy for additional details.`,
   },
   {
     id: "treatment-changes",
