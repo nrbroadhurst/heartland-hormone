@@ -244,22 +244,24 @@ export const labPolicy = {
 export const membershipExclusions = additionalServices;
 
 export const billingPolicy = {
+  billingIntro:
+    "Memberships are billed every 4 weeks (13 billing cycles per year) and automatically renew unless canceled. To avoid the next billing cycle, cancellations must be submitted before the next scheduled billing date.",
   programCovers:
-    "Hormone optimization programs are offered through a recurring membership that includes ongoing provider oversight, medication management, follow-up care, and the medications specifically included in your selected program. Program fees include provider oversight and the medications specifically listed within each program.",
+    "Hormone therapy programs are offered through a recurring membership that includes ongoing provider oversight, medication management, follow-up care, and the medications specifically included in your selected program.",
   recurring: billingConfig.recurringDisclosure,
   recurringAuthorization: billingConfig.recurringAuthorization,
   nonPayment:
     "If a recurring program fee is declined or unpaid, pending and future compounding pharmacy orders, medication shipments and clinical appointments are paused. Prescriptions are not reordered or sent until the account balance is paid in full. Persistent non-payment past 30 days may result in discharge from the practice and cancellation of active prescriptions.",
   priceAdjustments:
-    "Program fees reflect current medication, compounding pharmacy, supplier, shipping and operational costs. If medication shortages, market disruptions, regulatory changes or significant supplier cost increases occur, membership fees may be adjusted. Patients receive at least 30 days of written notice before a fee adjustment takes effect.",
+    "Program fees reflect current medication, compounding pharmacy, supplier, shipping, and operational costs. In the event of medication shortages, market disruptions, regulatory changes, or significant increases in supplier costs, membership fees may be adjusted. Patients will receive at least 30 days' written notice before any fee adjustment takes effect.",
   refunds:
-    "Consultation fees are non-refundable. Membership fees are non-refundable once billed and medications have been prescribed, processed or shipped.",
+    "Consultation fees are non-refundable. Membership fees are non-refundable once billed and after medications have been prescribed, processed, or shipped.",
   shipping:
     "Prescribed medications included in a program are typically shipped to the patient's home.",
   treatmentChanges:
     "Treatment plans are individualized and may be modified based on symptoms, treatment response, laboratory findings, medication availability, safety considerations or medical necessity. Medication type, formulation, dosage and laboratory monitoring requirements may change throughout treatment.",
   cancellation:
-    "Members may cancel at any time prior to their next scheduled billing date. Memberships are billed every four weeks and automatically renew unless canceled. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.",
+    "Members may cancel at any time before their next scheduled billing date. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.",
   pharmacyFulfillment:
     "Prescriptions may be filled by an appropriately licensed pharmacy based on the patient's treatment plan, location and medication needs.",
   ancillaryNotIncluded:

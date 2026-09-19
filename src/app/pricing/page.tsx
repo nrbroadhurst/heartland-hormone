@@ -193,36 +193,28 @@ export default function PricingPage() {
         </div>
 
         <div id="program-policies" className="scroll-mt-28">
-          <SectionHeading
-            compact
-            eyebrow="Membership"
-            title="Membership & billing"
-            description="Memberships bill every 4 weeks (13 cycles per year) and renew until you cancel. Cancel before the next bill to stop the following cycle."
-          />
-          <div className="grid gap-6 lg:grid-cols-2 text-sm text-charcoal/85 leading-relaxed">
-            <div className="space-y-3">
-              <p>{billingPolicy.programCovers}</p>
-              <p>{billingPolicy.refunds}</p>
-              <p>{billingPolicy.priceAdjustments}</p>
-            </div>
-            <div className="space-y-3">
-              <p>{billingPolicy.cancellation}</p>
-              <p>
-                <Link
-                  href="/recurring-billing"
-                  className="text-teal underline underline-offset-2"
-                >
-                  Full recurring billing and cancellation policy
-                </Link>
-                {" · "}
-                <Link
-                  href="/refund-policy"
-                  className="text-teal underline underline-offset-2"
-                >
-                  Refund policy
-                </Link>
-              </p>
-            </div>
+          <SectionHeading compact title="Membership &amp; Billing" />
+          <div className="max-w-3xl space-y-4 text-sm text-charcoal/85 leading-relaxed -mt-4">
+            <p>{billingPolicy.billingIntro}</p>
+            <p>{billingPolicy.programCovers}</p>
+            <p>{billingPolicy.refunds}</p>
+            <p>{billingPolicy.priceAdjustments}</p>
+            <p>{billingPolicy.cancellation}</p>
+            <p>
+              <Link
+                href="/recurring-billing"
+                className="text-teal underline underline-offset-2"
+              >
+                Full recurring billing and cancellation policy
+              </Link>
+              {" · "}
+              <Link
+                href="/refund-policy"
+                className="text-teal underline underline-offset-2"
+              >
+                Refund policy
+              </Link>
+            </p>
           </div>
         </div>
 
