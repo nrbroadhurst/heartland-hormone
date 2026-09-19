@@ -151,7 +151,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "program-billing",
     category: "General",
     question: "How does recurring program billing work?",
-    answer: `${billingPolicy.recurring} ${billingPolicy.nonPayment} ${billingPolicy.refunds}`,
+    answer:
+      "Recurring hormone care memberships are automatically billed every 4 weeks and renew unless canceled.\n\nIf a recurring program fee is declined or remains unpaid, medication orders, prescription refills, medication shipments, and scheduled clinical services may be paused until the account balance is paid in full.\n\nAccounts that remain unpaid for more than 30 days may be subject to discharge from the practice and cancellation of active prescriptions.\n\nConsultation fees are nonrefundable. Membership fees are nonrefundable once billed and after medications have been prescribed, processed, or shipped.",
   },
   {
     id: "weight-treatment",
