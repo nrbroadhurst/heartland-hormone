@@ -68,9 +68,8 @@ export default function AboutPage() {
             <div className="space-y-4 text-charcoal/90 leading-relaxed">
               <p>
                 Heartland Hormone & Wellness Clinic was founded by{" "}
-                {SITE.providerName}, {SITE.providerTitle},{" "}
-                {SITE.providerCredential}, with decades of advanced clinical
-                experience.
+                {SITE.providerName}, a board-certified nurse practitioner with
+                decades of advanced clinical experience.
               </p>
               <p>
                 Raised in Miami County and a longtime resident of Overland Park,
