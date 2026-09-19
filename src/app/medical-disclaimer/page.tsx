@@ -1,33 +1,41 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { MEDICAL_DISCLAIMER, SITE } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
   title: "Medical Disclaimer",
-  description: `Educational-use disclaimer for ${SITE.name}.`,
+  description:
+    "This website is provided for general educational purposes only and is not intended as medical advice.",
   path: "/medical-disclaimer",
 });
 
 export default function MedicalDisclaimerPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Legal"
-        title="Medical Disclaimer"
-        description="This website is for general education. It is not a substitute for an individualized medical visit."
-      />
+      <PageHero title="Medical Disclaimer" />
       <article className="mx-auto max-w-3xl px-4 py-14 md:px-6 space-y-6 text-charcoal/90 leading-relaxed">
-        <p>{MEDICAL_DISCLAIMER}</p>
         <p>
-          Nothing on this site establishes a provider-patient relationship.
-          Treatment decisions are made only after evaluation by a licensed
-          healthcare professional. Prescription treatment is provided only when
-          clinically appropriate.
+          This website is provided for general educational purposes only and is
+          not intended as medical advice. Information presented on this website
+          should not be used as a substitute for an individualized medical
+          evaluation, diagnosis, or treatment.
         </p>
         <p>
-          Individual results vary. We do not guarantee symptom resolution, weight
-          loss, testosterone levels or any other outcome.
+          Treatment recommendations are individualized and based on a
+          comprehensive evaluation, health history, laboratory findings, and
+          each patient&apos;s unique needs. Prescription medications are
+          prescribed only after appropriate clinical evaluation.
+        </p>
+        <p>
+          Nothing on this website creates a provider-patient relationship.
+          Treatment decisions are made only after consultation and evaluation by
+          a licensed healthcare professional.
+        </p>
+        <p>
+          Individual results vary. {SITE.name} does not guarantee symptom
+          resolution, weight loss, hormone levels, or any specific treatment
+          outcome.
         </p>
       </article>
     </>
