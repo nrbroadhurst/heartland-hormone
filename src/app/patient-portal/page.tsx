@@ -5,7 +5,7 @@ import { pageMeta } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Patient Portal",
+  title: "Patient Access",
   description:
     "Heartland uses OptiMantra for patient forms, shared documents, invoices, and secure clinic messaging after a patient account has been established.",
   path: "/patient-portal",
@@ -15,8 +15,8 @@ export default function PatientPortalPage() {
   return (
     <>
       <PageHero
-        eyebrow="Patient Portal"
-        title="Patient Portal"
+        eyebrow="Patient Access"
+        title="Patient Access"
         description="Heartland uses OptiMantra for patient forms, shared documents, invoices, and secure clinic messaging after a patient account has been established."
       />
       <article className="mx-auto max-w-3xl px-4 py-14 md:px-6 space-y-8 text-charcoal/90 leading-relaxed">

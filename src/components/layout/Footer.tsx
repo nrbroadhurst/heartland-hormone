@@ -42,7 +42,7 @@ export function Footer() {
               ))}
               <li>
                 <Link href="/patient-portal" className="hover:text-gold-light transition-colors">
-                  Patient Portal
+                  Patient Access
                 </Link>
               </li>
               <li>

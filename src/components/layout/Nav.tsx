@@ -83,7 +83,7 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <Button asChild variant="outline-teal" size="sm" className="hidden md:inline-flex">
-            <Link href="/patient-portal">Patient Portal</Link>
+            <Link href="/patient-portal">Patient Access</Link>
           </Button>
           <Button asChild variant="gold" size="sm" className="hidden sm:inline-flex">
             <Link href="/contact">{SITE.consultCtaShort}</Link>
@@ -174,7 +174,7 @@ export function Nav() {
             className="py-3 text-base font-medium"
             onClick={() => setOpen(false)}
           >
-            Patient Portal
+            Patient Access
           </Link>
           <Link
             href="/contact"
