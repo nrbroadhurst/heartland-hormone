@@ -223,31 +223,40 @@ export default function PricingPage() {
           className="scroll-mt-28 rounded-md border border-gold/40 bg-cream p-5 md:p-6"
         >
           <h2 className="font-display text-xl text-teal tracking-wide mb-4">
-            Get started
+            Get Started
           </h2>
-          <ul className="space-y-2 text-sm text-charcoal/85 mb-6">
+          <ul className="space-y-4 text-sm text-charcoal/85">
             <li>
-              New Patient Consultation — {pricing.initialEvaluation.display}{" "}
-              one-time
+              <span className="block">New Patient Consultation</span>
+              <span className="block pl-3 text-charcoal/70">
+                {pricing.initialEvaluation.display} one-time
+              </span>
             </li>
             <li>
-              {pricing.mensInjections.name} — {pricing.mensInjections.display}{" "}
-              every 4 weeks
+              <span className="block">{pricing.mensInjections.name}</span>
+              <span className="block pl-3 text-charcoal/70">
+                {pricing.mensInjections.display} every 4 weeks
+              </span>
             </li>
             <li>
-              {pricing.mensTransdermal.name} — {pricing.mensTransdermal.display}{" "}
-              every 4 weeks
+              <span className="block">{pricing.mensTransdermal.name}</span>
+              <span className="block pl-3 text-charcoal/70">
+                {pricing.mensTransdermal.display} every 4 weeks
+              </span>
             </li>
             <li>
-              {pricing.womensTriple.name} — {pricing.womensTriple.display} every
-              4 weeks
+              <span className="block">{pricing.womensTriple.name}</span>
+              <span className="block pl-3 text-charcoal/70">
+                {pricing.womensTriple.display} every 4 weeks
+              </span>
             </li>
             <li>
-              {pricing.womensAdvanced.name} — {pricing.womensAdvanced.display}{" "}
-              every 4 weeks
+              <span className="block">{pricing.womensAdvanced.name}</span>
+              <span className="block pl-3 text-charcoal/70">
+                {pricing.womensAdvanced.display} every 4 weeks
+              </span>
             </li>
           </ul>
-          <BookButton />
         </div>
 
         <PricingDisclaimer />
