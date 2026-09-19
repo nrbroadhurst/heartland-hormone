@@ -183,7 +183,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Weight Management",
     question: "How often do I need follow-up visits?",
     answer:
-      "Follow-up frequency depends on the treatment plan. Virtual follow-up may be used when clinically and legally appropriate. Some visits may still need to be in person.",
+      "Follow-up frequency varies based on the prescribed treatment plan, medication management needs, treatment response, and laboratory monitoring requirements. Your provider will recommend an appropriate follow-up schedule based on your individual needs and progress.",
   },
 ];
 
