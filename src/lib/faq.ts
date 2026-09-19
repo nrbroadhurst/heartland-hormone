@@ -154,7 +154,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "women-meds-included",
     category: "Women's Hormone & Menopause Care",
     question: "Are medications included in the program?",
-    answer: `${pricing.womensTriple.name} is ${pricing.womensTriple.display} every 4 weeks and includes estradiol, progesterone and testosterone cream when clinically appropriate. ${pricing.womensAdvanced.name} is ${pricing.womensAdvanced.display} every 4 weeks with testosterone injections plus estradiol and progesterone therapy. Laboratory fees are billed separately.`,
+    answer:
+      `The ${pricing.womensTriple.name} is ${pricing.womensTriple.display} every 4 weeks and includes estradiol, progesterone, and testosterone therapy as part of an individualized treatment plan.\n\nThe ${pricing.womensAdvanced.name} is ${pricing.womensAdvanced.display} every 4 weeks and includes testosterone injections together with estradiol and progesterone therapy as part of an individualized treatment plan.\n\nLaboratory testing is billed separately.`,
   },
   {
     id: "program-billing",
