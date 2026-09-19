@@ -226,7 +226,7 @@ export const labPolicy = {
     "Additional laboratory testing requested by the patient or required beyond Heartland's standard hormone and thyroid monitoring panels is billed separately.",
   ],
   notIncluded:
-    "Laboratory testing is separate from consultation and membership fees. Heartland offers access to discounted laboratory testing through Quest Diagnostics. Patients who choose this option purchase laboratory testing through Heartland, and payment is required before laboratory orders are issued. Patients who prefer to use their own health insurance for laboratory testing may request a laboratory requisition for completion through their insurance plan's preferred laboratory.",
+    "Laboratory testing is separate from consultation and membership fees.\n\nHeartland offers access to discounted laboratory testing through Quest Diagnostics. Patients who choose this option purchase laboratory testing through Heartland, and payment is required before laboratory orders are issued.\n\nPatients who prefer to use their own health insurance for laboratory testing may request a laboratory requisition for testing through their insurance plan's preferred laboratory.",
   preAppointment:
     "Baseline laboratory testing is required before beginning hormone therapy and must be completed before your consultation so results are available for review during your appointment.",
   titration:
