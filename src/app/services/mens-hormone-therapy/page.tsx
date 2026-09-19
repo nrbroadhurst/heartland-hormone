@@ -93,14 +93,14 @@ export default function MensHormonePage() {
           items={[
             "Comprehensive initial evaluation",
             "Baseline laboratory testing and review",
-            "Individualized treatment plan",
+            "Individualized treatment planning",
             "Education on medication administration",
             "Routine follow-up visits",
             "Laboratory monitoring",
             "Symptom assessment and monitoring",
             "Treatment adjustments as needed",
             "Prescription refill management",
-            "In-office care when necessary",
+            "In-office care when needed",
           ]}
         />
       </section>
