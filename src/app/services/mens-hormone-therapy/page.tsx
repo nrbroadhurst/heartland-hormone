@@ -75,14 +75,13 @@ export default function MensHormonePage() {
           <div className="space-y-4 text-charcoal/90 leading-relaxed -mt-4">
             <p>
               Treatment begins with a comprehensive evaluation of symptoms,
-              medical history, and laboratory findings. Based on these results,
-              Heartland develops a personalized treatment plan designed to
-              address each patient&apos;s individual needs and goals.
+              health history, and laboratory findings. Based on these results,
+              Heartland develops an individualized treatment plan designed around
+              each patient&apos;s unique needs and goals.
             </p>
             <p>
               Ongoing care includes symptom review, laboratory monitoring, and
-              treatment adjustments as needed to help patients achieve and
-              maintain the best possible results.
+              treatment adjustments as needed.
             </p>
           </div>
         </div>
@@ -108,7 +107,7 @@ export default function MensHormonePage() {
 
       <CTASection
         headline="Ready to Get Started?"
-        subtext="Schedule a consultation to discuss your symptoms, review your health history, and determine whether hormone therapy is right for you."
+        subtext="Schedule a consultation to discuss your symptoms, review your health history, and learn whether hormone therapy may be right for you."
         ctaLabel="Schedule a Consultation"
       />
     </>
