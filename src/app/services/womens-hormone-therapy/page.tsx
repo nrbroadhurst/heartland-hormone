@@ -68,7 +68,8 @@ export default function WomensHormonePage() {
 
       <section className="bg-teal/5 border-y border-gold/20">
         <div className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
-          <p className="text-charcoal/90 leading-relaxed">
+          <SectionHeading title="PMOS/PCOS and Metabolic Hormone Care" />
+          <p className="text-charcoal/90 leading-relaxed -mt-4">
             PMOS/PCOS (polycystic ovary syndrome) can affect cycles, androgen
             levels, metabolic health, and long-term wellness. Heartland evaluates
             these concerns as part of women&apos;s hormone and metabolic care.
