@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero, SectionHeading } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { FadeIn } from "@/components/FadeIn";
-import { SITE, providerCredentialLine } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta } from "@/lib/seo";
 import { clinicJsonLd, personJsonLd } from "@/lib/schema";
@@ -53,14 +53,11 @@ export default function AboutPage() {
         <div className="grid gap-12 md:grid-cols-2 md:items-start">
           <FadeIn>
             <div className="aspect-[4/5] w-full rounded-md border border-gold/30 bg-teal text-cream flex flex-col items-center justify-center px-8 text-center">
-              <p className="font-display text-xs uppercase tracking-[0.25em] text-gold mb-4">
-                Founder
-              </p>
-              <p className="font-display text-2xl tracking-wide mb-3">
-                {SITE.providerName ?? SITE.shortName}
+              <p className="font-display text-2xl tracking-wide mb-3 text-balance">
+                {SITE.providerName}, {SITE.providerCredential}
               </p>
               <p className="text-sm text-cream/80 leading-relaxed">
-                {providerCredentialLine()}
+                Board-Certified Nurse Practitioner
               </p>
             </div>
           </FadeIn>
