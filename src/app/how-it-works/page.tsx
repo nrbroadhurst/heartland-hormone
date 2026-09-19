@@ -32,8 +32,9 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-12 md:px-6 lg:px-8 text-center">
+        <p className="text-charcoal/90 mb-2 font-medium">Questions?</p>
         <p className="text-charcoal/80 mb-4">
-          Questions? Visit our{" "}
+          Visit our{" "}
           <Link href="/faq" className="text-teal underline underline-offset-2">
             FAQ page
           </Link>{" "}
