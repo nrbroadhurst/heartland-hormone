@@ -141,7 +141,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Women's Hormone & Menopause Care",
     question: "Do you offer customized hormone therapy?",
     answer:
-      "Customized prescription formulations may be considered when clinically appropriate and legally available. Compounded hormones are not described as safer, more natural or free of risk.",
+      "Yes. Treatment plans are individualized and may include hormone therapy based on symptoms, health history, treatment goals, and laboratory findings. Specific medications, formulations, and dosages are determined during the evaluation process and tailored to each patient's individual needs.",
   },
   {
     id: "women-testosterone",
