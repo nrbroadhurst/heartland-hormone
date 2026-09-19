@@ -49,24 +49,19 @@ export default function MensHormonePage() {
 
       <section className="mx-auto max-w-3xl px-4 py-14 md:py-16 md:px-6">
         <SectionHeading title="Could a Hormone Imbalance Be Affecting You?" />
-        <p className="text-charcoal/90 leading-relaxed -mt-4 mb-6">
-          These symptoms can have many causes. A comprehensive evaluation and
-          laboratory testing are important to determine whether hormonal changes
-          may be contributing.
-        </p>
-        <TreatmentList
-          items={[
-            "Low energy",
-            "Reduced libido",
-            "Erectile dysfunction",
-            "Loss of strength",
-            "Changes in body composition",
-            "Mood changes",
-            "Decreased motivation",
-            "Difficulty concentrating",
-            "Slower recovery from exercise or physical activity",
-          ]}
-        />
+        <div className="space-y-4 text-charcoal/90 leading-relaxed -mt-4">
+          <p>
+            These symptoms can have many causes. A comprehensive evaluation and
+            laboratory testing are important to determine whether hormonal changes
+            may be contributing.
+          </p>
+          <p>
+            Low energy • Reduced libido • Erectile dysfunction • Loss of
+            strength • Changes in body composition • Mood changes • Decreased
+            motivation • Difficulty concentrating • Slower recovery from
+            exercise or physical activity
+          </p>
+        </div>
       </section>
 
       <section className="bg-teal/5 border-y border-gold/20">
