@@ -30,15 +30,15 @@ export default async function ContactPage({ searchParams }: Props) {
       <PageHero title="Schedule an Appointment">
         <div className="max-w-2xl space-y-4 text-lg text-cream/85 leading-relaxed">
           <p>
-            Schedule your appointment through our{" "}
+            Schedule your appointment through the{" "}
             <Link
               href="/patient-portal"
               className="underline underline-offset-2 text-gold-light hover:text-gold"
             >
               secure patient portal
             </Link>{" "}
-            or contact us by phone, email, or message if you have questions before
-            booking.
+            or contact the clinic by phone, email, or message if you have
+            questions before scheduling.
           </p>
           <h2 className="font-display text-2xl text-gold tracking-wide pt-2">
             New Patient Consultations
@@ -46,16 +46,17 @@ export default async function ContactPage({ searchParams }: Props) {
           <p>
             New patient consultations are typically 60 minutes and include a
             comprehensive review of your symptoms, health history, laboratory
-            findings, and health goals. To make the most of your visit, a
-            comprehensive laboratory evaluation is completed beforehand so we can
-            review your results together, discuss any underlying hormonal or
-            metabolic concerns, and develop a personalized treatment plan when
-            appropriate.
+            results, and treatment goals.
           </p>
           <p>
-            If treatment is recommended, ongoing follow-up care is provided to
-            monitor your progress, review laboratory results, and adjust your
-            treatment plan as needed.
+            To make the most of your visit, a comprehensive laboratory evaluation
+            is completed beforehand so your provider can review your results,
+            discuss potential hormonal or metabolic concerns, and develop an
+            individualized treatment plan when appropriate.
+          </p>
+          <p>
+            If treatment is recommended, ongoing follow-up care includes symptom
+            review, laboratory monitoring, and treatment adjustments as needed.
           </p>
           <h2 className="font-display text-2xl text-gold tracking-wide pt-2">
             Follow-Up Appointments
@@ -63,11 +64,13 @@ export default async function ContactPage({ searchParams }: Props) {
           <p>
             Follow-up visits are available for established Heartland patients
             currently receiving care. These appointments provide an opportunity
-            to review your progress, discuss any concerns, evaluate laboratory
-            results, and make adjustments to your treatment plan as needed.
-            Periodic laboratory testing is an important part of ongoing monitoring
-            and is required to help ensure treatment effectiveness, support
-            patient safety, and guide long-term care.
+            to review treatment progress, discuss concerns, review laboratory
+            results, and make treatment adjustments as needed.
+          </p>
+          <p>
+            Periodic laboratory testing is an important part of ongoing
+            monitoring and helps guide treatment decisions, support patient
+            safety, and evaluate treatment effectiveness over time.
           </p>
         </div>
       </PageHero>
