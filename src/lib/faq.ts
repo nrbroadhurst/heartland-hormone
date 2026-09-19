@@ -38,7 +38,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     question: "Do you accept insurance?",
     answer: SITE.acceptsInsurance
       ? "Insurance billing details are reviewed during scheduling."
-      : "Heartland does not bill insurance for consultation fees, membership fees, or ongoing program services. A superbill can be provided upon request for patients who wish to submit claims to their insurance plan for potential reimbursement. Coverage and reimbursement are determined by your individual insurance plan.\n\nLaboratory testing is separate and may be completed through your insurance plan or through Heartland's discounted laboratory testing program.",
+      : "Heartland does not bill insurance for consultation fees, membership fees, or ongoing program services. A superbill can be provided upon request for patients who wish to submit claims to their insurance plan for possible reimbursement. Coverage and reimbursement are determined by your individual insurance plan.\n\nLaboratory testing is separate from consultation and membership fees. Patients may choose to complete laboratory testing through their insurance plan or purchase discounted laboratory testing through Heartland.\n\nHeartland offers access to negotiated discounted laboratory pricing through Quest Diagnostics. Laboratory testing purchased through Heartland must be prepaid before laboratory orders are issued.",
   },
   {
     id: "hsa-fsa",
