@@ -38,7 +38,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     question: "Do you accept insurance?",
     answer: SITE.acceptsInsurance
       ? "Insurance billing details are reviewed during scheduling."
-      : `Heartland uses cash-pay clinical programs rather than insurance billing for recurring program fees. ${SITE.superbillAvailable ? "A superbill can be provided on request for you to submit to your plan." : ""} Laboratory testing may be billed through insurance or paid at Heartland's discounted cash-pay laboratory rates.`,
+      : "Heartland does not bill insurance for consultation fees, membership fees, or ongoing program services. A superbill can be provided upon request for patients who wish to submit claims to their insurance plan for potential reimbursement. Coverage and reimbursement are determined by your individual insurance plan.\n\nLaboratory testing is separate and may be completed through your insurance plan or through Heartland's discounted laboratory testing program.",
   },
   {
     id: "hsa-fsa",
