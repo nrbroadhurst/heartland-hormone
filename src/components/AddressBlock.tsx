@@ -10,10 +10,10 @@ export function AddressBlock({ className }: { className?: string }) {
       {lines.map((line) => (
         <span
           key={line}
-          className={cn(
-            "block",
-            line === SITE.addressNote && "whitespace-nowrap",
-          )}
+          className="block"
+          style={
+            line === SITE.addressNote ? { whiteSpace: "nowrap" } : undefined
+          }
         >
           {line}
         </span>
