@@ -21,7 +21,7 @@ const PILLARS = [
   },
   {
     title: "Continuity",
-    quote: "Follow-up, messaging and medication adjustments with the same clinic.",
+    quote: "Ongoing follow-up, provider communication, and treatment adjustments through the same clinic.",
   },
   {
     title: "Local Availability",
