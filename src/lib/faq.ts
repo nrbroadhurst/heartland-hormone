@@ -1,5 +1,4 @@
 import { pricing, labPolicy, billingPolicy } from "@/lib/pricing";
-import { billingConfig } from "@/lib/billing";
 import { SITE } from "@/lib/site";
 
 export type FAQEntry = {
@@ -58,7 +57,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "billing-frequency",
     category: "General",
     question: "How often am I billed?",
-    answer: `Recurring hormone programs are billed ${billingConfig.frequencyLabel} until canceled (13 cycles per year). Published program rates are listed on Pricing & Programs. Your selected program and billing terms are confirmed before enrollment.`,
+    answer:
+      "Recurring hormone care memberships are billed every 4 weeks and automatically renew unless canceled. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.\n\nCurrent program pricing is available on the Pricing & Programs page. Your selected program, fees, and billing terms are reviewed before enrollment.",
   },
   {
     id: "cancel-program",
