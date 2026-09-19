@@ -47,8 +47,8 @@ export default function HowItWorksPage() {
       </section>
 
       <CTASection
-        headline="Ready to restore your energy and confidence?"
-        subtext="Schedule a consultation at our Kansas City-area clinic to discuss whether hormone care or medical weight management may be right for you."
+        headline="Ready to Restore Your Energy and Confidence?"
+        subtext="Schedule a consultation to discuss your symptoms, health history, and goals, and learn whether hormone care or medical weight management may be right for you."
         secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"
       />
