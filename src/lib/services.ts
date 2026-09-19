@@ -110,15 +110,15 @@ export const SERVICES: Service[] = [
     shortTitle: "Weight Management",
     href: "/services/weight-management",
     description:
-      "Medical evaluation and individualized treatment for weight-related health concerns, with prescription treatment when clinically appropriate, dose management and ongoing follow-up.",
+      "Medical evaluation and individualized treatment for weight-related health concerns, including prescription weight-management medications, ongoing monitoring, and support to help patients work toward their health goals.",
     heroDescriptor:
       "Medical weight-management care with clinical evaluation, monitoring and prescription treatment when appropriate.",
     highlights: [
       "Medical evaluation",
-      "Prescription treatment when clinically appropriate",
-      "Dose management and side-effect monitoring",
-      "Nutrition and activity guidance",
-      "Ongoing medical follow-up",
+      "Prescription weight-management medications",
+      "Medication management and monitoring",
+      "Nutrition and lifestyle guidance",
+      "Ongoing follow-up care",
     ],
     ctaLabel: "Explore Weight Management",
     primary: true,
