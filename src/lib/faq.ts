@@ -148,7 +148,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Women's Hormone & Menopause Care",
     question: "Is testosterone used in women?",
     answer:
-      "Testosterone may be included in women's hormone care programs when clinically appropriate. It is not a routine treatment for every menopausal patient.",
+      "Yes. Testosterone may be included in some women's hormone treatment plans based on symptoms, health history, and individual treatment goals. It is not used in every patient's treatment plan.",
   },
   {
     id: "women-meds-included",
