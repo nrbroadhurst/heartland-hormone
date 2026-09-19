@@ -82,7 +82,7 @@ export default async function ContactPage({ searchParams }: Props) {
           </div>
 
           <div>
-            <SectionHeading title="Clinic details" />
+            <SectionHeading title="Clinic Details" />
             <ul className="space-y-4 text-charcoal/90 -mt-4">
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 text-gold shrink-0" strokeWidth={1.5} aria-hidden />
@@ -96,43 +96,38 @@ export default async function ContactPage({ searchParams }: Props) {
                       rel="noreferrer"
                       className="mt-1 inline-block text-sm text-teal underline underline-offset-2"
                     >
-                      Get directions
+                      Get Directions
                     </a>
                   )}
-                  <span className="block text-sm text-charcoal/70 mt-1">
-                    {SITE.serviceAreaLine}
-                  </span>
                 </div>
               </li>
               {hasPhone() && (
                 <li className="flex gap-3">
                   <Phone className="h-5 w-5 text-gold shrink-0" strokeWidth={1.5} aria-hidden />
-                  <a href={phoneHref() ?? `tel:${SITE.phone}`} className="hover:text-teal">
-                    {SITE.phone}
-                  </a>
+                  <span>
+                    Phone:{" "}
+                    <a href={phoneHref() ?? `tel:${SITE.phone}`} className="hover:text-teal">
+                      {SITE.phone}
+                    </a>
+                  </span>
                 </li>
               )}
               {hasEmail() && (
                 <li className="flex gap-3">
                   <Mail className="h-5 w-5 text-gold shrink-0" strokeWidth={1.5} aria-hidden />
                   <span>
-                    <EmailLink />
+                    Email: <EmailLink />
                     <span className="block text-sm text-charcoal/70 mt-1">
-                      Public clinic inbox only. Messages from this page are sent
-                      to this address. Microsoft sign-in is not used, so a
-                      personal mailbox is never shown.
+                      Messages submitted through this website are sent to the
+                      clinic email address listed above.
                     </span>
                   </span>
                 </li>
               )}
               <li className="flex gap-3">
                 <Clock className="h-5 w-5 text-gold shrink-0" strokeWidth={1.5} aria-hidden />
-                <span>
-                  {SITE.officeHours ?? "Hours provided when you book"}
-                  <br />
-                  <span className="font-display text-xs uppercase tracking-[0.2em] text-gold">
-                    By Appointment Only
-                  </span>
+                <span className="font-display text-xs uppercase tracking-[0.2em] text-gold">
+                  By Appointment Only
                 </span>
               </li>
             </ul>
