@@ -177,8 +177,14 @@ export default function PricingPage() {
               <h3 className="font-display text-lg text-teal tracking-wide mb-3">
                 Ongoing Monitoring
               </h3>
-              <div className="space-y-3">
-                {labPolicy.ongoing.map((paragraph) => (
+              <p className="mb-4">{labPolicy.ongoingIntro}</p>
+              <ul className="space-y-2.5 pl-5 list-disc marker:text-gold">
+                {labPolicy.ongoingSteps.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <div className="mt-4 space-y-3">
+                {labPolicy.ongoingNotes.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>

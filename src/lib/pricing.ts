@@ -212,13 +212,16 @@ export const labPolicy = {
       price: "$175",
     },
   ],
-  ongoing: [
+  ongoingIntro:
     "Laboratory monitoring is an important part of safe and effective hormone therapy.",
+  ongoingSteps: [
     "An initial comprehensive laboratory panel is required before beginning treatment.",
     "Follow-up hormone testing is typically performed 6 to 8 weeks after starting therapy or following significant dose adjustments.",
     "Once treatment is established, laboratory monitoring is generally performed every 3 months until hormone levels and symptoms have stabilized.",
     "After a stable treatment regimen is achieved, laboratory monitoring may be performed every 6 months.",
     "An annual comprehensive laboratory panel is required as part of ongoing care.",
+  ],
+  ongoingNotes: [
     "Outside laboratory results may be accepted if they include all required tests and were completed within the previous 30 days. Additional testing may still be required.",
     "Additional laboratory testing requested by the patient or required beyond Heartland's standard hormone and thyroid monitoring panels is billed separately.",
   ],
