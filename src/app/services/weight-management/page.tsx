@@ -61,6 +61,15 @@ export default function WeightManagementPage() {
           Ongoing care includes weight and health progress monitoring,
           side-effect management, and treatment adjustments as needed.
         </p>
+        <p className="text-charcoal/90 leading-relaxed">
+          For patients enrolled in a hormone care membership, medical weight
+          management may be added to ongoing care without an additional
+          consultation or recurring management fee. Patients are responsible for
+          the cost of prescribed medications and any additional laboratory
+          testing that may be required. Patients who are not enrolled in a
+          hormone care membership may schedule a medical weight management
+          consultation to discuss treatment options.
+        </p>
       </section>
 
       <section className="bg-teal/5 border-y border-gold/20">
