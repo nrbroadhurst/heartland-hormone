@@ -24,9 +24,9 @@ const DEFAULT_STEPS: Step[] = [
     icon: CalendarCheck,
   },
   {
-    title: "Complete a Comprehensive Evaluation",
+    title: "Complete Laboratory Testing and Evaluation",
     description:
-      "Testing and laboratory review help determine whether hormone replacement and symptom-guided hormone balancing or other treatment options may be appropriate. Laboratory fees are paid by the patient, typically before an order is placed, through Quest Diagnostics or insurance when available.",
+      "Laboratory testing is required before your consultation so results are available for review during your appointment. Testing and evaluation help determine potential causes of symptoms and guide treatment recommendations.",
     icon: FlaskConical,
   },
   {
