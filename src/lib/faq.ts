@@ -134,7 +134,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Women's Hormone & Menopause Care",
     question: "What does women's hormone care include?",
     answer:
-      "Depending on the patient and program tier, customized hormone therapy may be considered when clinically appropriate. Specific prescriptions, strengths and combinations are determined during clinical evaluation and documented in your medical record, not on this public website.",
+      "Women's hormone care programs may include estradiol, progesterone, testosterone, or a combination of therapies based on symptoms, health history, treatment goals, and laboratory findings. Specific medications, formulations, and dosages are determined during the evaluation process and individualized for each patient.",
   },
   {
     id: "compounded",
