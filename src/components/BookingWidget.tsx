@@ -8,7 +8,7 @@ const APPOINTMENT_TYPES = [
     href: "#contact-form",
   },
   {
-    label: "Follow-Up Visit (15-20 minutes)",
+    label: "Follow-Up Visit (15 to 20 minutes)",
     href: "#contact-form",
   },
 ] as const;
@@ -69,7 +69,7 @@ export function BookingWidget() {
       </p>
       <p className="text-sm text-charcoal/80 leading-relaxed mb-6">
         If you already have a Heartland patient portal account, please use the
-        invitation link provided by the clinic to access your portal. Portal
+        portal invitation provided by the clinic to access your account. Portal
         access is not available directly through this website.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row">
