@@ -175,7 +175,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "weight-meds-cost",
     category: "Weight Management",
     question: "Is medication included in the program cost?",
-    answer: `${pricing.weightManagement.summary} Medication is billed separately from the consultation.`,
+    answer:
+      "For patients enrolled in a hormone care membership, weight-management medications may be incorporated into ongoing care. Medication and laboratory testing fees are billed separately.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options. Prescription medications are billed separately from consultation fees.",
   },
   {
     id: "weight-follow-up",
