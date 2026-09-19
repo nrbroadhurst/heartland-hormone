@@ -75,12 +75,20 @@ export default function RecurringBillingPage() {
           </h2>
           <p>
             Members may cancel at any time before their next scheduled billing
-            date.
+            date by calling{" "}
+            <a
+              href={`tel:${SITE.phoneTel}`}
+              className="text-teal underline underline-offset-2"
+            >
+              {SITE.phone}
+            </a>{" "}
+            or emailing the clinic. This website does not provide a patient
+            portal login.
           </p>
           <p>
             Portal access is provided by the clinic after a patient account has
-            been established. This website does not provide a patient portal
-            login.
+            been established. Cancellation requests should be made by phone or
+            email rather than through this website.
           </p>
           <p>To manage or cancel a membership, contact the clinic at:</p>
           <p>

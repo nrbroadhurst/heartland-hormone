@@ -65,7 +65,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Can I cancel my program?",
     answer:
-      `Members may cancel at any time before their next scheduled billing date. To avoid the next billing cycle, cancellations must be submitted before the next scheduled billing date.\n\nUse the Patient Portal to manage your account or contact the clinic at ${SITE.phone}.\n\nSee the Recurring Billing & Cancellation Policy for additional details.`,
+      `Members may cancel at any time before their next scheduled billing date by calling ${SITE.phone} or emailing the clinic at ${SITE.email}. This website does not provide a patient portal login.\n\nTo avoid the next billing cycle, the clinic must receive your cancellation before the next scheduled billing date.\n\nSee the Recurring Billing & Cancellation Policy for additional details.`,
   },
   {
     id: "treatment-changes",
