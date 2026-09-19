@@ -9,7 +9,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "How It Works",
   description:
-    "Schedule a consultation, complete a comprehensive evaluation including labs, receive a personalized plan when treatment is appropriate, and continue with ongoing monitoring at Heartland Hormone.",
+    "Schedule a consultation, complete a comprehensive evaluation and laboratory testing, review your results with your provider, and begin ongoing care with regular monitoring and follow-up.",
   path: "/how-it-works",
 });
 
@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="The Process"
         title="How It Works"
-        description="Schedule a consultation, complete a comprehensive evaluation including laboratory review, receive a personalized plan when treatment is appropriate, and continue with ongoing monitoring."
+        description="Schedule a consultation, complete a comprehensive evaluation and laboratory testing, review your results with your provider, and begin ongoing care with regular monitoring and follow-up."
       >
         <BookButton />
       </PageHero>
