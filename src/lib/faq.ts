@@ -1,4 +1,4 @@
-import { pricing, labPolicy, billingPolicy } from "@/lib/pricing";
+import { pricing, labPolicy } from "@/lib/pricing";
 import { SITE } from "@/lib/site";
 
 export type FAQEntry = {
