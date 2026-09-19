@@ -7,8 +7,8 @@ export function AddressBlock({ className }: { className?: string }) {
 
   return (
     <div className={cn("leading-7", className)}>
-      {lines.map((line, index) => (
-        <span key={line} className={cn("block text-pretty", index > 0 && "pl-1")}>
+      {lines.map((line) => (
+        <span key={line} className="block text-pretty">
           {line}
         </span>
       ))}
