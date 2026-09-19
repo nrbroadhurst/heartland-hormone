@@ -79,7 +79,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Can I use lab results from another provider?",
     answer:
-      "Outside labs may be accepted when they include the tests needed to establish care and are no more than one month old. Additional testing may still be required.",
+      "Outside laboratory results may be accepted if they include the tests required to establish care and were completed within the previous 30 days. Additional testing may still be required.",
   },
   {
     id: "lab-cost",
