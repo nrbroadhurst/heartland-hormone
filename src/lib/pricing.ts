@@ -261,7 +261,7 @@ export const billingPolicy = {
   treatmentChanges:
     "Treatment plans are individualized and may be modified based on symptoms, treatment response, laboratory findings, medication availability, safety considerations or medical necessity. Medication type, formulation, dosage and laboratory monitoring requirements may change throughout treatment.",
   cancellation:
-    "Members may cancel at any time before their next scheduled billing date. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.",
+    "Members may cancel at any time before their next scheduled billing date.",
   pharmacyFulfillment:
     "Prescriptions may be filled by an appropriately licensed pharmacy based on the patient's treatment plan, location and medication needs.",
   ancillaryNotIncluded:
