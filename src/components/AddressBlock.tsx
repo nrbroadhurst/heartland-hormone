@@ -1,4 +1,4 @@
-import { addressLines } from "@/lib/site";
+import { SITE, addressLines } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function AddressBlock({ className }: { className?: string }) {
@@ -8,7 +8,13 @@ export function AddressBlock({ className }: { className?: string }) {
   return (
     <div className={cn("leading-7", className)}>
       {lines.map((line) => (
-        <span key={line} className="block text-pretty">
+        <span
+          key={line}
+          className={cn(
+            "block",
+            line === SITE.addressNote && "whitespace-nowrap",
+          )}
+        >
           {line}
         </span>
       ))}
