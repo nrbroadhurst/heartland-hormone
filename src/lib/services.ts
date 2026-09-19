@@ -76,16 +76,10 @@ export const SERVICES: Service[] = [
     shortTitle: "Women's Hormone Care",
     href: "/services/womens-hormone-therapy",
     description:
-      "Personalized care for women experiencing perimenopause, menopause, hot flashes, night sweats, disrupted sleep, mood changes, fatigue, libido concerns and other hormone-related symptoms.",
+      "Heartland provides individualized care for women experiencing symptoms associated with the menopause transition, including perimenopause, menopause, and postmenopause. Treatment recommendations are based on symptoms, health history, risk factors, laboratory findings, and personal health goals.",
     heroDescriptor:
       "Individualized perimenopause and menopause care with customized hormone treatment, laboratory evaluation and ongoing clinical monitoring.",
-    highlights: [
-      "Perimenopause and menopause care",
-      "Hot flashes, night sweats and sleep changes",
-      "PMOS/PCOS evaluation when clinically appropriate",
-      "Individualized hormone treatment",
-      "Ongoing clinical management",
-    ],
+    highlights: [],
     ctaLabel: "Explore Women's Hormone Care",
     primary: true,
     icon: "heart",

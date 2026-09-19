@@ -58,18 +58,22 @@ export function PrimaryServiceCard({
             {service.highlightsHeading}
           </p>
         ) : null}
-        <ul className="mb-6 flex-1 space-y-2">
-          {service.highlights.map((item) => (
-            <li key={item} className="flex gap-2 text-sm text-charcoal/90">
-              <Check
-                className="h-4 w-4 shrink-0 mt-0.5 text-gold"
-                strokeWidth={1.5}
-                aria-hidden
-              />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
+        {service.highlights.length > 0 ? (
+          <ul className="mb-6 flex-1 space-y-2">
+            {service.highlights.map((item) => (
+              <li key={item} className="flex gap-2 text-sm text-charcoal/90">
+                <Check
+                  className="h-4 w-4 shrink-0 mt-0.5 text-gold"
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="mb-6 flex-1" />
+        )}
         <Link
           href={service.href}
           className="inline-flex min-h-11 items-center justify-center rounded-md bg-teal px-5 text-sm font-medium text-cream hover:bg-teal-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
