@@ -4,7 +4,6 @@ import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { StepList } from "@/components/StepList";
 import { CTASection } from "@/components/CTASection";
 import { pageMeta } from "@/lib/seo";
-import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "How It Works",
@@ -30,10 +29,6 @@ export default function HowItWorksPage() {
           description="Every patient begins with a consultation and comprehensive evaluation. Treatment recommendations are individualized and based on symptoms, health history, and laboratory findings."
         />
         <StepList />
-        <p className="mt-8 text-sm text-charcoal/75 max-w-3xl leading-relaxed">
-          {SITE.virtualCareStatement} {SITE.firstVisitPreference} We do not promise
-          that prescriptions can always be provided entirely through virtual care.
-        </p>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-12 md:px-6 lg:px-8 text-center">
