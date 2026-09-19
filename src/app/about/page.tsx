@@ -28,8 +28,9 @@ const PILLARS = [
     quote: "Treatment recommendations are individualized based on symptoms, health history, laboratory findings, and personal goals.",
   },
   {
-    title: "Accessibility",
-    quote: "Convenient scheduling, ongoing support, and care designed around each patient's needs.",
+    title: "Local Roots",
+    quote:
+      "Founded by a provider with deep roots in the local community and a longstanding commitment to serving patients in the area.",
   },
   {
     title: "Evidence-Based Decisions",
