@@ -42,8 +42,8 @@ export default function FAQPage() {
       </section>
 
       <CTASection
-        headline="Still have questions?"
-        subtext="Book a consultation, or send a general (non-health) message on our contact page."
+        headline="Still Have Questions?"
+        subtext="We're here to help. Schedule a consultation or send a general (non-medical) question through our Contact page."
         secondaryLabel="Contact Heartland"
         secondaryHref="/contact"
       />
