@@ -105,7 +105,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "lab-frequency",
     category: "Men's Hormone Care",
     question: "How often are labs checked?",
-    answer: `${labPolicy.titration} ${labPolicy.maintenance} ${labPolicy.annual} Follow-up labs should be completed before scheduled follow-up appointments.`,
+    answer:
+      "Follow-up hormone testing is typically performed 6 to 8 weeks after starting therapy or following significant dose adjustments.\n\nOnce treatment is established, laboratory monitoring is generally performed every 3 months until hormone levels and symptoms have stabilized. After a stable treatment regimen is achieved, laboratory monitoring may be performed every 6 months.\n\nAn annual comprehensive laboratory panel is required as part of ongoing care. Laboratory testing should be completed before scheduled follow-up appointments so results are available for review during your visit.",
   },
   {
     id: "trt-ed",
