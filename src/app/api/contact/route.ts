@@ -9,6 +9,7 @@ const schema = z.object({
   email: z.string().email().max(200),
   phone: z.string().max(40).optional(),
   interest: z.string().max(80).optional(),
+  visit: z.string().max(80).optional(),
   contactMethod: z.string().max(40).optional(),
   message: z.string().max(5000).optional(),
 });

@@ -5,11 +5,11 @@ import { SITE } from "@/lib/site";
 const APPOINTMENT_TYPES = [
   {
     label: "New Patient Consultation (60 minutes)",
-    href: "#contact-form",
+    href: "/contact?visit=new-patient#contact-form",
   },
   {
     label: "Follow-Up Visit (15 to 20 minutes)",
-    href: "#contact-form",
+    href: "/contact?visit=follow-up#contact-form",
   },
 ] as const;
 

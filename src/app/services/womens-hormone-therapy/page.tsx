@@ -38,7 +38,10 @@ export default function WomensHormonePage() {
         description="Heartland provides individualized care for women experiencing symptoms associated with the menopause transition, including perimenopause, menopause, and postmenopause. Treatment recommendations are based on symptoms, health history, risk factors, laboratory findings, and personal health goals."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <BookButton label="Book a Women's Hormone Consultation" />
+          <BookButton
+            label="Book a Women's Hormone Consultation"
+            href="/contact?interest=womens-hormone"
+          />
           <BookButton
             label="View Pricing & Programs"
             href="/programs#womens-hormone"
@@ -144,6 +147,7 @@ export default function WomensHormonePage() {
         headline="Ready to Get Started?"
         subtext="Schedule a consultation to discuss your symptoms, review your health history, and learn whether hormone therapy may be right for you."
         ctaLabel="Book a Women's Hormone Consultation"
+        ctaHref="/contact?interest=womens-hormone"
       />
     </>
   );

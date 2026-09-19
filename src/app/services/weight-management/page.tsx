@@ -39,7 +39,10 @@ export default function WeightManagementPage() {
         description="Heartland provides medical evaluation and individualized treatment for weight-related health concerns. Care includes prescription weight management medications when indicated, ongoing monitoring, and personalized support to help patients achieve their health goals."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <BookButton label="Book a Weight Management Consultation" />
+          <BookButton
+            label="Book a Weight Management Consultation"
+            href="/contact?interest=weight-management"
+          />
           <BookButton
             label="View Pricing & Programs"
             href="/programs"
@@ -104,8 +107,9 @@ export default function WeightManagementPage() {
         headline="Ready to Get Started?"
         subtext="Schedule a consultation to discuss your health history, weight-related concerns, and treatment goals."
         ctaLabel="Book a Weight Management Consultation"
+        ctaHref="/contact?interest=weight-management"
         secondaryLabel="View Pricing & Programs"
-        secondaryHref="/programs"
+        secondaryHref="/programs#weight-management"
       />
     </>
   );

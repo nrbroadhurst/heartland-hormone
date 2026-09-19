@@ -7,16 +7,25 @@ export type ContactPayload = {
   email: string;
   phone?: string;
   interest?: string;
+  visit?: string;
   contactMethod?: string;
   message?: string;
 };
 
 export function formatContactBody(data: ContactPayload): string {
+  const visitLabel =
+    data.visit === "follow-up"
+      ? "Follow-Up Visit (15 to 20 minutes)"
+      : data.visit === "new-patient"
+        ? "New Patient Consultation (60 minutes)"
+        : data.visit || "(not provided)";
+
   return [
     `Name: ${data.name}`,
     `Email: ${data.email}`,
     `Phone: ${data.phone || "(not provided)"}`,
     `Interest: ${data.interest || "(not provided)"}`,
+    `Appointment type: ${visitLabel}`,
     `Preferred contact: ${data.contactMethod || "(not provided)"}`,
     "",
     data.message?.trim() ? data.message.trim() : "(no message)",

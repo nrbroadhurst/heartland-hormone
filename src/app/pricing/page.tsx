@@ -143,6 +143,27 @@ export default function PricingPage() {
           </div>
         </div>
 
+        <div id="weight-management" className="scroll-mt-28">
+          <SectionHeading
+            compact
+            eyebrow="Weight"
+            title="Medical Weight Management"
+            description="Medical weight management is billed separately from hormone memberships. Medication and laboratory fees are billed separately when clinically appropriate."
+          />
+          <PricingCard
+            name={pricing.weightManagement.name}
+            price="By consultation"
+            billingNote="Not a published membership rate"
+            summary={pricing.weightManagement.summary}
+            includesHeading="Program Includes"
+            includes={pricing.weightManagement.includes}
+            notIncludedHeading="Additional Costs"
+            notIncluded={pricing.weightManagement.notIncluded}
+            href="/contact?interest=weight-management"
+            ctaLabel="Book a Weight Management Consultation"
+          />
+        </div>
+
         <div id="lab-schedule" className="scroll-mt-28">
           <SectionHeading compact title="Laboratory Testing" />
           <div className="max-w-3xl space-y-8 text-sm text-charcoal/85 leading-relaxed -mt-4">
@@ -252,6 +273,12 @@ export default function PricingPage() {
               <span className="block">{pricing.womensAdvanced.name}</span>
               <span className="block pl-3 text-charcoal/70">
                 {pricing.womensAdvanced.display} every 4 weeks
+              </span>
+            </li>
+            <li>
+              <span className="block">{pricing.weightManagement.name}</span>
+              <span className="block pl-3 text-charcoal/70">
+                By consultation
               </span>
             </li>
           </ul>

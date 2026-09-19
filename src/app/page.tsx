@@ -206,7 +206,7 @@ export default function HomePage() {
               {
                 name: "Medical Weight Management",
                 teaser: pricing.weightManagement.teaserDisplay,
-                href: "/services/weight-management",
+                href: "/programs#weight-management",
               },
             ].map((card) => (
               <Link
