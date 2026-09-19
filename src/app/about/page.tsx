@@ -85,10 +85,10 @@ export default function AboutPage() {
                 personalized care close to home.
               </p>
               <p>
-                Care is built around continuity, accessibility, and personalized
-                attention. Every treatment plan is developed based on a
-                comprehensive evaluation, health history, laboratory findings,
-                and each patient&apos;s individual goals.
+                Care is built around continuity, personalized attention, and
+                strong patient relationships. Every treatment plan is developed
+                based on a comprehensive evaluation, health history, laboratory
+                findings, and each patient&apos;s individual goals.
               </p>
             </div>
           </FadeIn>
