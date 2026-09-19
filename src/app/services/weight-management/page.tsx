@@ -63,12 +63,16 @@ export default function WeightManagementPage() {
         </p>
         <p className="text-charcoal/90 leading-relaxed">
           For patients enrolled in a hormone care membership, medical weight
-          management may be added to ongoing care without an additional
+          management may be incorporated into ongoing care without an additional
           consultation or recurring management fee. Patients are responsible for
           the cost of prescribed medications and any additional laboratory
-          testing that may be required. Patients who are not enrolled in a
-          hormone care membership may schedule a medical weight management
-          consultation to discuss treatment options.
+          testing that may be required.
+        </p>
+        <p className="text-charcoal/90 leading-relaxed">
+          Patients who are not enrolled in a hormone care membership may
+          schedule a medical weight management consultation to discuss treatment
+          options. Medical weight management for non-members is billed
+          separately by consultation.
         </p>
       </section>
 
