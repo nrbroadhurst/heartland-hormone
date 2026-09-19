@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
+import { PageHero, SectionHeading } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SITE, providerCredentialLine } from "@/lib/site";
@@ -64,36 +64,31 @@ export default function AboutPage() {
             </div>
           </FadeIn>
           <FadeIn delay={0.08}>
-            <p className="font-display text-xs uppercase tracking-[0.25em] text-gold mb-3">
+            <h2 className="font-display text-3xl text-teal tracking-wide mb-6">
               Your Provider
-            </p>
-            <h2 className="font-display text-3xl text-teal tracking-wide mb-2">
-              {SITE.providerName ?? "Nurse Practitioner-Led Care"}
             </h2>
-            <p className="text-charcoal/70 mb-6">{providerCredentialLine()}</p>
-            <div className="h-px w-16 bg-gold mb-6" />
             <div className="space-y-4 text-charcoal/90 leading-relaxed">
               <p>
                 Heartland Hormone & Wellness Clinic was founded by{" "}
-                {SITE.providerName}, an {SITE.providerTitle} with decades of
-                advanced clinical experience. Care is nurse practitioner-led.
+                {SITE.providerName}, {SITE.providerTitle},{" "}
+                {SITE.providerCredential}, with decades of advanced clinical
+                experience.
               </p>
               <p>
-                Raised in Miami County, the founder has called the Kansas City
-                metro home for many years and built a family here. With children
-                educated in the Blue Valley School District, those long-standing
-                local ties are the reason this clinic exists: to provide
-                personalized, evidence-based hormone and wellness care to this
-                community.
+                Raised in Miami County and a longtime resident of Overland Park,
+                Sherry founded Heartland to provide thoughtful, individualized
+                hormone and wellness care rooted in evidence-based practice and
+                strong patient relationships. After building a career and raising
+                a family in the community, with children educated in the Blue
+                Valley School District, she created the clinic to bring
+                personalized care close to home.
               </p>
               <p>
-                Care is built around continuity, a personal relationship with
-                patients, local availability when an in-office visit is best, and
-                virtual follow-up when clinically appropriate.
+                Care is built around continuity, accessibility, and personalized
+                attention. Every treatment plan is developed based on a
+                comprehensive evaluation, health history, laboratory findings,
+                and each patient&apos;s individual goals.
               </p>
-            </div>
-            <div className="mt-8">
-              <BookButton />
             </div>
           </FadeIn>
         </div>
