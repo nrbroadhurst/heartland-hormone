@@ -98,7 +98,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "mens-program-included",
     category: "Men's Hormone Care",
     question: "What is included in the men's hormone care program?",
-    answer: `${pricing.mensInjections.name} is ${pricing.mensInjections.display} every 4 weeks and includes testosterone injections, supplies, shipping, quarterly follow-up and ongoing monitoring when clinically appropriate. ${pricing.mensTransdermal.name} is ${pricing.mensTransdermal.display} every 4 weeks with compounded testosterone cream. Laboratory testing is billed separately.`,
+    answer:
+      `The ${pricing.mensInjections.name} is ${pricing.mensInjections.display} every 4 weeks and includes testosterone injections, injection supplies, medications shipped directly to your home, quarterly follow-up visits, ongoing provider oversight, and individualized treatment adjustments.\n\nThe ${pricing.mensTransdermal.name} is ${pricing.mensTransdermal.display} every 4 weeks and includes compounded testosterone cream, medications shipped directly to your home, quarterly follow-up visits, ongoing provider oversight, and individualized treatment adjustments.\n\nLaboratory testing is billed separately.`,
   },
   {
     id: "lab-frequency",
