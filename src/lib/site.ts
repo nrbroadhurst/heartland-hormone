@@ -38,7 +38,7 @@ export const SITE = {
     "Our approach focuses on treating the whole person, not just lab numbers, helping you achieve lasting improvements in health, well-being, and quality of life.",
 
   streetAddress: "14400 Metcalf Avenue, Suite 105",
-  addressNote: "Inside Property Evaluations\u00A0/\u00A0Regus Building",
+  addressNote: "Property Evaluations\u00A0/\u00A0Regus Building",
   zip: "66223",
   phone: "913-427-9275",
   phoneTel: "+19134279275",
