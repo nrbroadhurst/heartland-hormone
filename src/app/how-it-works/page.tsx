@@ -33,15 +33,15 @@ export default function HowItWorksPage() {
 
       <section className="mx-auto max-w-7xl px-4 pb-12 md:px-6 lg:px-8 text-center">
         <p className="text-charcoal/80 mb-4">
-          Questions about which path fits you?{" "}
+          Questions? Visit our{" "}
           <Link href="/faq" className="text-teal underline underline-offset-2">
-            Visit the FAQ
+            FAQ page
           </Link>{" "}
-          or{" "}
+          or view{" "}
           <Link href="/programs" className="text-teal underline underline-offset-2">
-            view pricing &amp; programs
-          </Link>
-          .
+            Pricing &amp; Programs
+          </Link>{" "}
+          for additional information.
         </p>
       </section>
 
