@@ -11,14 +11,17 @@ const INTEREST_OPTIONS = [
   { value: "mens-hormone", label: "Men's Hormone Care" },
   { value: "womens-hormone", label: "Women's Hormone & Menopause Care" },
   { value: "weight-management", label: "Medical Weight Management" },
-  { value: "wellness", label: "General Wellness Consultation" },
   { value: "general", label: "General Question" },
 ] as const;
+
+const INTEREST_VALUES = new Set<string>(
+  INTEREST_OPTIONS.map((option) => option.value),
+);
 
 const CONTACT_METHOD_OPTIONS = [
   { value: "email", label: "Email" },
   { value: "phone", label: "Phone" },
-  { value: "either", label: "Either email or phone" },
+  { value: "either", label: "Either" },
 ] as const;
 
 const contactSchema = z.object({
@@ -26,7 +29,7 @@ const contactSchema = z.object({
   lastName: z.string().min(1, "Please enter your last name"),
   email: z.string().email("Please enter a valid email"),
   phone: z.string().min(7, "Please enter a phone number"),
-  interest: z.string().min(1, "Please choose a service category"),
+  interest: z.string().min(1, "Please choose a preferred service"),
   contactMethod: z.string().min(1, "Please choose a contact method"),
   message: z.string().optional(),
   website: z.string().max(0).optional(),
@@ -39,6 +42,9 @@ export function ContactForm({
 }: {
   defaultInterest?: string;
 }) {
+  const interestDefault = INTEREST_VALUES.has(defaultInterest)
+    ? defaultInterest
+    : "general";
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const {
     register,
@@ -52,7 +58,7 @@ export function ContactForm({
       lastName: "",
       email: "",
       phone: "",
-      interest: defaultInterest,
+      interest: interestDefault,
       contactMethod: "either",
       message: "",
       website: "",
@@ -92,7 +98,7 @@ export function ContactForm({
         lastName: "",
         email: "",
         phone: "",
-        interest: defaultInterest,
+        interest: interestDefault,
         contactMethod: "either",
         message: "",
         website: "",
@@ -111,15 +117,15 @@ export function ContactForm({
       autoComplete="off"
     >
       <p className="rounded-md border border-gold/30 bg-teal/5 px-4 py-3 text-sm text-charcoal/80">
-        This form is for <strong>scheduling requests and general questions</strong>.
-        Please do not include detailed medical information in this form. Clinical
-        information will be collected securely during the patient intake process.
+        This form is intended for scheduling requests and general inquiries.
+        Clinical information will be collected securely during the patient
+        intake process after an appointment has been scheduled.
       </p>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="firstName" className="mb-1.5 block text-sm font-medium text-teal">
-            First name
+            First Name
           </label>
           <input
             id="firstName"
@@ -136,7 +142,7 @@ export function ContactForm({
         </div>
         <div>
           <label htmlFor="lastName" className="mb-1.5 block text-sm font-medium text-teal">
-            Last name
+            Last Name
           </label>
           <input
             id="lastName"
@@ -194,7 +200,7 @@ export function ContactForm({
 
       <div>
         <label htmlFor="interest" className="mb-1.5 block text-sm font-medium text-teal">
-          Preferred service category
+          Preferred Service
         </label>
         <select
           id="interest"
@@ -216,7 +222,7 @@ export function ContactForm({
 
       <div>
         <label htmlFor="contactMethod" className="mb-1.5 block text-sm font-medium text-teal">
-          Preferred contact method
+          Preferred Contact Method
         </label>
         <select
           id="contactMethod"
@@ -238,12 +244,12 @@ export function ContactForm({
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-teal">
-          Message <span className="font-normal text-charcoal/60">(optional)</span>
+          Message (Optional)
         </label>
         <textarea
           id="message"
           rows={4}
-          placeholder="Brief scheduling preference or general question only."
+          placeholder="Please provide a brief scheduling request or general question."
           className="w-full rounded-md border border-gold/40 bg-cream px-3 py-2.5 text-charcoal focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/20"
           {...register("message")}
         />

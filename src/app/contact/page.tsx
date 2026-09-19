@@ -139,8 +139,8 @@ export default async function ContactPage({ searchParams }: Props) {
         <div className="mx-auto max-w-xl px-4 py-16 md:px-6">
           <SectionHeading
             align="center"
-            title="Request a visit"
-            description="For scheduling requests and non-health questions only. Do not include symptoms, medications or medical history."
+            title="Request a Visit"
+            description="For appointment requests and general questions only. Please do not include symptoms, medications, medical history, laboratory results, or other personal health information."
           />
           <ContactForm key={defaultInterest} defaultInterest={defaultInterest} />
         </div>
