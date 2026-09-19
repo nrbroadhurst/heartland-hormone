@@ -15,7 +15,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Do you offer in-person appointments?",
     answer:
-      "Yes. Heartland is a local Kansas medical practice with a physical clinic in the Kansas City area. An in-person first visit is preferred. Virtual follow-up may be available for eligible Kansas and Missouri patients when clinically and legally appropriate. Controlled substances may require at least one in-person visit per year.",
+      "Yes. Heartland Hormone & Wellness Clinic is a local medical practice with a physical clinic in Overland Park, Kansas. Care is provided by appointment and includes comprehensive evaluations, treatment planning, and ongoing follow-up.",
   },
   {
     id: "location",
