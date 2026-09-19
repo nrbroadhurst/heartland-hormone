@@ -128,8 +128,8 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        headline="Ready to meet?"
-        subtext="Book a consultation, virtual or at our Kansas City-area clinic."
+        headline="Ready to Meet?"
+        subtext="Schedule a consultation to discuss your symptoms, review your health history, and learn whether treatment may be right for you."
         secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"
       />
