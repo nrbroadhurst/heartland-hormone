@@ -71,7 +71,8 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "treatment-changes",
     category: "General",
     question: "What happens if my treatment changes?",
-    answer: billingPolicy.treatmentChanges,
+    answer:
+      "Treatment plans are individualized and may be adjusted over time based on symptoms, treatment response, laboratory findings, medication availability, safety considerations, and clinical needs. Medication type, formulation, dosage, and laboratory monitoring requirements may change throughout treatment.",
   },
   {
     id: "outside-labs",
