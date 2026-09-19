@@ -25,9 +25,8 @@ export default function PricingPage() {
     <>
       <PageHero
         compact
-        eyebrow="Pricing & Programs"
         title="Pricing & Programs"
-        description="Membership pricing includes prescribed testosterone, estradiol, and progesterone when part of your treatment plan, along with routine follow-up and ongoing clinical management. Program fees vary by treatment tier based on the medications and formulations prescribed. Additional medications, laboratory testing, and other services are billed separately."
+        description="Membership pricing includes prescribed testosterone, estradiol, and progesterone when part of your treatment plan, along with routine follow-up and ongoing clinical management. Program fees vary based on the medications and formulations prescribed. Additional medications, laboratory testing, and other services are billed separately."
       >
         <BookButton />
       </PageHero>
