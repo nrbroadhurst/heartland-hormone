@@ -58,7 +58,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "How often am I billed?",
     answer:
-      "Recurring hormone care memberships are billed every 4 weeks and automatically renew unless canceled. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.\n\nCurrent program pricing is available on the Pricing & Programs page. Your selected program, fees, and billing terms are reviewed before enrollment.",
+      "Recurring hormone care memberships are billed every 4 weeks and automatically renew unless canceled. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.\n\nCurrent pricing is available on the Pricing & Programs page. Your selected program, fees, and billing terms will be reviewed before enrollment.",
   },
   {
     id: "cancel-program",
