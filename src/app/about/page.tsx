@@ -119,12 +119,11 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
-        <SectionHeading
-          title="Credentials"
-          description={`${SITE.providerCredential}. ${SITE.providerTitle}.`}
-        />
-        <p className="text-sm text-charcoal/70 max-w-2xl">
-          {SITE.serviceAreaLine} License details are confirmed during your visit.
+        <SectionHeading title="Credentials" description={SITE.providerCredential} />
+        <p className="text-charcoal/90 leading-relaxed max-w-2xl -mt-4">
+          Board-Certified Nurse Practitioner caring for adult patients with a
+          focus on hormone health, metabolic wellness, and individualized
+          treatment.
         </p>
       </section>
 
