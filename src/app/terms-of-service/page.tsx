@@ -64,7 +64,9 @@ export default function TermsOfServicePage() {
           </h2>
           <p>
             Some clinical programs use recurring billing. Membership programs
-            are billed every four weeks and automatically renew unless canceled.
+            are billed every 4 weeks and automatically renew unless canceled.
+            Because memberships are billed every 4 weeks rather than monthly,
+            there are 13 billing cycles per year.
           </p>
           <p>
             By enrolling in a recurring program, you authorize {SITE.name} to
@@ -100,7 +102,7 @@ export default function TermsOfServicePage() {
           <p>
             Consultation fees are nonrefundable. Membership fees are
             nonrefundable once billed and after medications have been
-            prescribed, processed, or shipped.
+            prescribed, processed, dispensed, or shipped.
           </p>
           <p>
             Please refer to the{" "}

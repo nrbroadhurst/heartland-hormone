@@ -148,7 +148,7 @@ export default function PricingPage() {
             compact
             eyebrow="Weight"
             title="Medical Weight Management"
-            description="Medical weight management is billed separately from hormone memberships. Medication and laboratory fees are billed separately when clinically appropriate."
+            description="For hormone care members, medical weight management may be incorporated into ongoing care without an additional consultation or recurring management fee. Medications and additional laboratory testing are billed separately. For patients who are not in a hormone care membership, medical weight management is billed separately by consultation."
           />
           <PricingCard
             name={pricing.weightManagement.name}

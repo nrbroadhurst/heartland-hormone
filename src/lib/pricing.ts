@@ -175,15 +175,17 @@ export const pricing = {
     teaserDisplay: "By consultation",
     confirmed: true,
     summary:
-      "Hormone program members have preferred access to medical weight-management care. Medication and laboratory fees are billed separately when clinically appropriate.",
+      "For patients enrolled in a hormone care membership, medical weight management may be incorporated into ongoing care without an additional consultation or recurring management fee. Patients are responsible for the cost of prescribed medications and any additional laboratory testing that may be required. Patients who are not enrolled in a hormone care membership may schedule a medical weight management consultation. Medical weight management for non-members is billed separately by consultation.",
     includes: [
-      "Preferred access for patients in an active hormone program",
-      "Prescription treatment when clinically appropriate, billed separately",
+      "For hormone care members: incorporated without an additional consultation or recurring management fee",
+      "Prescription treatment when clinically appropriate",
+      "Medication and additional laboratory testing billed separately",
     ],
     notIncluded: [
       "Laboratory testing fees",
       "Medication cost",
       "A published medication-inclusive membership rate",
+      "A waived consultation for patients who are not in an active hormone care membership",
     ],
   },
 } as const;
@@ -255,7 +257,7 @@ export const billingPolicy = {
   priceAdjustments:
     "Program fees reflect current medication, compounding pharmacy, supplier, shipping, and operational costs. In the event of medication shortages, market disruptions, regulatory changes, or significant increases in supplier costs, membership fees may be adjusted. Patients will receive at least 30 days' written notice before any fee adjustment takes effect.",
   refunds:
-    "Consultation fees are non-refundable. Membership fees are non-refundable once billed and after medications have been prescribed, processed, or shipped.",
+    "Consultation fees are nonrefundable. Membership fees are nonrefundable once billed and after medications have been prescribed, processed, dispensed, or shipped.",
   shipping:
     "Prescribed medications included in a program are typically shipped to the patient's home.",
   treatmentChanges:

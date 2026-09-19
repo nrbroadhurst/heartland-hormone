@@ -35,7 +35,7 @@ export default function RefundPolicyPage() {
           </h2>
           <p>
             Membership fees are nonrefundable once billed and after medications
-            have been prescribed, processed, or shipped.
+            have been prescribed, processed, dispensed, or shipped.
           </p>
           <p>
             Members may cancel at any time before their next scheduled billing

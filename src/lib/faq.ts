@@ -162,21 +162,21 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "How does recurring program billing work?",
     answer:
-      "Recurring hormone care memberships are automatically billed every 4 weeks and renew unless canceled.\n\nIf a recurring program fee is declined or remains unpaid, medication orders, prescription refills, medication shipments, and scheduled clinical services may be paused until the account balance is paid in full.\n\nAccounts that remain unpaid for more than 30 days may be subject to discharge from the practice and cancellation of active prescriptions.\n\nConsultation fees are nonrefundable. Membership fees are nonrefundable once billed and after medications have been prescribed, processed, or shipped.",
+      "Recurring hormone care memberships are automatically billed every 4 weeks and renew unless canceled.\n\nIf a recurring program fee is declined or remains unpaid, medication orders, prescription refills, medication shipments, and scheduled clinical services may be paused until the account balance is paid in full.\n\nAccounts that remain unpaid for more than 30 days may be subject to discharge from the practice and cancellation of active prescriptions.\n\nConsultation fees are nonrefundable. Membership fees are nonrefundable once billed and after medications have been prescribed, processed, dispensed, or shipped.",
   },
   {
     id: "weight-treatment",
     category: "Weight Management",
     question: "What prescription treatment is available for weight management?",
     answer:
-      "Prescription weight-management medications may be recommended following a comprehensive evaluation. Medication selection is individualized and based on health history, current health status, treatment goals, and ongoing response to treatment.\n\nFor patients enrolled in a hormone care membership, weight-management medications may be incorporated into ongoing care when appropriate. Medication and laboratory testing fees are billed separately.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options.",
+      "Prescription weight-management medications may be recommended following a comprehensive evaluation. Medication selection is individualized and based on health history, current health status, treatment goals, and ongoing response to treatment.\n\nFor patients enrolled in a hormone care membership, medical weight management may be incorporated into ongoing care without an additional consultation or recurring management fee. Patients are responsible for the cost of prescribed weight-management medications and any additional laboratory testing that may be required.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options. Medical weight management for non-members is billed separately by consultation.",
   },
   {
     id: "weight-meds-cost",
     category: "Weight Management",
     question: "Is medication included in the program cost?",
     answer:
-      "No. Weight-management medications are billed separately.\n\nFor patients enrolled in a hormone care membership, medical weight management may be incorporated into ongoing care without an additional program or management fee. Patients are responsible for the cost of prescribed weight-management medications and any additional laboratory testing that may be required.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options.",
+      "No. Weight-management medications are billed separately.\n\nFor patients enrolled in a hormone care membership, medical weight management may be incorporated into ongoing care without an additional consultation or recurring management fee. Patients are responsible for the cost of prescribed weight-management medications and any additional laboratory testing that may be required.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options. Medical weight management for non-members is billed separately by consultation.",
   },
   {
     id: "weight-follow-up",
