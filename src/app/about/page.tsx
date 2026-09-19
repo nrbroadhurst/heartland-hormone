@@ -121,9 +121,8 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
         <SectionHeading title="Credentials" description={SITE.providerCredential} />
         <p className="text-charcoal/90 leading-relaxed max-w-2xl -mt-4">
-          Board-Certified Nurse Practitioner caring for adult patients with a
-          focus on hormone health, metabolic wellness, and individualized
-          treatment.
+          Board-Certified Nurse Practitioner with a focus on hormone health,
+          metabolic wellness, and individualized patient care.
         </p>
       </section>
 
