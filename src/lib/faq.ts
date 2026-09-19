@@ -127,7 +127,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Women's Hormone & Menopause Care",
     question: "Do you treat perimenopause as well as menopause?",
     answer:
-      "Yes. Perimenopause and menopause are both evaluated when symptoms and history support care.",
+      "Yes. Heartland evaluates and treats symptoms associated with both perimenopause and menopause. Treatment recommendations are individualized and based on symptoms, health history, and laboratory findings.",
   },
   {
     id: "which-hormones",
