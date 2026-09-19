@@ -113,7 +113,14 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Men's Hormone Care",
     question: "Can hormone treatment help erectile dysfunction?",
     answer:
-      "Erectile dysfunction has many potential causes. Hormone treatment is not appropriate for every case of ED and is evaluated as part of a clinical visit.",
+      "Erectile dysfunction can have many potential causes. Hormone therapy may be helpful for some patients, but it is not appropriate for every case. A comprehensive evaluation is needed to determine whether hormonal factors may be contributing to symptoms.",
+  },
+  {
+    id: "ed-meds-included",
+    category: "Men's Hormone Care",
+    question: "Are ED medications included in the men's hormone care program?",
+    answer:
+      "No. Erectile dysfunction medications are not included in Heartland's hormone care membership programs. If prescribed, these medications are billed separately.",
   },
   {
     id: "perimenopause",
