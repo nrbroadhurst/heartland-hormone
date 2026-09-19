@@ -12,7 +12,6 @@ import {
   billingPolicy,
   programSharedIncludes,
 } from "@/lib/pricing";
-import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Pricing & Programs",
@@ -260,9 +259,6 @@ export default function PricingPage() {
         </div>
 
         <PricingDisclaimer />
-        <p className="text-sm text-charcoal/70 max-w-3xl">
-          {SITE.virtualCareStatement}
-        </p>
       </section>
 
       <CTASection

@@ -81,7 +81,7 @@ export const MEDICAL_DISCLAIMER =
   "Information provided on this website is for general educational purposes only and is not intended as medical advice. Treatment recommendations are individualized and based on a comprehensive clinical evaluation. Prescription medications are prescribed only when medically appropriate.";
 
 export const PRICING_DISCLAIMER =
-  "Treatment is individualized. Medication availability, dose, laboratory requirements and treatment recommendations vary by patient. Published program rates are listed on Pricing & Programs and may change. Additional medications, laboratory testing or specialized services are billed separately. Prescription treatment is provided only when clinically appropriate. Consultation fees are nonrefundable. Membership fees are nonrefundable once billed and medications have been prescribed, processed or shipped.";
+  "Treatment is individualized. Medication selection, dosing, laboratory requirements, and treatment recommendations vary by patient. Program pricing is listed on the Pricing & Programs page and is subject to change. Additional medications, laboratory testing, and specialized services are billed separately. Prescription medications are prescribed only when medically appropriate. Consultation fees are nonrefundable. Membership fees are nonrefundable once billed and after medications have been prescribed, processed, or shipped.";
 
 export const LEGAL_LINKS = [
   { href: "/privacy-policy", label: "Privacy Policy" },
