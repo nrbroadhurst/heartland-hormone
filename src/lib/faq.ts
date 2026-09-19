@@ -169,7 +169,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Weight Management",
     question: "What prescription treatment is available for weight management?",
     answer:
-      "Prescription weight-management treatment may be considered when medically appropriate following a clinical evaluation. It is not a published membership rate. Hormone program members have preferred access. Medication and laboratory fees are billed separately. Medication selection depends on health history, goals and clinical appropriateness.",
+      "Prescription weight-management medications may be recommended following a comprehensive evaluation. Medication selection is individualized and based on health history, current health status, treatment goals, and ongoing response to treatment.\n\nFor patients enrolled in a hormone care membership, weight-management medications may be incorporated into ongoing care when appropriate. Medication and laboratory testing fees are billed separately.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options.",
   },
   {
     id: "weight-meds-cost",
