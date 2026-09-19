@@ -92,7 +92,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Men's Hormone Care",
     question: "How do I know if I have low testosterone?",
     answer:
-      "Symptoms such as low energy, reduced libido or changes in body composition can have many causes. Low testosterone is diagnosed with a clinical evaluation plus laboratory testing, not symptoms alone.",
+      "Symptoms such as low energy, reduced libido, or changes in body composition can have many causes. Low testosterone is diagnosed through a clinical evaluation and laboratory testing, not symptoms alone.",
   },
   {
     id: "mens-program-included",
