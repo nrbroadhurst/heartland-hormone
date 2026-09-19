@@ -20,7 +20,7 @@ const DEFAULT_STEPS: Step[] = [
   {
     title: "Schedule Your Consultation",
     description:
-      `Meet with our provider to discuss your symptoms, medical history and health goals. Call, email or send a message to request an initial visit. ${SITE.consultLength} An in-person first visit is preferred.`,
+      `Meet with your provider to discuss your symptoms, health history, and treatment goals. ${SITE.consultLength}`,
     icon: CalendarCheck,
   },
   {
