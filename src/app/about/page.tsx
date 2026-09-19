@@ -24,8 +24,8 @@ const PILLARS = [
     quote: "Ongoing follow-up, provider communication, and treatment adjustments through the same clinic.",
   },
   {
-    title: "Local Availability",
-    quote: "A Kansas City-area clinic when face-to-face care is the better fit.",
+    title: "Personalized Care",
+    quote: "Treatment recommendations are individualized based on symptoms, health history, laboratory findings, and personal goals.",
   },
   {
     title: "Telehealth Access",
