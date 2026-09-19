@@ -88,7 +88,7 @@ export default function WeightManagementPage() {
       </section>
 
       <CTASection
-        headline="Book a Weight Management Consultation"
+        headline="Ready to Get Started?"
         subtext="Schedule a consultation to discuss your health history, weight-related concerns, and treatment goals."
         ctaLabel="Book a Weight Management Consultation"
         secondaryLabel="View Pricing & Programs"
