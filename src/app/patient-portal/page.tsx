@@ -27,7 +27,7 @@ export default function PatientPortalPage() {
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">
-            How Portal Access Works
+            Setting Up Your OptiMantra Portal Account
           </h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>
