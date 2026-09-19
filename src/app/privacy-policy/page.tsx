@@ -15,19 +15,19 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <PageHero
-        eyebrow="Legal"
         title="Privacy Policy"
-        description="This policy covers general website data collection (contact forms and technical data). It is separate from our HIPAA Notice of Privacy Practices."
+        description="This Privacy Policy applies to information collected through this website, including contact forms and technical website data. It is separate from Heartland Hormone & Wellness Clinic's HIPAA Notice of Privacy Practices, which governs protected health information (PHI)."
       />
       <article className="mx-auto max-w-3xl px-4 py-14 md:px-6 space-y-8 text-charcoal/90 leading-relaxed">
-        <p className="text-sm text-charcoal/60">Last updated: August 17, 2026</p>
+        <p className="text-sm text-charcoal/60">Last Updated: August 17, 2026</p>
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">Overview</h2>
           <p>
-            {SITE.name} (&quot;we,&quot; &quot;us&quot;) operates this website for
-            marketing and general inquiries. This Privacy Policy describes how we
-            collect and use information gathered through the website itself.
+            {SITE.name} (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates
+            this website for informational purposes, patient education, and general
+            inquiries. This Privacy Policy explains how information collected
+            through this website is used and protected.
           </p>
           <p>
             Protected health information (PHI) is governed by our{" "}
@@ -36,66 +36,71 @@ export default function PrivacyPolicyPage() {
               className="text-teal underline underline-offset-2"
             >
               Notice of Privacy Practices
-            </Link>
-            , which is a separate document.
+            </Link>{" "}
+            and is subject to separate privacy and security requirements.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">
-            Information we collect
+            Information We Collect
           </h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>
-              Contact details you submit via general inquiry forms (name, email,
-              phone, visit type, message).
+              Contact information submitted through general inquiry forms,
+              including name, email address, phone number, visit type, and
+              message content.
             </li>
             <li>
-              Technical data such as IP address, browser type and pages visited
-              when analytics are enabled.
+              Technical information such as IP address, browser type, device
+              information, and pages visited when website analytics are enabled.
             </li>
           </ul>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">
-            How we use information
+            How We Use Information
           </h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>To respond to general inquiries and scheduling requests.</li>
-            <li>To operate, secure and improve the website.</li>
-            <li>To understand aggregate traffic patterns when analytics are enabled.</li>
+            <li>To operate, maintain, secure, and improve the website.</li>
+            <li>
+              To understand website traffic and usage patterns when analytics
+              tools are enabled.
+            </li>
           </ul>
           <p>
-            Do not submit symptoms, diagnoses, medications or other health details
-            through general website forms. Health information should only be shared
-            through secure intake after booking.
+            Please do not submit symptoms, diagnoses, medications, laboratory
+            results, or other personal health information through general website
+            contact forms. Health information should only be shared through
+            approved secure patient communications after establishing care.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">
-            Cookies &amp; tracking
+            Cookies and Tracking Technologies
           </h2>
           <p>
-            Essential cookies may be used to operate the site. Marketing pixels are
-            not enabled by default. If analytics or advertising tools are added
-            later, this policy will be updated.
+            Essential cookies may be used to operate and maintain website
+            functionality. Marketing pixels and advertising trackers are not
+            enabled by default. If analytics, advertising, or additional tracking
+            technologies are added in the future, this Privacy Policy will be
+            updated accordingly.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-display text-2xl text-teal tracking-wide">Contact</h2>
+          <p>Questions regarding this Privacy Policy may be directed to:</p>
           <p>
-            Questions about this policy: {SITE.name}
+            {SITE.name}
+            <br />
             {hasEmail() ? (
-              <>
-                {" "}
-                at{" "}
-                <EmailLink className="text-teal underline underline-offset-2" />
-              </>
+              <EmailLink className="text-teal underline underline-offset-2" />
             ) : (
-              ". Use the contact form for general questions."
+              "Use the contact form for general questions."
             )}
           </p>
         </section>
