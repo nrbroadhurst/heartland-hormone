@@ -30,9 +30,9 @@ const DEFAULT_STEPS: Step[] = [
     icon: FlaskConical,
   },
   {
-    title: "Receive Your Personalized Treatment Plan",
+    title: "Review Your Results and Treatment Plan",
     description:
-      "Based on your evaluation, we develop a customized plan tailored to your needs. If treatment is clinically appropriate, your provider will discuss options, risks, benefits, alternatives and expected follow-up.",
+      "Your provider will review your symptoms, health history, laboratory findings, and treatment goals. If treatment is recommended, an individualized care plan will be developed and discussed, including expected benefits, risks, monitoring requirements, and follow-up.",
     icon: ClipboardList,
   },
   {
