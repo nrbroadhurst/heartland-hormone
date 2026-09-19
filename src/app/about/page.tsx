@@ -33,7 +33,7 @@ const PILLARS = [
   },
   {
     title: "Evidence-Based Decisions",
-    quote: "Symptoms, history and labs inform treatment, not a fixed protocol.",
+    quote: "Symptoms, health history, physical assessment when indicated, and laboratory findings guide treatment recommendations rather than a one-size-fits-all approach.",
   },
 ];
 
