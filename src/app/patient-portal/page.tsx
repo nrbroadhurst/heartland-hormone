@@ -15,6 +15,7 @@ export default function PatientPortalPage() {
   return (
     <>
       <PageHero
+        eyebrow="Patient Portal"
         title="Patient Portal"
         description="Heartland uses OptiMantra for patient forms, shared documents, invoices, and secure clinic messaging after a patient account has been established."
       />
