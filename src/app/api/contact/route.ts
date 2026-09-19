@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { clientIp, rateLimit } from "@/lib/rate-limit";
 import { sendContactEmail } from "@/lib/send-contact-email";
 
 const schema = z.object({
@@ -11,10 +12,22 @@ const schema = z.object({
   interest: z.string().max(80).optional(),
   visit: z.string().max(80).optional(),
   contactMethod: z.string().max(40).optional(),
-  message: z.string().max(5000).optional(),
+  message: z.string().max(500).optional(),
+  confirmNoPhi: z.literal(true),
 });
 
 export async function POST(request: Request) {
+  const limited = rateLimit(`contact:${clientIp(request)}`);
+  if (!limited.ok) {
+    return NextResponse.json(
+      { error: "Too many requests. Please wait before sending another message." },
+      {
+        status: 429,
+        headers: { "Retry-After": String(limited.retryAfterSec) },
+      },
+    );
+  }
+
   try {
     const body = await request.json();
     const parsed = schema.safeParse(body);

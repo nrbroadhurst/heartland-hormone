@@ -41,6 +41,6 @@ Level 1 / Level 2 tiers may be used only when they correspond to actual publishe
 
 ## Patient Portal
 
-Patient portal URL: https://www.optimantra.com/optimus/om/patient/login
+Do not publish the OptiMantra patient login URL on the public website, in public documentation, or in this repository. Staff should open OptiMantra from the clinic workflow, not from the marketing site.
 
 Payment management should use the approved OptiMantra/Authorize.Net workflow, not a custom card form on the marketing site.

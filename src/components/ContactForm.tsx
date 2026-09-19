@@ -39,6 +39,8 @@ const CONTACT_METHOD_OPTIONS = [
   { value: "either", label: "Either" },
 ] as const;
 
+const MESSAGE_MAX = 500;
+
 const contactSchema = z.object({
   firstName: z.string().min(1, "Please enter your first name"),
   lastName: z.string().min(1, "Please enter your last name"),
@@ -47,7 +49,13 @@ const contactSchema = z.object({
   interest: z.string().min(1, "Please choose a preferred service"),
   visit: z.string().min(1, "Please choose an appointment type"),
   contactMethod: z.string().min(1, "Please choose a contact method"),
-  message: z.string().optional(),
+  message: z
+    .string()
+    .max(MESSAGE_MAX, `Please keep your message under ${MESSAGE_MAX} characters.`)
+    .optional(),
+  confirmNoPhi: z.boolean().refine((checked) => checked === true, {
+    message: "Please confirm you are not including health details in this form.",
+  }),
   website: z.string().max(0).optional(),
 });
 
@@ -66,7 +74,9 @@ export function ContactForm({
   const visitDefault = VISIT_VALUES.has(defaultVisit)
     ? defaultVisit
     : "new-patient";
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success" | "error" | "limited">(
+    "idle",
+  );
   const {
     register,
     handleSubmit,
@@ -83,11 +93,13 @@ export function ContactForm({
       visit: visitDefault,
       contactMethod: "either",
       message: "",
+      confirmNoPhi: false,
       website: "",
     },
   });
 
   async function onSubmit(data: ContactValues) {
+    setStatus("idle");
     if (data.website) {
       setStatus("success");
       return;
@@ -103,12 +115,17 @@ export function ContactForm({
         visit: data.visit,
         contactMethod: data.contactMethod,
         message: data.message ?? "",
+        confirmNoPhi: true as const,
       };
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+      if (res.status === 429) {
+        setStatus("limited");
+        return;
+      }
       const result = (await res.json().catch(() => null)) as {
         emailed?: boolean;
       } | null;
@@ -125,6 +142,7 @@ export function ContactForm({
         visit: visitDefault,
         contactMethod: "either",
         message: "",
+        confirmNoPhi: false,
         website: "",
       });
     } catch {
@@ -295,11 +313,39 @@ export function ContactForm({
         <textarea
           id="message"
           rows={4}
-          placeholder="Please provide a brief scheduling request or general question."
+          maxLength={MESSAGE_MAX}
+          placeholder="Please provide a brief scheduling request or general question. Do not include symptoms, medications, or lab results."
           className="w-full rounded-md border border-gold/40 bg-cream px-3 py-2.5 text-charcoal focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/20"
           {...register("message")}
         />
+        <p className="mt-1 text-xs text-charcoal/60">
+          {MESSAGE_MAX} character maximum. Clinical details will be collected
+          during secure patient intake after an appointment is scheduled.
+        </p>
+        {errors.message && (
+          <p className="mt-1 text-sm text-red-700" role="alert">
+            {errors.message.message}
+          </p>
+        )}
       </div>
+
+      <div className="flex items-start gap-3">
+        <input
+          id="confirmNoPhi"
+          type="checkbox"
+          className="mt-1 h-4 w-4 shrink-0 rounded border-gold/40 text-teal focus:ring-2 focus:ring-teal/20"
+          {...register("confirmNoPhi")}
+        />
+        <label htmlFor="confirmNoPhi" className="text-sm text-charcoal/80">
+          I confirm this message does not include symptoms, medications, medical
+          history, laboratory results, or other health information.
+        </label>
+      </div>
+      {errors.confirmNoPhi && (
+        <p className="mt-1 text-sm text-red-700" role="alert">
+          {errors.confirmNoPhi.message}
+        </p>
+      )}
 
       <div className="absolute -left-[9999px] opacity-0" aria-hidden="true">
         <label htmlFor="website">Website</label>
@@ -310,6 +356,12 @@ export function ContactForm({
         <p className="rounded-md bg-teal/10 px-4 py-3 text-sm text-teal" role="status">
           Thank you. Your appointment request was sent to the clinic. We will
           respond shortly.
+        </p>
+      )}
+      {status === "limited" && (
+        <p className="rounded-md bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
+          Too many messages were sent from this connection. Please wait about 15
+          minutes, or call {SITE.phone}.
         </p>
       )}
       {status === "error" && (
