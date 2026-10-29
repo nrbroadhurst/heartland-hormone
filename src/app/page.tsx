@@ -17,6 +17,7 @@ import {
   WHY_CHOOSE_INTRO,
 } from "@/lib/homepage-copy";
 import { Button } from "@/components/ui/button";
+import { BookOnlineButton } from "@/components/BookOnlineButton";
 import { TrustBadgeRow } from "@/components/TrustBadgeRow";
 import { SpecializedCareGrid } from "@/components/SpecializedCare";
 import { StepList } from "@/components/StepList";
@@ -62,9 +63,7 @@ export default function HomePage() {
               {HERO_WHOLE_PERSON}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button asChild variant="gold" size="lg">
-                <Link href="/contact">{SITE.consultCta}</Link>
-              </Button>
+              <BookOnlineButton variant="gold" size="lg" />
               <Button asChild variant="outline" size="lg">
                 <Link href="/programs">View Pricing &amp; Programs</Link>
               </Button>
@@ -249,7 +248,8 @@ export default function HomePage() {
       <CTASection
         headline={CLOSING_CTA_HEADLINE}
         subtext={CLOSING_CTA_SUBTEXT}
-        ctaLabel={SITE.consultCta}
+        ctaLabel="Book Online"
+        ctaHref={SITE.bookingUrl}
         secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"
         variant="teal"

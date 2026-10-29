@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero, SectionHeading } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { FadeIn } from "@/components/FadeIn";
+import { ProviderPortrait } from "@/components/ProviderPortrait";
 import { SITE } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta } from "@/lib/seo";
@@ -10,7 +11,7 @@ import { clinicJsonLd, personJsonLd } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "About | Experienced Care, Local Roots",
   description:
-    "Heartland Hormone & Wellness Clinic was founded by Sherry Broadhurst, MSN, APRN, AGACNP-BC, with decades of clinical experience and more than four decades in the Kansas City community.",
+    "Heartland Hormone & Wellness Clinic was founded by Sherry Broadhurst, AGACNP-BC, a board-certified nurse practitioner with decades of clinical experience caring for adults.",
   path: "/about",
 });
 
@@ -52,17 +53,12 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 md:py-24 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 md:items-start">
           <FadeIn>
-            <div className="aspect-[4/5] w-full rounded-md border border-gold/30 bg-teal text-cream flex flex-col items-center justify-center px-8 text-center">
-              <p className="font-display text-xs uppercase tracking-[0.25em] text-gold mb-4">
-                Founder
-              </p>
-              <p className="font-display text-2xl tracking-wide mb-3 text-balance">
-                {SITE.providerName}, {SITE.providerCredential}
-              </p>
-              <p className="text-sm text-cream/80 leading-relaxed">
-                Board-Certified Nurse Practitioner
-              </p>
-            </div>
+            <ProviderPortrait
+              eyebrow="Founder"
+              name={`${SITE.providerName}, ${SITE.providerCredential}`}
+              detail="Board-Certified Nurse Practitioner"
+              priority
+            />
           </FadeIn>
           <FadeIn delay={0.08}>
             <h2 className="font-display text-3xl text-teal tracking-wide mb-6">
@@ -71,24 +67,25 @@ export default function AboutPage() {
             <div className="space-y-4 text-charcoal/90 leading-relaxed">
               <p>
                 Heartland Hormone & Wellness Clinic was founded by{" "}
-                {SITE.providerName}, a board-certified nurse practitioner with
-                decades of advanced clinical experience caring for adult
-                patients, including those with complex medical conditions.
+                {SITE.providerName}, AGACNP-BC, a board-certified nurse
+                practitioner with decades of clinical experience caring for
+                adults, including patients with complex medical conditions.
               </p>
               <p>
                 Raised in Miami County and a longtime resident of Overland Park,
-                Sherry founded Heartland to provide thoughtful, individualized
-                hormone and wellness care rooted in evidence-based practice and
-                strong patient relationships. After building a career and raising
-                a family in the community, with children educated in the Blue
-                Valley School District, she created the clinic to bring
-                personalized care close to home.
+                Sherry established Heartland to provide a more personalized
+                approach to hormone replacement therapy and wellness care. Her
+                commitment to the community, combined with her extensive clinical
+                background, inspired her to create a practice where patients
+                receive individualized attention, thoughtful guidance, and
+                evidence-based treatment.
               </p>
               <p>
-                Care is built around continuity, personalized attention, and
-                strong patient relationships. Every treatment plan is developed
-                based on a comprehensive evaluation, health history, laboratory
-                findings, and each patient&apos;s individual goals.
+                At Heartland, care begins with understanding the whole patient.
+                Each treatment plan is developed through a comprehensive
+                evaluation of symptoms, medical history, laboratory findings, and
+                individual health goals, with an emphasis on ongoing support and
+                continuity of care.
               </p>
             </div>
           </FadeIn>

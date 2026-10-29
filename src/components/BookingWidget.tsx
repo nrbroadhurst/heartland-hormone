@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { BookOnlineButton } from "@/components/BookOnlineButton";
 import { SITE } from "@/lib/site";
 
 const APPOINTMENT_TYPES = [
@@ -14,26 +15,6 @@ const APPOINTMENT_TYPES = [
 ] as const;
 
 export function BookingWidget() {
-  const bookingHref = SITE.bookingUrl;
-
-  if (bookingHref) {
-    return (
-      <div className="rounded-md border border-gold/40 bg-cream p-6 md:p-8">
-        <p className="font-display text-xs uppercase tracking-[0.2em] text-gold mb-3">
-          Schedule
-        </p>
-        <h3 className="font-display text-2xl text-teal tracking-wide mb-4">
-          {SITE.consultCta}
-        </h3>
-        <iframe
-          title="Appointment scheduler"
-          src={bookingHref}
-          className="h-[32rem] w-full rounded-md border border-gold/20"
-        />
-      </div>
-    );
-  }
-
   return (
     <div className="rounded-md border border-gold/40 bg-cream p-6 md:p-8">
       <p className="font-display text-xs uppercase tracking-[0.2em] text-gold mb-3">
@@ -73,7 +54,8 @@ export function BookingWidget() {
         access is not available directly through this website.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row">
-        <Button asChild variant="teal">
+        <BookOnlineButton variant="teal" />
+        <Button asChild variant="outline-teal">
           <Link href="#contact-form">Send a Message</Link>
         </Button>
         <Button asChild variant="outline-teal">

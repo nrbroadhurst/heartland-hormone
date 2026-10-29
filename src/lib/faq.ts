@@ -99,7 +99,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Men's Hormone Care",
     question: "What is included in the men's hormone care program?",
     answer:
-      `The ${pricing.mensInjections.name} is ${pricing.mensInjections.display} every 4 weeks and includes testosterone injections, injection supplies, medications shipped directly to your home, quarterly follow-up visits, ongoing provider oversight, and individualized treatment adjustments.\n\nThe ${pricing.mensTransdermal.name} is ${pricing.mensTransdermal.display} every 4 weeks and includes compounded testosterone cream, medications shipped directly to your home, quarterly follow-up visits, ongoing provider oversight, and individualized treatment adjustments.\n\nLaboratory testing is billed separately.`,
+      `${pricing.mensInjections.listingLine}\n\nIt includes injectable testosterone, injection supplies, medications shipped directly to your home, quarterly follow-up visits, ongoing provider oversight, and individualized treatment adjustments.\n\n${pricing.mensTransdermal.listingLine}\n\nIt includes topical testosterone cream, medications shipped directly to your home, quarterly follow-up visits, ongoing provider oversight, and individualized treatment adjustments.\n\nTestosterone in these programs may be a compounded formulation prepared by a compounding pharmacy or a commercial FDA-approved product. The choice depends on the treatment plan and your preference. Compounded preparations are not FDA-approved products. Your provider explains the product, the dose, and the risks before it is prescribed.\n\nBoth programs provide the same personalized medical oversight and follow-up care. Pricing differences reflect the medication formulations, administration methods, and supplies included. Laboratory testing is billed separately.`,
   },
   {
     id: "lab-frequency",
@@ -134,28 +134,28 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Women's Hormone & Menopause Care",
     question: "What does women's hormone care include?",
     answer:
-      "Women's hormone care programs may include estradiol, progesterone, testosterone, or a combination of therapies based on symptoms, health history, treatment goals, and laboratory findings. Specific medications, formulations, and dosages are determined during the evaluation process and individualized for each patient.",
+      "Female HRT Core offers personalized hormone therapy with oral and topical medication options, including progesterone, estrogen, and testosterone, as clinically appropriate. Female HRT Plus incorporates oral, topical, and injectable medications, as clinically appropriate, and includes testosterone injections and injection supplies. Medication selection is tailored to your needs. Alternative formulations, including troches, can be discussed with your provider.",
   },
   {
     id: "compounded",
     category: "Women's Hormone & Menopause Care",
     question: "Do you offer customized hormone therapy?",
     answer:
-      "Yes. Treatment plans are individualized and may include hormone therapy based on symptoms, health history, treatment goals, and laboratory findings. Specific medications, formulations, and dosages are determined during the evaluation process and tailored to each patient's individual needs.",
+      "Yes. Hormone plans are tailored to symptoms, health history, treatment goals, and laboratory findings. A plan may use a compounded formulation prepared by a compounding pharmacy or a commercial FDA-approved product. If you want a commercial product and one is appropriate, your provider can prescribe it. Compounded hormone preparations are not FDA-approved products. Your provider explains the product, the dose, and the risks before it is prescribed.",
   },
   {
     id: "women-testosterone",
     category: "Women's Hormone & Menopause Care",
     question: "Is testosterone used in women?",
     answer:
-      "Yes. Testosterone may be included in some women's hormone treatment plans based on symptoms, health history, and individual treatment goals. It is not used in every patient's treatment plan.",
+      "Yes. Testosterone may be included in some women's hormone treatment plans based on symptoms, health history, and individual treatment goals. It is not used in every patient's treatment plan. It may be a compounded formulation or a commercial product. FDA-approved testosterone products in the United States are approved for use in men. Use of testosterone in women is off-label. A compounded preparation is not an FDA-approved product. Your provider explains the reason, the product, the dose, and the risks before it is prescribed.",
   },
   {
     id: "women-meds-included",
     category: "Women's Hormone & Menopause Care",
     question: "Are medications included in the program?",
     answer:
-      `The ${pricing.womensTriple.name} is ${pricing.womensTriple.display} every 4 weeks and includes estradiol, progesterone, and testosterone therapy as part of an individualized treatment plan.\n\nThe ${pricing.womensAdvanced.name} is ${pricing.womensAdvanced.display} every 4 weeks and includes testosterone injections together with estradiol and progesterone therapy as part of an individualized treatment plan.\n\nLaboratory testing is billed separately.`,
+      "Female HRT Core — $200 Every 4 Weeks\n\nPersonalized hormone therapy with oral and topical medication options, including progesterone, estrogen, and testosterone, as clinically appropriate.\n\nFemale HRT Plus — $240 Every 4 Weeks\n\nPersonalized hormone therapy incorporating oral, topical, and injectable medications, as clinically appropriate. This program includes testosterone injections and the necessary injection supplies.\n\nFlexible Treatment Options\n\nMedication selection and delivery methods are tailored to your individual needs. Alternative formulations, including troches and other available options, can be discussed with your provider. Pricing may vary based on the medications and delivery methods selected.\n\nBoth programs provide the same personalized medical oversight and follow-up care. Pricing differences reflect the medication formulations, administration methods, and supplies included.",
   },
   {
     id: "program-billing",
@@ -169,7 +169,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Weight Management",
     question: "What prescription treatment is available for weight management?",
     answer:
-      "Prescription weight-management medications may be recommended following a comprehensive evaluation. Medication selection is individualized and based on health history, current health status, treatment goals, and ongoing response to treatment.\n\nFor patients enrolled in a hormone care membership, medical weight management may be incorporated into ongoing care without an additional consultation or recurring management fee. Patients are responsible for the cost of prescribed weight-management medications and any additional laboratory testing that may be required.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options. Medical weight management for non-members is billed separately by consultation.",
+      "Prescription weight-management medications may be recommended following a comprehensive evaluation. Medication selection is individualized and based on health history, current health status, treatment goals, and ongoing response to treatment. A commercial FDA-approved medicine or a compounded formulation may be prescribed. If you want a commercial product and one is appropriate, your provider can prescribe it. When a compounded formulation is prescribed, it is not an FDA-approved product. Your provider explains the product, the dose, and the risks before it is prescribed.\n\nFor patients enrolled in a hormone care membership, medical weight management may be incorporated into ongoing care without an additional consultation or recurring management fee. Patients are responsible for the cost of prescribed weight-management medications and any additional laboratory testing that may be required.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options. Medical weight management for non-members is billed separately by consultation.",
   },
   {
     id: "weight-meds-cost",

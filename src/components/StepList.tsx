@@ -1,7 +1,6 @@
 import { FadeIn } from "@/components/FadeIn";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { Service } from "@/lib/services";
-import { SITE } from "@/lib/site";
 import {
   CalendarCheck,
   FlaskConical,
@@ -20,7 +19,7 @@ const DEFAULT_STEPS: Step[] = [
   {
     title: "Schedule Your Consultation",
     description:
-      `Meet with your provider to discuss your symptoms, health history, and treatment goals. ${SITE.consultLength}`,
+      "Take the first step toward personalized hormone care by scheduling your consultation online or by calling our office. New patient consultations are typically 60 minutes, while follow-up appointments generally last 15–20 minutes.",
     icon: CalendarCheck,
   },
   {

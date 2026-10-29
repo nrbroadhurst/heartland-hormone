@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = pageMeta({
   title: "Pricing & Programs",
   description:
-    "Published Heartland Hormone rates: $225 new-patient consultation, men's TRT from $175 every 4 weeks, and women's BHRT from $200 every 4 weeks. Labs billed separately.",
+    "Published Heartland Hormone rates: $225 new-patient consultation, Male HRT Core $175 every 4 weeks, and Female HRT Core $200 every 4 weeks. Labs billed separately.",
   path: "/programs",
 });
 
@@ -26,7 +26,7 @@ export default function PricingPage() {
       <PageHero
         compact
         title="Pricing & Programs"
-        description="Membership pricing includes prescribed testosterone, estradiol, and progesterone when part of your treatment plan, along with routine follow-up and ongoing clinical management. Program fees vary based on the medications and formulations prescribed. Additional medications, laboratory testing, and other services are billed separately."
+        description="Membership pricing includes prescribed testosterone, estrogen, and progesterone when part of your treatment plan, along with routine follow-up and ongoing clinical management. Programs provide the same personalized medical oversight and follow-up care. Pricing differences reflect the medication formulations, administration methods, and supplies included. Additional medications, laboratory testing, and other services are billed separately."
       >
         <BookButton />
       </PageHero>
@@ -76,14 +76,14 @@ export default function PricingPage() {
             compact
             eyebrow="Men"
             title="Men's Hormone Care"
-            description="Recurring membership billed every 4 weeks. Membership includes prescribed testosterone therapy, routine follow-up, ongoing clinical management, and shipment of included medications."
+            description="Male HRT Core — $175 every 4 weeks, injectable testosterone. Male HRT Premium — $200 every 4 weeks, the higher-priced tier with topical testosterone cream. Membership includes routine follow-up, ongoing clinical management, and shipment of included medications."
           />
           <div className="grid gap-6 lg:grid-cols-2">
             <PricingCard
               featured
               name={pricing.mensInjections.name}
               price={pricing.mensInjections.display}
-              billingNote="Every 4 Weeks"
+              billingNote={pricing.mensInjections.billingNote}
               summary={pricing.mensInjections.summary}
               includesHeading={pricing.mensInjections.includesHeading}
               includes={pricing.mensInjections.includes}
@@ -93,9 +93,10 @@ export default function PricingPage() {
               ctaLabel="Book a Men's Hormone Consultation"
             />
             <PricingCard
+              featured
               name={pricing.mensTransdermal.name}
               price={pricing.mensTransdermal.display}
-              billingNote="Every 4 Weeks"
+              billingNote={pricing.mensTransdermal.billingNote}
               summary={pricing.mensTransdermal.summary}
               includesHeading={pricing.mensTransdermal.includesHeading}
               includes={pricing.mensTransdermal.includes}
@@ -112,14 +113,14 @@ export default function PricingPage() {
             compact
             eyebrow="Women"
             title="Women's Hormone Care"
-            description="Recurring membership billed every 4 weeks. Membership includes prescribed hormone therapy, routine follow-up, ongoing clinical management, and shipment of included medications."
+            description="Female HRT Core is $200 every 4 weeks and offers oral and topical medication options, including progesterone, estrogen, and testosterone, as clinically appropriate. Female HRT Plus is $240 every 4 weeks and adds injectable medications, including testosterone injections and injection supplies. Both programs provide the same personalized medical oversight and follow-up care."
           />
           <div className="grid gap-6 lg:grid-cols-2">
             <PricingCard
               featured
               name={pricing.womensTriple.name}
               price={pricing.womensTriple.display}
-              billingNote="Every 4 Weeks"
+              billingNote={pricing.womensTriple.billingNote}
               summary={pricing.womensTriple.summary}
               includesHeading={pricing.womensTriple.includesHeading}
               includes={pricing.womensTriple.includes}
@@ -129,9 +130,10 @@ export default function PricingPage() {
               ctaLabel="Book a Women's Hormone Consultation"
             />
             <PricingCard
+              featured
               name={pricing.womensAdvanced.name}
               price={pricing.womensAdvanced.display}
-              billingNote="Every 4 Weeks"
+              billingNote={pricing.womensAdvanced.billingNote}
               summary={pricing.womensAdvanced.summary}
               includesHeading={pricing.womensAdvanced.includesHeading}
               includes={pricing.womensAdvanced.includes}
@@ -254,25 +256,25 @@ export default function PricingPage() {
             <li>
               <span className="block">{pricing.mensInjections.name}</span>
               <span className="block pl-3 text-charcoal/70">
-                {pricing.mensInjections.display} every 4 weeks
+                {pricing.mensInjections.display} {pricing.mensInjections.intervalPhrase}
               </span>
             </li>
             <li>
               <span className="block">{pricing.mensTransdermal.name}</span>
               <span className="block pl-3 text-charcoal/70">
-                {pricing.mensTransdermal.display} every 4 weeks
+                {pricing.mensTransdermal.display} {pricing.mensTransdermal.intervalPhrase}
               </span>
             </li>
             <li>
               <span className="block">{pricing.womensTriple.name}</span>
               <span className="block pl-3 text-charcoal/70">
-                {pricing.womensTriple.display} every 4 weeks
+                {pricing.womensTriple.display} {pricing.womensTriple.intervalPhrase}
               </span>
             </li>
             <li>
               <span className="block">{pricing.womensAdvanced.name}</span>
               <span className="block pl-3 text-charcoal/70">
-                {pricing.womensAdvanced.display} every 4 weeks
+                {pricing.womensAdvanced.display} {pricing.womensAdvanced.intervalPhrase}
               </span>
             </li>
             <li>

@@ -4,9 +4,8 @@
  * Fill null fields before production. The UI never prints raw placeholders.
  *
  * Still pending from clinic:
- * - provider photo
  * - clinic photos
- * - booking URL / custom domain (heartlandhormone.com)
+ * - custom domain (heartlandhormone.com)
  * - tadalafil add-on pricing
  * - Quest/LabCorp cash-rate list
  * - cancellation/pause policy finalization
@@ -44,7 +43,8 @@ export const SITE = {
   phoneTel: "+19134279275",
   email: "sherry@heartlandhormones.com",
   officeHours: "By appointment only",
-  bookingUrl: null as string | null,
+  bookingUrl:
+    "https://www.optimantra.com/optimus/patient/patientaccess/prospects?pid=SFIwUzArZGFpblhpdEJJbEZ0RyswZz09",
   bookingSystem: "OptiMantra",
   /** Do not publish a live OptiMantra login URL on the public site. */
   patientPortalUrl: null as string | null,
@@ -57,7 +57,7 @@ export const SITE = {
   privacyOfficerName: "Sherry Broadhurst",
 
   consultLength:
-    "New patient consultations are typically 60 minutes. Follow-up visits are typically 15 to 20 minutes.",
+    "New patient consultations are typically 60 minutes, while follow-up appointments generally last 15–20 minutes.",
   firstVisitPreference:
     "An in-person first visit is preferred. Follow-up may be in office or by virtual visit when clinically and legally appropriate. Controlled substances may require at least one in-person visit per year.",
 

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Logo } from "@/components/logo/Logo";
 import { Button } from "@/components/ui/button";
+import { BookOnlineButton } from "@/components/BookOnlineButton";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import { getNavServices } from "@/lib/services";
 import { cn } from "@/lib/utils";
@@ -85,9 +86,11 @@ export function Nav() {
           <Button asChild variant="outline-teal" size="sm" className="hidden md:inline-flex">
             <Link href="/patient-portal">Patient Access</Link>
           </Button>
-          <Button asChild variant="gold" size="sm" className="hidden sm:inline-flex">
-            <Link href="/contact">{SITE.consultCtaShort}</Link>
-          </Button>
+          <BookOnlineButton
+            variant="gold"
+            size="sm"
+            className="hidden sm:inline-flex"
+          />
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-md text-teal lg:hidden"
@@ -183,11 +186,11 @@ export function Nav() {
           >
             Contact
           </Link>
-          <Button asChild variant="gold" className="mt-4">
-            <Link href="/contact" onClick={() => setOpen(false)}>
-              {SITE.consultCta}
-            </Link>
-          </Button>
+          <BookOnlineButton
+            variant="gold"
+            className="mt-4"
+            onClick={() => setOpen(false)}
+          />
         </nav>
       </div>
       {open && (

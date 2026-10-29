@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { BookOnlineButton } from "@/components/BookOnlineButton";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/lib/site";
 
@@ -48,9 +49,13 @@ export function CTASection({
           </p>
         )}
         <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-          <Button asChild variant={isTeal ? "gold" : "teal"} size="lg">
-            <Link href={ctaHref}>{ctaLabel}</Link>
-          </Button>
+          {ctaHref === SITE.bookingUrl ? (
+            <BookOnlineButton variant={isTeal ? "gold" : "teal"} size="lg" />
+          ) : (
+            <Button asChild variant={isTeal ? "gold" : "teal"} size="lg">
+              <Link href={ctaHref}>{ctaLabel}</Link>
+            </Button>
+          )}
           {secondaryLabel && secondaryHref && (
             <Button asChild variant="outline" size="lg">
               <Link href={secondaryHref}>{secondaryLabel}</Link>

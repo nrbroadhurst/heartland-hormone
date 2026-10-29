@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero, SectionHeading } from "@/components/PageHero";
 import { BookingWidget } from "@/components/BookingWidget";
 import { ContactForm } from "@/components/ContactForm";
@@ -31,15 +30,8 @@ export default async function ContactPage({ searchParams }: Props) {
       <PageHero title="Schedule an Appointment">
         <div className="max-w-2xl space-y-4 text-lg text-cream/85 leading-relaxed">
           <p>
-            Schedule your appointment through the{" "}
-            <Link
-              href="/patient-portal"
-              className="underline underline-offset-2 text-gold-light hover:text-gold"
-            >
-              secure patient portal
-            </Link>{" "}
-            or contact the clinic by phone, email, or message if you have
-            questions before scheduling.
+            Book your appointment online, or contact the clinic by phone,
+            email, or message if you have questions before scheduling.
           </p>
           <h2 className="font-display text-2xl text-gold tracking-wide pt-2">
             New Patient Consultations
