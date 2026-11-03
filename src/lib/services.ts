@@ -79,7 +79,13 @@ export const SERVICES: Service[] = [
       "Heartland provides individualized care for women experiencing symptoms associated with the menopause transition, including perimenopause, menopause, and postmenopause. Treatment recommendations are based on symptoms, health history, risk factors, laboratory findings, and personal health goals.",
     heroDescriptor:
       "Individualized perimenopause and menopause care with customized hormone treatment, laboratory evaluation and ongoing clinical monitoring.",
-    highlights: [],
+    highlightsHeading: "Program Includes:",
+    highlights: [
+      "Perimenopause, menopause, and postmenopause care",
+      "Customized hormone therapy when clinically appropriate",
+      "PMOS/PCOS evaluation as part of metabolic hormone care",
+      "Ongoing laboratory monitoring and follow-up",
+    ],
     ctaLabel: "Explore Women's Hormone Care",
     primary: true,
     icon: "heart",

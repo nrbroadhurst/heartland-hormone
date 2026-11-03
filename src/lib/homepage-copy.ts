@@ -43,12 +43,12 @@ export const COMMON_SYMPTOMS = [
 
 export const SPECIALIZED_CARE = [
   {
-    title: "Women's Hormonal Health & Wellness",
+    title: "Women's Hormone & Menopause Care",
     body: "Personalized care for women experiencing hormonal changes related to perimenopause, menopause, postmenopause, endometriosis, and other hormone imbalances. Treatment plans are designed around your symptoms, laboratory findings, health history, and individual goals.",
     href: "/services/womens-hormone-therapy",
   },
   {
-    title: "Testosterone Replacement Therapy (TRT) for Men",
+    title: "Men's Hormone Care",
     body: "Comprehensive evaluation and personalized treatment for men experiencing symptoms associated with low testosterone, including fatigue, decreased libido, reduced muscle mass, brain fog, and diminished overall well-being.",
     href: "/services/mens-hormone-therapy",
   },

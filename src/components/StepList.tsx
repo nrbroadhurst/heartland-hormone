@@ -42,16 +42,42 @@ const DEFAULT_STEPS: Step[] = [
   },
 ];
 
+const COMPACT_STEPS: Step[] = [
+  {
+    title: "Schedule Your Consultation",
+    description:
+      "Book online or call. New patient visits are typically 60 minutes; follow-ups are generally 30 minutes.",
+  },
+  {
+    title: "Complete Laboratory Testing",
+    description:
+      "Labs are completed before your consultation so results are ready to review at your visit.",
+  },
+  {
+    title: "Review Your Plan",
+    description:
+      "Your provider reviews symptoms, history, and labs, then discusses treatment only if it is appropriate.",
+  },
+  {
+    title: "Ongoing Care",
+    description:
+      "Follow-up visits and monitoring keep treatment aligned with your goals and safety needs.",
+  },
+];
+
 export function StepList({
-  steps = DEFAULT_STEPS,
+  steps,
   numbered = true,
+  compact = false,
 }: {
   steps?: Step[];
   numbered?: boolean;
+  compact?: boolean;
 }) {
+  const items = steps ?? (compact ? COMPACT_STEPS : DEFAULT_STEPS);
   return (
     <ol className="grid gap-8 md:grid-cols-2">
-      {steps.map((step, i) => {
+      {items.map((step, i) => {
         const Icon = step.icon;
         return (
           <FadeIn key={step.title} delay={i * 0.06}>

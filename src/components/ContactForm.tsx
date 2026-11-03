@@ -134,12 +134,6 @@ export function ContactForm({
       noValidate
       autoComplete="off"
     >
-      <p className="rounded-md border border-gold/30 bg-teal/5 px-4 py-3 text-sm text-charcoal/80">
-        This form is for general questions only. Clinical information will be
-        collected securely during patient intake after an appointment has been
-        booked.
-      </p>
-
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="firstName" className="mb-1.5 block text-sm font-medium text-teal">
@@ -273,8 +267,7 @@ export function ContactForm({
           {...register("message")}
         />
         <p className="mt-1 text-xs text-charcoal/60">
-          {MESSAGE_MAX} character maximum. Clinical details will be collected
-          during secure patient intake after an appointment is scheduled.
+          {MESSAGE_MAX} character maximum.
         </p>
         {errors.message && (
           <p className="mt-1 text-sm text-red-700" role="alert">

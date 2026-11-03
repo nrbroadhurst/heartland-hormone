@@ -47,13 +47,13 @@ export function Nav() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6 lg:px-8">
         <Logo variant="horizontal" theme="light" className="h-11 w-auto md:h-12" />
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Primary">
           {NAV_LINKS.map((link) =>
             "children" in link && link.children ? (
               <div key={link.href} className="relative group">
                 <Link
                   href={link.href}
-                  className="inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-teal hover:text-teal-dark"
+                  className="inline-flex items-center gap-1 whitespace-nowrap px-2.5 py-2 text-sm font-medium text-teal hover:text-teal-dark"
                 >
                   {link.label}
                   <ChevronDown className="h-3.5 w-3.5 text-gold" />
@@ -74,7 +74,7 @@ export function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium text-teal hover:text-teal-dark"
+                className="whitespace-nowrap px-2.5 py-2 text-sm font-medium text-teal hover:text-teal-dark"
               >
                 {link.label}
               </Link>
@@ -183,13 +183,6 @@ export function Nav() {
           >
             Patient Access
           </a>
-          <Link
-            href="/contact"
-            className="py-3 text-base font-medium"
-            onClick={() => setOpen(false)}
-          >
-            Contact &amp; Booking
-          </Link>
           <BookOnlineButton
             variant="gold"
             className="mt-4"

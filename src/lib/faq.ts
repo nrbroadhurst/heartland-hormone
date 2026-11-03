@@ -56,7 +56,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "How often am I billed?",
     answer:
-      "Recurring hormone care memberships are billed every 4 weeks and automatically renew unless canceled. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.\n\nCurrent pricing is available on the Pricing & Programs page. Your selected program, fees, and billing terms will be reviewed before enrollment.",
+      "Recurring hormone care memberships are billed every 4 weeks and automatically renew unless canceled. Because memberships are billed every 4 weeks rather than monthly, there are 13 billing cycles per year.\n\nIf a recurring program fee is declined or remains unpaid, medication orders, refills, shipments, and scheduled clinical services may be paused until the account is paid in full. Accounts unpaid for more than 30 days may be discharged from the practice.\n\nConsultation fees are nonrefundable. Membership fees are nonrefundable once billed and after medications have been prescribed, processed, dispensed, or shipped.\n\nCurrent pricing is on the Pricing & Programs page. Your selected program, fees, and billing terms are reviewed before enrollment.",
   },
   {
     id: "cancel-program",
@@ -132,7 +132,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Women's Hormone & Menopause Care",
     question: "What does women's hormone care include?",
     answer:
-      "Female HRT Core offers personalized hormone therapy with oral and topical medication options, including progesterone, estrogen, and testosterone, as clinically appropriate. Female HRT Plus incorporates oral, topical, and injectable medications, as clinically appropriate, and includes testosterone injections and injection supplies. Medication selection is tailored to your needs. Alternative formulations, including troches, can be discussed with your provider.",
+      "Female HRT Core — $200 every 4 weeks — offers oral and topical medication options, including progesterone, estrogen, and testosterone, as clinically appropriate.\n\nFemale HRT Plus — $240 every 4 weeks — adds injectable medications, including testosterone injections and injection supplies.\n\nMedication selection is tailored to your needs. Alternative formulations, including troches, can be discussed with your provider. Both programs include the same medical oversight and follow-up. Laboratory testing is billed separately.",
   },
   {
     id: "compounded",
@@ -149,20 +149,6 @@ export const FAQ_ENTRIES: FAQEntry[] = [
       "Yes. Testosterone may be included in some women's hormone treatment plans based on symptoms, health history, and individual treatment goals. It is not used in every patient's treatment plan. It may be a compounded formulation or a commercial product. FDA-approved testosterone products in the United States are approved for use in men. Use of testosterone in women is off-label. A compounded preparation is not an FDA-approved product. Your provider explains the reason, the product, the dose, and the risks before it is prescribed.",
   },
   {
-    id: "women-meds-included",
-    category: "Women's Hormone & Menopause Care",
-    question: "Are medications included in the program?",
-    answer:
-      "Female HRT Core — $200 Every 4 Weeks\n\nPersonalized hormone therapy with oral and topical medication options, including progesterone, estrogen, and testosterone, as clinically appropriate.\n\nFemale HRT Plus — $240 Every 4 Weeks\n\nPersonalized hormone therapy incorporating oral, topical, and injectable medications, as clinically appropriate. This program includes testosterone injections and the necessary injection supplies.\n\nFlexible Treatment Options\n\nMedication selection and delivery methods are tailored to your individual needs. Alternative formulations, including troches and other available options, can be discussed with your provider. Pricing may vary based on the medications and delivery methods selected.\n\nBoth programs provide the same personalized medical oversight and follow-up care. Pricing differences reflect the medication formulations, administration methods, and supplies included.",
-  },
-  {
-    id: "program-billing",
-    category: "General",
-    question: "How does recurring program billing work?",
-    answer:
-      "Recurring hormone care memberships are automatically billed every 4 weeks and renew unless canceled.\n\nIf a recurring program fee is declined or remains unpaid, medication orders, prescription refills, medication shipments, and scheduled clinical services may be paused until the account balance is paid in full.\n\nAccounts that remain unpaid for more than 30 days may be subject to discharge from the practice and cancellation of active prescriptions.\n\nConsultation fees are nonrefundable. Membership fees are nonrefundable once billed and after medications have been prescribed, processed, dispensed, or shipped.",
-  },
-  {
     id: "weight-treatment",
     category: "Weight Management",
     question: "What prescription treatment is available for weight management?",
@@ -174,7 +160,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "Weight Management",
     question: "Is medication included in the program cost?",
     answer:
-      "No. Weight-management medications are billed separately.\n\nFor patients enrolled in a hormone care membership, medical weight management may be incorporated into ongoing care without an additional consultation or recurring management fee. Patients are responsible for the cost of prescribed weight-management medications and any additional laboratory testing that may be required.\n\nPatients who are not enrolled in a hormone care membership may schedule a medical weight management consultation to discuss treatment options. Medical weight management for non-members is billed separately by consultation.",
+      "No. Weight-management medications and extra laboratory testing are billed separately. Hormone-care members do not pay an extra consultation or recurring management fee for weight management; non-members book a separate consultation.",
   },
   {
     id: "weight-follow-up",

@@ -81,10 +81,11 @@ export const pricing = {
       "Quarterly follow-up visits",
       "Ongoing provider oversight",
       "Individualized treatment adjustments",
-      "Discounted laboratory testing available through Heartland",
     ],
     notIncludedHeading: "Additional Costs",
-    notIncluded: ["Laboratory testing fees"],
+    notIncluded: [
+      "Laboratory testing fees (discounted Quest pricing available through Heartland)",
+    ],
   },
   mensTransdermal: {
     id: "mens-transdermal",
@@ -101,9 +102,9 @@ export const pricing = {
     intervalPhrase: "every 4 weeks",
     billingNote: "Every 4 Weeks",
     listingLine:
-      "Male HRT Premium — $200 every 4 weeks, the higher-priced tier with topical testosterone cream.",
+      "Male HRT Premium — $200 every 4 weeks, topical testosterone cream.",
     confirmed: true,
-    summary: "The higher-priced tier with topical testosterone cream.",
+    summary: "Topical testosterone cream, for patients who prefer a non-injectable option.",
     includesHeading: "Program Includes",
     includes: [
       "Topical testosterone cream",
@@ -111,10 +112,11 @@ export const pricing = {
       "Quarterly follow-up visits",
       "Ongoing provider oversight",
       "Individualized treatment adjustments",
-      "Discounted laboratory testing available through Heartland",
     ],
     notIncludedHeading: "Additional Costs",
-    notIncluded: ["Laboratory testing fees"],
+    notIncluded: [
+      "Laboratory testing fees (discounted Quest pricing available through Heartland)",
+    ],
   },
   womensTriple: {
     id: "womens-triple",
@@ -140,10 +142,11 @@ export const pricing = {
       "Quarterly follow-up visits",
       "Ongoing provider oversight",
       "Individualized treatment adjustments",
-      "Discounted laboratory testing available through Heartland",
     ],
     notIncludedHeading: "Additional Costs",
-    notIncluded: ["Laboratory testing fees"],
+    notIncluded: [
+      "Laboratory testing fees (discounted Quest pricing available through Heartland)",
+    ],
   },
   womensAdvanced: {
     id: "womens-advanced",
@@ -170,10 +173,11 @@ export const pricing = {
       "Quarterly follow-up visits",
       "Ongoing provider oversight",
       "Individualized treatment adjustments",
-      "Discounted laboratory testing available through Heartland",
     ],
     notIncludedHeading: "Additional Costs",
-    notIncluded: ["Laboratory testing fees"],
+    notIncluded: [
+      "Laboratory testing fees (discounted Quest pricing available through Heartland)",
+    ],
   },
   weightManagement: {
     id: "weight-management",
@@ -190,10 +194,9 @@ export const pricing = {
       "Medication and additional laboratory testing billed separately",
     ],
     notIncluded: [
-      "Laboratory testing fees",
-      "Medication cost",
-      "A published medication-inclusive membership rate",
-      "A waived consultation for patients who are not in an active hormone care membership",
+      "Weight-management medication cost",
+      "Additional laboratory testing",
+      "A separate consultation fee for patients who are not in an active hormone care membership",
     ],
   },
 } as const;

@@ -51,11 +51,6 @@ export function Footer() {
                   Patient Access
                 </a>
               </li>
-              <li>
-                <Link href="/contact" className="hover:text-gold-light transition-colors">
-                  Contact &amp; Booking
-                </Link>
-              </li>
             </ul>
           </div>
 

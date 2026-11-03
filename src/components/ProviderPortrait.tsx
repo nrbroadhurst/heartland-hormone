@@ -20,9 +20,9 @@ export function ProviderPortrait({
     <figure
       className={`overflow-hidden rounded-md border border-gold/30 bg-teal text-cream ${className}`}
     >
-      <div className="relative aspect-[4/5] w-full bg-cream">
+      <div className="relative aspect-square w-full bg-cream">
         <Image
-          src="/images/sherry-broadhurst.webp"
+          src="/images/sherry-broadhurst.jpg"
           alt={`${SITE.providerName}, ${SITE.providerCredential}`}
           fill
           priority={priority}

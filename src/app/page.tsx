@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Stethoscope, UserRound, MapPin, ClipboardCheck } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { SITE, mapsUrl, hasStreetAddress } from "@/lib/site";
 import { AddressBlock } from "@/components/AddressBlock";
 import {
@@ -25,7 +25,6 @@ import { CTASection } from "@/components/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/PageHero";
 import { JsonLd } from "@/components/JsonLd";
-import { TrustCard } from "@/components/TrustCard";
 import { ProviderPreview } from "@/components/ProviderPreview";
 import { TreatmentList } from "@/components/TreatmentList";
 import { clinicJsonLd } from "@/lib/schema";
@@ -120,60 +119,30 @@ export default function HomePage() {
           title="Personalized, Evidence-Based Care"
           description={WHY_CHOOSE_INTRO}
         />
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div className="space-y-4 text-charcoal/90 leading-relaxed">
             <p>Our commitment is to provide:</p>
             <TreatmentList items={WHY_CHOOSE_COMMITMENTS} />
-            <p>
-              Patients who need or prefer in-person care have access to a physical
-              clinic in the Kansas City area. {SITE.virtualCareStatement}
-            </p>
-            {hasStreetAddress() && (
-              <div className="rounded-md border border-gold/40 bg-teal/5 p-5 text-sm">
-                <p className="font-display text-teal tracking-wide mb-2">
-                  Clinic Location
-                </p>
-                <AddressBlock />
-                <p className="mt-2">{SITE.officeHours}</p>
-                {mapsUrl() && (
-                  <Link
-                    href={mapsUrl()!}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block text-teal underline underline-offset-2"
-                  >
-                    View on Google Maps
-                  </Link>
-                )}
-              </div>
-            )}
+            <p>{SITE.virtualCareStatement}</p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            <TrustCard
-              index={0}
-              icon={Stethoscope}
-              title="Experienced Clinical Care"
-              body="Care led by a board-certified nurse practitioner with decades of clinical experience."
-            />
-            <TrustCard
-              index={1}
-              icon={UserRound}
-              title="Individualized Treatment"
-              body="Treatment decisions based on symptoms, history, laboratory findings and individual goals."
-            />
-            <TrustCard
-              index={2}
-              icon={MapPin}
-              title="Local Kansas Clinic"
-              body="A physical Kansas City-area clinic for patients who prefer face-to-face care."
-            />
-            <TrustCard
-              index={3}
-              icon={ClipboardCheck}
-              title="Ongoing Clinical Monitoring"
-              body="Structured follow-up, laboratory review and treatment adjustments when clinically appropriate."
-            />
-          </div>
+          {hasStreetAddress() && (
+            <div className="rounded-md border border-gold/40 bg-teal/5 p-5 text-sm">
+              <p className="font-display text-teal tracking-wide mb-2">
+                Clinic Location
+              </p>
+              <AddressBlock />
+              {mapsUrl() && (
+                <Link
+                  href={mapsUrl()!}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block text-teal underline underline-offset-2"
+                >
+                  View on Google Maps
+                </Link>
+              )}
+            </div>
+          )}
         </div>
       </section>
 
@@ -194,12 +163,12 @@ export default function HomePage() {
               },
               {
                 name: "Men's Hormone Care",
-                teaser: pricing.mensInjections.teaserDisplay,
+                teaser: `From ${pricing.mensInjections.teaserDisplay}`,
                 href: "/programs#mens-hormone",
               },
               {
                 name: "Women's Hormone Care",
-                teaser: pricing.womensTriple.teaserDisplay,
+                teaser: `From ${pricing.womensTriple.teaserDisplay}`,
                 href: "/programs#womens-hormone",
               },
               {
@@ -242,7 +211,7 @@ export default function HomePage() {
             <Link href="/how-it-works">See How It Works</Link>
           </Button>
         </div>
-        <StepList />
+        <StepList compact />
       </section>
 
       <CTASection
@@ -250,8 +219,8 @@ export default function HomePage() {
         subtext={CLOSING_CTA_SUBTEXT}
         ctaLabel={SITE.consultCta}
         ctaHref={SITE.bookingUrl}
-        secondaryLabel="View Pricing & Programs"
-        secondaryHref="/programs"
+        secondaryLabel="Contact"
+        secondaryHref="/contact"
         variant="teal"
       />
     </>

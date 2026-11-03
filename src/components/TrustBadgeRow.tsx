@@ -1,8 +1,8 @@
 import {
   BadgeCheck,
   MapPin,
-  FlaskConical,
-  Lock,
+  UserRound,
+  ClipboardCheck,
   type LucideIcon,
 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
@@ -10,8 +10,8 @@ import { FadeIn } from "@/components/FadeIn";
 const DEFAULT_BADGES: { icon: LucideIcon; label: string }[] = [
   { icon: BadgeCheck, label: "Board-Certified Provider" },
   { icon: MapPin, label: "Local Kansas Clinic" },
-  { icon: FlaskConical, label: "Individualized Treatment" },
-  { icon: Lock, label: "Ongoing Clinical Monitoring" },
+  { icon: UserRound, label: "Individualized Treatment" },
+  { icon: ClipboardCheck, label: "Ongoing Clinical Monitoring" },
 ];
 
 export function TrustBadgeRow({

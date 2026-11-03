@@ -107,11 +107,12 @@ export const LEGAL_LINKS = [
 
 export const NAV_LINKS = [
   { href: "/services", label: "Services", children: true },
-  { href: "/programs", label: "Pricing & Programs" },
+  { href: "/programs", label: "Pricing" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/about", label: "About" },
-  { href: "/locations", label: "Locations" },
+  { href: "/locations", label: "Location" },
   { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export function providerCredentialLine(): string {

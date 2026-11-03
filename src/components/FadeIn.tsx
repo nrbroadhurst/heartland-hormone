@@ -19,9 +19,9 @@ export function FadeIn({ children, className, delay = 0 }: FadeInProps) {
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0.2, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.5, ease: "easeOut", delay }}
     >
       {children}

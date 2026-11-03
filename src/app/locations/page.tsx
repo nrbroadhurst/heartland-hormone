@@ -8,7 +8,7 @@ import { MapPin, Video, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Locations | Overland Park & Kansas City",
+  title: "Location | Overland Park & Kansas City",
   description:
     "Heartland Hormone serves Overland Park and the Kansas City area from a local Kansas clinic. Virtual follow-up may be available for eligible patients.",
   path: "/locations",
@@ -21,8 +21,8 @@ export default function LocationsPage() {
     <>
       <PageHero
         eyebrow="Visit Us"
-        title="Local Kansas City-Area Clinic"
-        description={`${SITE.locationLine}. Visits are by appointment only.`}
+        title="Our Overland Park Clinic"
+        description={`${SITE.locationLine} Visits are by appointment only.`}
       >
         <BookButton />
       </PageHero>
@@ -70,9 +70,6 @@ export default function LocationsPage() {
                 <Clock className="h-4 w-4 mt-1 text-gold shrink-0" aria-hidden />
                 {SITE.officeHours ?? "Hours provided when you book"}
               </li>
-              <li className="font-display text-xs uppercase tracking-[0.2em] text-gold pt-2">
-                By Appointment Only
-              </li>
             </ul>
           </div>
 
@@ -106,8 +103,8 @@ export default function LocationsPage() {
       <CTASection
         headline="Book your visit"
         subtext="In-person care at our Kansas City-area clinic, by appointment."
-        secondaryLabel="View Pricing & Programs"
-        secondaryHref="/programs"
+        secondaryLabel="Contact"
+        secondaryHref="/contact"
       />
     </>
   );

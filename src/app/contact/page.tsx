@@ -51,39 +51,7 @@ export default async function ContactPage({ searchParams }: Props) {
               </a>
             </p>
           )}
-          <h2 className="font-display text-2xl text-gold tracking-wide pt-2">
-            New Patient Consultations
-          </h2>
-          <p>
-            New patient consultations are typically 60 minutes and include a
-            comprehensive review of your symptoms, health history, laboratory
-            results, and treatment goals.
-          </p>
-          <p>
-            To make the most of your visit, a comprehensive laboratory evaluation
-            is completed beforehand so your provider can review your results,
-            discuss potential hormonal or metabolic concerns, and develop an
-            individualized treatment plan when appropriate.
-          </p>
-          <p>
-            If treatment is recommended, ongoing follow-up care includes symptom
-            review, laboratory monitoring, and treatment adjustments as needed.
-          </p>
-          <h2 className="font-display text-2xl text-gold tracking-wide pt-2">
-            Follow-Up Appointments
-          </h2>
-          <p>
-            Follow-up visits are available for established Heartland patients
-            currently receiving care. These appointments are typically 30 minutes
-            and provide an opportunity to review treatment progress, discuss
-            concerns, review laboratory results, and make treatment adjustments
-            as needed.
-          </p>
-          <p>
-            Periodic laboratory testing is an important part of ongoing
-            monitoring and helps guide treatment decisions, support patient
-            safety, and evaluate treatment effectiveness over time.
-          </p>
+          <p className="text-base text-cream/80">{SITE.consultLength}</p>
         </div>
       </PageHero>
 

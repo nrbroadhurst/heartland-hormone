@@ -91,16 +91,10 @@ export default function MensHormonePage() {
         <SectionHeading title="What to Expect" />
         <TreatmentList
           items={[
-            "Comprehensive initial evaluation",
-            "Baseline laboratory testing and review",
-            "Individualized treatment planning",
+            "Comprehensive initial evaluation and baseline labs",
+            "Individualized treatment plan if therapy is appropriate",
             "Education on medication administration",
-            "Routine follow-up visits",
-            "Laboratory monitoring",
-            "Symptom assessment and monitoring",
-            "Treatment adjustments as needed",
-            "Prescription refill management",
-            "In-office care when needed",
+            "Follow-up visits, laboratory monitoring, and refill management",
           ]}
         />
       </section>

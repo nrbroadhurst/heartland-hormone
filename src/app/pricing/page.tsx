@@ -34,7 +34,7 @@ export default function PricingPage() {
       <section className="mx-auto max-w-7xl px-4 py-10 md:py-12 md:px-6 lg:px-8 space-y-12">
         <div className="rounded-md border border-gold/40 bg-teal/5 p-5 md:p-6">
           <h2 className="font-display text-xl text-teal tracking-wide mb-4">
-            All Programs Include
+            Hormone Programs Include
           </h2>
           <ul className="grid gap-2 sm:grid-cols-2">
             {programSharedIncludes.map((item) => (
@@ -75,7 +75,7 @@ export default function PricingPage() {
             compact
             eyebrow="Men"
             title="Men's Hormone Care"
-            description="Male HRT Core — $175 every 4 weeks, injectable testosterone. Male HRT Premium — $200 every 4 weeks, the higher-priced tier with topical testosterone cream. Membership includes routine follow-up, ongoing clinical management, and shipment of included medications."
+            description="Male HRT Core — $175 every 4 weeks, injectable testosterone. Male HRT Premium — $200 every 4 weeks, topical testosterone cream. Membership includes routine follow-up, ongoing clinical management, and shipment of included medications."
           />
           <div className="grid gap-6 lg:grid-cols-2">
             <PricingCard
@@ -91,7 +91,6 @@ export default function PricingPage() {
               ctaLabel="Book a Men's Hormone Consultation"
             />
             <PricingCard
-              featured
               name={pricing.mensTransdermal.name}
               price={pricing.mensTransdermal.display}
               billingNote={pricing.mensTransdermal.billingNote}
@@ -126,7 +125,6 @@ export default function PricingPage() {
               ctaLabel="Book a Women's Hormone Consultation"
             />
             <PricingCard
-              featured
               name={pricing.womensAdvanced.name}
               price={pricing.womensAdvanced.display}
               billingNote={pricing.womensAdvanced.billingNote}
@@ -231,53 +229,6 @@ export default function PricingPage() {
               </Link>
             </p>
           </div>
-        </div>
-
-        <div
-          id="get-started"
-          className="scroll-mt-28 rounded-md border border-gold/40 bg-cream p-5 md:p-6"
-        >
-          <h2 className="font-display text-xl text-teal tracking-wide mb-4">
-            Get Started
-          </h2>
-          <ul className="space-y-4 text-sm text-charcoal/85">
-            <li>
-              <span className="block">New Patient Consultation</span>
-              <span className="block pl-3 text-charcoal/70">
-                {pricing.initialEvaluation.display} one-time
-              </span>
-            </li>
-            <li>
-              <span className="block">{pricing.mensInjections.name}</span>
-              <span className="block pl-3 text-charcoal/70">
-                {pricing.mensInjections.display} {pricing.mensInjections.intervalPhrase}
-              </span>
-            </li>
-            <li>
-              <span className="block">{pricing.mensTransdermal.name}</span>
-              <span className="block pl-3 text-charcoal/70">
-                {pricing.mensTransdermal.display} {pricing.mensTransdermal.intervalPhrase}
-              </span>
-            </li>
-            <li>
-              <span className="block">{pricing.womensTriple.name}</span>
-              <span className="block pl-3 text-charcoal/70">
-                {pricing.womensTriple.display} {pricing.womensTriple.intervalPhrase}
-              </span>
-            </li>
-            <li>
-              <span className="block">{pricing.womensAdvanced.name}</span>
-              <span className="block pl-3 text-charcoal/70">
-                {pricing.womensAdvanced.display} {pricing.womensAdvanced.intervalPhrase}
-              </span>
-            </li>
-            <li>
-              <span className="block">{pricing.weightManagement.name}</span>
-              <span className="block pl-3 text-charcoal/70">
-                By consultation
-              </span>
-            </li>
-          </ul>
         </div>
 
         <PricingDisclaimer />

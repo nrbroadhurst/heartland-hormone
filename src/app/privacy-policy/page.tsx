@@ -48,8 +48,8 @@ export default function PrivacyPolicyPage() {
           <ul className="list-disc pl-5 space-y-2">
             <li>
               Contact information submitted through general inquiry forms,
-              including name, email address, phone number, visit type, and
-              message content.
+              including name, email address, phone number, preferred service,
+              and message content.
             </li>
             <li>
               Technical information such as IP address, browser type, device
@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
             How We Use Information
           </h2>
           <ul className="list-disc pl-5 space-y-2">
-            <li>To respond to general inquiries and scheduling requests.</li>
+            <li>To respond to general inquiries.</li>
             <li>To operate, maintain, secure, and improve the website.</li>
             <li>
               To understand website traffic and usage patterns when analytics

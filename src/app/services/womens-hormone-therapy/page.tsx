@@ -56,9 +56,8 @@ export default function WomensHormonePage() {
             "Disrupted sleep",
             "Fatigue",
             "Changes in mood",
-            "Low libido",
+            "Low libido or sexual wellness concerns",
             "Vaginal symptoms",
-            "Sexual wellness concerns",
             "Changes in body composition",
             "Symptoms that may be related to PMOS/PCOS",
             "Reduced sense of well-being",
@@ -123,18 +122,10 @@ export default function WomensHormonePage() {
           <SectionHeading title="What to Expect" />
           <TreatmentList
             items={[
-              "Initial evaluation",
-              "Review of medical history and current medications",
-              "Review of previous laboratory results",
+              "Initial evaluation and review of history, medications, and prior labs",
               "Appropriate laboratory testing",
-              "Individualized treatment planning",
-              "Medication management",
-              "Treatment adjustments as needed",
-              "Symptom assessment and monitoring",
-              "Side-effect monitoring",
-              "Routine follow-up visits",
-              "Prescription refill management",
-              "Secure provider messaging",
+              "Individualized treatment plan if therapy is appropriate",
+              "Follow-up for symptom response, side effects, and refills",
             ]}
           />
         </div>
