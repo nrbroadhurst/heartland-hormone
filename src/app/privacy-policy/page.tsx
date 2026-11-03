@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
     <>
       <PageHero
         title="Privacy Policy"
-        description="This Privacy Policy applies to information collected through this website, including contact forms and technical website data. It is separate from Heartland Hormone & Wellness Clinic's HIPAA Notice of Privacy Practices, which governs protected health information (PHI)."
+        description="This Privacy Policy applies to information collected through this website, including technical website data. It is separate from Heartland Hormone & Wellness Clinic's HIPAA Notice of Privacy Practices, which governs protected health information (PHI)."
       />
       <article className="mx-auto max-w-3xl px-4 py-14 md:px-6 space-y-8 text-charcoal/90 leading-relaxed">
         <p className="text-sm text-charcoal/60">Last Updated: August 17, 2026</p>
@@ -47,9 +47,8 @@ export default function PrivacyPolicyPage() {
           </h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>
-              Contact information submitted through general inquiry forms,
-              including name, email address, phone number, preferred service,
-              and message content.
+              This website does not use a contact form. Clinic phone and email
+              are listed on the Contact page.
             </li>
             <li>
               Technical information such as IP address, browser type, device
@@ -63,7 +62,6 @@ export default function PrivacyPolicyPage() {
             How We Use Information
           </h2>
           <ul className="list-disc pl-5 space-y-2">
-            <li>To respond to general inquiries.</li>
             <li>To operate, maintain, secure, and improve the website.</li>
             <li>
               To understand website traffic and usage patterns when analytics
@@ -71,10 +69,10 @@ export default function PrivacyPolicyPage() {
             </li>
           </ul>
           <p>
-            Please do not submit symptoms, diagnoses, medications, laboratory
-            results, or other personal health information through general website
-            contact forms. Health information should only be shared through
-            approved secure patient communications after establishing care.
+            Please do not send symptoms, diagnoses, medications, laboratory
+            results, or other personal health information by email. Health
+            information should only be shared through approved secure patient
+            communications after establishing care.
           </p>
         </section>
 
@@ -100,7 +98,7 @@ export default function PrivacyPolicyPage() {
             {hasEmail() ? (
               <EmailLink className="text-teal underline underline-offset-2" />
             ) : (
-              "Use the contact form for general questions."
+              `Call ${SITE.phone}.`
             )}
           </p>
         </section>

@@ -43,7 +43,7 @@ export default function FAQPage() {
 
       <CTASection
         headline="Still Have Questions?"
-        subtext="We're here to help. Schedule a consultation or send a general (non-medical) question through our Contact page."
+        subtext="We're here to help. Schedule a consultation or call the clinic."
         secondaryLabel="Contact"
         secondaryHref="/contact"
       />

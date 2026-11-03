@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, SectionHeading } from "@/components/PageHero";
 import { BookOnlineButton } from "@/components/BookOnlineButton";
-import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { PHONE, PORTAL_URL, SITE, hasEmail, hasPhone, mapsUrl, phoneHref } from "@/lib/site";
 import { AddressBlock } from "@/components/AddressBlock";
@@ -12,17 +11,11 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Contact & Booking",
   description:
-    "Book a consultation, log in to the patient portal, or send Heartland Hormone a general question from our Overland Park / Kansas City clinic.",
+    "Book a consultation, log in to the patient portal, or call Heartland Hormone at our Overland Park / Kansas City clinic.",
   path: "/contact",
 });
 
-type Props = {
-  searchParams: Promise<{ interest?: string }>;
-};
-
-export default async function ContactPage({ searchParams }: Props) {
-  const { interest } = await searchParams;
-  const defaultInterest = interest ?? "general";
+export default function ContactPage() {
   const directions = mapsUrl();
 
   return (
@@ -92,10 +85,6 @@ export default async function ContactPage({ searchParams }: Props) {
                 <Mail className="h-5 w-5 text-gold shrink-0" strokeWidth={1.5} aria-hidden />
                 <span>
                   Email: <EmailLink />
-                  <span className="block text-sm text-charcoal/70 mt-1">
-                    Messages submitted through this website are sent to the
-                    clinic email address listed above.
-                  </span>
                 </span>
               </li>
             )}
@@ -106,20 +95,6 @@ export default async function ContactPage({ searchParams }: Props) {
               </span>
             </li>
           </ul>
-        </div>
-      </section>
-
-      <section className="border-t border-gold/30 bg-teal/5">
-        <div className="mx-auto max-w-xl px-4 py-16 md:px-6">
-          <SectionHeading
-            align="center"
-            title="Questions? Send Us a Message"
-            description="For general questions only. To book, use Book a Consultation above."
-          />
-          <ContactForm
-            key={defaultInterest}
-            defaultInterest={defaultInterest}
-          />
         </div>
       </section>
     </>
