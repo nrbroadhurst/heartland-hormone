@@ -74,12 +74,16 @@ export function PatientFlowGuide() {
               className="text-teal underline underline-offset-2"
             >
               Patient Access
-            </a>{" "}
-            to open the OptiMantra portal in a new tab.
+            </a>. That opens the OptiMantra patient login in a new tab.
           </li>
           <li>
-            Use the portal for forms, documents, invoices, and messages to the
-            clinic.
+            Sign in as a patient. Use the email the portal invite was sent to,
+            and the password you created when you opened that invite. This is
+            the patient login, not a staff login.
+          </li>
+          <li>
+            Once you are signed in, you can complete forms, view documents and
+            invoices, and send a message to the clinic.
           </li>
           <li>
             Book follow-up visits in OptiMantra or call the clinic. Follow-ups
@@ -114,34 +118,6 @@ export function PatientFlowGuide() {
           There is no message form on this website. Please do not send symptoms,
           medications, or lab results by email. Use the portal after you are a
           patient, or discuss them at your visit.
-        </p>
-      </div>
-
-      <div className="rounded-md border border-gold/40 bg-cream p-6 md:p-8">
-        <h3 className="font-display text-xl text-teal tracking-wide mb-4">
-          Quick map
-        </h3>
-        <ul className="space-y-3 text-charcoal/90 leading-relaxed">
-          <li>
-            <span className="font-medium">Website</span> — learn about services,
-            pricing, and location; start booking or log in
-          </li>
-          <li>
-            <span className="font-medium">Book a Consultation</span> — OptiMantra
-            scheduling
-          </li>
-          <li>
-            <span className="font-medium">Patient Access</span> — OptiMantra
-            portal (forms, documents, billing, messages)
-          </li>
-          <li>
-            <span className="font-medium">Phone</span> — talk to the clinic
-            {hasPhone() ? ` at ${PHONE}` : ""}
-          </li>
-        </ul>
-        <p className="mt-4 text-sm text-charcoal/75 leading-relaxed">
-          If you get stuck on a login or booking screen, call {PHONE} and we
-          will walk you through it.
         </p>
       </div>
     </div>
