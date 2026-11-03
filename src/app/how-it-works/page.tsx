@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { StepList } from "@/components/StepList";
+import { PatientFlowGuide } from "@/components/PatientFlowGuide";
 import { CTASection } from "@/components/CTASection";
 import { pageMeta } from "@/lib/seo";
 
@@ -31,7 +32,17 @@ export default function HowItWorksPage() {
         <StepList />
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-12 md:px-6 lg:px-8 text-center">
+      <section className="border-y border-gold/20 bg-teal/5">
+        <div className="mx-auto max-w-3xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
+          <SectionHeading
+            title="Using the Website and Patient Portal"
+            description="A simple map of how this website, OptiMantra scheduling, and the patient portal work together."
+          />
+          <PatientFlowGuide />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-12 md:px-6 lg:px-8 text-center">
         <p className="text-charcoal/90 mb-2 font-medium">Questions?</p>
         <p className="text-charcoal/80 mb-4">
           Visit our{" "}

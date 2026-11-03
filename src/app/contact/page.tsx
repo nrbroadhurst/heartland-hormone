@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { PHONE, PORTAL_URL, SITE, hasEmail, hasPhone, mapsUrl, phoneHref } from "@/lib/site";
 import { AddressBlock } from "@/components/AddressBlock";
 import { EmailLink } from "@/components/EmailLink";
+import { PatientFlowGuide } from "@/components/PatientFlowGuide";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
 
@@ -95,6 +96,16 @@ export default function ContactPage() {
               </span>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section className="border-t border-gold/20 bg-teal/5">
+        <div className="mx-auto max-w-3xl px-4 py-16 md:py-20 md:px-6 lg:px-8">
+          <SectionHeading
+            title="Using the Website and Patient Portal"
+            description="A simple map of how this website, OptiMantra scheduling, and the patient portal work together."
+          />
+          <PatientFlowGuide />
         </div>
       </section>
     </>
