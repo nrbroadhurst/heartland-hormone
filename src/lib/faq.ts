@@ -1,4 +1,4 @@
-import { pricing, labPolicy } from "@/lib/pricing";
+import { pricing, labPolicy, appointmentPolicies } from "@/lib/pricing";
 import { CLINIC_ADDRESS, SITE } from "@/lib/site";
 
 export type FAQEntry = {
@@ -27,7 +27,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "What does the initial consultation cost?",
     answer:
-      `The ${pricing.initialEvaluation.name} is ${pricing.initialEvaluation.display} and includes a comprehensive 60-minute evaluation. Laboratory testing is separate from the consultation fee.\n\nHeartland offers access to discounted laboratory testing through Quest Diagnostics. Laboratory testing purchased through Heartland must be prepaid before laboratory orders are issued. Patients who prefer to use their own health insurance benefits for laboratory testing may request a laboratory requisition for testing through their insurance plan's preferred laboratory.`,
+      `The ${pricing.initialEvaluation.name} is ${pricing.initialEvaluation.display} and includes a comprehensive 60-minute evaluation. Laboratory testing is separate from the consultation fee.\n\n${appointmentPolicies.preferredLabTitle}: ${appointmentPolicies.preferredLab}\n\n${appointmentPolicies.discountedLabsTitle}: ${appointmentPolicies.discountedLabs}\n\n${appointmentPolicies.timing}`,
   },
   {
     id: "insurance",
@@ -35,7 +35,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     question: "Do you accept insurance?",
     answer: SITE.acceptsInsurance
       ? "Insurance billing details are reviewed during scheduling."
-      : "Heartland does not bill insurance for consultation fees, membership fees, or ongoing program services. A superbill can be provided upon request for patients who wish to submit claims to their insurance plan for possible reimbursement. Coverage and reimbursement are determined by your individual insurance plan.\n\nLaboratory testing is separate from consultation and membership fees. Patients may choose to complete laboratory testing through their insurance plan or purchase discounted laboratory testing through Heartland.\n\nHeartland offers access to negotiated discounted laboratory pricing through Quest Diagnostics. Laboratory testing purchased through Heartland must be prepaid before laboratory orders are issued.",
+      : `Heartland does not bill insurance for consultation fees, membership fees, or ongoing program services. A superbill can be provided upon request for patients who wish to submit claims to their insurance plan for possible reimbursement. Coverage and reimbursement are determined by your individual insurance plan.\n\nLaboratory testing is separate from consultation and membership fees.\n\n${appointmentPolicies.preferredLabTitle}: ${appointmentPolicies.preferredLab}\n\n${appointmentPolicies.discountedLabsTitle}: ${appointmentPolicies.discountedLabs}`,
   },
   {
     id: "hsa-fsa",
@@ -84,6 +84,12 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Are labs included in the program fee?",
     answer: labPolicy.notIncluded,
+  },
+  {
+    id: "appointment-policies",
+    category: "General",
+    question: "What is the cancellation and no-show policy?",
+    answer: `${appointmentPolicies.cancellation}\n\n${appointmentPolicies.confirmation}\n\n${appointmentPolicies.card}`,
   },
   {
     id: "low-t",

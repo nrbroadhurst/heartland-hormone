@@ -12,6 +12,7 @@ import {
   billingPolicy,
   programSharedIncludes,
 } from "@/lib/pricing";
+import { AppointmentPolicies } from "@/components/AppointmentPolicies";
 
 export const metadata: Metadata = pageMeta({
   title: "Pricing & Programs",
@@ -160,12 +161,9 @@ export default function PricingPage() {
 
         <div id="lab-schedule" className="scroll-mt-28">
           <SectionHeading compact title="Laboratory Testing" />
-          <div className="max-w-3xl space-y-8 text-sm text-charcoal/85 leading-relaxed -mt-4">
-            <div className="space-y-4">
-              <p>{labPolicy.intro}</p>
-              <p>{labPolicy.questOption}</p>
-              <p>{labPolicy.insuranceOption}</p>
-            </div>
+          <div className="max-w-3xl space-y-6 text-sm text-charcoal/85 leading-relaxed -mt-4">
+            <p>{labPolicy.intro}</p>
+            <AppointmentPolicies />
             <div>
               <h3 className="font-display text-lg text-teal tracking-wide mb-3">
                 Before Your Initial Consultation

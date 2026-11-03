@@ -25,7 +25,7 @@ const DEFAULT_STEPS: Step[] = [
   {
     title: "Complete Laboratory Testing and Evaluation",
     description:
-      "Laboratory testing is required before your consultation so results are available for review during your appointment. Testing and evaluation help determine potential causes of symptoms and guide treatment recommendations.",
+      "Laboratory testing is required before your consultation. Complete labs at least 3-4 business days before your appointment so results are available for review. Testing and evaluation help determine potential causes of symptoms and guide treatment recommendations.",
     icon: FlaskConical,
   },
   {
@@ -51,7 +51,7 @@ const COMPACT_STEPS: Step[] = [
   {
     title: "Complete Laboratory Testing",
     description:
-      "Labs are completed before your consultation so results are ready to review at your visit.",
+      "Complete labs at least 3-4 business days before your consultation so results are ready to review at your visit.",
   },
   {
     title: "Review Your Plan",

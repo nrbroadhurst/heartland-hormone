@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, SectionHeading, BookButton } from "@/components/PageHero";
 import { StepList } from "@/components/StepList";
+import { AppointmentPolicies } from "@/components/AppointmentPolicies";
 import { PatientFlowGuide } from "@/components/PatientFlowGuide";
 import { CTASection } from "@/components/CTASection";
 import { pageMeta } from "@/lib/seo";
@@ -30,6 +31,14 @@ export default function HowItWorksPage() {
           description="Every patient begins with a consultation and comprehensive evaluation. Treatment recommendations are individualized and based on symptoms, health history, and laboratory findings."
         />
         <StepList />
+      </section>
+
+      <section
+        id="lab-appointment-policies"
+        className="scroll-mt-28 mx-auto max-w-3xl px-4 py-16 md:py-20 md:px-6 lg:px-8"
+      >
+        <SectionHeading compact title="Lab Options & Appointment Policies" />
+        <AppointmentPolicies />
       </section>
 
       <section className="border-y border-gold/20 bg-teal/5">

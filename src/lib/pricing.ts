@@ -49,9 +49,9 @@ export const pricing = {
     ],
     beforeAppointmentHeading: "Required Before Your Appointment",
     beforeAppointment: [
-      "Laboratory testing is required and must be completed before your consultation so results are available for review during your appointment.",
-      "Heartland offers access to negotiated discounted laboratory pricing through Quest Diagnostics. Laboratory testing purchased through Heartland must be prepaid before laboratory orders are issued.",
-      "Patients who prefer to use their own health insurance benefits for laboratory testing may request a laboratory requisition for testing through their insurance plan's preferred laboratory.",
+      "Laboratory testing is required before your consultation. Lab work should be completed at least 3-4 business days before your appointment so results are available for review.",
+      "Heartland Wellness Discounted Labs: through our partnership with Fullscript, we offer discounted cash-pay lab panels drawn locally at Quest Diagnostics. Payment is required before your lab requisition is issued.",
+      "Use Your Preferred Lab: we will email you a lab requisition that can be used with your insurance and laboratory of choice.",
       "Laboratory testing fees are separate from the consultation fee.",
     ],
   },
@@ -201,15 +201,35 @@ export const pricing = {
   },
 } as const;
 
+export const appointmentPolicies = {
+  title: "Lab Options & Appointment Policies",
+  labIntro: "Choose the option that works best for you:",
+  preferredLabTitle: "Use Your Preferred Lab",
+  preferredLab:
+    "We will email you a lab requisition that can be used with your insurance and laboratory of choice.",
+  discountedLabsTitle: "Heartland Wellness Discounted Labs",
+  discountedLabs:
+    "Through our partnership with Fullscript, we offer discounted cash-pay lab panels drawn locally at Quest Diagnostics. Payment is required before your lab requisition is issued.",
+  timing:
+    "Lab work should be completed at least 3-4 business days before your appointment to ensure results are available for review.",
+  confirmationTitle: "Appointment Confirmation",
+  confirmation:
+    "No booking fee is required. Your appointment is reserved when you book. If you choose Heartland Wellness Discounted Labs, you pay for those labs before the requisition is issued. That payment is for the labs, not a fee to hold your visit.",
+  cancellationTitle: "Cancellation & No-Show Policy",
+  cancellation:
+    "Please provide at least 24 hours' notice for cancellations or rescheduling. Appointments canceled with less than 24 hours' notice and no-show appointments will be charged the full consultation fee.",
+  cardTitle: "Credit Card on File",
+  card:
+    "A credit card is not required to reserve your appointment. If you choose Heartland Wellness Discounted Labs, a valid credit card must be on file before we can issue the Fullscript / Quest lab requisition.",
+} as const;
+
 export const labPolicy = {
   intro:
     "Laboratory testing is separate from consultation and membership fees.",
-  questOption:
-    "Heartland offers access to discounted laboratory testing through Quest Diagnostics. Patients who choose this option purchase laboratory testing through Heartland, and payment is required before laboratory orders are issued.",
-  insuranceOption:
-    "Patients who prefer to use their own health insurance for laboratory testing may request a laboratory requisition for completion through their insurance plan's preferred laboratory.",
+  questOption: appointmentPolicies.discountedLabs,
+  insuranceOption: appointmentPolicies.preferredLab,
   beforeConsult:
-    "Baseline laboratory testing is required before beginning hormone therapy and must be completed before your consultation so results are available for review during your appointment.",
+    "Baseline laboratory testing is required before beginning hormone therapy. Lab work should be completed at least 3-4 business days before your appointment so results are available for review.",
   pricingIntro: "Heartland's current discounted laboratory pricing is:",
   panels: [
     {
@@ -239,7 +259,7 @@ export const labPolicy = {
     "Additional laboratory testing requested by the patient or required beyond Heartland's standard hormone and thyroid monitoring panels is billed separately.",
   ],
   notIncluded:
-    "Laboratory testing is separate from consultation and membership fees.\n\nHeartland offers access to discounted laboratory testing through Quest Diagnostics. Patients who choose this option purchase laboratory testing through Heartland, and payment is required before laboratory orders are issued.\n\nPatients who prefer to use their own health insurance for laboratory testing may request a laboratory requisition for testing through their insurance plan's preferred laboratory.",
+    "Laboratory testing is separate from consultation and membership fees.\n\nUse Your Preferred Lab: we will email you a lab requisition that can be used with your insurance and laboratory of choice.\n\nHeartland Wellness Discounted Labs: through our partnership with Fullscript, we offer discounted cash-pay lab panels drawn locally at Quest Diagnostics. Payment is required before your lab requisition is issued.\n\nLab work should be completed at least 3-4 business days before your appointment.",
   preAppointment:
     "Baseline laboratory testing is required before beginning hormone therapy and must be completed before your consultation so results are available for review during your appointment.",
   titration:

@@ -47,8 +47,9 @@ export function PatientFlowGuide() {
             &quot;create account&quot; button on this website.
           </li>
           <li>
-            Complete any forms in the portal. Laboratory testing is done before
-            your first visit so results are ready when we meet.
+            Complete any forms in the portal. Laboratory testing should be
+            finished at least 3-4 business days before your first visit so
+            results are ready when we meet.
           </li>
           <li>
             New patient visits are typically 60 minutes and are by appointment
