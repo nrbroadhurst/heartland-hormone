@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { SITE } from "@/lib/site";
+import { CLINIC_EMAIL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /**
@@ -14,6 +14,6 @@ export function EmailLink({
   children?: ReactNode;
 }) {
   return (
-    <span className={cn("select-all", className)}>{children ?? SITE.email}</span>
+    <span className={cn("select-all", className)}>{children ?? CLINIC_EMAIL}</span>
   );
 }

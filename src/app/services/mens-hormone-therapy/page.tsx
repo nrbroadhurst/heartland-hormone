@@ -38,10 +38,7 @@ export default function MensHormonePage() {
         description="Heartland provides individualized evaluation, treatment, and ongoing monitoring for men experiencing symptoms that may be associated with low testosterone levels, including low energy, decreased libido, reduced strength, changes in body composition, mood changes, and brain fog."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <BookButton
-            label="Book a Men's Hormone Consultation"
-            href="/contact?interest=mens-hormone"
-          />
+          <BookButton label="Book a Men's Hormone Consultation" />
           <BookButton
             label="View Pricing & Programs"
             href="/programs#mens-hormone"
@@ -111,8 +108,7 @@ export default function MensHormonePage() {
       <CTASection
         headline="Ready to Get Started?"
         subtext="Schedule a consultation to discuss your symptoms, review your health history, and learn whether hormone therapy may be right for you."
-        ctaLabel="Schedule a Consultation"
-        ctaHref="/contact?interest=mens-hormone"
+        ctaLabel="Book a Consultation"
       />
     </>
   );

@@ -18,21 +18,6 @@ const INTEREST_VALUES = new Set<string>(
   INTEREST_OPTIONS.map((option) => option.value),
 );
 
-const VISIT_OPTIONS = [
-  {
-    value: "new-patient",
-    label: "New Patient Consultation (60 minutes)",
-  },
-  {
-    value: "follow-up",
-    label: "Follow-Up Visit (15 to 20 minutes)",
-  },
-] as const;
-
-const VISIT_VALUES = new Set<string>(
-  VISIT_OPTIONS.map((option) => option.value),
-);
-
 const CONTACT_METHOD_OPTIONS = [
   { value: "email", label: "Email" },
   { value: "phone", label: "Phone" },
@@ -47,7 +32,6 @@ const contactSchema = z.object({
   email: z.string().email("Please enter a valid email"),
   phone: z.string().min(7, "Please enter a phone number"),
   interest: z.string().min(1, "Please choose a preferred service"),
-  visit: z.string().min(1, "Please choose an appointment type"),
   contactMethod: z.string().min(1, "Please choose a contact method"),
   message: z
     .string()
@@ -63,17 +47,12 @@ type ContactValues = z.infer<typeof contactSchema>;
 
 export function ContactForm({
   defaultInterest = "general",
-  defaultVisit = "new-patient",
 }: {
   defaultInterest?: string;
-  defaultVisit?: string;
 }) {
   const interestDefault = INTEREST_VALUES.has(defaultInterest)
     ? defaultInterest
     : "general";
-  const visitDefault = VISIT_VALUES.has(defaultVisit)
-    ? defaultVisit
-    : "new-patient";
   const [status, setStatus] = useState<"idle" | "success" | "error" | "limited">(
     "idle",
   );
@@ -90,7 +69,6 @@ export function ContactForm({
       email: "",
       phone: "",
       interest: interestDefault,
-      visit: visitDefault,
       contactMethod: "either",
       message: "",
       confirmNoPhi: false,
@@ -112,7 +90,6 @@ export function ContactForm({
         email: data.email,
         phone: data.phone,
         interest: data.interest,
-        visit: data.visit,
         contactMethod: data.contactMethod,
         message: data.message ?? "",
         confirmNoPhi: true as const,
@@ -139,7 +116,6 @@ export function ContactForm({
         email: "",
         phone: "",
         interest: interestDefault,
-        visit: visitDefault,
         contactMethod: "either",
         message: "",
         confirmNoPhi: false,
@@ -159,9 +135,9 @@ export function ContactForm({
       autoComplete="off"
     >
       <p className="rounded-md border border-gold/30 bg-teal/5 px-4 py-3 text-sm text-charcoal/80">
-        This form is intended for scheduling requests and general inquiries.
-        Clinical information will be collected securely during the patient
-        intake process after an appointment has been scheduled.
+        This form is for general questions only. Clinical information will be
+        collected securely during patient intake after an appointment has been
+        booked.
       </p>
 
       <div className="grid gap-5 sm:grid-cols-2">
@@ -241,28 +217,6 @@ export function ContactForm({
       </div>
 
       <div>
-        <label htmlFor="visit" className="mb-1.5 block text-sm font-medium text-teal">
-          Appointment Type
-        </label>
-        <select
-          id="visit"
-          className="w-full rounded-md border border-gold/40 bg-cream px-3 py-2.5 text-charcoal focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/20"
-          {...register("visit")}
-        >
-          {VISIT_OPTIONS.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-        {errors.visit && (
-          <p className="mt-1 text-sm text-red-700" role="alert">
-            {errors.visit.message}
-          </p>
-        )}
-      </div>
-
-      <div>
         <label htmlFor="interest" className="mb-1.5 block text-sm font-medium text-teal">
           Preferred Service
         </label>
@@ -314,7 +268,7 @@ export function ContactForm({
           id="message"
           rows={4}
           maxLength={MESSAGE_MAX}
-          placeholder="Please provide a brief scheduling request or general question. Do not include symptoms, medications, or lab results."
+          placeholder="Please provide a brief general question. Do not include symptoms, medications, or lab results."
           className="w-full rounded-md border border-gold/40 bg-cream px-3 py-2.5 text-charcoal focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/20"
           {...register("message")}
         />
@@ -354,8 +308,8 @@ export function ContactForm({
 
       {status === "success" && (
         <p className="rounded-md bg-teal/10 px-4 py-3 text-sm text-teal" role="status">
-          Thank you. Your appointment request was sent to the clinic. We will
-          respond shortly.
+          Thank you. Your message was sent to the clinic. We will respond
+          shortly.
         </p>
       )}
       {status === "limited" && (

@@ -82,13 +82,12 @@ export default function RecurringBillingPage() {
             >
               {SITE.phone}
             </a>{" "}
-            or emailing the clinic. This website does not provide a patient
-            portal login.
+            or emailing the clinic.
           </p>
           <p>
-            Portal access is provided by the clinic after a patient account has
-            been established. Cancellation requests should be made by phone or
-            email rather than through this website.
+            Existing patients can log in through Patient Access. Cancellation
+            requests should be made by phone or email rather than through this
+            website.
           </p>
           <p>To manage or cancel a membership, contact the clinic at:</p>
           <p>

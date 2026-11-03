@@ -6,7 +6,7 @@ Write your answers after each question. "N/A" is fine if something does not appl
 
 **Already on the website (confirm or correct):**
 - Phone: 913-427-9275
-- Email: sherry@heartlandhormones.com
+- Email: sherry@heartlandhormone.com
 - Address: 14400 Metcalf Avenue, Suite 105 (Inside Property Evaluations/Regus Building), Overland Park, KS
 - Men's HRT: Tier 1 $199/mo injections | Tier 2 $229/mo cream or troche
 - Women's HRT: Tier 1 $199/mo triple therapy | Tier 2 $229/mo advanced formulations
@@ -56,7 +56,7 @@ Write your answers after each question. "N/A" is fine if something does not appl
 12. **Confirm public phone:** 913-427-9275  
     Answer: _______________________________________________
 
-13. **Confirm public email:** sherry@heartlandhormones.com  
+13. **Confirm public email:** sherry@heartlandhormone.com  
     Answer: _______________________________________________
 
 14. **Scheduling system you plan to use (Acuity, Jane, SimplePractice, other):**  
@@ -211,7 +211,7 @@ Write your answers after each question. "N/A" is fine if something does not appl
 57. **Instagram URL:**  
     Answer: _______________________________________________
 
-58. **Custom domain planned (e.g. heartlandhormones.com):**  
+58. **Custom domain planned (e.g. heartlandhormone.com):**  
     Answer: _______________________________________________
 
 59. **Anything that should NOT be advertised on the website?**  

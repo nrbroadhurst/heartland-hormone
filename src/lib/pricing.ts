@@ -2,6 +2,7 @@
  * Clinic fee schedule shown on Pricing & Programs.
  */
 import { billingConfig } from "@/lib/billing";
+import { BOOKING_URL } from "@/lib/site";
 
 export const FOUR_WEEK_NOTE = "Every 4 weeks";
 
@@ -28,7 +29,7 @@ export const pricing = {
     id: "initial-evaluation",
     name: "New Patient Consultation",
     invoiceDescription: "New Patient Consultation",
-    href: "/contact",
+    href: BOOKING_URL,
     price: 225,
     cadence: "one-time" as const,
     display: "$225",

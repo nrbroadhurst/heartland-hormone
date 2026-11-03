@@ -248,7 +248,7 @@ export default function HomePage() {
       <CTASection
         headline={CLOSING_CTA_HEADLINE}
         subtext={CLOSING_CTA_SUBTEXT}
-        ctaLabel="Book Online"
+        ctaLabel={SITE.consultCta}
         ctaHref={SITE.bookingUrl}
         secondaryLabel="View Pricing & Programs"
         secondaryHref="/programs"

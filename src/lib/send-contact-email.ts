@@ -1,4 +1,4 @@
-import { SITE } from "@/lib/site";
+import { CLINIC_EMAIL, SITE } from "@/lib/site";
 
 export type ContactPayload = {
   name: string;
@@ -13,19 +13,11 @@ export type ContactPayload = {
 };
 
 export function formatContactBody(data: ContactPayload): string {
-  const visitLabel =
-    data.visit === "follow-up"
-      ? "Follow-Up Visit (15 to 20 minutes)"
-      : data.visit === "new-patient"
-        ? "New Patient Consultation (60 minutes)"
-        : data.visit || "(not provided)";
-
   return [
     `Name: ${data.name}`,
     `Email: ${data.email}`,
     `Phone: ${data.phone || "(not provided)"}`,
     `Interest: ${data.interest || "(not provided)"}`,
-    `Appointment type: ${visitLabel}`,
     `Preferred contact: ${data.contactMethod || "(not provided)"}`,
     "",
     data.message?.trim() ? data.message.trim() : "(no message)",
@@ -44,9 +36,9 @@ async function sendWithResend(data: ContactPayload, apiKey: string) {
     },
     body: JSON.stringify({
       from,
-      to: [SITE.email],
+      to: [CLINIC_EMAIL],
       reply_to: data.email,
-      subject: `Website appointment request from ${data.name}`,
+      subject: `Website message from ${data.name}`,
       text: formatContactBody(data),
     }),
   });
@@ -71,9 +63,9 @@ async function sendWithMaileroo(data: ContactPayload, apiKey: string) {
         address: fromAddress,
         display_name: "Heartland Hormone Website",
       },
-      to: [{ address: SITE.email, display_name: SITE.name }],
+      to: [{ address: CLINIC_EMAIL, display_name: SITE.name }],
       reply_to: { address: data.email, display_name: data.name },
-      subject: `Website appointment request from ${data.name}`,
+      subject: `Website message from ${data.name}`,
       plain: formatContactBody(data),
     }),
   });
@@ -100,12 +92,12 @@ async function sendWithSendgrid(data: ContactPayload, apiKey: string) {
     body: JSON.stringify({
       personalizations: [
         {
-          to: [{ email: SITE.email }],
+          to: [{ email: CLINIC_EMAIL }],
         },
       ],
       from: { email: from, name: "Heartland Hormone Website" },
       reply_to: { email: data.email, name: data.name },
-      subject: `Website appointment request from ${data.name}`,
+      subject: `Website message from ${data.name}`,
       content: [{ type: "text/plain", value: formatContactBody(data) }],
     }),
   });

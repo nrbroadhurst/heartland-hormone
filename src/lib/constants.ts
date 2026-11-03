@@ -3,4 +3,9 @@ export {
   NAV_LINKS,
   LEGAL_LINKS,
   MEDICAL_DISCLAIMER,
+  BOOKING_URL,
+  PORTAL_URL,
+  CLINIC_EMAIL,
+  CLINIC_ADDRESS,
+  PHONE,
 } from "@/lib/site";

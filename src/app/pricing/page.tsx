@@ -66,7 +66,6 @@ export default function PricingPage() {
             includes={pricing.initialEvaluation.includes}
             extraHeading={pricing.initialEvaluation.beforeAppointmentHeading}
             extra={pricing.initialEvaluation.beforeAppointment}
-            href="/contact"
             ctaLabel="Book a Consultation"
           />
         </div>
@@ -89,7 +88,6 @@ export default function PricingPage() {
               includes={pricing.mensInjections.includes}
               notIncludedHeading={pricing.mensInjections.notIncludedHeading}
               notIncluded={pricing.mensInjections.notIncluded}
-              href="/contact?interest=mens-hormone"
               ctaLabel="Book a Men's Hormone Consultation"
             />
             <PricingCard
@@ -102,7 +100,6 @@ export default function PricingPage() {
               includes={pricing.mensTransdermal.includes}
               notIncludedHeading={pricing.mensTransdermal.notIncludedHeading}
               notIncluded={pricing.mensTransdermal.notIncluded}
-              href="/contact?interest=mens-hormone"
               ctaLabel="Book a Men's Hormone Consultation"
             />
           </div>
@@ -126,7 +123,6 @@ export default function PricingPage() {
               includes={pricing.womensTriple.includes}
               notIncludedHeading={pricing.womensTriple.notIncludedHeading}
               notIncluded={pricing.womensTriple.notIncluded}
-              href="/contact?interest=womens-hormone"
               ctaLabel="Book a Women's Hormone Consultation"
             />
             <PricingCard
@@ -139,7 +135,6 @@ export default function PricingPage() {
               includes={pricing.womensAdvanced.includes}
               notIncludedHeading={pricing.womensAdvanced.notIncludedHeading}
               notIncluded={pricing.womensAdvanced.notIncluded}
-              href="/contact?interest=womens-hormone"
               ctaLabel="Book a Women's Hormone Consultation"
             />
           </div>
@@ -161,7 +156,6 @@ export default function PricingPage() {
             includes={pricing.weightManagement.includes}
             notIncludedHeading="Additional Costs"
             notIncluded={pricing.weightManagement.notIncluded}
-            href="/contact?interest=weight-management"
             ctaLabel="Book a Weight Management Consultation"
           />
         </div>

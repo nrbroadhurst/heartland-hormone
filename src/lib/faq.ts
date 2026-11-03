@@ -1,5 +1,5 @@
 import { pricing, labPolicy } from "@/lib/pricing";
-import { SITE } from "@/lib/site";
+import { CLINIC_ADDRESS, SITE } from "@/lib/site";
 
 export type FAQEntry = {
   id: string;
@@ -20,9 +20,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     id: "location",
     category: "General",
     question: "Where is Heartland located?",
-    answer: SITE.streetAddress
-      ? `Heartland Hormone & Wellness Clinic is at ${SITE.streetAddress}, ${SITE.addressNote}, ${SITE.city}, ${SITE.state} ${SITE.zip}. Visits are by appointment only.`
-      : `Heartland Hormone & Wellness Clinic serves patients from the ${SITE.city} / ${SITE.region} area. The physical clinic is by appointment.`,
+    answer: `Heartland Hormone & Wellness Clinic is at ${CLINIC_ADDRESS}. Visits are by appointment only.`,
   },
   {
     id: "initial-eval",
@@ -51,7 +49,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Where do I log in for records, forms, and billing?",
     answer:
-      "Heartland uses OptiMantra for patient forms, shared documents, invoices, and secure clinic messaging after your patient account has been created.\n\nMedical records are not stored on this website, and this website does not provide a patient portal login.\n\nNew patients should request a consultation to begin the enrollment process. Existing patients may access their portal using the invitation email provided by the clinic.",
+      "Heartland uses OptiMantra for patient forms, shared documents, invoices, and secure clinic messaging.\n\nMedical records are not stored on this website. Existing patients can log in through Patient Access. New patients receive a portal invite after booking a consultation.",
   },
   {
     id: "billing-frequency",
@@ -65,7 +63,7 @@ export const FAQ_ENTRIES: FAQEntry[] = [
     category: "General",
     question: "Can I cancel my program?",
     answer:
-      `Members may cancel at any time before their next scheduled billing date by calling ${SITE.phone} or emailing the clinic at ${SITE.email}. This website does not provide a patient portal login.\n\nTo avoid the next billing cycle, the clinic must receive your cancellation before the next scheduled billing date.\n\nSee the Recurring Billing & Cancellation Policy for additional details.`,
+      `Members may cancel at any time before their next scheduled billing date by calling ${SITE.phone} or emailing the clinic at ${SITE.email}.\n\nTo avoid the next billing cycle, the clinic must receive your cancellation before the next scheduled billing date.\n\nSee the Recurring Billing & Cancellation Policy for additional details.`,
   },
   {
     id: "treatment-changes",

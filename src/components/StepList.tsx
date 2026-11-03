@@ -19,7 +19,7 @@ const DEFAULT_STEPS: Step[] = [
   {
     title: "Schedule Your Consultation",
     description:
-      "Take the first step toward personalized hormone care by scheduling your consultation online or by calling our office. New patient consultations are typically 60 minutes, while follow-up appointments generally last 15–20 minutes.",
+      "Take the first step toward personalized hormone care by scheduling your consultation online or by calling our office. New patient consultations are typically 60 minutes, while follow-up appointments generally last 30 minutes.",
     icon: CalendarCheck,
   },
   {

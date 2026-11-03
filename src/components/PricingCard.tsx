@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { SITE } from "@/lib/site";
+import { SITE, isHttpUrl } from "@/lib/site";
 
 type PricingCardProps = {
   name: string;
@@ -32,7 +32,7 @@ export function PricingCard({
   extra,
   notIncluded,
   notIncludedHeading = "Not automatically included",
-  href = "/contact",
+  href = SITE.bookingUrl,
   ctaLabel = SITE.consultCta,
   featured = false,
   note,
@@ -162,7 +162,13 @@ export function PricingCard({
         </p>
       )}
       <Button asChild variant={featured ? "gold" : "teal"} className="mt-auto">
-        <Link href={href}>{ctaLabel}</Link>
+        {isHttpUrl(href) ? (
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {ctaLabel}
+          </a>
+        ) : (
+          <Link href={href}>{ctaLabel}</Link>
+        )}
       </Button>
     </article>
   );

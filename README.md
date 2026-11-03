@@ -25,4 +25,4 @@ Priority confirmations: clinic address, provider credentials, telehealth states,
 
 ## Contact form
 
-Send Message stays on the clinic page. It does not open Outlook, mailto, FormSubmit, or a Microsoft account picker. Requests are emailed to `sherry@heartlandhormones.com` from the site’s mail service. Optional env: `RESEND_API_KEY` + `CONTACT_FROM_EMAIL`, or `MAILEROO_API_KEY` + `MAILEROO_FROM`, or `SENDGRID_API_KEY` + `SENDGRID_FROM_EMAIL`.
+Send Message stays on the clinic page. It does not open Outlook, mailto, FormSubmit, or a Microsoft account picker. Requests are emailed to `sherry@heartlandhormone.com` from the site’s mail service. Optional env: `RESEND_API_KEY` + `CONTACT_FROM_EMAIL`, or `MAILEROO_API_KEY` + `MAILEROO_FROM`, or `SENDGRID_API_KEY` + `SENDGRID_FROM_EMAIL`.

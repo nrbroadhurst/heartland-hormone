@@ -6,7 +6,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Logo } from "@/components/logo/Logo";
 import { Button } from "@/components/ui/button";
 import { BookOnlineButton } from "@/components/BookOnlineButton";
-import { NAV_LINKS, SITE } from "@/lib/site";
+import { NAV_LINKS, PORTAL_URL, SITE } from "@/lib/site";
 import { getNavServices } from "@/lib/services";
 import { cn } from "@/lib/utils";
 
@@ -84,7 +84,9 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <Button asChild variant="outline-teal" size="sm" className="hidden md:inline-flex">
-            <Link href="/patient-portal">Patient Access</Link>
+            <a href={PORTAL_URL} target="_blank" rel="noopener noreferrer">
+              Patient Access
+            </a>
           </Button>
           <BookOnlineButton
             variant="gold"
@@ -172,19 +174,21 @@ export function Nav() {
               </Link>
             ),
           )}
-          <Link
-            href="/patient-portal"
+          <a
+            href={PORTAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="py-3 text-base font-medium"
             onClick={() => setOpen(false)}
           >
             Patient Access
-          </Link>
+          </a>
           <Link
             href="/contact"
             className="py-3 text-base font-medium"
             onClick={() => setOpen(false)}
           >
-            Contact
+            Contact &amp; Booking
           </Link>
           <BookOnlineButton
             variant="gold"

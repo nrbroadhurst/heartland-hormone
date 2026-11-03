@@ -19,7 +19,7 @@ export function CTASection({
   headline,
   subtext,
   ctaLabel = SITE.consultCta,
-  ctaHref = "/contact",
+  ctaHref = SITE.bookingUrl,
   secondaryLabel,
   secondaryHref,
   variant = "teal",
@@ -50,7 +50,11 @@ export function CTASection({
         )}
         <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
           {ctaHref === SITE.bookingUrl ? (
-            <BookOnlineButton variant={isTeal ? "gold" : "teal"} size="lg" />
+            <BookOnlineButton
+              label={ctaLabel}
+              variant={isTeal ? "gold" : "teal"}
+              size="lg"
+            />
           ) : (
             <Button asChild variant={isTeal ? "gold" : "teal"} size="lg">
               <Link href={ctaHref}>{ctaLabel}</Link>

@@ -5,6 +5,7 @@ import { EmailLink } from "@/components/EmailLink";
 import {
   LEGAL_LINKS,
   NAV_LINKS,
+  PORTAL_URL,
   SITE,
   MEDICAL_DISCLAIMER,
   hasEmail,
@@ -41,13 +42,18 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/patient-portal" className="hover:text-gold-light transition-colors">
+                <a
+                  href={PORTAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold-light transition-colors"
+                >
                   Patient Access
-                </Link>
+                </a>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-gold-light transition-colors">
-                  Contact
+                  Contact &amp; Booking
                 </Link>
               </li>
             </ul>

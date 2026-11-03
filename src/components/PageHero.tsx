@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { SITE } from "@/lib/site";
+import { SITE, isHttpUrl } from "@/lib/site";
 
 type PageHeroProps = {
   eyebrow?: string;
@@ -93,16 +93,23 @@ export function SectionHeading({
 
 export function BookButton({
   label = SITE.consultCta,
-  href = "/contact",
+  href = SITE.bookingUrl,
   variant = "gold" as const,
 }: {
   label?: string;
   href?: string;
   variant?: "gold" | "teal" | "outline" | "outline-teal";
 }) {
+  const isExternal = isHttpUrl(href);
   return (
     <Button asChild variant={variant} size="lg">
-      <Link href={href}>{label}</Link>
+      {isExternal ? (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {label}
+        </a>
+      ) : (
+        <Link href={href}>{label}</Link>
+      )}
     </Button>
   );
 }

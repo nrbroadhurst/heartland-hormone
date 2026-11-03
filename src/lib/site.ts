@@ -11,14 +11,23 @@
  * - cancellation/pause policy finalization
  * - attorney-reviewed legal pages
  */
+export const BOOKING_URL =
+  "https://www.optimantra.com/optimus/patient/patientaccess/servicesall?pid=TXd6ZERaRCtjNHFyYVUxTXM4MnY0QT09&lid=RVQ1d3BUUmxBZDhURThxRURVYVVNdz09";
+export const PORTAL_URL =
+  "https://www.optimantra.com/optimus/om/patient/login";
+export const CLINIC_EMAIL = "sherry@heartlandhormone.com";
+export const CLINIC_ADDRESS =
+  "14400 Metcalf Avenue, Suite 105, Property Evaluations / Regus Building, Overland Park, KS 66223";
+export const PHONE = "913-427-9275";
+
 export const SITE = {
   name: "Heartland Hormone & Wellness Clinic",
   legalBusinessName: "Heartland Hormone & Wellness Clinic",
   shortName: "Heartland",
   tagline:
     "Helping women and men restore energy, balance, vitality, and confidence through personalized hormone replacement and symptom-guided hormone balancing.",
-  consultCta: "Schedule Your Consultation",
-  consultCtaShort: "Schedule Consultation",
+  consultCta: "Book a Consultation",
+  consultCtaShort: "Book a Consultation",
   siteUrl: "https://heartland-hormone.vercel.app",
 
   city: "Overland Park",
@@ -37,17 +46,15 @@ export const SITE = {
     "Our approach focuses on treating the whole person, not just lab numbers, helping you achieve lasting improvements in health, well-being, and quality of life.",
 
   streetAddress: "14400 Metcalf Avenue, Suite 105",
-  addressNote: "Property Evaluations\u00A0/\u00A0Regus Building",
+  addressNote: "Property Evaluations / Regus Building",
   zip: "66223",
-  phone: "913-427-9275",
+  phone: PHONE,
   phoneTel: "+19134279275",
-  email: "sherry@heartlandhormones.com",
+  email: CLINIC_EMAIL,
   officeHours: "By appointment only",
-  bookingUrl:
-    "https://www.optimantra.com/optimus/patient/patientaccess/prospects?pid=SFIwUzArZGFpblhpdEJJbEZ0RyswZz09",
+  bookingUrl: BOOKING_URL,
   bookingSystem: "OptiMantra",
-  /** Do not publish a live OptiMantra login URL on the public site. */
-  patientPortalUrl: null as string | null,
+  patientPortalUrl: PORTAL_URL,
 
   providerName: "Sherry Broadhurst",
   providerCredential: "MSN, APRN, AGACNP-BC",
@@ -57,7 +64,7 @@ export const SITE = {
   privacyOfficerName: "Sherry Broadhurst",
 
   consultLength:
-    "New patient consultations are typically 60 minutes, while follow-up appointments generally last 15–20 minutes.",
+    "New patient consultations are typically 60 minutes, while follow-up appointments generally last 30 minutes.",
   firstVisitPreference:
     "An in-person first visit is preferred. Follow-up may be in office or by virtual visit when clinically and legally appropriate. Controlled substances may require at least one in-person visit per year.",
 
@@ -141,15 +148,17 @@ export function addressLines(): string[] {
 }
 
 export function formattedAddress(): string | null {
-  const lines = addressLines();
-  return lines.length ? lines.join(", ") : null;
+  return CLINIC_ADDRESS;
 }
 
 export function mapsUrl(): string | null {
-  if (!SITE.streetAddress) return null;
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    formattedAddress() ?? SITE.streetAddress,
+    CLINIC_ADDRESS,
   )}`;
+}
+
+export function isHttpUrl(href: string): boolean {
+  return href.startsWith("http://") || href.startsWith("https://");
 }
 
 export function phoneHref(): string | null {

@@ -1,4 +1,4 @@
-import { SITE, addressLines } from "@/lib/site";
+import { CLINIC_ADDRESS, SITE, addressLines } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function AddressBlock({ className }: { className?: string }) {
@@ -6,7 +6,7 @@ export function AddressBlock({ className }: { className?: string }) {
   if (lines.length === 0) return null;
 
   return (
-    <div className={cn("leading-7", className)}>
+    <div className={cn("leading-7", className)} title={CLINIC_ADDRESS}>
       {lines.map((line) => (
         <span
           key={line}
