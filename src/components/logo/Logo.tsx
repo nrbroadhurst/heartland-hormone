@@ -153,7 +153,7 @@ export function Logo({
 
   if (href === null) return mark;
   return (
-    <Link href={href} className="inline-flex shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm">
+    <Link href={href} className="inline-flex min-w-0 shrink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm">
       {mark}
     </Link>
   );

@@ -36,7 +36,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm leading-6">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-gold-light transition-colors">
+                  <Link href={link.href} className="inline-flex min-h-11 items-center hover:text-gold-light transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -46,7 +46,7 @@ export function Footer() {
                   href={PORTAL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gold-light transition-colors"
+                    className="inline-flex min-h-11 items-center hover:text-gold-light transition-colors"
                 >
                   Patient Access
                 </a>
@@ -63,7 +63,7 @@ export function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={service.href}
-                    className="text-pretty hover:text-gold-light transition-colors"
+                    className="inline-flex min-h-11 items-center text-pretty hover:text-gold-light transition-colors"
                   >
                     {service.title.replace("Menopause Care", "Menopause\u00A0Care")}
                   </Link>
@@ -88,7 +88,7 @@ export function Footer() {
                 {hasPhone() && (
                   <a
                     href={phoneHref() ?? `tel:${SITE.phone}`}
-                    className="block hover:text-gold-light"
+                    className="block min-h-11 py-2 hover:text-gold-light"
                   >
                     {SITE.phone}
                   </a>
@@ -115,7 +115,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs leading-6 text-cream/75">
               {LEGAL_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-gold-light">
+                  <Link href={link.href} className="inline-flex min-h-11 items-center hover:text-gold-light">
                     {link.label}
                   </Link>
                 </li>
